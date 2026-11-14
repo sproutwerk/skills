@@ -68,7 +68,7 @@ the read-only `DragDropAutoScrollMargin` (one text line with spacing) is the mar
 | `DirectX/` | D3D11 via TerraFX: `Shader<T>` kinds, `Buffer`, `ConstantBuffer<T>`, `Sampler`, `FullScreenQuad`, `CustomRenderManager` + `ICustomRenderable`, image effects (`IEffect`, `EffectGraph`, `LunaEffects`, `ShaderFilterEffect`, `ComputeFilterEffect`, `Image`, `RwImage`), `TextureArraySlicer`. Not mirrored in `references/`; indexed only. |
 | `GameInterop/` | `HookManager` (`CreateHook<T>(name, address|signature, detour, enable)` → `Task<Hook<T>?>`, `TryReplaceHook<T>`, `DisposeHook(name)`, `Hooks` as `IEnumerable<IHookData>`, event `HookStateChanged`, `LogExceptions(log)`), `FastHook<T>` base, `IHookData`, `HookManagerDrawer` (an `IUiService` with `Draw()` that lists the hooks), `SafeResourceHandle`, `SafeTextureHandle`. |
 | `Compression/` | `FileCompactor` (Windows transparent compression), `CompressionFunctions`, `CompressionAlgorithm`. |
-| `Resources/` | `ResourceProvider` (internal) plus shader sources; compiled `.dxbc` are embedded resources, built by `Build-Shaders.ps1`. |
+| `Resources/` | `ResourceProvider` (internal) plus shader sources; compiled `.dxbc` are embedded resources, built by upstream's `Build-Shaders.ps1` (not bundled). |
 
 Members that differ on older pins are listed under
 [recent API changes](guide.md#recent-api-changes).

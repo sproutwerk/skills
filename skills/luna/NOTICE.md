@@ -16,3 +16,5 @@ Luna ships the GNU Affero General Public License version 3 text, and GitHub repo
 The authored files quote upstream type names, member names and signatures for reference.
 
 Luna, ImSharp and Luna.Targa are the upstream projects' names. This independently maintained reference skill is not an official release or endorsement of any of them.
+
+The bundled trees are selections listed in `references/manifest-luna.txt`, `references/manifest-imsharp.txt` and `references/manifest-targa.txt`. Luna's shader build script, `Luna/Build-Shaders.ps1`, is not bundled.

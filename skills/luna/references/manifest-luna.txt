@@ -64,7 +64,6 @@ Luna.Tests/Luna.Tests.csproj
 Luna.Tests/NamedEnumTests.cs
 Luna.Tests/StrongTypeTest.cs
 Luna.slnx
-Luna/Build-Shaders.ps1
 Luna/Colors/ColorCache.cs
 Luna/Colors/ColorCombos.cs
 Luna/Colors/ColorData.cs
