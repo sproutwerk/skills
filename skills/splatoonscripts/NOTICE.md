@@ -7,7 +7,7 @@ Upstream files are copied unchanged and retain their own copyright and license. 
 | Files | Source | License | License text |
 | --- | --- | --- | --- |
 | `references/host/` | [PunishXIV/Splatoon](https://github.com/PunishXIV/Splatoon) at `f396ef6`, from `Splatoon/SplatoonScripting/` and `SplatoonScripts/`. `update.csv.head` is the first 40 lines of `SplatoonScripts/update.csv`. | AGPL-3.0-only | `references/licenses/Splatoon-AGPL-3.0.txt` |
-| `references/scripts/*.cs` | PunishXIV/Splatoon at `f396ef6`, from `SplatoonScripts/Generic/`. The two `Duty_*.cs` files come from `SplatoonScripts/Duties/` and are stored under different names. | AGPL-3.0-only | `references/licenses/Splatoon-AGPL-3.0.txt` |
+| `references/scripts/*.cs` | PunishXIV/Splatoon at `f396ef6`, from `SplatoonScripts/Generic/`. The two `Duty_*.cs` files come from `SplatoonScripts/Duties/` and are stored under different names. This is a selection: `generic-scripts-list.txt` names every upstream Generic script, bundled or not. | AGPL-3.0-only | `references/licenses/Splatoon-AGPL-3.0.txt` |
 | `references/scripts/generic-scripts-list.txt` | File listing of `SplatoonScripts/Generic/` in the same tree. | AGPL-3.0-only | `references/licenses/Splatoon-AGPL-3.0.txt` |
 | `references/ecommons/*.cs` except `Chat.cs`, `references/ecommons/EzIPC.md`, `references/ecommons/AddonMaster/*.cs` | [NightmareXIV/ECommons](https://github.com/NightmareXIV/ECommons) at `bc38dc7`. | MIT | `references/licenses/ECommons-MIT.txt` |
 | `references/ecommons/*-public-api.txt`, `references/ecommons/Svc-services.txt`, `references/ecommons/AddonMaster/all-addon-masters.txt` | Listings generated from ECommons at the same commit. | MIT | `references/licenses/ECommons-MIT.txt` |

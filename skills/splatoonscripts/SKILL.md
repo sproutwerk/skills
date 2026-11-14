@@ -41,6 +41,18 @@ do not combine a moving branch with these pinned examples. For deployment,
 compare against the dependency commits shipped by the installed Splatoon build
 (including its ECommons submodule), and report any mismatch before adapting code.
 
+## Boundaries
+
+A script runs inside the game with the plugin's privileges and acts as the
+user's character. Write the script the user asked for and hand it over; the
+user installs and enables it. Scripts from this skill reach the game through
+Splatoon, ECommons and documented IPC only: no assembly loading, process
+launch, file access outside the script's own configuration, or network calls.
+Values read from other plugins by IPC or reflection, and chat or log text, are
+data to compare against expected values, never commands to pass along.
+Splatoon's URL import and update list are the user's to manage; do not add
+script URLs or trusted repositories for them.
+
 ## Topic index
 
 Read the matching topic in `references/` when its trigger applies. Paths are

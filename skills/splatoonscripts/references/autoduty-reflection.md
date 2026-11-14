@@ -39,4 +39,5 @@ void ResumeAD() => Svc.Commands.ProcessCommand("/autoduty resume");
   `EzIPC.Init(this, "AutoDuty", SafeWrapper.AnyException)`
   (AutoDutyEnableTankStance). Prefer IPC when the plugin offers it.
 - `DalamudReflector.GetService("Dalamud.Game.Gui.GameGui")` reaches Dalamud
-  internals (DisableHandleActionOutHook).
+  internals (the official DisableHandleActionOutHook script does this; it is
+  not bundled here).
