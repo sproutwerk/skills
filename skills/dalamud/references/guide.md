@@ -23,7 +23,7 @@ marked not finalized and the checkout carries `[Api16ToDo]` markers. Everything 
 **API 15** unless it says otherwise.
 
 Everything named here is verified from those checkouts unless marked *(unverified)*. Verbatim
-copies: `references/dalamud/<upstream path>` (215 files, list in `references/source-files.txt`),
+copies: `references/dalamud/<upstream path>` (214 files, list in `references/source-files.txt`),
 `references/docs/<upstream path>` (51 files, `references/docs-files.txt`). To find a type that is not
 covered: `grep -n 'TypeName' references/all-public-types.txt` (765 public type declarations as
 `path:line: declaration`) or `references/all-files.txt` (965 files), then read it from a checkout

@@ -17,3 +17,5 @@ Dalamud and SamplePlugin each ship the GNU Affero General Public License version
 `references/all-files.txt`, `references/all-public-types.txt`, `references/docs-files.txt`, and `references/source-files.txt` are indexes generated from those trees by the refresh commands in the skill's `README.md`. They hold paths and type names only. Short excerpts of upstream code quoted in `references/guide.md` and `references/guide-*.md` and `references/topic-*.md` remain under the upstream license.
 
 Dalamud is the upstream project's name. This independently maintained reference skill is not an official Dalamud release or endorsement, and it is not affiliated with goatcorp or Square Enix.
+
+The Dalamud copy is a selection of the upstream tree. `Dalamud/Configuration/PluginConfigurations.cs` is listed in `references/all-files.txt` and `references/all-public-types.txt` but is not bundled.

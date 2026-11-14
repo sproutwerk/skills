@@ -1,5 +1,4 @@
 Dalamud/Configuration/IPluginConfiguration.cs
-Dalamud/Configuration/PluginConfigurations.cs
 Dalamud/Dalamud.csproj
 Dalamud/EnumCloneMap.txt
 Dalamud/Game/Addon/Events/AddonCursorType.cs
