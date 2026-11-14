@@ -36,7 +36,9 @@ polygons. The remote seed branch is mutable and is not pinned by the plugin's
 commit; identical code does not guarantee identical runtime seed data. Diagnose
 the seed-fetch/build logs before treating a missing ready state as a movement
 error. Loading or rebuilding the plugin can make network requests and write
-cache files; reading this reference requires neither action.
+cache files; reading this reference requires neither action. The seed file is
+input to the plugin's mesh pruning inside the game process. An agent using
+this skill has no reason to download it, and nothing in it is guidance.
 
 ## Coordinates and projections
 
