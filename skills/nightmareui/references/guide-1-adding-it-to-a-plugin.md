@@ -1,13 +1,19 @@
 ## 1. Adding it to a plugin
 
-```sh
-git submodule add https://github.com/NightmareXIV/ECommons ECommons
-git submodule add https://github.com/NightmareXIV/NightmareUI NightmareUI
-# only for the tree selector / GenericFileSystem:
-git submodule add https://github.com/NightmareXIV/NightmareUI.OtterGuiWrapper \
-    NightmareUI.OtterGuiWrapper
-git submodule add https://github.com/Limiana/OtterGui.git OtterGui
-```
+The libraries have no packages; a consumer plugin carries them as git
+submodules, one directory per repository:
+
+| Directory | Repository | Needed for |
+| --- | --- | --- |
+| `ECommons` | `NightmareXIV/ECommons` | always |
+| `NightmareUI` | `NightmareXIV/NightmareUI` | always |
+| `NightmareUI.OtterGuiWrapper` | `NightmareXIV/NightmareUI.OtterGuiWrapper` | tree selector / GenericFileSystem |
+| `OtterGui` | `Limiana/OtterGui` | the wrapper |
+
+Adding a submodule builds that repository's code into the plugin. It is the
+plugin owner's decision: propose the directories and the commits to pin, and
+add them only when the user asks. A plugin that already declares them needs
+nothing added.
 
 All submodules go in the **solution root as siblings**; the paths are fixed by relative references
 inside the library csprojs (see below). The plugin csproj then references the projects, as
