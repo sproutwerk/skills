@@ -19,3 +19,5 @@ Dalamud ships the text of version 3 of the GNU Affero General Public License and
 No Dear ImGui, ImPlot, ImGuizmo or ImGui.NET source is bundled. The pinned commits and submodule revisions are recorded in `references/PROVENANCE.txt`.
 
 Dalamud and Dear ImGui are the upstream projects' names. This independently maintained reference skill is not an official release or endorsement of either project.
+
+The Dalamud copy is a selection of the upstream tree. `Dalamud/Interface/Utility/ImVectorWrapper.cs` and `Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs` appear in `references/index/interface-methods.txt` and `references/index/interface-files.txt` but are not bundled.

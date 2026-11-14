@@ -63,7 +63,6 @@ Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawParams.cs
 Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawResult.cs
 Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawState.cs
 Dalamud/Interface/ImGuiSeStringRenderer/SeStringReplacementEntity.cs
-Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
 Dalamud/Interface/ManagedFontAtlas/FontAtlasAutoRebuildMode.cs
 Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildStep.cs
 Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildStepDelegate.cs
@@ -98,7 +97,6 @@ Dalamud/Interface/Utility/ImGuiExtensions.cs
 Dalamud/Interface/Utility/ImGuiHelpers.cs
 Dalamud/Interface/Utility/ImGuiId.cs
 Dalamud/Interface/Utility/ImGuiTable.cs
-Dalamud/Interface/Utility/ImVectorWrapper.cs
 Dalamud/Interface/Utility/LineEvaluator.cs
 Dalamud/Interface/Utility/Raii/Disposables/ChildDisposable.cs
 Dalamud/Interface/Utility/Raii/Disposables/ChildFrameDisposable.cs

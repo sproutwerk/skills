@@ -23,13 +23,13 @@ Reference material, all under `references/`:
 
 | Path | What |
 |---|---|
-| `src/<upstream path>` | Verbatim copies of 206 load-bearing files (list: `manifest.txt`) |
+| `src/<upstream path>` | Verbatim copies of 204 load-bearing files (list: `manifest.txt`) |
 | `index/imgui-methods.txt` | Every public `ImGui.*` overload (1605 lines), grep-able, with source file |
 | `index/imguip-methods.txt` | Every public `ImGuiP.*` overload (internals) |
 | `index/imgui-struct-methods.txt` | Methods on `ImDrawListPtr`, `ImFontPtr`, `ImGuiIOPtr`, `ImU8String` ... |
 | `index/implot-methods.txt`, `imguizmo-methods.txt` | ImPlot (pointer overloads dropped) / ImGuizmo |
 | `index/enums.txt` | Every binding enum with members and values |
-| `index/interface-methods.txt`, `interface-files.txt` | Signatures in the copied `Dalamud/Interface` files; all 449 files there |
+| `index/interface-methods.txt`, `interface-files.txt` | Signatures in the copied `Dalamud/Interface` files, plus `ImVectorWrapper` and `FluentGlyphRangeBuilder`, which are indexed but not copied; all 449 files there |
 | `index/fontawesome-icons.txt` | 1381 `FontAwesomeIcon` members (Font Awesome 7.1.0) |
 | `upstream-docs/v13.md`, `v14.md`, `v15.md`, `v16/index.md` | API migration notes |
 | `upstream-docs/v16/sestring.md` | API 16 guide to replacing `SeString` with `ReadOnlySeString` |

@@ -25,7 +25,8 @@ while IFS= read -r f; do
   fi
 done < "$REF/manifest.txt"
 
-# 2. indexes (only files that are actually compiled, see the csproj Compile Remove rules)
+# 2. indexes (only files that are actually compiled, see the csproj Compile Remove rules).
+#    tools/index-only.txt lists files whose signatures are indexed but which are not copied.
 mkdir -p "$REF/index"
 B="$SRC/imgui/Dalamud.Bindings.ImGui"
 export INDEX_BASE="$SRC/imgui"
@@ -37,7 +38,7 @@ export INDEX_BASE="$SRC/imgui"
 INDEX_SKIP_POINTERS=1 "$GEN" "$REF/index/implot-methods.txt" 'ImPlot' "$SRC/imgui/Dalamud.Bindings.ImPlot"
 "$GEN" "$REF/index/imguizmo-methods.txt" 'ImGuizmo' "$SRC/imgui/Dalamud.Bindings.ImGuizmo"
 INDEX_BASE="$SRC" "$GEN" "$REF/index/interface-methods.txt" '.*' \
-  $(grep -E '^Dalamud/' "$REF/manifest.txt" | sed "s|^|$SRC/|")
+  $(cat "$REF/manifest.txt" "$HERE/tools/index-only.txt" | grep -E '^Dalamud/' | LC_ALL=C sort | sed "s|^|$SRC/|")
 
 # enums: one line per enum with its members
 "$ENUMS" "$SRC/imgui" "$REF/index/enums.txt"

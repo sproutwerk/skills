@@ -1,0 +1,2 @@
+Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+Dalamud/Interface/Utility/ImVectorWrapper.cs
