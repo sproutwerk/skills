@@ -22,8 +22,8 @@
    `vfuncs:` / `instances:` / `vtbls:`) so the renamer and CExporter can
    cross-check. CI (`validate-data.yaml`) runs the validator on `data.yml`
    changes.
-5. `dotnet run --project CExporter/CExporter.csproj -c Release` — same as
-   `pr-change-check.yaml`. Non-empty `ida/errors.txt` (overlapping fields,
+5. In the contributor's own checkout, build and run the `CExporter` project
+   in Release configuration, the same check as `pr-change-check.yaml`. Non-empty `ida/errors.txt` (overlapping fields,
    size mismatches, name collisions between C# and `data.yml`, missing
    `data.yml` entries) fails the PR with a bot comment and the
    `requested changes` label. `CompatChecker` (apicompat main vs PR) adds the

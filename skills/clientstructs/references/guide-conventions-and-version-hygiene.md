@@ -8,9 +8,9 @@ runtime. If the client is unavailable, inspect `lib/FFXIVClientStructs` at
 the intended Dalamud commit and record that runtime matching is unverified.
 The API level alone does not identify a ClientStructs revision.
 
-Use an existing matching checkout or clone
-`https://github.com/aers/FFXIVClientStructs` into a separate temporary directory.
-Check out the exact commit and verify it with `git rev-parse HEAD`. Search
+Use the user's existing checkout of FFXIVClientStructs when it matches, or ask
+them for one at the exact commit; read the files, do not build or run them.
+Verify the commit with `git rev-parse HEAD`. Search
 `FFXIVClientStructs/` for the type, then inspect its bases and generated-member
 attributes at the same revision. Keep the installed skill's source mirror
 unchanged during a consumer task. Current `main` is useful for comparisons;
@@ -90,10 +90,10 @@ This skill ships only `references/ida/data.yml.excerpt`: the header,
 `globals:`/`functions:` samples and the `Framework`, `InventoryManager` and
 `AtkUnitBase` class entries (`# ...` marks elided lines). The full
 `ida/data.yml` (2637 class entries) exists only in the checkout. When
-`references/all-structs.txt` or the excerpt leads beyond the curated files, get
-the pinned checkout: `git clone https://github.com/aers/FFXIVClientStructs
-/tmp/cs && git -C /tmp/cs checkout 80cb4a7b7e11a6702e2eb8839afd301a918c638e` (a `--depth 1` clone of `main`
-gives a newer commit; re-verify offsets against it). `data-validator.js` enforces the
+`references/all-structs.txt` or the excerpt leads beyond the curated files, read
+the upstream repository (`aers/FFXIVClientStructs`) at the pinned commit
+`80cb4a7b7e11a6702e2eb8839afd301a918c638e` in a checkout the user provides (current `main`
+is a newer commit; re-verify offsets against it). `data-validator.js` enforces the
 schema (numeric keys, string values, `version` regex, optional numeric vtable
 `size`); `data_schema.py` is
 the Python model used by the renamer.

@@ -42,13 +42,9 @@ The project must allow unsafe code and reference the ClientStructs assembly matc
 
 ## Validate a layout change
 
-From the full FFXIVClientStructs checkout at the matching revision, run the same exporter check used by its upstream change-validation workflow:
+This applies when the user is contributing to FFXIVClientStructs and already works in their own full checkout of it. Upstream's change-validation workflow builds and runs the repository's `CExporter` project in Release configuration, which writes `ida/errors.txt`. Building it executes that checkout's code, so run it only in the user's own checkout and at their request; do not fetch a copy of the repository to run it.
 
-```sh
-dotnet run --project CExporter/CExporter.csproj -c Release
-```
-
-Inspect `ida/errors.txt` for overlapping fields, size mismatches, name collisions, and missing `data.yml` entries. Correct the reported layout or declaration and rerun the check. The bundled source is a curated reference, so run this command in the full checkout. Signature resolution also depends on the matching game executable; an exporter pass does not establish that a signature resolves.
+Inspect `ida/errors.txt` for overlapping fields, size mismatches, name collisions, and missing `data.yml` entries. Correct the reported layout or declaration and rerun the check. The bundled source is a curated reference and cannot run the exporter. Signature resolution also depends on the matching game executable; an exporter pass does not establish that a signature resolves.
 
 ## Interop rules
 
