@@ -14,3 +14,5 @@ Unmodified upstream files keep their own licenses:
 The three OtterGui repositories carry the same license file at those commits, and the copy here matches it. Upstream ships no separate notice file, and its license files name no copyright holder, so the repositories above are the attribution. Commits and dates are recorded in `references/VERSIONS.txt`.
 
 OtterGui is the upstream project's name. This independently maintained reference skill is not an official OtterGui release or endorsement.
+
+The mirrored source omits three files of the fork: `String/Utf8String.cs`, `Text/HelperObjects/SpanTextWriter.cs` and `Extensions/PowerSetExtensions.cs`. Their declarations remain in `references/api-index.txt` and `references/public-types.txt`.

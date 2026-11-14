@@ -39,7 +39,6 @@ Custom/IndividualHelpers.cs
 Extensions/ArrayExtensions.cs
 Extensions/FileExtensions.cs
 Extensions/GuidExtensions.cs
-Extensions/PowerSetExtensions.cs
 Extensions/StableInsertionSortExtension.cs
 Extensions/VectorExtensions.cs
 Filesystem/Extensions.cs
@@ -98,7 +97,6 @@ Services/IService.cs
 Services/ImGuiCacheService.cs
 Services/ServiceManager.cs
 String/Interop.cs
-String/Utf8String.cs
 Table/Column.cs
 Table/ColumnFlags.cs
 Table/ColumnNumber.cs
@@ -162,7 +160,6 @@ Text/HelperObjects/ImTextExtensions.cs
 Text/HelperObjects/ImUtf8Exception.cs
 Text/HelperObjects/InputStringHandlerBuffer.cs
 Text/HelperObjects/LabelStringHandlerBuffer.cs
-Text/HelperObjects/SpanTextWriter.cs
 Text/HelperObjects/TextStringHandlerBuffer.cs
 Text/HelperObjects/Utf8StringHandler.cs
 Text/ImUtf8.BulletText.cs

@@ -34,8 +34,8 @@ Software License 1.0 (`references/src/OtterGuiInternal/LICENSE`). The mirror und
 contains unmodified upstream source with its original notices.
 
 **Verification.** Every type, member and signature named in this skill was read from the pinned
-checkouts, which are mirrored verbatim under `references/src/` (256 files, list in
-`references/manifest.txt`). **Nothing was compiled**: no Dalamud build environment was available,
+checkouts, which are mirrored verbatim under `references/src/` (253 files, list in
+`references/manifest.txt`). Three files are indexed in `references/api-index.txt` but not bundled: `String/Utf8String.cs`, `Text/HelperObjects/SpanTextWriter.cs` and `Extensions/PowerSetExtensions.cs`; read them from the pinned checkout. **Nothing was compiled**: no Dalamud build environment was available,
 so the examples are written against the source, not tested. Items marked *(unverified)* could not
 be confirmed from the checkouts. Before using a member that is not shown here:
 

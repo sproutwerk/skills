@@ -21,12 +21,14 @@ done
   mkdir -p "$REF/src/OtterGuiInternal/$(dirname "$f")"; cp "$INTERNAL/$f" "$REF/src/OtterGuiInternal/$f"
 done
 
-( cd "$REF/src" && find . -type f | sed 's|^\./||' | LC_ALL=C sort ) > "$REF/manifest.txt"
-
 # path:line: declaration for every public/protected declaration (multi-line parameter lists joined)
 ( cd "$REF/src" && find . -name '*.cs' | sed 's|^\./||' | LC_ALL=C sort | xargs "$SIGS" ) > "$REF/api-index.txt"
 grep -E ': public ((static|sealed|abstract|unsafe|readonly|partial|ref|record) )*(class|interface|struct|enum|record|delegate) ' \
   "$REF/api-index.txt" > "$REF/public-types.txt" || true
+
+# tools/index-only.txt lists files that stay in the indexes above but are not bundled.
+while IFS= read -r f; do [ -n "$f" ] && rm -f "$REF/src/$f"; done < "$ROOT/tools/index-only.txt"
+( cd "$REF/src" && find . -type f | sed 's|^\./||' | LC_ALL=C sort ) > "$REF/manifest.txt"
 
 ( cd "$FORK"
   git diff "$UPSTREAM" HEAD -- . ':!OtterGuiInternal' > "$REF/upstream-to-fork.diff"

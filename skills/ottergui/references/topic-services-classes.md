@@ -306,7 +306,7 @@ layer (`IsCompactedFile` and `CompactFile` default to `CompressionAlgorithm.Xpre
 
 ## String (`String/`, namespace `OtterGui.String`)
 
-`StringU8` (file `Utf8String.cs`): an immutable UTF-8 string struct implementing
+`StringU8` (file `Utf8String.cs`, indexed but not bundled): an immutable UTF-8 string struct implementing
 `IReadOnlyList<byte>`, `IEquatable<StringU8>`, `IComparable<StringU8>`,
 `IComparisonOperators<StringU8, StringU8, bool>`, `ISpanFormattable` and `IUtf8SpanFormattable`,
 with a nested `Utf8InterpolatedStringHandler`. `Interop.cs` has
