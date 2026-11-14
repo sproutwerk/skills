@@ -1,0 +1,3 @@
+interface:
+  display_name: "Doman Mahjong"
+  short_description: "FFXIV Mahjong rules, hand analysis, and solver design"

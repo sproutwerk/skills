@@ -1,0 +1,51 @@
+public partial class TaskManager : IDisposable
+    public readonly TaskManagerConfiguration DefaultConfiguration;
+    public int MaxTasks { get; private set; } = 0;
+    public int NumQueuedTasks => Tasks.Count + (CurrentTask == null ? 0 : 1);
+    public float Progress => MaxTasks == 0 ? 0 : (MaxTasks - NumQueuedTasks) / (float)MaxTasks;
+    public bool IsBusy => Tasks.Count != 0 || CurrentTask != null;
+    public List<TaskManagerTask> Tasks { get; init; } = [];
+    public TaskManagerTask? CurrentTask { get; private set; } = null;
+    public long RemainingTimeMS
+    public bool StepMode
+    public TaskManager(TaskManagerConfiguration? defaultConfiguration = null)
+    public void Dispose()
+    public void Abort()
+    public void AbortCurrent()
+    public void Step()
+public partial class TaskManager
+    public void Enqueue(Func<bool?> func, string taskName, TaskManagerConfiguration? configuration = null) => EnqueueTask(new(func, taskName, configuration));
+    public void Enqueue(Func<bool?> func, TaskManagerConfiguration? configuration = null) => EnqueueTask(new(func, configuration));
+    public void Enqueue(Func<bool> func, string taskName, TaskManagerConfiguration? configuration = null) => EnqueueTask(new(func, taskName, configuration));
+    public void Enqueue(Func<bool> func, TaskManagerConfiguration? configuration = null) => EnqueueTask(new(func, configuration));
+    public void Enqueue(Action action, string taskName, TaskManagerConfiguration? configuration = null) => EnqueueTask(new(action, taskName, configuration));
+    public void Enqueue(Action action, TaskManagerConfiguration? configuration = null) => EnqueueTask(new(action, configuration));
+    public void EnqueueTask(TaskManagerTask task) => EnqueueMulti(task);
+    public void EnqueueMulti(params TaskManagerTask?[] tasks)
+public partial class TaskManager
+    public void Insert(Func<bool?> func, string taskName, TaskManagerConfiguration? configuration = null) => InsertTask(new(func, taskName, configuration));
+    public void Insert(Func<bool?> func, TaskManagerConfiguration? configuration = null) => InsertTask(new(func, configuration));
+    public void Insert(Func<bool> func, string taskName, TaskManagerConfiguration? configuration = null) => InsertTask(new(func, taskName, configuration));
+    public void Insert(Func<bool> func, TaskManagerConfiguration? configuration = null) => InsertTask(new(func, configuration));
+    public void Insert(Action action, string taskName, TaskManagerConfiguration? configuration = null) => InsertTask(new(action, taskName, configuration));
+    public void Insert(Action action, TaskManagerConfiguration? configuration = null) => InsertTask(new(action, configuration));
+    public void InsertTask(TaskManagerTask task) => InsertMulti(task);
+    public void InsertMulti(params TaskManagerTask?[] tasks)
+public partial class TaskManager
+    public void EnqueueDelay(int ms, bool isFrame = false, TaskManagerConfiguration configuration = null)
+    public void InsertDelay(int ms, bool isFrame = false, TaskManagerConfiguration configuration = null)
+public partial class TaskManager
+    public record struct StackDetails()
+        public string Name { get; set; }
+        public List<TaskManagerTask> Stack { get; set; } = [];
+    public List<StackDetails> Stack { get; init; } = [];
+    public bool IsStackActive => Stack.Count > 0;
+    public void BeginStack(string? name)
+    public void BeginStack() => BeginStack(null);
+    public void EnqueueStack()
+    public void InsertStack()
+    public void DiscardStack()
+    public void EnqueueStack(Action executeAction) => EnqueueStack(null, executeAction);
+    public void EnqueueStack(string name, Action executeAction)
+    public void InsertStack(Action executeAction) => InsertStack(null, executeAction);
+    public void InsertStack(string name, Action executeAction)

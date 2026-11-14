@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup Label="Target">
+        <EnableWindowsTargeting>True</EnableWindowsTargeting>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Feature">
+        <Description>XIV Launcher addon framework</Description>
+        <DalamudVersion>15.0.3.9</DalamudVersion>
+        <AssemblyVersion>$(DalamudVersion)</AssemblyVersion>
+        <Version>$(DalamudVersion)</Version>
+        <FileVersion>$(DalamudVersion)</FileVersion>
+        <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Output">
+        <OutputType>Library</OutputType>
+        <OutputPath>..\bin\$(Configuration)\</OutputPath>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Documentation">
+        <DocumentationFile>$(OutputPath)Dalamud.xml</DocumentationFile>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Build">
+        <UseWindowsForms>true</UseWindowsForms>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Deterministic>true</Deterministic>
+        <Nullable>annotations</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+        <!-- Enable when cswin32 properly supports implementing COM interfaces and we can
+             make IDropTarget work -->
+        <!-- <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling> -->
+    </PropertyGroup>
+
+    <PropertyGroup Label="Configuration">
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    </PropertyGroup>
+    <PropertyGroup Label="Configuration" Condition="'$(Configuration)'=='Debug'">
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Warnings">
+        <NoWarn>IDE0002;IDE0003;IDE1006;IDE0044;CA1822;CS1591;CS1701;CS1702</NoWarn>
+        <!-- IDE1002 - Simplify member access -->
+        <!-- IDE1003 - This and me preferences -->
+        <!-- IDE1006 - Naming violation -->
+        <!-- IDE1006 - Add readonly modifier -->
+        <!-- CA1822  - Can be marked as static -->
+        <!-- CS1591  - Missing XML comment for publicly visible type or member -->
+        <!-- CS1701  - Runtime policy may be needed -->
+        <!-- CS1702  - Runtime policy may be needed -->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BitFaster.Caching" />
+        <PackageReference Include="CheapLoc" />
+        <PackageReference Include="DotNet.ReproducibleBuilds" PrivateAssets="all" />
+        <PackageReference Include="goatcorp.Reloaded.Hooks" />
+        <PackageReference Include="JetBrains.Annotations" />
+        <PackageReference Include="Lumina" />
+        <PackageReference Include="Microsoft.Extensions.ObjectPool" />
+        <PackageReference Include="Microsoft.Windows.CsWin32">
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="Serilog" />
+        <PackageReference Include="Serilog.Sinks.Async" />
+        <PackageReference Include="Serilog.Sinks.Console" />
+        <PackageReference Include="Serilog.Sinks.File" />
+        <PackageReference Include="sqlite-net-pcl" />
+        <PackageReference Include="StyleCop.Analyzers">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="System.Reactive" />
+        <PackageReference Include="System.Reflection.MetadataLoadContext" />
+        <PackageReference Include="TerraFX.Interop.Windows" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\generators\Dalamud.EnumGenerator\Dalamud.EnumGenerator\Dalamud.EnumGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="EnumCloneMap.txt" />
+        <AdditionalFiles Include="EnumCloneMap.txt" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Interface\ImGuiBackend\Renderers\imgui-frag.hlsl.bytes">
+          <LogicalName>imgui-frag.hlsl.bytes</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Interface\ImGuiBackend\Renderers\imgui-vertex.hlsl.bytes">
+          <LogicalName>imgui-vertex.hlsl.bytes</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Interface\ImGuiBackend\Renderers\blur-fullscreen.vs.bytes">
+          <WithCulture>false</WithCulture>
+          <LogicalName>blur-fullscreen.vs.bytes</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Interface\ImGuiBackend\Renderers\kawase-downsample.ps.bytes">
+          <WithCulture>false</WithCulture>
+          <LogicalName>kawase-downsample.ps.bytes</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Interface\ImGuiBackend\Renderers\kawase-upsample.ps.bytes">
+          <WithCulture>false</WithCulture>
+          <LogicalName>kawase-upsample.ps.bytes</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Interface\ImGuiBackend\Renderers\kawase-upsample-composite.ps.bytes">
+          <WithCulture>false</WithCulture>
+          <LogicalName>kawase-upsample-composite.ps.bytes</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Interface\ImGuiBackend\Renderers\NoiseAsset_256X256_PNG.png">
+            <WithCulture>false</WithCulture>
+          <LogicalName>blur-noise.png</LogicalName>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Dalamud.Common\Dalamud.Common.csproj" />
+        <ProjectReference Include="..\imgui\Dalamud.Bindings.ImGuizmo\Dalamud.Bindings.ImGuizmo.csproj" />
+        <ProjectReference Include="..\imgui\Dalamud.Bindings.ImGui\Dalamud.Bindings.ImGui.csproj" />
+        <ProjectReference Include="..\imgui\Dalamud.Bindings.ImPlot\Dalamud.Bindings.ImPlot.csproj" />
+        <ProjectReference Include="..\imgui\ImGuiScene\ImGuiScene.csproj" />
+        <ProjectReference Include="..\lib\FFXIVClientStructs\FFXIVClientStructs\FFXIVClientStructs.csproj" />
+        <ProjectReference Include="..\lib\FFXIVClientStructs\InteropGenerator.Runtime\InteropGenerator.Runtime.csproj" />
+        <ProjectReference Include="..\lib\Lumina.Excel\src\Lumina.Excel\Lumina.Excel.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AdditionalFiles Include="..\stylecop.json" />
+    </ItemGroup>
+
+    <!-- Copy XML files from all PackageReferences to output dir -->
+    <Target Name="_ResolveCopyLocalNuGetPkgXmls" AfterTargets="ResolveReferences">
+        <ItemGroup>
+            <ReferenceCopyLocalPaths
+                Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')"
+                Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)'!='' and '%(ReferenceCopyLocalPaths.NuGetPackageId)'!='TerraFX.Interop.Windows' and Exists('%(RootDir)%(Directory)%(Filename).xml')" />
+        </ItemGroup>
+    </Target>
+
+    <ItemGroup>
+      <None Remove="licenses.txt" />
+      <Content Include="licenses.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Interface\ImGuiBackend\Renderers\gaussian.hlsl" />
+      <None Remove="Interface\ImGuiBackend\Renderers\fullscreen-quad.hlsl.bytes" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Interface\ImGuiSeStringRenderer\Internal\TextProcessing\DerivedGeneralCategory.txt" LogicalName="DerivedGeneralCategory.txt" />
+      <EmbeddedResource Include="Interface\ImGuiSeStringRenderer\Internal\TextProcessing\EastAsianWidth.txt" LogicalName="EastAsianWidth.txt" />
+      <EmbeddedResource Include="Interface\ImGuiSeStringRenderer\Internal\TextProcessing\emoji-data.txt" LogicalName="emoji-data.txt" />
+      <EmbeddedResource Include="Interface\ImGuiSeStringRenderer\Internal\TextProcessing\LineBreak.txt" LogicalName="LineBreak.txt" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource WithCulture="false" Include="Interface\Textures\TextureWraps\Internal\DrawListTextureWrap\Renderer.DrawToPremul.ps.bin" />
+      <EmbeddedResource WithCulture="false" Include="Interface\Textures\TextureWraps\Internal\DrawListTextureWrap\Renderer.DrawToPremul.vs.bin" />
+      <EmbeddedResource WithCulture="false" Include="Interface\Textures\TextureWraps\Internal\DrawListTextureWrap\Renderer.MakeStraight.ps.bin" />
+      <EmbeddedResource WithCulture="false" Include="Interface\Textures\TextureWraps\Internal\DrawListTextureWrap\Renderer.MakeStraight.vs.bin" />
+    </ItemGroup>
+
+    <Target Name="AddRuntimeDependenciesToContent" BeforeTargets="GetCopyToOutputDirectoryItems" DependsOnTargets="GenerateBuildDependencyFile;GenerateBuildRuntimeConfigurationFiles">
+        <ItemGroup>
+            <ContentWithTargetPath Include="$(ProjectDepsFilePath)" CopyToOutputDirectory="PreserveNewest" TargetPath="$(ProjectDepsFileName)" />
+            <ContentWithTargetPath Include="$(ProjectRuntimeConfigFilePath)" CopyToOutputDirectory="PreserveNewest" TargetPath="$(ProjectRuntimeConfigFileName)" />
+        </ItemGroup>
+    </Target>
+
+    <PropertyGroup>
+        <!-- Needed temporarily for CI -->
+        <TempVerFile>$(OutputPath)TEMP_gitver.txt</TempVerFile>
+        <CommitHashFile>$(OutputPath)commit_hash.txt</CommitHashFile>
+        <DalamudRevisionFile>$(OutputPath)revision.txt</DalamudRevisionFile>
+    </PropertyGroup>
+
+    <Target Name="GetVersionData" BeforeTargets="WriteVersionData" Condition="'$(SCMVersion)'=='' And '$(Configuration)'=='Release'">
+        <Exec Command="git -C &quot;$(ProjectDir.Replace('\','\\'))&quot; rev-list --count HEAD" ConsoleToMSBuild="true">
+            <Output TaskParameter="ConsoleOutput" PropertyName="DalamudGitCommitCount" />
+        </Exec>
+        <Exec Command="git -C &quot;$(ProjectDir.Replace('\','\\'))&quot; describe --match=NeVeRmAtCh --always --abbrev=40 --dirty" ConsoleToMSBuild="true">
+            <Output TaskParameter="ConsoleOutput" PropertyName="DalamudGitCommitHash" />
+        </Exec>
+        <Exec Command="git -C &quot;$(ProjectDir.Replace('\','\\'))&quot; describe --tags --always --dirty" ConsoleToMSBuild="true">
+            <Output TaskParameter="ConsoleOutput" PropertyName="DalamudGitDescribeOutput" />
+        </Exec>
+        <Exec Command="git -C &quot;$(ProjectDir.Replace('\','\\'))&quot; rev-parse --abbrev-ref HEAD" ConsoleToMSBuild="true">
+            <Output TaskParameter="ConsoleOutput" PropertyName="DalamudGitBranch" />
+        </Exec>
+        <Exec Command="git -C &quot;$(ProjectDir.Replace('\','\\'))\..\lib\FFXIVClientStructs&quot; describe --long --always --dirty" ConsoleToMSBuild="true">
+            <Output TaskParameter="ConsoleOutput" PropertyName="ClientStructsGitDescribeOutput" />
+        </Exec>
+
+        <PropertyGroup>
+            <CommitCount>$([System.Text.RegularExpressions.Regex]::Replace($(DalamudGitCommitCount), @"\t|\n|\r", ""))</CommitCount>
+            <CommitHash>$([System.Text.RegularExpressions.Regex]::Replace($(DalamudGitCommitHash), @"\t|\n|\r", ""))</CommitHash>
+            <Branch>$([System.Text.RegularExpressions.Regex]::Replace($(DalamudGitBranch), @"\t|\n|\r", ""))</Branch>
+            <SCMVersion>$([System.Text.RegularExpressions.Regex]::Replace($(DalamudGitDescribeOutput), @"\t|\n|\r", ""))</SCMVersion>
+            <CommitHashClientStructs>$([System.Text.RegularExpressions.Regex]::Replace($(ClientStructsGitDescribeOutput), @"\t|\n|\r", ""))</CommitHashClientStructs>
+        </PropertyGroup>
+
+        <Exec Command="echo|set /P =&quot;$(CommitCount)&quot; &gt; $(DalamudRevisionFile)" IgnoreExitCode="true" />
+        <Exec Command="echo|set /P =&quot;$(CommitHash)&quot; &gt; $(CommitHashFile)" IgnoreExitCode="true" />
+        <Exec Command="echo|set /P =&quot;$(SCMVersion)&quot; &gt; $(TempVerFile)" IgnoreExitCode="true" />
+    </Target>
+
+    <!-- did anything change? -->
+    <Target Name="CollectLocalBuildInputs" DependsOnTargets="$(CoreCompileDependsOn);GenerateSourceLinkFile">
+        <PropertyGroup>
+            <LocalBuildTimeFile>$(IntermediateOutputPath)LocalBuildTime.txt</LocalBuildTimeFile>
+        </PropertyGroup>
+        <ItemGroup>
+            <!-- see: target "CoreCompile" in Microsoft.CSharp.Core.targets -->
+            <LocalBuildInput Include="$(MSBuildAllProjects);@(Compile);@(_CoreCompileResourceInputs);$(ApplicationIcon);$(KeyOriginatorFile);@(ReferencePathWithRefAssemblies);@(CompiledLicenseFile);@(LinkResource);@(EmbeddedDocumentation);$(Win32Resource);$(Win32Manifest);@(CustomAdditionalCompileInputs);$(ResolvedCodeAnalysisRuleSet);@(AdditionalFiles);@(EmbeddedFiles);@(Analyzer);@(EditorConfigFiles);$(SourceLink)" Exclude="$(IntermediateOutputPath)CustomAssemblyInfo.cs" />
+        </ItemGroup>
+    </Target>
+
+    <Target Name="WriteLocalBuildTimeFile" DependsOnTargets="CollectLocalBuildInputs" Inputs="@(LocalBuildInput)" Outputs="$(LocalBuildTimeFile)">
+        <WriteLinesToFile File="$(LocalBuildTimeFile)" Lines="$([System.DateTime]::Now.ToString('yyyy-MM-dd HH:mm:ss'))" Overwrite="true" />
+    </Target>
+
+    <Target Name="GenerateStubVersionData" BeforeTargets="WriteVersionData" DependsOnTargets="WriteLocalBuildTimeFile" Condition="'$(SCMVersion)'=='' And '$(Configuration)'!='Release'">
+        <!-- stub out version since it takes a while. -->
+        <PropertyGroup>
+            <SCMVersion>Local build at $([System.IO.File]::ReadAllText('$(LocalBuildTimeFile)').Trim())</SCMVersion>
+            <Branch>???</Branch>
+            <CommitHashClientStructs>???</CommitHashClientStructs>
+        </PropertyGroup>
+    </Target>
+
+    <Target Name="WriteVersionData" BeforeTargets="CoreCompile">
+        <!-- names the obj/.../CustomAssemblyInfo.cs file -->
+        <PropertyGroup>
+            <CustomAssemblyInfoFile>$(IntermediateOutputPath)CustomAssemblyInfo.cs</CustomAssemblyInfoFile>
+        </PropertyGroup>
+        <!-- includes the CustomAssemblyInfo for compilation into your project -->
+        <ItemGroup>
+            <Compile Include="$(CustomAssemblyInfoFile)" />
+        </ItemGroup>
+        <!-- defines the AssemblyMetadata attribute that will be written -->
+        <ItemGroup>
+            <VersionMetadata Include="SCMVersion" Value="$(SCMVersion)" Condition="'$(SCMVersion)' != ''" />
+            <VersionMetadata Include="GitCommitCount" Value="$(CommitCount)" Condition="'$(CommitCount)' != ''" />
+            <VersionMetadata Include="GitBranch" Value="$(Branch)" Condition="'$(Branch)' != ''" />
+            <VersionMetadata Include="GitHashClientStructs" Value="$(CommitHashClientStructs)" Condition="'$(CommitHashClientStructs)' != ''" />
+            <VersionMetadata Include="GitHash" Value="$(CommitHash)" Condition="'$(CommitHash)' != ''" />
+            <AssemblyAttributes Include="AssemblyMetadata"><_Parameter1>%(VersionMetadata.Identity)</_Parameter1><_Parameter2>%(VersionMetadata.Value)</_Parameter2></AssemblyAttributes>
+        </ItemGroup>
+        <WriteCodeFragment Language="C#" OutputFile="$(CustomAssemblyInfoFile).tmp" AssemblyAttributes="@(AssemblyAttributes)" />
+        <ReadLinesFromFile File="$(CustomAssemblyInfoFile).tmp"><Output TaskParameter="Lines" ItemName="CustomAssemblyInfoFileLines" /></ReadLinesFromFile>
+        <WriteLinesToFile File="$(CustomAssemblyInfoFile)" Lines="@(CustomAssemblyInfoFileLines)" Overwrite="true" WriteOnlyWhenDifferent="true" />
+    </Target>
+</Project>

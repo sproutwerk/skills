@@ -1,0 +1,600 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": ".gitmodules",
+      "path": "references/source/AutoRetainer/.gitmodules",
+      "sha256": "2c7104f2ddb266075073c438f26c7f4ee9c0b9257dd66bb42e3a518db3114e27"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/AutoRetainer.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/AutoRetainer.cs",
+      "sha256": "acd3adf08bb06c9250640b70ec40b7883e0836a40b79dc2c719f34a2b69d3232"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/AutoRetainer.csproj",
+      "path": "references/source/AutoRetainer/AutoRetainer/AutoRetainer.csproj",
+      "sha256": "9ad07e437b9545f85d0520d6a16bde3d0c3724cb3f1ab6e1e714ae2d9ec7bcd1"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/AutoRetainer.json",
+      "path": "references/source/AutoRetainer/AutoRetainer/AutoRetainer.json",
+      "sha256": "eb5c95002d876c57631d480456a2cb48950f842f7f35b554a9fdebbb82776181"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Global.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Global.cs",
+      "sha256": "003a06cf70330a8264aec8804cb7313dfb54380863bdfd6cbc7c18995c3be0ab"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Helpers/Utils.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Helpers/Utils.cs",
+      "sha256": "a4a986273bad90f602be6dd464ec81cfccc6451c557e15fc16e649d9ae723b22"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Helpers/VentureUtils.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Helpers/VentureUtils.cs",
+      "sha256": "cd08050972436ecee17da2aa6d31ac9869716f9df6c885c6a8307ca4cbc04ccd"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/EzIPCManagers/EzIPCManager.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/EzIPCManagers/EzIPCManager.cs",
+      "sha256": "d139c97fd038652a7429b74aaf8208054ff9b3410b9c33765b047ed933d0aed1"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/EzIPCManagers/IPC_GCContinuation.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/EzIPCManagers/IPC_GCContinuation.cs",
+      "sha256": "64ce3af6fddd762e19f71ae59c5260ce626faf630d0f86c4a18dd938e9be9eee"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/EzIPCManagers/IPC_PluginState.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/EzIPCManagers/IPC_PluginState.cs",
+      "sha256": "3714caf98aca86099327aea6bb0ab0b0cbb6f13d7f3c151221859625a0c63142"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/GcHandin/GCInfo.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/GcHandin/GCInfo.cs",
+      "sha256": "43a2ff1364e9f99681b2342282e21e405bc004736db599fc0442448f04e4d769"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/IPC.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/IPC.cs",
+      "sha256": "fc470a75b9cb97fb569c9da260011a438322e83a79dd17413918ac43c0416ced"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/Multi/MultiMode.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/Multi/MultiMode.cs",
+      "sha256": "c3b59ebef42e86028a816d98c7765ed3be9746147675251e493639f3a435bf19"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/OfflineDataManager.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/OfflineDataManager.cs",
+      "sha256": "fa65f31ee524506b37d162087f759fc4328713bb6b26ba7cee91e423af9f1331"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/Voyage/VoyageMain.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/Voyage/VoyageMain.cs",
+      "sha256": "0772d7120f6b233b3040b2b18aebbcbac1f281204f500689825e88496b99ca8e"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/Voyage/VoyageScheduler.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/Voyage/VoyageScheduler.cs",
+      "sha256": "77b1a17f42a74704ce85c04f787942a3c4d1becae7912a1b39c045db366fb98a"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Modules/Voyage/VoyageUtils.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Modules/Voyage/VoyageUtils.cs",
+      "sha256": "fc39ecbb2c1b32470c14779627f20c58019f02c03057166e95309d984671ef8e"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/PluginData/Config.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/PluginData/Config.cs",
+      "sha256": "739281904abedc667a184a3f7de533b8b975ba9bfa3ae12f0fcdd003e4be1038"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Scheduler/SchedulerMain.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Scheduler/SchedulerMain.cs",
+      "sha256": "a26e081451f54f541844beaeff7811a08acf9ed31ee6c245a2543993bb2f52f2"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Scheduler/Tasks/TaskPostprocessCharacterIPC.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Scheduler/Tasks/TaskPostprocessCharacterIPC.cs",
+      "sha256": "aabd9b54a64e3cc1e8de7a94213e25d71515263efb3ff009e37cfe9513b143e0"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Scheduler/Tasks/TaskPostprocessRetainerIPC.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Scheduler/Tasks/TaskPostprocessRetainerIPC.cs",
+      "sha256": "7e5acb9c0e35e143657cc9dcf1e1e4e3d845a2eee1c12990322f02bc4223c7a2"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/Services/IpcConfigValuesProvider.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/Services/IpcConfigValuesProvider.cs",
+      "sha256": "d6bef3490988172d14f024001d59045edce74d600ccfbe575edb99d849af9a7f"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/UI/Overlays/RetainerListOverlay.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/UI/Overlays/RetainerListOverlay.cs",
+      "sha256": "5cf9e166811d9656a597936c837f489b74467e271cddf1fd3af2678b0d9b81c1"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "AutoRetainer/UI/Windows/VenturePlanner.cs",
+      "path": "references/source/AutoRetainer/AutoRetainer/UI/Windows/VenturePlanner.cs",
+      "sha256": "9e61ec95b1b8262a8848a67665c87bccb8d344638ceac2a0cd56f4c9888cc583"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "LICENCE.md",
+      "path": "references/source/AutoRetainer/LICENCE.md",
+      "sha256": "43fb9e63ee674c9299563637a5eb8c711f38954132390149b7c92a8625cb8c82"
+    },
+    {
+      "repository": "AutoRetainer",
+      "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+      "upstreamPath": "README.md",
+      "path": "references/source/AutoRetainer/README.md",
+      "sha256": "644330fc568e54a4f012a24f58fb7db839946abd9c2175ab99e69e619f4c47e2"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/.editorconfig",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/.editorconfig",
+      "sha256": "3df097191b872286917516b76310301aa554b8d7cdab3e7f11ec11e610ecd73e"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/ApiConsts.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/ApiConsts.cs",
+      "sha256": "f8f54e2c7fec8923be0952d7dedf9b35326c0a2a35e3789713b68258df43ceba"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/AutoRetainerAPI.csproj",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/AutoRetainerAPI.csproj",
+      "sha256": "64c3e67432142f61303b7bf57c0678f9fc6c537c06e442ac7511a20b84601070"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/AutoRetainerApi.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/AutoRetainerApi.cs",
+      "sha256": "741c1f115ec0137f335641e3304c6058139d1af0d01dfceb036e97103bb395fa"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/AutoRetainerApiInternal.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/AutoRetainerApiInternal.cs",
+      "sha256": "aa6982f60672f2d54c9cc9bf5e067b297bdb7e53c1640811345d712824050796"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/AutoRetainerConfig.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/AutoRetainerConfig.cs",
+      "sha256": "6c17b696477c69d9abc40f0913574d8c35daea88d1dc6279e3d3b4b437bb424d"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/ARDiscardMiniConfig.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/ARDiscardMiniConfig.cs",
+      "sha256": "4f21c33e45510d156067fc4a95a28d6cc0d2ef49c9faaf3a63c6d627f104bbb7"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/AdditionalRetainerData.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/AdditionalRetainerData.cs",
+      "sha256": "8aae2d084ba93f39437a314e20a2f494959038e4d3b73e6a917ba4d34b0065c2"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/AdditionalVesselData.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/AdditionalVesselData.cs",
+      "sha256": "b142dbb2e64212d3dc1f3ae1cbf4a03263a9f4ed26115e6da787de91e9da8226"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/CutsceneSkipMode.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/CutsceneSkipMode.cs",
+      "sha256": "97712b93d759fbe7596ee4a33f39deccda37d33ac55019f32aae3fbf759c9480"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/DeployablesVisualOrder.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/DeployablesVisualOrder.cs",
+      "sha256": "f788f03a2894e17776879bf1351b58b0e7b7c592493bf6f8901777e9040ab1f0"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/EntrustCategoryConfiguration.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/EntrustCategoryConfiguration.cs",
+      "sha256": "bb9ffd95e653fc0cedd7199e6a3335c37672df60498d870c6de8ea4fb4eb687d"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/EntrustPlan.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/EntrustPlan.cs",
+      "sha256": "458e7eaf1786e62685af91e1c44d48619292cdcb359de490ba92c44cebfe70e2"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/FCData.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/FCData.cs",
+      "sha256": "352acf2b7c765f2523a5f7579b3d5ad6abfa72bd45cfc35d870038ed346d544b"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/GCDeliveryType.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/GCDeliveryType.cs",
+      "sha256": "6c7c76e817201a4f939abcd7a403e2b2a1dcaad5df6d6b42fe2967b231953e61"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/GCExchangeCategoryTab.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/GCExchangeCategoryTab.cs",
+      "sha256": "cfc55858bbad46b8a08635679247d52645affa95d2e1a2e51b0c3f8af20253a4"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/GCExchangeItem.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/GCExchangeItem.cs",
+      "sha256": "cf47f1bfa8dcd932c614659e3137ae91ca132940ebb798bb1475230bab821a13"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/GCExchangeListingMetadata.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/GCExchangeListingMetadata.cs",
+      "sha256": "c762647d22c55bd62ccf5b0c3a1698f44cf84875317be7262ed4cb65e21f80d5"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/GCExchangePlan.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/GCExchangePlan.cs",
+      "sha256": "a7028a8572f6a71c493ea2b2df1b0553a708c06e1d807dbc9c2d88ff653a88f5"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/GCExchangeRankTab.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/GCExchangeRankTab.cs",
+      "sha256": "78a316dfdde2c11f9dc6a6350b983ba5542f8d965f21c3c77ab39a14734ff501"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/HalfHourSchedule.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/HalfHourSchedule.cs",
+      "sha256": "fdc59543764f56da81782f9d5635d0a222c99a65e8ce545f30ade58fdede1a7b"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/HouseDescriptor.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/HouseDescriptor.cs",
+      "sha256": "8d11d45fb148eb7a31e5131274320417fd856dc9ef7a9ed064b8635180a78557"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/HouseTeleportTarget.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/HouseTeleportTarget.cs",
+      "sha256": "ffb33933114e920af2ce15ee3bae58a6da0d3f51318ca6d9c58eb005eb05d398"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/IMListKind.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/IMListKind.cs",
+      "sha256": "9964dbaed6df04906c56072b1133e3bd2710bcde6c7e7f49eed30fc631b80b23"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/IntervalState.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/IntervalState.cs",
+      "sha256": "5ad2e0d0a2d1bb581e1fd5811d7f5c461ffe754370f36c2aaea3f96805ec6153"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/InventoryManagementSettings.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/InventoryManagementSettings.cs",
+      "sha256": "51a698fa2a21691d1e96634f0b1b917634fb853ab78751f87d941f02eda53fd3"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/ItemWithQuantity.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/ItemWithQuantity.cs",
+      "sha256": "935b249132defbd8d9473aa2d6643bec87ba55d3ef2605d1ba9bae9ea1dfdd70"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/LevelAndPartsData.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/LevelAndPartsData.cs",
+      "sha256": "57835b1b427b774887e669803454166d787af6bea855ace234cdb9b53379320f"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/MultiModeCommonConfiguration.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/MultiModeCommonConfiguration.cs",
+      "sha256": "c8ddff631af86c41a7f5e298b398a2345718e0c6d6b1bb80f062def604a7687c"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/MultiModeType.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/MultiModeType.cs",
+      "sha256": "56f209d600e386581f97a26c148b80131336f8636f4d0c199e29b818728acade"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/OfflineCharacterData.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/OfflineCharacterData.cs",
+      "sha256": "c9231a3f92631ac2b7c47151df7e72693f00c7bfadbcf01311eac78e2fe7ab36"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/OfflineRetainerData.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/OfflineRetainerData.cs",
+      "sha256": "6aa00d6c84673758f870d64a8a58981e98d0fe107f52d87b667ad23b2b92ace6"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/OfflineVesselData.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/OfflineVesselData.cs",
+      "sha256": "f16f86d4cfb1fbc591e366fc186118f5d8b213722890868c0206cc5bb4a1f5ba"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/OpenBellBehavior.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/OpenBellBehavior.cs",
+      "sha256": "7757f96103a020d8fc7731e2d8be2b530a4806d859a3c639177f430a9be9cd24"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/PlanCompleteBehavior.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/PlanCompleteBehavior.cs",
+      "sha256": "3980740d33c39a457e47a345e0ee8ef5cc0dad48b51d9c5374df327408b8fdbb"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/PlannedVenture.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/PlannedVenture.cs",
+      "sha256": "ef84be57605df5b7010db50a629ae201c10e9f68c6a193bca4332a30b52a9dc1"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/PluginEnableReason.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/PluginEnableReason.cs",
+      "sha256": "eec80740fd38ed43af9483bde915f0542c7a5043fae2beaa58c821f9256ac6fe"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/RetainerVisualOrder.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/RetainerVisualOrder.cs",
+      "sha256": "8b0f83e848ca0183af27cdf08da4f34ca8fe9565fdd4f066c9d55471e0526a04"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/SubmarinePointPlan.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/SubmarinePointPlan.cs",
+      "sha256": "d6127b9926aed36329a77eb9ae55f6737f2c38e5fad71a209e577f90b03d298c"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/SubmarineUnlockPlan.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/SubmarineUnlockPlan.cs",
+      "sha256": "e8a0ac9de86fbefcf33310ffdf96a701e493b0f6d61bd9c51ae35093bcfc8553"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/TaskCompletedBehavior.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/TaskCompletedBehavior.cs",
+      "sha256": "ea678a5a17b89e8ed7dbfe4586a7259c8e7c627fad14c0a343c81c2a190622e5"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/TeleportOptions.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/TeleportOptions.cs",
+      "sha256": "90f5f4781ea3f302f2311d667bbfd119ec85e1cce436bb11557951f11a5e2d82"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/TeleportOptionsOverride.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/TeleportOptionsOverride.cs",
+      "sha256": "8c06bdcdcce65f32be2afad7e923aa0394d6f14dd0e2091b67f15c0305ec659b"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/UnavailableVentureDisplay.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/UnavailableVentureDisplay.cs",
+      "sha256": "23aa8f6611d16347cf1d3547cde8b5151aa8789a53d1ddcc758d30e5963abd15"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/UnlockMode.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/UnlockMode.cs",
+      "sha256": "a8d93861af77c95cecdadc44c73e64260ea8eac4bb76c570caf58cef878d38a3"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/UnoptimalVesselConfiguration.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/UnoptimalVesselConfiguration.cs",
+      "sha256": "278af1bd4d4463559236c194fa0d16bcdf4566708752877d2752c9251f1b7273"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/VenturePlan.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/VenturePlan.cs",
+      "sha256": "3440eb2acbc41e21e25e81d153149c9ffe1f69665a09d517578bf82c2a4b678a"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/VesselBehavior.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/VesselBehavior.cs",
+      "sha256": "e7ff7548dc3e45eafe930ad31e2affe37f34bd219c616c5b6e8ffa3249bfd07f"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/VesselTaskType.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/VesselTaskType.cs",
+      "sha256": "bbef6455c27047c98435435e3e8e4ed9024e387ac0497760e882050fcea705ba"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Configuration/WorkshopFailAction.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Configuration/WorkshopFailAction.cs",
+      "sha256": "fb0b0e1f315364e8232fcf2cfb7913548ecc179e5eef3845cc3bee716240e05e"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/Delegates.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/Delegates.cs",
+      "sha256": "62a25a97851ef659be4749ce795331b5194eefd00fc5f1288c686f0e5a561448"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/StaticData/ApartmentHousingMarker.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/StaticData/ApartmentHousingMarker.cs",
+      "sha256": "3dd6681f0d5531b749a52b3842059de4208f7097db17a37d6c4730c917def788"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/StaticData/FCHousingMarker.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/StaticData/FCHousingMarker.cs",
+      "sha256": "6e5a5eace71a7ba0e0a391c622cb37218b56327439de0f8ca03fbce913764123"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/StaticData/FullGrandCompanyInfo.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/StaticData/FullGrandCompanyInfo.cs",
+      "sha256": "3b3ca3a17bf56f683afe16ed48e5d91a69775ab62253d87ca16c2a4b6094c36e"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/StaticData/NPCDescriptor.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/StaticData/NPCDescriptor.cs",
+      "sha256": "b744153e57b64a41c67d57df507de4b8770f524c62e04740d3de2886dd487d5c"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/StaticData/PrivateHousingMarker.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/StaticData/PrivateHousingMarker.cs",
+      "sha256": "40e8a1c1ba4b4492e9f118ca097e5ce40cd689f00cbc20f2d42909f2dfa627f0"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "AutoRetainerAPI/StaticData/SharedHousingMarker.cs",
+      "path": "references/source/AutoRetainerAPI/AutoRetainerAPI/StaticData/SharedHousingMarker.cs",
+      "sha256": "cb474e1d4104af438dedb7667e1e1f12b340942be23d83f16ad1ce786269cc8a"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "LICENSE",
+      "path": "references/source/AutoRetainerAPI/LICENSE",
+      "sha256": "fa18671c9ff816d2a815c51360db237ca428dfb79f4c9c68109d8d9ff90ccef0"
+    },
+    {
+      "repository": "AutoRetainerAPI",
+      "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+      "upstreamPath": "README.md",
+      "path": "references/source/AutoRetainerAPI/README.md",
+      "sha256": "4915aba91eda9b6839b8c38aca69c1ed1021b7d2ac0a1d0b6b83d0a75cd74d33"
+    }
+  ]
+}

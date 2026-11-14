@@ -1,0 +1,601 @@
+{
+  "repository": "https://github.com/PunishXIV/Questionable",
+  "revision": "0a1510bd7be42f3e5063a8bccf398312d2d2f7e9",
+  "files": [
+    {
+      "path": "references/source/Questionable/CONTRIBUTING.md",
+      "upstreamPath": "CONTRIBUTING.md",
+      "sha256": "2ffd0b2f53e42a7cc8bc25e50984c0e42b79ff61025a2afc7a01979511d9ac04"
+    },
+    {
+      "path": "references/source/Questionable/Directory.Build.props",
+      "upstreamPath": "Directory.Build.props",
+      "sha256": "a54319f4a1a0c99de6eaad48443736695d8f15795bd315b0d095bd6474ea0540"
+    },
+    {
+      "path": "references/source/Questionable/Directory.Build.targets",
+      "upstreamPath": "Directory.Build.targets",
+      "sha256": "801b4a373e4858f28d4f7bc0d22232ee9444d9ef36337588baa9e373d1683d21"
+    },
+    {
+      "path": "references/source/Questionable/LICENSE",
+      "upstreamPath": "LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "references/source/Questionable/QuestPaths.JsonValidator/TestQuestLoader.cs",
+      "upstreamPath": "QuestPaths.JsonValidator/TestQuestLoader.cs",
+      "sha256": "09250565dc3044aa069ffa024f919ee75b7486203e8a0e98fce96cadaa5b5d5a"
+    },
+    {
+      "path": "references/source/Questionable/QuestPaths.JsonValidator/ValidJsonFilesTest.cs",
+      "upstreamPath": "QuestPaths.JsonValidator/ValidJsonFilesTest.cs",
+      "sha256": "a9e009c28b16a5a42d77da148449d2b63502993e626910a597b2fc10f4cef433"
+    },
+    {
+      "path": "references/source/Questionable/QuestPaths/2.x - A Realm Reborn/MSQ-1/Gridania/85_Close to Home (Lancer).json",
+      "upstreamPath": "QuestPaths/2.x - A Realm Reborn/MSQ-1/Gridania/85_Close to Home (Lancer).json",
+      "sha256": "0f7f2cc49f0a27ffd884df6c17b9325a0639e8f8dd5b422e0097739b4a181b7f"
+    },
+    {
+      "path": "references/source/Questionable/QuestPaths/README.md",
+      "upstreamPath": "QuestPaths/README.md",
+      "sha256": "6aa1e65d577938df696c8d616e52594f192103becbdcbf4f19e4220c6ef9d22d"
+    },
+    {
+      "path": "references/source/Questionable/QuestPaths/Reusable Paths.md",
+      "upstreamPath": "QuestPaths/Reusable Paths.md",
+      "sha256": "828583df7d7642f852f9feebf60229899e12c6375b62a291b3d13791ec44ce58"
+    },
+    {
+      "path": "references/source/Questionable/QuestPaths/quest-v1.json",
+      "upstreamPath": "QuestPaths/quest-v1.json",
+      "sha256": "5398d8b62f9ee1fee1d254f613e6c9d84e8820eeafadda6bb70aa9735174a4dc"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.IpcTest/IpcTestPlugin.cs",
+      "upstreamPath": "Questionable.IpcTest/IpcTestPlugin.cs",
+      "sha256": "737959ce3cc259efa67438ee35b060f2272d526c851802489f1764103468f0ac"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/AssemblyModelLoader.cs",
+      "upstreamPath": "Questionable.Model/AssemblyModelLoader.cs",
+      "sha256": "b6defe331f30440e10f5159db420b5a186b3d7ea0f9c0b485abef8337ec4f2e5"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/AethernetShortcut.cs",
+      "upstreamPath": "Questionable.Model/Common/AethernetShortcut.cs",
+      "sha256": "ac24a631d01b18675c7106dc17569f044e993b3436d83452b7c46e64be679391"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/Attributes.cs",
+      "upstreamPath": "Questionable.Model/Common/Attributes.cs",
+      "sha256": "dc61276cac13a8cf788995d8fe3056fce6d913d0576373603fa8bc4c6e34764c"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/Converter/AetheryteConverter.cs",
+      "upstreamPath": "Questionable.Model/Common/Converter/AetheryteConverter.cs",
+      "sha256": "ceaa35f14acb095ceff9f7a1af682e7ac3e62da3770733e62ad075e240e2d917"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/Converter/EnumConverter.cs",
+      "upstreamPath": "Questionable.Model/Common/Converter/EnumConverter.cs",
+      "sha256": "1bf388583588d1775fe1fee741d2976dd2ffb8226b8a04a806a8f3909467a9ce"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/Converter/StringListOrValueConverter.cs",
+      "upstreamPath": "Questionable.Model/Common/Converter/StringListOrValueConverter.cs",
+      "sha256": "905c466e216d1882d702d8ff20744dd2a435dcfba2d30018aab3abff90f7a982"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/Converter/VectorConverter.cs",
+      "upstreamPath": "Questionable.Model/Common/Converter/VectorConverter.cs",
+      "sha256": "321d08139c48b1b90e21775845c790c5d65cecbb10bd2288b04f2a724962b04f"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/EAetheryteLocation.cs",
+      "upstreamPath": "Questionable.Model/Common/EAetheryteLocation.cs",
+      "sha256": "6e815da64e1922da68c37816b9d0e53f7070cd2632cea6cac9333b070e16f7f3"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/EAlliedSociety.cs",
+      "upstreamPath": "Questionable.Model/Common/EAlliedSociety.cs",
+      "sha256": "7aad8dd998f7d18133a4468465bc8287e65985434d2dce022bc353bade44363f"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/EAlliedSocietyRank.cs",
+      "upstreamPath": "Questionable.Model/Common/EAlliedSocietyRank.cs",
+      "sha256": "e9b3f9a2102a165bfb0e9e53ec44c3c9c7bbd0c01c3af2a4b45823ffa0c9c12a"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/ECombatModule.cs",
+      "upstreamPath": "Questionable.Model/Common/ECombatModule.cs",
+      "sha256": "bd8681f50faf0a0f37112f45a382fbee68e0ce21ea3af28447855eebdbd2d1de"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/EContentType.cs",
+      "upstreamPath": "Questionable.Model/Common/EContentType.cs",
+      "sha256": "a3691bf83dec743945e2852d22c95e424a82dfd400c5e6414c6d84cf62e631ab"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/EGearsetUpdateSource.cs",
+      "upstreamPath": "Questionable.Model/Common/EGearsetUpdateSource.cs",
+      "sha256": "67dab0ca13d4130c6c1abcd38492bd8749c40392ff9890726c69f38b18e608b0"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/EItemRewardType.cs",
+      "upstreamPath": "Questionable.Model/Common/EItemRewardType.cs",
+      "sha256": "0257679c8f3e74ca81cd68e07e87288baded62379cc492378a8b887e4e10955e"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/EMovementType.cs",
+      "upstreamPath": "Questionable.Model/Common/EMovementType.cs",
+      "sha256": "c2192ed691ee1b2c2fffcb95868a6467c8cf584f23f8e44f22bb1f548c766745"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Common/EQuestJoin.cs",
+      "upstreamPath": "Questionable.Model/Common/EQuestJoin.cs",
+      "sha256": "0e6b4b4765c1bef63af785529f011d8501337c00fddafe849a408c148249d517"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/EExpansionVersion.cs",
+      "upstreamPath": "Questionable.Model/EExpansionVersion.cs",
+      "sha256": "140de82e0df220aaf2e18a6dcd3a2a58a4e933cdd2af74e880a4a2fa69bb3ec4"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Gathering/GatheringLocation.cs",
+      "upstreamPath": "Questionable.Model/Gathering/GatheringLocation.cs",
+      "sha256": "962a20ee83912cf508a9da7554f0e0cf05883f6e7be66c0e401ba9c812eab859"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Gathering/GatheringNode.cs",
+      "upstreamPath": "Questionable.Model/Gathering/GatheringNode.cs",
+      "sha256": "0b6aa55c2c977783fd95755e4593793d4e8a342a598934fbabe8b18eaf4509c0"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Gathering/GatheringNodeGroup.cs",
+      "upstreamPath": "Questionable.Model/Gathering/GatheringNodeGroup.cs",
+      "sha256": "7b6d72299bcae59ba87a2a24ef47633bc0ff45e80b0c74cf43568e81dcb28598"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Gathering/GatheringPointId.cs",
+      "upstreamPath": "Questionable.Model/Gathering/GatheringPointId.cs",
+      "sha256": "17d779b0bb809dfbf9be78cd7e1aca0f9f2d20d6e8d55f9139e8eb19ad79a645"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Gathering/GatheringRoot.cs",
+      "upstreamPath": "Questionable.Model/Gathering/GatheringRoot.cs",
+      "sha256": "cf60501c8ee7f177019b9c7f228a2f4501794655fc1fd181b56a871fb01ea287"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/GatheringMath.cs",
+      "upstreamPath": "Questionable.Model/GatheringMath.cs",
+      "sha256": "d8679b984b42254201ea9601244f1bd797ab8e3b39705434bd69219777246213"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/PathDataFormat.cs",
+      "upstreamPath": "Questionable.Model/PathDataFormat.cs",
+      "sha256": "ad67dcac7ee8d7f056766ca8fa06576342b79d25b9aa1be6448c392006716106"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/QuestPatchMapper.cs",
+      "upstreamPath": "Questionable.Model/QuestPatchMapper.cs",
+      "sha256": "c8183b2a32c0555bf3f88b6a2bcf7d92a26dacbb7850ea87d84c077756b37197"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/ChatMessage.cs",
+      "upstreamPath": "Questionable.Model/Questing/ChatMessage.cs",
+      "sha256": "eeea2a449455612ba89bc321fe7a77ca724c8ed876bb57404493f12cab4dd676"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/CombatItemUse.cs",
+      "upstreamPath": "Questionable.Model/Questing/CombatItemUse.cs",
+      "sha256": "ccb1dfd877828338ebbeac9da5cd8bd70fa3428f844b775668bcd78a058fd147"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/ComplexCombatData.cs",
+      "upstreamPath": "Questionable.Model/Questing/ComplexCombatData.cs",
+      "sha256": "1851016deb58a0f2a3b6b1d7e298998487755521ea0e8f6917609cb3841f819e"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/ActionConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/ActionConverter.cs",
+      "sha256": "7d18209996bfa8153a9b71208f112454ac7516dd34225e3c6455cc26fe722ae2"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/AethernetShardConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/AethernetShardConverter.cs",
+      "sha256": "a1ef6de3f14b3e11860c31fa461f12b31f58824ab7f58e3ce40a38f4a8ed7f57"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/AethernetShortcutConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/AethernetShortcutConverter.cs",
+      "sha256": "59b43949c20d178535b3ccb3e014584f025b942fce96ea71454c42fa0d0d77a5"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/CombatItemUseConditionConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/CombatItemUseConditionConverter.cs",
+      "sha256": "35b1b5ddd54d2f64fdacbfd98098ed8765131e6d465a65c89321247f7a9d4341"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/DialogueChoiceTypeConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/DialogueChoiceTypeConverter.cs",
+      "sha256": "9c546c7959526ea0bbbb98a5f28983a9d9daea35bd623673f662ad04db8c5d93"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/ElementIdConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/ElementIdConverter.cs",
+      "sha256": "233a7a4ea3f35bc726f1b177a4cb7762b0beaa7f06c2d5d57a1b45d46a5bbb62"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/ElementIdListConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/ElementIdListConverter.cs",
+      "sha256": "0b6f9bc5e2e696f6cee7f38101e00d498cf4a8f94a9335917b447e0c9fd36f6d"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/EmoteConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/EmoteConverter.cs",
+      "sha256": "56ecd7185a5f2ad7739acaafd5bb14099eeeee56bcc1d247a2f242a0ae7cbf19"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/EnemySpawnTypeConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/EnemySpawnTypeConverter.cs",
+      "sha256": "2f1acbbb065db9b99cd5f4579f49c56894745e01f69e8e90ba92839491d8ca6b"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/ExcelRefConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/ExcelRefConverter.cs",
+      "sha256": "7eab531f4bc201e3d5c1511e6c18516b98928b1eacee442769adb5948a695278"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/ExtendedClassJobConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/ExtendedClassJobConverter.cs",
+      "sha256": "4100d6a466feb0c79a3a65ea5ef88b3c8077542248e41341b5e81fcfe2aa92ab"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/HookTypeFilterConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/HookTypeFilterConverter.cs",
+      "sha256": "87edbd34dfa2e09c613c598e347fe17d4137adc07f0a025a833c07b1ae335660"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/InteractionTypeConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/InteractionTypeConverter.cs",
+      "sha256": "b0b090fbd34f7620acb2dc5b5de545448f7f5423491fa38d722082d7d4b23503"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/JumpTypeConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/JumpTypeConverter.cs",
+      "sha256": "8301b0b4ae7651ebdb3130aff97f5f3e52a7e63242355e3fc7511aafd8b344bb"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/LockedSkipConditionConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/LockedSkipConditionConverter.cs",
+      "sha256": "7d7d154775427dc5bc3e2eb08a8c0d22f8e7828c5e908bbff33b747a806626b5"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/QuestWorkConfigConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/QuestWorkConfigConverter.cs",
+      "sha256": "81ccb752432370bc020d87df09ba0aad15c5fbf2f842ec1b2853d50a0bc9cc34"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/QuestWorkModeConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/QuestWorkModeConverter.cs",
+      "sha256": "5460333184ad18e64b67d3dfb16cb197c4a56244c0fa1b1dddc2d8b00baae8ad"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/SkipConditionConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/SkipConditionConverter.cs",
+      "sha256": "c7282a047a870e00159e82f10229826ff98a636bbd8665406f06f37c0fe54d42"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/Converter/StatusConverter.cs",
+      "upstreamPath": "Questionable.Model/Questing/Converter/StatusConverter.cs",
+      "sha256": "009362f71673e77ba00165b864533e44c25d339cebeb4851db14b4d5393a679e"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/DialogueChoice.cs",
+      "upstreamPath": "Questionable.Model/Questing/DialogueChoice.cs",
+      "sha256": "b038548ec262cca1784e73047e32ca44a26d7856607fc601ee301cec238550c9"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/DutyOptions.cs",
+      "upstreamPath": "Questionable.Model/Questing/DutyOptions.cs",
+      "sha256": "d7434f782b83eb0c2f104f2e7b3745514a540162b804da4f11d95b999e8a2648"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EAction.cs",
+      "upstreamPath": "Questionable.Model/Questing/EAction.cs",
+      "sha256": "aed0c70e275467dfb90dc5ba3d34422d493dba6682623aebbad7bfdf493d5e40"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/ECombatItemUseCondition.cs",
+      "upstreamPath": "Questionable.Model/Questing/ECombatItemUseCondition.cs",
+      "sha256": "b510e794d134d3be167ac01473e4f66fdb9c9273f32c68761e3ca80f8f4e7dbd"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EDialogChoiceType.cs",
+      "upstreamPath": "Questionable.Model/Questing/EDialogChoiceType.cs",
+      "sha256": "a874363dc068a4b368e3a3191bdddfef33b00f6f8412779a5cba2cb2bcc08c27"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EEmote.cs",
+      "upstreamPath": "Questionable.Model/Questing/EEmote.cs",
+      "sha256": "be8842f56a9a9953a0a64b394f6eb729254743929cfb9b6487aae5491cfccaca"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EEnemySpawnType.cs",
+      "upstreamPath": "Questionable.Model/Questing/EEnemySpawnType.cs",
+      "sha256": "1cbfe1949835cb2b3deb2629ba2bebd6119db92a7292ae11ab40125db21e23b4"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EExtendedClassJob.cs",
+      "upstreamPath": "Questionable.Model/Questing/EExtendedClassJob.cs",
+      "sha256": "e4033ddc22e215e1c8e559bf27e53839506579a0c87d598ef5ba893e63228c27"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EExtraSkipCondition.cs",
+      "upstreamPath": "Questionable.Model/Questing/EExtraSkipCondition.cs",
+      "sha256": "76f4917a89153628ac709885abe14a3014fc13b2849ac7667880635ffb118f2b"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EInteractionType.cs",
+      "upstreamPath": "Questionable.Model/Questing/EInteractionType.cs",
+      "sha256": "3ef5af396164b7a517baf0a342f66711b9575be5f0514fae4f761afc57a060b8"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EItemQuality.cs",
+      "upstreamPath": "Questionable.Model/Questing/EItemQuality.cs",
+      "sha256": "0bf8ec7a8cf848e45028b6f9c020136284678e308306a94096015db69b486a43"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EJumpType.cs",
+      "upstreamPath": "Questionable.Model/Questing/EJumpType.cs",
+      "sha256": "a08b9dd90a5c690456d908742a511d69058659c9f70197e3f5254ba1e4b1b2f4"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/ELockedSkipCondition.cs",
+      "upstreamPath": "Questionable.Model/Questing/ELockedSkipCondition.cs",
+      "sha256": "f63ff66c6d55bfe434ec2ad150fcdaa35d2e834cb034a6f805e6456f929afbff"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EQuestWorkMode.cs",
+      "upstreamPath": "Questionable.Model/Questing/EQuestWorkMode.cs",
+      "sha256": "91d38c451fa67e50043e1f469f70d507092d4fbbe2604d447f46d5f6598080f7"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/EStatus.cs",
+      "upstreamPath": "Questionable.Model/Questing/EStatus.cs",
+      "sha256": "4b1ccce623d5ecbe6ccf15667d41ef1d8d6c82dad42c744773443ddc899301b4"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/ElementId.cs",
+      "upstreamPath": "Questionable.Model/Questing/ElementId.cs",
+      "sha256": "9718e9292ed50ef036ebaf13d056c9b9c515babdb139c7d1f6ca82b8038557ae"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/ExcelRef.cs",
+      "upstreamPath": "Questionable.Model/Questing/ExcelRef.cs",
+      "sha256": "8e0889aa1a27bbc00917a20837bd21df638137bedc9023ab355a3faf69fab35c"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/GatheredItem.cs",
+      "upstreamPath": "Questionable.Model/Questing/GatheredItem.cs",
+      "sha256": "45e9f38f3787e64f5d04c3287e6469c3d324b058ac86a38b42ad6065012b8935"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/HookTypeFilter.cs",
+      "upstreamPath": "Questionable.Model/Questing/HookTypeFilter.cs",
+      "sha256": "4dcc7b6663fdad5f6f749dbdfaf2355a01a573875ca5c36539be4b2e9ffc2765"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/JumpDestination.cs",
+      "upstreamPath": "Questionable.Model/Questing/JumpDestination.cs",
+      "sha256": "de6ea15d6d0b9cb7403c450566987bef333f1cb37080bb86cd9376de949ae4a5"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/LastChecked.cs",
+      "upstreamPath": "Questionable.Model/Questing/LastChecked.cs",
+      "sha256": "49589d564fbd37bf7167618ffe37b1a273dc3c912823151b6d58a660a1aac844"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/NearPositionCondition.cs",
+      "upstreamPath": "Questionable.Model/Questing/NearPositionCondition.cs",
+      "sha256": "8d9533a8617cb78ed0f4a86525a5ec3a62136525f61b64c10e81ab3804bffc69"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/PurchaseMenu.cs",
+      "upstreamPath": "Questionable.Model/Questing/PurchaseMenu.cs",
+      "sha256": "7d129e5d3d757bf79ad2e4798eb6e31a717b87d56b99d14d6b0f455444d40718"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/QuestRoot.cs",
+      "upstreamPath": "Questionable.Model/Questing/QuestRoot.cs",
+      "sha256": "41120e46dfd19a1a31260aca55d63832b33361749f61e4a52bda58ebf6ca8707"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/QuestSequence.cs",
+      "upstreamPath": "Questionable.Model/Questing/QuestSequence.cs",
+      "sha256": "8f53a8a527ba72bbf14ac9a477dd84a8459c3e5d44873f205341be33b807af84"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/QuestStep.cs",
+      "upstreamPath": "Questionable.Model/Questing/QuestStep.cs",
+      "sha256": "571254929131462e9c9f75008cdfa1dd8297d7f2d7ca7b11ac06adb8fd8906e9"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/QuestWorkValue.cs",
+      "upstreamPath": "Questionable.Model/Questing/QuestWorkValue.cs",
+      "sha256": "b0bdb66ea7e927d876c77fa944515fb080918df8fb7f53795ced6dd1ccb6078b"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/SinglePlayerDutyOptions.cs",
+      "upstreamPath": "Questionable.Model/Questing/SinglePlayerDutyOptions.cs",
+      "sha256": "ecf56c55bcba4b99b3e575ed128450cd4829dc4e83e7f957bf291efe872bdcdf"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/SkipAetheryteCondition.cs",
+      "upstreamPath": "Questionable.Model/Questing/SkipAetheryteCondition.cs",
+      "sha256": "a7510db4b04220641f086504e560170fde7d247a57b0060bdb55ebe40ce43753"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/SkipConditions.cs",
+      "upstreamPath": "Questionable.Model/Questing/SkipConditions.cs",
+      "sha256": "6459e43b696eb8253cd4b745dac64ca50fa867ea3edd27eb3dea3b751ced10cb"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/SkipItemConditions.cs",
+      "upstreamPath": "Questionable.Model/Questing/SkipItemConditions.cs",
+      "sha256": "2ff911fcfa355318fad1551a28cfdaeb8409ff1e8329322fe55f6f5dd336355b"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questing/SkipStepConditions.cs",
+      "upstreamPath": "Questionable.Model/Questing/SkipStepConditions.cs",
+      "sha256": "6fb0654547e795697f0f28595f84de185b725b708edb9914aef2f9c71bcf72e7"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/Questionable.Model.csproj",
+      "upstreamPath": "Questionable.Model/Questionable.Model.csproj",
+      "sha256": "af8c12acbf579eda07b0f425d1b6ce6e6bc9777e788914969b7e7788bde764b5"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/common-aethernetshard.json",
+      "upstreamPath": "Questionable.Model/common-aethernetshard.json",
+      "sha256": "c91b47d62580d30b6361787977541f65588bf668ab0985cd97858291a691f2cd"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/common-aetheryte.json",
+      "upstreamPath": "Questionable.Model/common-aetheryte.json",
+      "sha256": "05cdd0d0cc48a5b50337eef3728f601c4fb640d04dc2db48a0a8656db0470b86"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/common-classjob.json",
+      "upstreamPath": "Questionable.Model/common-classjob.json",
+      "sha256": "d121425c1cad18c76ea0814a8ea1c3af389805fa7f1e9d7fa1133e04b6665bb1"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/common-completionflags.json",
+      "upstreamPath": "Questionable.Model/common-completionflags.json",
+      "sha256": "68a9ebe4261e7a235e9a1abc7af71f84c523f9af39ad099594fcb1c5e351a2ef"
+    },
+    {
+      "path": "references/source/Questionable/Questionable.Model/common-vector3.json",
+      "upstreamPath": "Questionable.Model/common-vector3.json",
+      "sha256": "3602f5d4764da43672bc4b279c2eafc25182acbf2db7087aa262831f6011789c"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Controller/CommandHandler.cs",
+      "upstreamPath": "Questionable/Controller/CommandHandler.cs",
+      "sha256": "59cea7f1f709f351e7c58c3d3e75f6cf517b07884ded38ab3830d4826b1c9a9b"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Controller/QuestController.cs",
+      "upstreamPath": "Questionable/Controller/QuestController.cs",
+      "sha256": "5f9368fa5dc329546229211391854f352eb3a57a7396415a74e621dafe6aed3b"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Controller/QuestPriorityManager.cs",
+      "upstreamPath": "Questionable/Controller/QuestPriorityManager.cs",
+      "sha256": "d6415540e8cf5f390e5383c5ff52a2afb75b63aeab1de36913cec7f39671df8d"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Controller/QuestProgressTracker.cs",
+      "upstreamPath": "Questionable/Controller/QuestProgressTracker.cs",
+      "sha256": "1a29cbed2a76ef9575907fe59e4bd690bea53a805e0572a7ea60d025d92f7efb"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Controller/QuestRegistry.cs",
+      "upstreamPath": "Questionable/Controller/QuestRegistry.cs",
+      "sha256": "601842bc29a4c084a7c4d548dd8c677526d79ff3ab2c6b0e3556501b00212481"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Controller/Steps/Shared/SkipCondition.cs",
+      "upstreamPath": "Questionable/Controller/Steps/Shared/SkipCondition.cs",
+      "sha256": "4341ca039e1e1d2bfccc1400bb98f13bd63a4f96d106e352618f4b85cda70e8a"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Domain/Quest.cs",
+      "upstreamPath": "Questionable/Domain/Quest.cs",
+      "sha256": "26207ef386e3150ebf8f51fae908894ca672f3e2d8cd508aeed01fd73e16fd52"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/External/LifestreamIpc.cs",
+      "upstreamPath": "Questionable/External/LifestreamIpc.cs",
+      "sha256": "0f3c7b15ecef1339052944600e26e3a30a42108ae52bf8c77bfef1a7e8f71d71"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/External/NavmeshIpc.cs",
+      "upstreamPath": "Questionable/External/NavmeshIpc.cs",
+      "sha256": "ce1cb31ef49cf99721df3c9baf2e2b6ade65d1cf5192448f95e2d961a1f30c65"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/External/QuestionableIpc.cs",
+      "upstreamPath": "Questionable/External/QuestionableIpc.cs",
+      "sha256": "25509e706079a7e86c06a009f255df828d722d4da3a63ed6ee7e605c02717d69"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/External/TextAdvanceIpc.cs",
+      "upstreamPath": "Questionable/External/TextAdvanceIpc.cs",
+      "sha256": "1f1bf6e859905bd47e8c69c2a268ddf2fbccd67eac963ca1c31bba3e3794af70"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Functions/QuestFunctions.cs",
+      "upstreamPath": "Questionable/Functions/QuestFunctions.cs",
+      "sha256": "eba11eba1c96059bbde215225f3808470ebf0959526584b9beec0505d8519886"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/PathData/PathDataBundle.cs",
+      "upstreamPath": "Questionable/PathData/PathDataBundle.cs",
+      "sha256": "e8798a9b48d7271f7900b56867cdca865770da335154fa7c4f754da8f937b889"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/PathData/PathDataManifest.cs",
+      "upstreamPath": "Questionable/PathData/PathDataManifest.cs",
+      "sha256": "390eeaf0eec11a6cb4f1f3f215dc137f9a561dd985cab764ce7df8663053e8c2"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/PathData/PathDataUpdater.cs",
+      "upstreamPath": "Questionable/PathData/PathDataUpdater.cs",
+      "sha256": "6b35dbc1e477ae13dc004608797f9775d1eb4c7b5bb6c738829d03d21373915f"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Questionable.csproj",
+      "upstreamPath": "Questionable/Questionable.csproj",
+      "sha256": "58720afe2279cfb705aee28a4d919d25fdeade729165872763fe497849085857"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Questionable.json",
+      "upstreamPath": "Questionable/Questionable.json",
+      "sha256": "412fdcce24ec1a381a7367c07bfbbf0b4203f080ae9acb6c9fe59e211580c921"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Validation/QuestValidator.cs",
+      "upstreamPath": "Questionable/Validation/QuestValidator.cs",
+      "sha256": "6e811ebf22a53835d1b38a889b02a87dd46516d4c5701d46a961756908885cd8"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Validation/Validators/JsonSchemaValidator.cs",
+      "upstreamPath": "Questionable/Validation/Validators/JsonSchemaValidator.cs",
+      "sha256": "994bd86ab35d0bf834b725fb551c4f37a1cc674e04736c3d01a330370c6cd6cc"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Windows/PriorityWindow.cs",
+      "upstreamPath": "Questionable/Windows/PriorityWindow.cs",
+      "sha256": "e5bed8eb21140109d97660434315820d6321264cb3ca28736778ea8d559b50cc"
+    },
+    {
+      "path": "references/source/Questionable/Questionable/Windows/QuestComponents/EventInfoComponent.cs",
+      "upstreamPath": "Questionable/Windows/QuestComponents/EventInfoComponent.cs",
+      "sha256": "f6075f3d4d8ba26745d8fb775f0ddb997e96c249fbb6adaab2e422bff9e5eca5"
+    },
+    {
+      "path": "references/source/Questionable/README.md",
+      "upstreamPath": "README.md",
+      "sha256": "f3ba5e65d7232484c4fbbffa3b7e5e3afaf6dfc958e7698fe66d8c13c0f72736"
+    },
+    {
+      "path": "references/source/Questionable/global.json",
+      "upstreamPath": "global.json",
+      "sha256": "9e8f16083db6a91af3ec956e0baf9c6ac288842715f761b1ddd9fca1c84d322e"
+    }
+  ]
+}

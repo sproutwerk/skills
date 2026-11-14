@@ -1,0 +1,1146 @@
+ImGuiP.static void ActivateItem(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Add(this ImRectPtr self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Add(this ImRectPtr self, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Add(this ref ImRect self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Add(this ref ImRect self, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint AddContextHook(ImGuiContextPtr context, ImGuiContextHookPtr hook)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint AddContextHook(ImGuiContextPtr context, ref ImGuiContextHook hook)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint AddContextHook(ref ImGuiContext context, ImGuiContextHookPtr hook)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint AddContextHook(ref ImGuiContext context, ref ImGuiContextHook hook)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void AddSettingsHandler(ImGuiSettingsHandlerPtr handler)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void AddSettingsHandler(ref ImGuiSettingsHandler handler)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ArrowButtonEx(ImU8String strId, ImGuiDir dir, Vector2 sizeArg, ImGuiButtonFlags flags = ImGuiButtonFlags.None)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static bool BeginChildEx(ImU8String name, uint id, Vector2 sizeArg, bool border, ImGuiWindowFlags flags)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void BeginColumns(ImU8String strId, int count, ImGuiOldColumnFlags flags = ImGuiOldColumnFlags.None)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static bool BeginComboPopup(uint popupId, ImRect bb, ImGuiComboFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginComboPreview()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BeginDockableDragDropSource(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BeginDockableDragDropSource(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BeginDockableDragDropTarget(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BeginDockableDragDropTarget(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BeginDocked(ImGuiWindowPtr window, bool* pOpen)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BeginDocked(ImGuiWindowPtr window, ref bool pOpen)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BeginDocked(ref ImGuiWindow window, bool* pOpen)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BeginDocked(ref ImGuiWindow window, ref bool pOpen)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginDragDropTargetCustom(ImRect bb, uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginMenuEx(ImU8String label, ImU8String icon = default, bool enabled = true)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static bool BeginPopupEx(uint id, ImGuiWindowFlags extraFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginTabBarEx(ImGuiTabBarPtr tabBar, ImRect bb, ImGuiTabBarFlags flags, ImGuiDockNodePtr dockNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginTabBarEx(ImGuiTabBarPtr tabBar, ImRect bb, ImGuiTabBarFlags flags, ref ImGuiDockNode dockNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginTabBarEx(ref ImGuiTabBar tabBar, ImRect bb, ImGuiTabBarFlags flags, ImGuiDockNodePtr dockNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginTabBarEx(ref ImGuiTabBar tabBar, ImRect bb, ImGuiTabBarFlags flags, ref ImGuiDockNode dockNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginTableEx(ImU8String name, uint id, int columnsCount, ImGuiTableFlags flags = ImGuiTableFlags.None, Vector2 outerSize = default, float innerWidth = 0.0f)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void BeginTooltipEx(ImGuiTooltipFlags tooltipFlags, ImGuiWindowFlags extraWindowFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool BeginViewportSideBar(ImU8String name, ImGuiViewportPtr viewport, ImGuiDir dir, float size, ImGuiWindowFlags windowFlags)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void BringWindowToDisplayBack(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToDisplayBack(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToDisplayBehind(ImGuiWindowPtr window, ImGuiWindowPtr aboveWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToDisplayBehind(ImGuiWindowPtr window, ref ImGuiWindow aboveWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToDisplayBehind(ref ImGuiWindow window, ImGuiWindowPtr aboveWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToDisplayBehind(ref ImGuiWindow window, ref ImGuiWindow aboveWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToDisplayFront(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToDisplayFront(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToFocusFront(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void BringWindowToFocusFront(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonBehavior(ImRect bb, uint id, bool* outHovered, bool* outHeld)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonBehavior(ImRect bb, uint id, bool* outHovered, bool* outHeld, ImGuiButtonFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonBehavior(ImRect bb, uint id, bool* outHovered, ref bool outHeld)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonBehavior(ImRect bb, uint id, bool* outHovered, ref bool outHeld, ImGuiButtonFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonBehavior(ImRect bb, uint id, ref bool outHovered, bool* outHeld)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonBehavior(ImRect bb, uint id, ref bool outHovered, bool* outHeld, ImGuiButtonFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonBehavior(ImRect bb, uint id, ref bool outHovered, ref bool outHeld)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonBehavior(ImRect bb, uint id, ref bool outHovered, ref bool outHeld, ImGuiButtonFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ButtonEx(ImU8String label, Vector2 sizeArg = default, ImGuiButtonFlags flags = ImGuiButtonFlags.None)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static float CalcFontSize(this ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float CalcFontSize(this ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 CalcItemSize(Vector2 size, float defaultW, float defaultH)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcItemSize(Vector2* pOut, Vector2 size, float defaultW, float defaultH)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcItemSize(ref Vector2 pOut, Vector2 size, float defaultW, float defaultH)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcNextTotalWidth(this ImGuiMenuColumnsPtr self, bool updateOffsets)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcNextTotalWidth(this ref ImGuiMenuColumns self, bool updateOffsets)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImDrawFlags CalcRoundingFlagsForRectInRect(ImRect rIn, ImRect rOuter, float threshold)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int CalcTypematicRepeatAmount(float t0, float t1, float repeatDelay, float repeatRate)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 CalcWindowNextAutoFitSize(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 CalcWindowNextAutoFitSize(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWindowNextAutoFitSize(Vector2* pOut, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWindowNextAutoFitSize(Vector2* pOut, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWindowNextAutoFitSize(ref Vector2 pOut, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWindowNextAutoFitSize(ref Vector2 pOut, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 CalcWorkRectPos(this ImGuiViewportPPtr self, Vector2 offMin)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 CalcWorkRectPos(this ref ImGuiViewportP self, Vector2 offMin)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWorkRectPos(Vector2* pOut, ImGuiViewportPPtr self, Vector2 offMin)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWorkRectPos(Vector2* pOut, ref ImGuiViewportP self, Vector2 offMin)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWorkRectPos(ref Vector2 pOut, ImGuiViewportPPtr self, Vector2 offMin)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWorkRectPos(ref Vector2 pOut, ref ImGuiViewportP self, Vector2 offMin)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 CalcWorkRectSize(this ImGuiViewportPPtr self, Vector2 offMin, Vector2 offMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 CalcWorkRectSize(this ref ImGuiViewportP self, Vector2 offMin, Vector2 offMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWorkRectSize(Vector2* pOut, ImGuiViewportPPtr self, Vector2 offMin, Vector2 offMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWorkRectSize(Vector2* pOut, ref ImGuiViewportP self, Vector2 offMin, Vector2 offMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWorkRectSize(ref Vector2 pOut, ImGuiViewportPPtr self, Vector2 offMin, Vector2 offMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CalcWorkRectSize(ref Vector2 pOut, ref ImGuiViewportP self, Vector2 offMin, Vector2 offMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float CalcWrapWidthForPos(Vector2 pos, float wrapPosX)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CallContextHooks(ImGuiContextPtr context, ImGuiContextHookType type)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CallContextHooks(ref ImGuiContext context, ImGuiContextHookType type)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Clear(this ImBitVectorPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Clear(this ImDrawDataBuilderPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Clear(this ImGuiNavItemDataPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Clear(this ref ImBitVector self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Clear(this ref ImDrawDataBuilder self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Clear(this ref ImGuiNavItemData self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearActiveID()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearBit(this ImBitVectorPtr self, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearBit(this ref ImBitVector self, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearDragDrop()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearFlags(this ImGuiNextItemDataPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearFlags(this ImGuiNextWindowDataPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearFlags(this ref ImGuiNextItemData self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearFlags(this ref ImGuiNextWindowData self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearFreeMemory(this ImDrawDataBuilderPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearFreeMemory(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearFreeMemory(this ref ImDrawDataBuilder self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearFreeMemory(this ref ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearIniSettings()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearRequestFlags(this ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearRequestFlags(this ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearSelection(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearSelection(this ref ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearText(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClearText(this ref ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClipWith(this ImRectPtr self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClipWith(this ref ImRect self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClipWithFull(this ImRectPtr self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClipWithFull(this ref ImRect self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool CloseButton(uint id, Vector2 pos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClosePopupsExceptModals()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClosePopupsOverWindow(ImGuiWindowPtr refWindow, bool restoreFocusToWindowUnderPopup)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClosePopupsOverWindow(ref ImGuiWindow refWindow, bool restoreFocusToWindowUnderPopup)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ClosePopupToLevel(int remaining, bool restoreFocusToWindowUnderPopup)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool CollapseButton(uint id, Vector2 pos, ImGuiDockNodePtr dockNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool CollapseButton(uint id, Vector2 pos, ref ImGuiDockNode dockNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ColorEditOptionsPopup(ReadOnlySpan<float> col, ImGuiColorEditFlags flags)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void ColorPickerOptionsPopup(ReadOnlySpan<float> refCol, ImGuiColorEditFlags flags)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void ColorTooltip(ImU8String text, ReadOnlySpan<float> col, ImGuiColorEditFlags flags)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void CompareWithCurrentState(this ImGuiStackSizesPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CompareWithCurrentState(this ref ImGuiStackSizes self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool Contains(this ImRectPtr self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool Contains(this ImRectPtr self, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool Contains(this ref ImRect self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool Contains(this ref ImRect self, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Create(this ImBitVectorPtr self, int sz)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Create(this ref ImBitVector self, int sz)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowSettingsPtr CreateNewWindowSettings(ImU8String name)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void CursorAnimReset(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CursorAnimReset(this ref ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CursorClamp(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void CursorClamp(this ref ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Custom_StbTextMakeUndoReplace(ImGuiInputTextStatePtr str, int where, int oldLength, int newLength)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void Custom_StbTextUndo(ImGuiInputTextStatePtr str)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static bool DataTypeApplyFromText<T>(ImU8String buf, ImGuiDataType dataType, T data, ImU8String format)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DataTypeApplyOp(ImGuiDataType dataType, int op, void* output, void* arg1, void* arg2)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DataTypeClamp(ImGuiDataType dataType, void* pData, void* pMin, void* pMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int DataTypeCompare(ImGuiDataType dataType, void* arg1, void* arg2)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiDataTypeInfoPtr DataTypeGetInfo(ImGuiDataType dataType)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugDrawItemRect()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugDrawItemRect(uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugHookIdInfo(uint id, ImGuiDataType dataType, void* dataId, void* dataIdEnd)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugLog(ImU8String text)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static void DebugNodeColumns(ImGuiOldColumnsPtr columns)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeColumns(ref ImGuiOldColumns columns)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDockNode(ImGuiDockNodePtr node, ImU8String label)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DebugNodeDrawCmdShowMeshAndBoundingBox(ImDrawListPtr outDrawList, ImDrawListPtr drawList, ImDrawCmdPtr drawCmd, bool showMesh, bool showAabb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDrawCmdShowMeshAndBoundingBox(ImDrawListPtr outDrawList, ImDrawListPtr drawList, ref ImDrawCmd drawCmd, bool showMesh, bool showAabb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDrawCmdShowMeshAndBoundingBox(ImDrawListPtr outDrawList, ref ImDrawList drawList, ImDrawCmdPtr drawCmd, bool showMesh, bool showAabb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDrawCmdShowMeshAndBoundingBox(ImDrawListPtr outDrawList, ref ImDrawList drawList, ref ImDrawCmd drawCmd, bool showMesh, bool showAabb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDrawCmdShowMeshAndBoundingBox(ref ImDrawList outDrawList, ImDrawListPtr drawList, ImDrawCmdPtr drawCmd, bool showMesh, bool showAabb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDrawCmdShowMeshAndBoundingBox(ref ImDrawList outDrawList, ImDrawListPtr drawList, ref ImDrawCmd drawCmd, bool showMesh, bool showAabb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDrawCmdShowMeshAndBoundingBox(ref ImDrawList outDrawList, ref ImDrawList drawList, ImDrawCmdPtr drawCmd, bool showMesh, bool showAabb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDrawCmdShowMeshAndBoundingBox(ref ImDrawList outDrawList, ref ImDrawList drawList, ref ImDrawCmd drawCmd, bool showMesh, bool showAabb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeDrawList(ImGuiWindowPtr window, ImGuiViewportPPtr viewport, ImDrawListPtr drawList, ImU8String label)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DebugNodeFont(ImFontPtr font)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeFont(ref ImFont font)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeFontGlyph(ImFontPtr font, ImFontGlyphPtr glyph)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeFontGlyph(ImFontPtr font, ref ImFontGlyph glyph)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeFontGlyph(ref ImFont font, ImFontGlyphPtr glyph)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeFontGlyph(ref ImFont font, ref ImFontGlyph glyph)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeInputTextState(ImGuiInputTextStatePtr state)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeInputTextState(ref ImGuiInputTextState state)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeStorage(ImGuiStoragePtr storage, ImU8String label)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DebugNodeTabBar(ImGuiTabBarPtr tabBar, ImU8String label)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DebugNodeTable(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeTable(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeTableSettings(ImGuiTableSettingsPtr settings)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeTableSettings(ref ImGuiTableSettings settings)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeViewport(ImGuiViewportPPtr viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeViewport(ref ImGuiViewportP viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeWindow(ImGuiWindowPtr window, ImU8String label)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DebugNodeWindowSettings(ImGuiWindowSettingsPtr settings)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeWindowSettings(ref ImGuiWindowSettings settings)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeWindowsList(scoped in ImVector<ImGuiWindowPtr> windows, ImU8String label)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DebugNodeWindowsListByBeginStackParent(ImGuiWindowPtrPtr windows, int windowsSize, ImGuiWindowPtr parentInBeginStack)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeWindowsListByBeginStackParent(ImGuiWindowPtrPtr windows, int windowsSize, ref ImGuiWindow parentInBeginStack)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeWindowsListByBeginStackParent(ref ImGuiWindow* windows, int windowsSize, ImGuiWindowPtr parentInBeginStack)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugNodeWindowsListByBeginStackParent(ref ImGuiWindow* windows, int windowsSize, ref ImGuiWindow parentInBeginStack)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugRenderViewportThumbnail(ImDrawListPtr drawList, ImGuiViewportPPtr viewport, ImRect bb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugRenderViewportThumbnail(ImDrawListPtr drawList, ref ImGuiViewportP viewport, ImRect bb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugRenderViewportThumbnail(ref ImDrawList drawList, ImGuiViewportPPtr viewport, ImRect bb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugRenderViewportThumbnail(ref ImDrawList drawList, ref ImGuiViewportP viewport, ImRect bb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DebugStartItemPicker()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float DeclColumns(this ImGuiMenuColumnsPtr self, float wIcon, float wLabel, float wShortcut, float wMark)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float DeclColumns(this ref ImGuiMenuColumns self, float wIcon, float wLabel, float wShortcut, float wMark)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Destroy(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Destroy(this ImGuiTablePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Destroy(this ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Destroy(this ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Destroy(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Destroy(this ref ImGuiTable self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Destroy(this ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Destroy(this ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DestroyPlatformWindow(ImGuiViewportPPtr viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DestroyPlatformWindow(ref ImGuiViewportP viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockBuilderAddNode()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockBuilderAddNode(ImGuiDockNodeFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockBuilderAddNode(uint nodeId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockBuilderAddNode(uint nodeId, ImGuiDockNodeFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderCopyDockSpace(uint srcDockspaceId, uint dstDockspaceId, ImVector<ConstPointer<byte>>* inWindowRemapPairs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderCopyDockSpace(uint srcDockspaceId, uint dstDockspaceId, ref ImVector<ConstPointer<byte>> inWindowRemapPairs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderCopyNode(uint srcNodeId, uint dstNodeId, ImVector<uint>* outNodeRemapPairs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderCopyNode(uint srcNodeId, uint dstNodeId, ref ImVector<uint> outNodeRemapPairs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderCopyWindowSettings(ImU8String srcName, ImU8String dstName)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DockBuilderDockWindow(ImU8String windowName, uint nodeId)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void DockBuilderFinish(uint nodeId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiDockNodePtr DockBuilderGetCentralNode(uint nodeId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiDockNodePtr DockBuilderGetNode(uint nodeId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderRemoveNode(uint nodeId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderRemoveNodeChildNodes(uint nodeId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderRemoveNodeDockedWindows(uint nodeId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderRemoveNodeDockedWindows(uint nodeId, bool clearSettingsRefs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderSetNodePos(uint nodeId, Vector2 pos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockBuilderSetNodeSize(uint nodeId, Vector2 size)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockBuilderSplitNode(uint nodeId, ImGuiDir splitDir, float sizeRatioForNodeAtDir, uint* outIdAtDir, uint* outIdAtOppositeDir)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ImGuiWindowPtr target, ImGuiDockNodePtr targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, bool splitOuter, Vector2* outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ImGuiWindowPtr target, ImGuiDockNodePtr targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, bool splitOuter, ref Vector2 outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ImGuiWindowPtr target, ImGuiDockNodePtr targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, bool splitOuter, Vector2* outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ImGuiWindowPtr target, ImGuiDockNodePtr targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, bool splitOuter, ref Vector2 outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ImGuiWindowPtr target, ref ImGuiDockNode targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, bool splitOuter, Vector2* outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ImGuiWindowPtr target, ref ImGuiDockNode targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, bool splitOuter, ref Vector2 outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ImGuiWindowPtr target, ref ImGuiDockNode targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, bool splitOuter, Vector2* outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ImGuiWindowPtr target, ref ImGuiDockNode targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, bool splitOuter, ref Vector2 outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ref ImGuiWindow target, ImGuiDockNodePtr targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, bool splitOuter, Vector2* outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ref ImGuiWindow target, ImGuiDockNodePtr targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, bool splitOuter, ref Vector2 outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ref ImGuiWindow target, ImGuiDockNodePtr targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, bool splitOuter, Vector2* outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ref ImGuiWindow target, ImGuiDockNodePtr targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, bool splitOuter, ref Vector2 outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ref ImGuiWindow target, ref ImGuiDockNode targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, bool splitOuter, Vector2* outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ref ImGuiWindow target, ref ImGuiDockNode targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, bool splitOuter, ref Vector2 outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ref ImGuiWindow target, ref ImGuiDockNode targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, bool splitOuter, Vector2* outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockContextCalcDropPosForDocking(ref ImGuiWindow target, ref ImGuiDockNode targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, bool splitOuter, ref Vector2 outPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextClearNodes(ImGuiContextPtr ctx, uint rootId, bool clearSettingsRefs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextClearNodes(ref ImGuiContext ctx, uint rootId, bool clearSettingsRefs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextEndFrame(ImGuiContextPtr ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextEndFrame(ref ImGuiContext ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockContextGenNodeID(ImGuiContextPtr ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockContextGenNodeID(ref ImGuiContext ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextInitialize(ImGuiContextPtr ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextInitialize(ref ImGuiContext ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextNewFrameUpdateDocking(ImGuiContextPtr ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextNewFrameUpdateDocking(ref ImGuiContext ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextNewFrameUpdateUndocking(ImGuiContextPtr ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextNewFrameUpdateUndocking(ref ImGuiContext ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ImGuiContextPtr ctx, ImGuiWindowPtr target, ImGuiDockNodePtr targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ImGuiContextPtr ctx, ImGuiWindowPtr target, ImGuiDockNodePtr targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ImGuiContextPtr ctx, ImGuiWindowPtr target, ref ImGuiDockNode targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ImGuiContextPtr ctx, ImGuiWindowPtr target, ref ImGuiDockNode targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ImGuiContextPtr ctx, ref ImGuiWindow target, ImGuiDockNodePtr targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ImGuiContextPtr ctx, ref ImGuiWindow target, ImGuiDockNodePtr targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ImGuiContextPtr ctx, ref ImGuiWindow target, ref ImGuiDockNode targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ImGuiContextPtr ctx, ref ImGuiWindow target, ref ImGuiDockNode targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ref ImGuiContext ctx, ImGuiWindowPtr target, ImGuiDockNodePtr targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ref ImGuiContext ctx, ImGuiWindowPtr target, ImGuiDockNodePtr targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ref ImGuiContext ctx, ImGuiWindowPtr target, ref ImGuiDockNode targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ref ImGuiContext ctx, ImGuiWindowPtr target, ref ImGuiDockNode targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ref ImGuiContext ctx, ref ImGuiWindow target, ImGuiDockNodePtr targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ref ImGuiContext ctx, ref ImGuiWindow target, ImGuiDockNodePtr targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ref ImGuiContext ctx, ref ImGuiWindow target, ref ImGuiDockNode targetNode, ImGuiWindowPtr payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueDock(ref ImGuiContext ctx, ref ImGuiWindow target, ref ImGuiDockNode targetNode, ref ImGuiWindow payload, ImGuiDir splitDir, float splitRatio, bool splitOuter)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueUndockNode(ImGuiContextPtr ctx, ImGuiDockNodePtr node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueUndockNode(ImGuiContextPtr ctx, ref ImGuiDockNode node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueUndockNode(ref ImGuiContext ctx, ImGuiDockNodePtr node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueUndockNode(ref ImGuiContext ctx, ref ImGuiDockNode node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueUndockWindow(ImGuiContextPtr ctx, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueUndockWindow(ImGuiContextPtr ctx, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueUndockWindow(ref ImGuiContext ctx, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextQueueUndockWindow(ref ImGuiContext ctx, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextRebuildNodes(ImGuiContextPtr ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextRebuildNodes(ref ImGuiContext ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextShutdown(ImGuiContextPtr ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockContextShutdown(ref ImGuiContext ctx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockNodeBeginAmendTabBar(ImGuiDockNodePtr node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockNodeBeginAmendTabBar(ref ImGuiDockNode node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void DockNodeEndAmendTabBar()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int DockNodeGetDepth(ImGuiDockNodePtr node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int DockNodeGetDepth(ref ImGuiDockNode node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiDockNodePtr DockNodeGetRootNode(ImGuiDockNodePtr node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiDockNodePtr DockNodeGetRootNode(ref ImGuiDockNode node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockNodeGetWindowMenuButtonId(ImGuiDockNodePtr node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint DockNodeGetWindowMenuButtonId(ref ImGuiDockNode node)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockNodeIsInHierarchyOf(ImGuiDockNodePtr node, ImGuiDockNodePtr parent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockNodeIsInHierarchyOf(ImGuiDockNodePtr node, ref ImGuiDockNode parent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockNodeIsInHierarchyOf(ref ImGuiDockNode node, ImGuiDockNodePtr parent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DockNodeIsInHierarchyOf(ref ImGuiDockNode node, ref ImGuiDockNode parent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool DragBehavior(uint id, ImGuiDataType dataType, void* pV, float vSpeed, void* pMin, void* pMax, ImU8String format, ImGuiSliderFlags flags)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void EndColumns()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void EndComboPreview()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ErrorCheckEndFrameRecover(ImGuiErrorLogCallback logCallback)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ErrorCheckEndFrameRecover(ImGuiErrorLogCallback logCallback, void* userData)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ErrorCheckEndWindowRecover(ImGuiErrorLogCallback logCallback)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ErrorCheckEndWindowRecover(ImGuiErrorLogCallback logCallback, void* userData)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Expand(this ImRectPtr self, Vector2 amount)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Expand(this ImRectPtr self, float amount)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Expand(this ref ImRect self, Vector2 amount)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Expand(this ref ImRect self, float amount)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 FindBestWindowPosForPopup(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 FindBestWindowPosForPopup(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FindBestWindowPosForPopup(Vector2* pOut, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FindBestWindowPosForPopup(Vector2* pOut, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FindBestWindowPosForPopup(ref Vector2 pOut, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FindBestWindowPosForPopup(ref Vector2 pOut, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 FindBestWindowPosForPopupEx(Vector2 refPos, Vector2 size, ImGuiDir* lastDir, ImRect rOuter, ImRect rAvoid, ImGuiPopupPositionPolicy policy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FindBestWindowPosForPopupEx(Vector2* pOut, Vector2 refPos, Vector2 size, ImGuiDir* lastDir, ImRect rOuter, ImRect rAvoid, ImGuiPopupPositionPolicy policy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FindBestWindowPosForPopupEx(ref Vector2 pOut, Vector2 refPos, Vector2 size, ImGuiDir* lastDir, ImRect rOuter, ImRect rAvoid, ImGuiPopupPositionPolicy policy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowPtr FindBottomMostVisibleWindowWithinBeginStack(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowPtr FindBottomMostVisibleWindowWithinBeginStack(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiViewportPPtr FindHoveredViewportFromPlatformWindowStack(Vector2 mousePlatformPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiOldColumnsPtr FindOrCreateColumns(ImGuiWindowPtr window, uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiOldColumnsPtr FindOrCreateColumns(ref ImGuiWindow window, uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowSettingsPtr FindOrCreateWindowSettings(ImU8String name)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static int FindRenderedTextEnd(ReadOnlySpan<byte> text, out ReadOnlySpan<byte> before, out ReadOnlySpan<byte> after)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static int FindRenderedTextEnd(ReadOnlySpan<char> text, out ReadOnlySpan<char> before, out ReadOnlySpan<char> after)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static ImGuiSettingsHandlerPtr FindSettingsHandler(ImU8String typeName)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static ImGuiWindowPtr FindWindowByID(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowPtr FindWindowByName(ImU8String name)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static int FindWindowDisplayIndex(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int FindWindowDisplayIndex(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowSettingsPtr FindWindowSettings(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FlattenIntoSingleLayer(this ImDrawDataBuilderPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FlattenIntoSingleLayer(this ref ImDrawDataBuilder self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Floor(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Floor(this ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FocusTopMostWindowUnderOne(ImGuiWindowPtr underThisWindow, ImGuiWindowPtr ignoreWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FocusTopMostWindowUnderOne(ImGuiWindowPtr underThisWindow, ref ImGuiWindow ignoreWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FocusTopMostWindowUnderOne(ref ImGuiWindow underThisWindow, ImGuiWindowPtr ignoreWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FocusTopMostWindowUnderOne(ref ImGuiWindow underThisWindow, ref ImGuiWindow ignoreWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FocusWindow(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void FocusWindow(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiListClipperRange FromIndices(int min, int max)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiListClipperRange FromPositions(float y1, float y2, int offMin, int offMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GcAwakeTransientWindowBuffers(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GcAwakeTransientWindowBuffers(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GcCompactTransientMiscBuffers()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GcCompactTransientWindowBuffers(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GcCompactTransientWindowBuffers(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetActiveID()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetArea(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetArea(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetBL(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetBL(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBL(Vector2* pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBL(Vector2* pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBL(ref Vector2 pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBL(ref Vector2 pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetBR(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetBR(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBR(Vector2* pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBR(Vector2* pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBR(ref Vector2 pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBR(ref Vector2 pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetBuildWorkRect(this ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetBuildWorkRect(this scoped in ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBuildWorkRect(ImRectPtr pOut, ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBuildWorkRect(ImRectPtr pOut, ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBuildWorkRect(ref ImRect pOut, ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetBuildWorkRect(ref ImRect pOut, ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetCenter(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetCenter(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetCenter(Vector2* pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetCenter(Vector2* pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetCenter(ref Vector2 pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetCenter(ref Vector2 pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetColumnNormFromOffset(ImGuiOldColumnsPtr columns, float offset)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetColumnNormFromOffset(ref ImGuiOldColumns columns, float offset)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetColumnOffsetFromNorm(ImGuiOldColumnsPtr columns, float offsetNorm)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetColumnOffsetFromNorm(ref ImGuiOldColumns columns, float offsetNorm)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableColumnSettingsPtr GetColumnSettings(this ImGuiTableSettingsPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableColumnSettingsPtr GetColumnSettings(this scoped in ImGuiTableSettings self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetColumnsID(ImU8String strId, int count)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static Vector2 GetContentRegionMaxAbs()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetContentRegionMaxAbs(Vector2* pOut)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetContentRegionMaxAbs(ref Vector2 pOut)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTablePtr GetCurrentTable()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowPtr GetCurrentWindow()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowPtr GetCurrentWindowRead()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetCursorPos(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetCursorPos(this scoped in ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImFontPtr GetDefaultFont()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetDrawListCount(this ImDrawDataBuilderPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetDrawListCount(this scoped in ImDrawDataBuilder self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetFocusedFocusScope()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetFocusID()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetFocusScope()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImDrawListPtr GetForegroundDrawList(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImDrawListPtr GetForegroundDrawList(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetHeight(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetHeight(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetHoveredID()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetID(ImGuiWindowPtr self, ImU8String str)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static uint GetID(ImGuiWindowPtr self, int n)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static uint GetID(ImGuiWindowPtr self, void* ptr)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static uint GetIDFromRectangle(this ImGuiWindowPtr self, ImRect rAbs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetIDFromRectangle(this scoped in ImGuiWindow self, ImRect rAbs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetIDWithSeed(ImU8String strId, uint seed)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static ImGuiInputTextStatePtr GetInputTextState(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiItemFlags GetItemFlags()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetItemID()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiItemStatusFlags GetItemStatusFlags()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiKeyDataPtr GetKeyData(ImGuiKey key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetMainRect(this ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetMainRect(this scoped in ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetMainRect(ImRectPtr pOut, ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetMainRect(ImRectPtr pOut, ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetMainRect(ref ImRect pOut, ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetMainRect(ref ImRect pOut, ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiModFlags GetMergedModFlags()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static string GetName(this ImGuiWindowSettingsPtr self)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static string GetName(this in ImGuiWindowSettings self)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> GetNameU8(this ImGuiWindowSettingsPtr self)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> GetNameU8(this in ImGuiWindowSettings self)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static float GetNavInputAmount(ImGuiNavInput n, ImGuiNavReadMode mode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetNavInputAmount2d(ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetNavInputAmount2d(ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode, float slowFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetNavInputAmount2d(ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode, float slowFactor, float fastFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetNavInputAmount2d(Vector2* pOut, ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetNavInputAmount2d(Vector2* pOut, ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode, float slowFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetNavInputAmount2d(Vector2* pOut, ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode, float slowFactor, float fastFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetNavInputAmount2d(ref Vector2 pOut, ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetNavInputAmount2d(ref Vector2 pOut, ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode, float slowFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetNavInputAmount2d(ref Vector2 pOut, ImGuiNavDirSourceFlags dirSources, ImGuiNavReadMode mode, float slowFactor, float fastFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static string GetNavInputName(this ImGuiNavInput n)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> GetNavInputNameU8(this ImGuiNavInput n)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ImRect GetPopupAllowedExtentRect(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetPopupAllowedExtentRect(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetPopupAllowedExtentRect(ImRectPtr pOut, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetPopupAllowedExtentRect(ImRectPtr pOut, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetPopupAllowedExtentRect(ref ImRect pOut, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetPopupAllowedExtentRect(ref ImRect pOut, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetRedoAvailCount(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetRedoAvailCount(this scoped in ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetSelectionEnd(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetSelectionEnd(this scoped in ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetSelectionStart(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetSelectionStart(this scoped in ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetSize(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetSize(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetSize(Vector2* pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetSize(Vector2* pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetSize(ref Vector2 pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetSize(ref Vector2 pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static string GetTabName(this ImGuiTabBarPtr self, ImGuiTabItemPtr tab)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static string GetTabName(this ImGuiTabBarPtr self, in ImGuiTabItem tab)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static string GetTabName(this in ImGuiTabBar self, ImGuiTabItemPtr tab)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static string GetTabName(this in ImGuiTabBar self, in ImGuiTabItem tab)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> GetTabNameU8(ImGuiTabBarPtr self, in ImGuiTabItem tab)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> GetTabNameU8(this ImGuiTabBarPtr self, ImGuiTabItemPtr tab)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> GetTabNameU8(this in ImGuiTabBar self, ImGuiTabItemPtr tab)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> GetTabNameU8(this in ImGuiTabBar self, in ImGuiTabItem tab)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static int GetTabOrder(this ImGuiTabBarPtr self, ImGuiTabItemPtr tab)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetTabOrder(this ImGuiTabBarPtr self, ref ImGuiTabItem tab)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetTabOrder(this scoped in ImGuiTabBar self, ImGuiTabItemPtr tab)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetTabOrder(this scoped in ImGuiTabBar self, ref ImGuiTabItem tab)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetTL(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetTL(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetTL(Vector2* pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetTL(Vector2* pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetTL(ref Vector2 pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetTL(ref Vector2 pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowPtr GetTopMostAndVisiblePopupModal()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowPtr GetTopMostPopupModal()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetTR(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 GetTR(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetTR(Vector2* pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetTR(Vector2* pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetTR(ref Vector2 pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetTR(ref Vector2 pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetUndoAvailCount(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int GetUndoAvailCount(this scoped in ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiPlatformMonitorPtr GetViewportPlatformMonitor(ImGuiViewportPtr viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiPlatformMonitorPtr GetViewportPlatformMonitor(ref ImGuiViewport viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetWidth(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float GetWidth(this scoped in ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool GetWindowAlwaysWantOwnTabBar(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool GetWindowAlwaysWantOwnTabBar(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiDockNodePtr GetWindowDockNode()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetWindowResizeBorderID(ImGuiWindowPtr window, ImGuiDir dir)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetWindowResizeBorderID(ref ImGuiWindow window, ImGuiDir dir)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetWindowResizeCornerID(ImGuiWindowPtr window, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetWindowResizeCornerID(ref ImGuiWindow window, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetWindowScrollbarID(ImGuiWindowPtr window, ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint GetWindowScrollbarID(ref ImGuiWindow window, ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetWindowScrollbarRect(ImGuiWindowPtr window, ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetWindowScrollbarRect(ref ImGuiWindow window, ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetWindowScrollbarRect(ImRectPtr pOut, ImGuiWindowPtr window, ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetWindowScrollbarRect(ImRectPtr pOut, ref ImGuiWindow window, ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetWindowScrollbarRect(ref ImRect pOut, ImGuiWindowPtr window, ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetWindowScrollbarRect(ref ImRect pOut, ref ImGuiWindow window, ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetWorkRect(this ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect GetWorkRect(this scoped in ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetWorkRect(ImRectPtr pOut, ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetWorkRect(ImRectPtr pOut, ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetWorkRect(ref ImRect pOut, ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void GetWorkRect(ref ImRect pOut, ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool HasSelection(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool HasSelection(this ref ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static double ImAbs(double x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImAbs(float x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int ImAbs(int x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImageButtonEx(uint id, ImTextureID textureId, Vector2 size, Vector2 uv0, Vector2 uv1, Vector2 padding, Vector4 bgCol, Vector4 tintCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint ImAlphaBlendColors(uint colA, uint colB)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImBezierCubicCalc(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBezierCubicCalc(Vector2* pOut, Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBezierCubicCalc(ref Vector2 pOut, Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImBezierCubicClosestPoint(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, Vector2 p, int numSegments)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBezierCubicClosestPoint(Vector2* pOut, Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, Vector2 p, int numSegments)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBezierCubicClosestPoint(ref Vector2 pOut, Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, Vector2 p, int numSegments)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImBezierCubicClosestPointCasteljau(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, Vector2 p, float tessTol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBezierCubicClosestPointCasteljau(Vector2* pOut, Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, Vector2 p, float tessTol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBezierCubicClosestPointCasteljau(ref Vector2 pOut, Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, Vector2 p, float tessTol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImBezierQuadraticCalc(Vector2 p1, Vector2 p2, Vector2 p3, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBezierQuadraticCalc(Vector2* pOut, Vector2 p1, Vector2 p2, Vector2 p3, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBezierQuadraticCalc(ref Vector2 pOut, Vector2 p1, Vector2 p2, Vector2 p3, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBitArrayClearBit(uint* arr, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBitArraySetBit(uint* arr, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImBitArraySetBitRange(uint* arr, int n, int n2)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImBitArrayTestBit(uint* arr, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImCharIsBlankA(byte c)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImCharIsBlankW(uint c)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImClamp(Vector2 v, Vector2 mn, Vector2 mx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImClamp(Vector2* pOut, Vector2 v, Vector2 mn, Vector2 mx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImClamp(ref Vector2 pOut, Vector2 v, Vector2 mn, Vector2 mx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImDot(Vector2 a, Vector2 b)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImDrawListSharedDataPtr ImDrawListSharedData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImFileClose(ImFileHandle file)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ulong ImFileGetSize(ImFileHandle file)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void* ImFileLoadToMemory(ImU8String filename, ImU8String mode, int paddingBytes = 0)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void* ImFileLoadToMemory(ImU8String filename, ImU8String mode, out nuint outFileSize, int paddingBytes = 0)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static ImFileHandle ImFileOpen(ImU8String filename, ImU8String mode)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static ulong ImFileRead(void* data, ulong size, ulong count, ImFileHandle file)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ulong ImFileWrite(void* data, ulong size, ulong count, ImFileHandle file)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImFloor(Vector2 v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImFloor(float f)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFloor(Vector2* pOut, Vector2 v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFloor(ref Vector2 pOut, Vector2 v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImFloorSigned(Vector2 v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImFloorSigned(float f)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFloorSigned(Vector2* pOut, Vector2 v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFloorSigned(ref Vector2 pOut, Vector2 v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildFinish(ImFontAtlasPtr atlas)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildFinish(ref ImFontAtlas atlas)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildInit(ImFontAtlasPtr atlas)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildInit(ref ImFontAtlas atlas)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildMultiplyCalcLookupTable(ReadOnlySpan<byte> outTable, float inMultiplyFactor, float gammaFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildMultiplyCalcLookupTable(byte* outTable, float inMultiplyFactor, float gammaFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildMultiplyCalcLookupTable(ref byte outTable, float inMultiplyFactor, float gammaFactor)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildMultiplyRectAlpha8(ReadOnlySpan<byte> table, ReadOnlySpan<byte> pixels, int x, int y, int w, int h, int stride)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void ImFontAtlasBuildRender32bppRectFromString(ImFontAtlasPtr atlas, int textureIndex, int x, int y, int w, int h, ReadOnlySpan<byte> inStr, byte inMarkerChar, uint inMarkerPixelValue)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void ImFontAtlasBuildRender8bppRectFromString(ImFontAtlasPtr atlas, int textureIndex, int x, int y, int w, int h, ReadOnlySpan<byte> inStr, byte inMarkerChar, byte inMarkerPixelValue)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void ImFontAtlasBuildSetupFont(ImFontAtlasPtr atlas, ImFontPtr font, ImFontConfigPtr fontConfig, float ascent, float descent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildSetupFont(ImFontAtlasPtr atlas, ImFontPtr font, ref ImFontConfig fontConfig, float ascent, float descent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildSetupFont(ImFontAtlasPtr atlas, ref ImFont font, ImFontConfigPtr fontConfig, float ascent, float descent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildSetupFont(ImFontAtlasPtr atlas, ref ImFont font, ref ImFontConfig fontConfig, float ascent, float descent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildSetupFont(ref ImFontAtlas atlas, ImFontPtr font, ImFontConfigPtr fontConfig, float ascent, float descent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildSetupFont(ref ImFontAtlas atlas, ImFontPtr font, ref ImFontConfig fontConfig, float ascent, float descent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildSetupFont(ref ImFontAtlas atlas, ref ImFont font, ImFontConfigPtr fontConfig, float ascent, float descent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFontAtlasBuildSetupFont(ref ImFontAtlas atlas, ref ImFont font, ref ImFontConfig fontConfig, float ascent, float descent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImFontBuilderIOPtr ImFontAtlasGetBuilderForStbTruetype()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImFormatStringToTempBuffer(byte** outBuf, byte** outBufEnd, ImU8String fmt)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static ImGuiDir ImGetDirQuadrantFromDelta(float dx, float dy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiComboPreviewDataPtr ImGuiComboPreviewData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiContextPtr ImGuiContext(ImFontAtlasPtr sharedFontAtlas)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiContextPtr ImGuiContext(ref ImFontAtlas sharedFontAtlas)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiContextHookPtr ImGuiContextHook()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiDockContextPtr ImGuiDockContext()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiDockNodePtr ImGuiDockNode(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiInputEventPtr ImGuiInputEvent()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiInputTextStatePtr ImGuiInputTextState()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiLastItemDataPtr ImGuiLastItemData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiListClipperDataPtr ImGuiListClipperData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiMenuColumnsPtr ImGuiMenuColumns()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiMetricsConfigPtr ImGuiMetricsConfig()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiNavItemDataPtr ImGuiNavItemData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiNextItemDataPtr ImGuiNextItemData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiNextWindowDataPtr ImGuiNextWindowData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiOldColumnDataPtr ImGuiOldColumnData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiOldColumnsPtr ImGuiOldColumns()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiPopupDataPtr ImGuiPopupData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiPtrOrIndexPtr ImGuiPtrOrIndex(int index)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiPtrOrIndexPtr ImGuiPtrOrIndex(void* ptr)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiSettingsHandlerPtr ImGuiSettingsHandler()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiStackLevelInfoPtr ImGuiStackLevelInfo()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiStackSizesPtr ImGuiStackSizes()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiStackToolPtr ImGuiStackTool()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiStyleModPtr ImGuiStyleMod(ImGuiStyleVar idx, Vector2 v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiStyleModPtr ImGuiStyleMod(ImGuiStyleVar idx, float v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiStyleModPtr ImGuiStyleMod(ImGuiStyleVar idx, int v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTabBarPtr ImGuiTabBar()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTabItemPtr ImGuiTabItem()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTablePtr ImGuiTable()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableColumnPtr ImGuiTableColumn()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableColumnSettingsPtr ImGuiTableColumnSettings()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableInstanceDataPtr ImGuiTableInstanceData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableSettingsPtr ImGuiTableSettings()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableTempDataPtr ImGuiTableTempData()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiViewportPPtr ImGuiViewportP()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiWindowPtr ImGuiWindow(ImGuiContextPtr context, ImU8String name)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static ImGuiWindowSettingsPtr ImGuiWindowSettings()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint ImHashData(ReadOnlySpan<byte> data, uint seed = 0)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static uint ImHashStr(ImU8String data, uint seed = 0)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static float ImInvLength(Vector2 lhs, float failValue)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImIsFloatAboveGuaranteedIntegerPrecision(float f)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImIsPowerOfTwo(int v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImIsPowerOfTwo(ulong v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImLengthSqr(Vector2 lhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImLengthSqr(Vector4 lhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImLerp(Vector2 a, Vector2 b, Vector2 t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImLerp(Vector2 a, Vector2 b, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector4 ImLerp(Vector4 a, Vector4 b, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImLerp(Vector2* pOut, Vector2 a, Vector2 b, Vector2 t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImLerp(Vector2* pOut, Vector2 a, Vector2 b, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImLerp(Vector4* pOut, Vector4 a, Vector4 b, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImLerp(ref Vector2 pOut, Vector2 a, Vector2 b, Vector2 t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImLerp(ref Vector2 pOut, Vector2 a, Vector2 b, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImLerp(ref Vector4 pOut, Vector4 a, Vector4 b, float t)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImLinearSweep(float current, float target, float speed)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImLineClosestPoint(Vector2 a, Vector2 b, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImLineClosestPoint(Vector2* pOut, Vector2 a, Vector2 b, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImLineClosestPoint(ref Vector2 pOut, Vector2 a, Vector2 b, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static double ImLog(double x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImLog(float x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImMax(Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImMax(Vector2* pOut, Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImMax(ref Vector2 pOut, Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImMin(Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImMin(Vector2* pOut, Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImMin(ref Vector2 pOut, Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int ImModPositive(int a, int b)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImMul(Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImMul(Vector2* pOut, Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImMul(ref Vector2 pOut, Vector2 lhs, Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImParseFormatSanitizeForPrinting(ReadOnlySpan<byte> fmtIn, Span<byte> fmtOut)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static void ImParseFormatSanitizeForScanning(ReadOnlySpan<byte> fmtIn, Span<byte> fmtOut)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static double ImPow(double x, double y)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImPow(float x, float y)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImQsort(void* baseValue, nuint count, nuint sizeOfElement, delegate*<void*, nuint, nuint, delegate*<void*, void*, int>, int> compareFunc)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRectPtr ImRect()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRectPtr ImRect(Vector2 min, Vector2 max)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRectPtr ImRect(Vector4 v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRectPtr ImRect(float x1, float y1, float x2, float y2)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImRotate(Vector2 v, float cosA, float sinA)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImRotate(Vector2* pOut, Vector2 v, float cosA, float sinA)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImRotate(ref Vector2 pOut, Vector2 v, float cosA, float sinA)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static double ImRsqrt(double x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImRsqrt(float x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImSaturate(float f)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static double ImSign(double x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImSign(float x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ushort* ImStrbolW(ushort* bufMidLine, ushort* bufBegin)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int ImStrchrRange<T>(ReadOnlySpan<T> str, T c, out ReadOnlySpan<T> before, out ReadOnlySpan<T> after)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static int ImStreolRange(ReadOnlySpan<byte> str, byte c, out ReadOnlySpan<byte> before, out ReadOnlySpan<byte> after)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static int ImStreolRange(ReadOnlySpan<char> str, char c, out ReadOnlySpan<char> before, out ReadOnlySpan<char> after)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static Span<byte> ImTextCharToUtf8(Span<byte> buf, char c)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static Span<byte> ImTextCharToUtf8(Span<byte> buf, int c)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static Span<byte> ImTextCharToUtf8(Span<byte> buf, uint c)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static int ImTextCountUtf8BytesFromStr(ushort* inText, ushort* inTextEnd)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float ImTriangleArea(Vector2 a, Vector2 b, Vector2 c)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleBarycentricCoords(Vector2 a, Vector2 b, Vector2 c, Vector2 p, float* outU, float* outV, float* outW)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleBarycentricCoords(Vector2 a, Vector2 b, Vector2 c, Vector2 p, float* outU, float* outV, ref float outW)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleBarycentricCoords(Vector2 a, Vector2 b, Vector2 c, Vector2 p, float* outU, ref float outV, float* outW)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleBarycentricCoords(Vector2 a, Vector2 b, Vector2 c, Vector2 p, float* outU, ref float outV, ref float outW)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleBarycentricCoords(Vector2 a, Vector2 b, Vector2 c, Vector2 p, ref float outU, float* outV, float* outW)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleBarycentricCoords(Vector2 a, Vector2 b, Vector2 c, Vector2 p, ref float outU, float* outV, ref float outW)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleBarycentricCoords(Vector2 a, Vector2 b, Vector2 c, Vector2 p, ref float outU, ref float outV, float* outW)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleBarycentricCoords(Vector2 a, Vector2 b, Vector2 c, Vector2 p, ref float outU, ref float outV, ref float outW)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ImTriangleClosestPoint(Vector2 a, Vector2 b, Vector2 c, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleClosestPoint(Vector2* pOut, Vector2 a, Vector2 b, Vector2 c, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ImTriangleClosestPoint(ref Vector2 pOut, Vector2 a, Vector2 b, Vector2 c, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ImTriangleContainsPoint(Vector2 a, Vector2 b, Vector2 c, Vector2 p)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int ImUpperPowerOfTwo(int v)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImVec1Ptr ImVec1()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImVec1Ptr ImVec1(float x)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImVec2IhPtr ImVec2ih()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImVec2IhPtr ImVec2ih(Vector2 rhs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImVec2IhPtr ImVec2ih(short x, short y)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Initialize()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsActiveIdUsingKey(ImGuiKey key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsActiveIdUsingNavDir(ImGuiDir dir)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsActiveIdUsingNavInput(ImGuiNavInput input)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsCentralNode(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsCentralNode(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsClippedEx(ImRect bb, uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsDockSpace(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsDockSpace(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsDragDropActive()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsDragDropPayloadBeingAccepted()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsEmpty(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsEmpty(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsFloatingNode(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsFloatingNode(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsGamepadKey(ImGuiKey key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsHiddenTabBar(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsHiddenTabBar(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsInverted(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsInverted(this ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsItemToggledSelection()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsKeyPressedMap(ImGuiKey key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsKeyPressedMap(ImGuiKey key, bool repeat)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsLeafNode(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsLeafNode(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsLegacyKey(ImGuiKey key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsMouseDragPastThreshold(ImGuiMouseButton button)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsMouseDragPastThreshold(ImGuiMouseButton button, float lockThreshold)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsNamedKey(ImGuiKey key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsNavInputDown(ImGuiNavInput n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsNavInputTest(ImGuiNavInput n, ImGuiNavReadMode rm)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsNoTabBar(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsNoTabBar(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsPopupOpen(uint id, ImGuiPopupFlags popupFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsRootNode(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsRootNode(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsSplitNode(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsSplitNode(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowAbove(ImGuiWindowPtr potentialAbove, ImGuiWindowPtr potentialBelow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowAbove(ImGuiWindowPtr potentialAbove, ref ImGuiWindow potentialBelow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowAbove(ref ImGuiWindow potentialAbove, ImGuiWindowPtr potentialBelow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowAbove(ref ImGuiWindow potentialAbove, ref ImGuiWindow potentialBelow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowChildOf(ImGuiWindowPtr window, ImGuiWindowPtr potentialParent, bool popupHierarchy, bool dockHierarchy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowChildOf(ImGuiWindowPtr window, ref ImGuiWindow potentialParent, bool popupHierarchy, bool dockHierarchy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowChildOf(ref ImGuiWindow window, ImGuiWindowPtr potentialParent, bool popupHierarchy, bool dockHierarchy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowChildOf(ref ImGuiWindow window, ref ImGuiWindow potentialParent, bool popupHierarchy, bool dockHierarchy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowNavFocusable(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowNavFocusable(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowWithinBeginStackOf(ImGuiWindowPtr window, ImGuiWindowPtr potentialParent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowWithinBeginStackOf(ImGuiWindowPtr window, ref ImGuiWindow potentialParent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowWithinBeginStackOf(ref ImGuiWindow window, ImGuiWindowPtr potentialParent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool IsWindowWithinBeginStackOf(ref ImGuiWindow window, ref ImGuiWindow potentialParent)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ItemAdd(ImRect bb, uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ItemAdd(ImRect bb, uint id, ImGuiItemFlags extraFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ItemAdd(ImRect bb, uint id, ImRectPtr navBb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ItemAdd(ImRect bb, uint id, ImRectPtr navBb, ImGuiItemFlags extraFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ItemAdd(ImRect bb, uint id, ref ImRect navBb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ItemAdd(ImRect bb, uint id, ref ImRect navBb, ImGuiItemFlags extraFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ItemHoverable(ImRect bb, uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ItemSize(ImRect bb)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ItemSize(ImRect bb, float textBaselineY)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ItemSize(Vector2 size)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ItemSize(Vector2 size, float textBaselineY)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void KeepAliveID(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void LogBegin(ImGuiLogType type, int autoOpenDepth)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void LogRenderedText(scoped in Vector2 refPos, ImU8String text)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static void LogSetNextTextDecoration(byte* prefix, byte* suffix)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void LogToBuffer()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void LogToBuffer(int autoOpenDepth)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void MarkIniSettingsDirty()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void MarkIniSettingsDirty(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void MarkIniSettingsDirty(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void MarkItemEdited(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float MenuBarHeight(this ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float MenuBarHeight(this ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect MenuBarRect(this ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect MenuBarRect(this ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void MenuBarRect(ImRectPtr pOut, ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void MenuBarRect(ImRectPtr pOut, ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void MenuBarRect(ref ImRect pOut, ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void MenuBarRect(ref ImRect pOut, ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool MenuItemEx(ImU8String label, ImU8String icon = default, ImU8String shortcut = default, bool selected = false, bool enabled = true)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void NavInitRequestApplyResult()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavInitWindow(ImGuiWindowPtr window, bool forceReinit)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavInitWindow(ref ImGuiWindow window, bool forceReinit)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavMoveRequestApplyResult()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool NavMoveRequestButNoResultYet()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavMoveRequestCancel()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavMoveRequestForward(ImGuiDir moveDir, ImGuiDir clipDir, ImGuiNavMoveFlags moveFlags, ImGuiScrollFlags scrollFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavMoveRequestResolveWithLastItem(ImGuiNavItemDataPtr result)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavMoveRequestResolveWithLastItem(ref ImGuiNavItemData result)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavMoveRequestSubmit(ImGuiDir moveDir, ImGuiDir clipDir, ImGuiNavMoveFlags moveFlags, ImGuiScrollFlags scrollFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavMoveRequestTryWrapping(ImGuiWindowPtr window, ImGuiNavMoveFlags moveFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void NavMoveRequestTryWrapping(ref ImGuiWindow window, ImGuiNavMoveFlags moveFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void OnKeyPressed(this ImGuiInputTextStatePtr self, int key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void OnKeyPressed(this ref ImGuiInputTextState self, int key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void OpenPopupEx(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void OpenPopupEx(uint id, ImGuiPopupFlags popupFlags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool Overlaps(this ImRectPtr self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool Overlaps(this ref ImRect self, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int PlotEx(ImGuiPlotType plotType, ImU8String label, ImGui.GetFloatDelegate valuesGetter, int valuesCount, int valuesOffset, ImU8String overlayText, float scaleMin, float scaleMax, Vector2 frameSize)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Plot.cs
+ImGuiP.static int PlotEx<TContext>(ImGuiPlotType plotType, ImU8String label, ImGui.GetFloatInContextDelegate<TContext> valuesGetter, scoped in TContext context, int valuesCount, int valuesOffset, ImU8String overlayText, float scaleMin, float scaleMax, Vector2 frameSize)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Plot.cs
+ImGuiP.static int PlotEx<TContext>(ImGuiPlotType plotType, ImU8String label, ImGui.GetFloatRefContextDelegate<TContext> valuesGetter, scoped in TContext context, int valuesCount, int valuesOffset, ImU8String overlayText, float scaleMin, float scaleMax, Vector2 frameSize)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Plot.cs
+ImGuiP.static void PopColumnsBackground()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void PopFocusScope()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void PopItemFlag()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void PushColumnClipRect(int columnIndex)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void PushColumnsBackground()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void PushFocusScope(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void PushItemFlag(ImGuiItemFlags option, bool enabled)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void PushMultiItemsWidths(int components, float widthFull)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void PushOverrideID(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect Rect(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect Rect(this ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect Rect(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect Rect(this ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Rect(ImRectPtr pOut, ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Rect(ImRectPtr pOut, ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Rect(ImRectPtr pOut, ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Rect(ImRectPtr pOut, ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Rect(ref ImRect pOut, ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Rect(ref ImRect pOut, ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Rect(ref ImRect pOut, ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Rect(ref ImRect pOut, ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RemoveContextHook(ImGuiContextPtr context, uint hookToRemove)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RemoveContextHook(ref ImGuiContext context, uint hookToRemove)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RemoveSettingsHandler(ImU8String typeName)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void RenderArrow(ImDrawListPtr drawList, Vector2 pos, uint col, ImGuiDir dir)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderArrow(ImDrawListPtr drawList, Vector2 pos, uint col, ImGuiDir dir, float scale)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderArrow(ref ImDrawList drawList, Vector2 pos, uint col, ImGuiDir dir)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderArrow(ref ImDrawList drawList, Vector2 pos, uint col, ImGuiDir dir, float scale)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderArrowDockMenu(ImDrawListPtr drawList, Vector2 pMin, float sz, uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderArrowDockMenu(ref ImDrawList drawList, Vector2 pMin, float sz, uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderArrowPointingAt(ImDrawListPtr drawList, Vector2 pos, Vector2 halfSz, ImGuiDir direction, uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderArrowPointingAt(ref ImDrawList drawList, Vector2 pos, Vector2 halfSz, ImGuiDir direction, uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderBullet(ImDrawListPtr drawList, Vector2 pos, uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderBullet(ref ImDrawList drawList, Vector2 pos, uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderCheckMark(ImDrawListPtr drawList, Vector2 pos, uint col, float sz)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderCheckMark(ref ImDrawList drawList, Vector2 pos, uint col, float sz)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderColorRectWithAlphaCheckerboard(ImDrawListPtr drawList, Vector2 pMin, Vector2 pMax, uint fillCol, float gridStep, Vector2 gridOff)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderColorRectWithAlphaCheckerboard(ImDrawListPtr drawList, Vector2 pMin, Vector2 pMax, uint fillCol, float gridStep, Vector2 gridOff, ImDrawFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderColorRectWithAlphaCheckerboard(ImDrawListPtr drawList, Vector2 pMin, Vector2 pMax, uint fillCol, float gridStep, Vector2 gridOff, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderColorRectWithAlphaCheckerboard(ImDrawListPtr drawList, Vector2 pMin, Vector2 pMax, uint fillCol, float gridStep, Vector2 gridOff, float rounding, ImDrawFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderColorRectWithAlphaCheckerboard(ref ImDrawList drawList, Vector2 pMin, Vector2 pMax, uint fillCol, float gridStep, Vector2 gridOff)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderColorRectWithAlphaCheckerboard(ref ImDrawList drawList, Vector2 pMin, Vector2 pMax, uint fillCol, float gridStep, Vector2 gridOff, ImDrawFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderColorRectWithAlphaCheckerboard(ref ImDrawList drawList, Vector2 pMin, Vector2 pMax, uint fillCol, float gridStep, Vector2 gridOff, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderColorRectWithAlphaCheckerboard(ref ImDrawList drawList, Vector2 pMin, Vector2 pMax, uint fillCol, float gridStep, Vector2 gridOff, float rounding, ImDrawFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderFrame(Vector2 pMin, Vector2 pMax, uint fillCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderFrame(Vector2 pMin, Vector2 pMax, uint fillCol, bool border)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderFrame(Vector2 pMin, Vector2 pMax, uint fillCol, bool border, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderFrame(Vector2 pMin, Vector2 pMax, uint fillCol, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderFrameBorder(Vector2 pMin, Vector2 pMax)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderFrameBorder(Vector2 pMin, Vector2 pMax, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderMouseCursor(Vector2 pos, float scale, ImGuiMouseCursor mouseCursor, uint colFill, uint colBorder, uint colShadow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderNavHighlight(ImRect bb, uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderNavHighlight(ImRect bb, uint id, ImGuiNavHighlightFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderRectFilledRangeH(ImDrawListPtr drawList, ImRect rect, uint col, float xStartNorm, float xEndNorm, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderRectFilledRangeH(ref ImDrawList drawList, ImRect rect, uint col, float xStartNorm, float xEndNorm, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderRectFilledWithHole(ImDrawListPtr drawList, ImRect outer, ImRect inner, uint col, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderRectFilledWithHole(ref ImDrawList drawList, ImRect outer, ImRect inner, uint col, float rounding)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void RenderText(Vector2 pos, ImU8String text, bool hideTextAfterHash = true)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static void RenderTextClipped(scoped in Vector2 posMin, scoped in Vector2 posMax, ImU8String text, scoped in Vector2? textSizeIfKnown = null, scoped in Vector2 align = default, scoped in ImRect? clipRect = null)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static void RenderTextClippedEx(ImDrawListPtr drawList, scoped in Vector2 posMin, scoped in Vector2 posMax, ImU8String text, scoped in Vector2? textSizeIfKnown = null, scoped in Vector2 align = default, scoped in ImRect? clipRect = null)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static void RenderTextEllipsis(ImDrawListPtr drawList, scoped in Vector2 posMin, scoped in Vector2 posMax, float clipMaxX, float ellipsisMaxX, ImU8String text, scoped in Vector2? textSizeIfKnown = null)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static void RenderTextWrapped(Vector2 pos, ImU8String text, float wrapWidth)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static void Reset(this ImGuiListClipperDataPtr self, ImGuiListClipperPtr clipper)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Reset(this ImGuiListClipperDataPtr self, ref ImGuiListClipper clipper)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Reset(this ref ImGuiListClipperData self, ImGuiListClipperPtr clipper)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Reset(this ref ImGuiListClipperData self, ref ImGuiListClipper clipper)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScaleWindowsInViewport(ImGuiViewportPPtr viewport, float scale)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScaleWindowsInViewport(ref ImGuiViewportP viewport, float scale)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Scrollbar(ImGuiAxis axis)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool ScrollbarEx(ImRect bb, uint id, ImGuiAxis axis, long* pScrollV, long availV, long contentsV, ImDrawFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToBringRectIntoView(ImGuiWindowPtr window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToBringRectIntoView(ref ImGuiWindow window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToItem()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToItem(ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRect(ImGuiWindowPtr window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRect(ImGuiWindowPtr window, ImRect rect, ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRect(ref ImGuiWindow window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRect(ref ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ScrollToRectEx(ImGuiWindowPtr window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ScrollToRectEx(ImGuiWindowPtr window, ImRect rect, ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ScrollToRectEx(ref ImGuiWindow window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 ScrollToRectEx(ref ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRectEx(Vector2* pOut, ImGuiWindowPtr window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRectEx(Vector2* pOut, ImGuiWindowPtr window, ImRect rect, ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRectEx(Vector2* pOut, ref ImGuiWindow window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRectEx(Vector2* pOut, ref ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRectEx(ref Vector2 pOut, ImGuiWindowPtr window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRectEx(ref Vector2 pOut, ImGuiWindowPtr window, ImRect rect, ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRectEx(ref Vector2 pOut, ref ImGuiWindow window, ImRect rect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ScrollToRectEx(ref Vector2 pOut, ref ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SelectAll(this ImGuiInputTextStatePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SelectAll(this ref ImGuiInputTextState self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SeparatorEx(ImGuiSeparatorFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetActiveID(uint id, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetActiveID(uint id, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetActiveIdUsingKey(ImGuiKey key)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetActiveIdUsingNavAndKeys()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetBit(this ImBitVectorPtr self, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetBit(this ref ImBitVector self, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetCircleTessellationMaxError(this ImDrawListSharedDataPtr self, float maxError)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetCircleTessellationMaxError(this ref ImDrawListSharedData self, float maxError)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetCurrentFont(ImFontPtr font)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetCurrentFont(ref ImFont font)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetCurrentViewport(ImGuiWindowPtr window, ImGuiViewportPPtr viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetCurrentViewport(ImGuiWindowPtr window, ref ImGuiViewportP viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetCurrentViewport(ref ImGuiWindow window, ImGuiViewportPPtr viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetCurrentViewport(ref ImGuiWindow window, ref ImGuiViewportP viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetFocusID(uint id, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetFocusID(uint id, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetHoveredID(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetItemUsingMouseWheel()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetLastItemData(uint itemId, ImGuiItemFlags inFlags, ImGuiItemStatusFlags statusFlags, ImRect itemRect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetLocalFlags(this ImGuiDockNodePtr self, ImGuiDockNodeFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetLocalFlags(this ref ImGuiDockNode self, ImGuiDockNodeFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetNavID(uint id, ImGuiNavLayer navLayer, uint focusScopeId, ImRect rectRel)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetNavWindow(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetNavWindow(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetNextWindowScroll(Vector2 scroll)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetScrollFromPosX(ImGuiWindowPtr window, float localX, float centerXRatio)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetScrollFromPosX(ref ImGuiWindow window, float localX, float centerXRatio)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetScrollFromPosY(ImGuiWindowPtr window, float localY, float centerYRatio)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetScrollFromPosY(ref ImGuiWindow window, float localY, float centerYRatio)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetScrollX(ImGuiWindowPtr window, float scrollX)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetScrollX(ref ImGuiWindow window, float scrollX)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetScrollY(ImGuiWindowPtr window, float scrollY)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetScrollY(ref ImGuiWindow window, float scrollY)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetToCurrentState(this ImGuiStackSizesPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetToCurrentState(this ref ImGuiStackSizes self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowClipRectBeforeSetChannel(ImGuiWindowPtr window, ImRect clipRect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowClipRectBeforeSetChannel(ref ImGuiWindow window, ImRect clipRect)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowCollapsed(ImGuiWindowPtr window, bool collapsed)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowCollapsed(ImGuiWindowPtr window, bool collapsed, ImGuiCond cond)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowCollapsed(ref ImGuiWindow window, bool collapsed)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowCollapsed(ref ImGuiWindow window, bool collapsed, ImGuiCond cond)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowDock(ImGuiWindowPtr window, uint dockId, ImGuiCond cond)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowDock(ref ImGuiWindow window, uint dockId, ImGuiCond cond)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowHitTestHole(ImGuiWindowPtr window, Vector2 pos, Vector2 size)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowHitTestHole(ref ImGuiWindow window, Vector2 pos, Vector2 size)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowPos(ImGuiWindowPtr window, Vector2 pos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowPos(ImGuiWindowPtr window, Vector2 pos, ImGuiCond cond)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowPos(ref ImGuiWindow window, Vector2 pos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowPos(ref ImGuiWindow window, Vector2 pos, ImGuiCond cond)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowSize(ImGuiWindowPtr window, Vector2 size)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowSize(ImGuiWindowPtr window, Vector2 size, ImGuiCond cond)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowSize(ref ImGuiWindow window, Vector2 size)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowSize(ref ImGuiWindow window, Vector2 size, ImGuiCond cond)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowViewport(ImGuiWindowPtr window, ImGuiViewportPPtr viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowViewport(ImGuiWindowPtr window, ref ImGuiViewportP viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowViewport(ref ImGuiWindow window, ImGuiViewportPPtr viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void SetWindowViewport(ref ImGuiWindow window, ref ImGuiViewportP viewport)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ShadeVertsLinearColorGradientKeepAlpha(ImDrawListPtr drawList, int vertStartIdx, int vertEndIdx, Vector2 gradientp0, Vector2 gradientp1, uint col0, uint col1)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ShadeVertsLinearColorGradientKeepAlpha(ref ImDrawList drawList, int vertStartIdx, int vertEndIdx, Vector2 gradientp0, Vector2 gradientp1, uint col0, uint col1)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ShadeVertsLinearUV(ImDrawListPtr drawList, int vertStartIdx, int vertEndIdx, Vector2 a, Vector2 b, Vector2 uvA, Vector2 uvB, bool clamp)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ShadeVertsLinearUV(ref ImDrawList drawList, int vertStartIdx, int vertEndIdx, Vector2 a, Vector2 b, Vector2 uvA, Vector2 uvB, bool clamp)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ShowFontAtlas(ImFontAtlasPtr atlas)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ShowFontAtlas(ref ImFontAtlas atlas)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ShrinkWidths(ImGuiShrinkWidthItemPtr items, int count, float widthExcess)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ShrinkWidths(ref ImGuiShrinkWidthItem items, int count, float widthExcess)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Shutdown()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SliderBehavior<T>(ImRect bb, uint id, ImGuiDataType dataType, scoped ref T value, T min, T max, ImU8String format, ImGuiSliderFlags flags, ImRectPtr outGrabBb)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, float* size2, float minsize1, float minsize2)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, float* size2, float minsize1, float minsize2, float hoverExtend)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, float* size2, float minsize1, float minsize2, float hoverExtend, float hoverVisibilityDelay)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, float* size2, float minsize1, float minsize2, float hoverExtend, float hoverVisibilityDelay, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, float* size2, float minsize1, float minsize2, float hoverExtend, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, float* size2, float minsize1, float minsize2, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, ref float size2, float minsize1, float minsize2)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, ref float size2, float minsize1, float minsize2, float hoverExtend)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, ref float size2, float minsize1, float minsize2, float hoverExtend, float hoverVisibilityDelay)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, ref float size2, float minsize1, float minsize2, float hoverExtend, float hoverVisibilityDelay, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, ref float size2, float minsize1, float minsize2, float hoverExtend, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, float* size1, ref float size2, float minsize1, float minsize2, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, float* size2, float minsize1, float minsize2)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, float* size2, float minsize1, float minsize2, float hoverExtend)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, float* size2, float minsize1, float minsize2, float hoverExtend, float hoverVisibilityDelay)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, float* size2, float minsize1, float minsize2, float hoverExtend, float hoverVisibilityDelay, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, float* size2, float minsize1, float minsize2, float hoverExtend, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, float* size2, float minsize1, float minsize2, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, ref float size2, float minsize1, float minsize2)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, ref float size2, float minsize1, float minsize2, float hoverExtend)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, ref float size2, float minsize1, float minsize2, float hoverExtend, float hoverVisibilityDelay)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, ref float size2, float minsize1, float minsize2, float hoverExtend, float hoverVisibilityDelay, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, ref float size2, float minsize1, float minsize2, float hoverExtend, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool SplitterBehavior(ImRect bb, uint id, ImGuiAxis axis, ref float size1, ref float size2, float minsize1, float minsize2, uint bgCol)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void StartMouseMovingWindow(ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void StartMouseMovingWindow(ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void StartMouseMovingWindowOrNode(ImGuiWindowPtr window, ImGuiDockNodePtr node, bool undockFloatingNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void StartMouseMovingWindowOrNode(ImGuiWindowPtr window, ref ImGuiDockNode node, bool undockFloatingNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void StartMouseMovingWindowOrNode(ref ImGuiWindow window, ImGuiDockNodePtr node, bool undockFloatingNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void StartMouseMovingWindowOrNode(ref ImGuiWindow window, ref ImGuiDockNode node, bool undockFloatingNode)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarAddTab(ImGuiTabBarPtr tabBar, ImGuiTabItemFlags tabFlags, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarAddTab(ImGuiTabBarPtr tabBar, ImGuiTabItemFlags tabFlags, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarAddTab(ref ImGuiTabBar tabBar, ImGuiTabItemFlags tabFlags, ImGuiWindowPtr window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarAddTab(ref ImGuiTabBar tabBar, ImGuiTabItemFlags tabFlags, ref ImGuiWindow window)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarCloseTab(ImGuiTabBarPtr tabBar, ImGuiTabItemPtr tab)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarCloseTab(ImGuiTabBarPtr tabBar, ref ImGuiTabItem tab)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarCloseTab(ref ImGuiTabBar tabBar, ImGuiTabItemPtr tab)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarCloseTab(ref ImGuiTabBar tabBar, ref ImGuiTabItem tab)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTabItemPtr TabBarFindMostRecentlySelectedTabForActiveWindow(ImGuiTabBarPtr tabBar)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTabItemPtr TabBarFindMostRecentlySelectedTabForActiveWindow(ref ImGuiTabBar tabBar)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTabItemPtr TabBarFindTabByID(ImGuiTabBarPtr tabBar, uint tabId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTabItemPtr TabBarFindTabByID(ref ImGuiTabBar tabBar, uint tabId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool TabBarProcessReorder(ImGuiTabBarPtr tabBar)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool TabBarProcessReorder(ref ImGuiTabBar tabBar)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarQueueReorder(ImGuiTabBarPtr tabBar, ImGuiTabItemPtr tab, int offset)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarQueueReorder(ImGuiTabBarPtr tabBar, ref ImGuiTabItem tab, int offset)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarQueueReorder(ref ImGuiTabBar tabBar, ImGuiTabItemPtr tab, int offset)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarQueueReorder(ref ImGuiTabBar tabBar, ref ImGuiTabItem tab, int offset)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarQueueReorderFromMousePos(ImGuiTabBarPtr tabBar, ImGuiTabItemPtr tab, Vector2 mousePos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarQueueReorderFromMousePos(ImGuiTabBarPtr tabBar, ref ImGuiTabItem tab, Vector2 mousePos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarQueueReorderFromMousePos(ref ImGuiTabBar tabBar, ImGuiTabItemPtr tab, Vector2 mousePos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarQueueReorderFromMousePos(ref ImGuiTabBar tabBar, ref ImGuiTabItem tab, Vector2 mousePos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarRemoveTab(ImGuiTabBarPtr tabBar, uint tabId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabBarRemoveTab(ref ImGuiTabBar tabBar, uint tabId)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabItemBackground(ImDrawListPtr drawList, ImRect bb, ImGuiTabItemFlags flags, uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TabItemBackground(ref ImDrawList drawList, ImRect bb, ImGuiTabItemFlags flags, uint col)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector2 TabItemCalcSize(ImU8String label, bool hasCloseButton)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static bool TabItemEx(ImGuiTabBarPtr tabBar, ImU8String label, ref bool open, ImGuiTabItemFlags flags, ImGuiWindowPtr dockedWindow)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void TabItemLabelAndCloseButton(ImDrawListPtr drawList, ImRect bb, ImGuiTabItemFlags flags, Vector2 framePadding, ImU8String label, uint tabId, uint closeButtonId, bool isContentsVisible, out bool justClosed, out bool textClipped)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static void TableBeginApplyRequests(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableBeginApplyRequests(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableBeginCell(ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableBeginCell(ref ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableBeginInitMemory(ImGuiTablePtr table, int columnsCount)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableBeginInitMemory(ref ImGuiTable table, int columnsCount)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableBeginRow(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableBeginRow(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableDrawBorders(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableDrawBorders(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableDrawContextMenu(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableDrawContextMenu(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableEndCell(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableEndCell(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableEndRow(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableEndRow(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTablePtr TableFindByID(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableFixColumnSortDirection(ImGuiTablePtr table, ImGuiTableColumnPtr column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableFixColumnSortDirection(ImGuiTablePtr table, ref ImGuiTableColumn column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableFixColumnSortDirection(ref ImGuiTable table, ImGuiTableColumnPtr column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableFixColumnSortDirection(ref ImGuiTable table, ref ImGuiTableColumn column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGcCompactSettings()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGcCompactTransientBuffers(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGcCompactTransientBuffers(ImGuiTableTempDataPtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGcCompactTransientBuffers(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGcCompactTransientBuffers(ref ImGuiTableTempData table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableSettingsPtr TableGetBoundSettings(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableSettingsPtr TableGetBoundSettings(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect TableGetCellBgRect(ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect TableGetCellBgRect(ref ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGetCellBgRect(ImRectPtr pOut, ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGetCellBgRect(ImRectPtr pOut, ref ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGetCellBgRect(ref ImRect pOut, ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableGetCellBgRect(ref ImRect pOut, ref ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static string TableGetColumnName(this ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static string TableGetColumnName(this in ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> TableGetColumnNameU8(this ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ReadOnlySpan<byte> TableGetColumnNameU8(this in ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.StringReturns.cs
+ImGuiP.static ImGuiSortDirection TableGetColumnNextSortDirection(ImGuiTableColumnPtr column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiSortDirection TableGetColumnNextSortDirection(ref ImGuiTableColumn column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint TableGetColumnResizeID(ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint TableGetColumnResizeID(ImGuiTablePtr table, int columnN, int instanceNo)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint TableGetColumnResizeID(ref ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static uint TableGetColumnResizeID(ref ImGuiTable table, int columnN, int instanceNo)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float TableGetColumnWidthAuto(ImGuiTablePtr table, ImGuiTableColumnPtr column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float TableGetColumnWidthAuto(ImGuiTablePtr table, ref ImGuiTableColumn column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float TableGetColumnWidthAuto(ref ImGuiTable table, ImGuiTableColumnPtr column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float TableGetColumnWidthAuto(ref ImGuiTable table, ref ImGuiTableColumn column)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float TableGetHeaderRowHeight()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static int TableGetHoveredColumn()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableInstanceDataPtr TableGetInstanceData(ImGuiTablePtr table, int instanceNo)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableInstanceDataPtr TableGetInstanceData(ref ImGuiTable table, int instanceNo)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float TableGetMaxColumnWidth(ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float TableGetMaxColumnWidth(ref ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableLoadSettings(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableLoadSettings(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableMergeDrawChannels(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableMergeDrawChannels(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableOpenContextMenu()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableOpenContextMenu(int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TablePopBackgroundChannel()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TablePushBackgroundChannel()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableRemove(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableRemove(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableResetSettings(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableResetSettings(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSaveSettings(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSaveSettings(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSetColumnSortDirection(int columnN, ImGuiSortDirection sortDirection, bool appendToSortSpecs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSetColumnWidth(int columnN, float width)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSetColumnWidthAutoAll(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSetColumnWidthAutoAll(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSetColumnWidthAutoSingle(ImGuiTablePtr table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSetColumnWidthAutoSingle(ref ImGuiTable table, int columnN)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSettingsAddSettingsHandler()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableSettingsPtr TableSettingsCreate(uint id, int columnsCount)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImGuiTableSettingsPtr TableSettingsFindByID(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSetupDrawChannels(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSetupDrawChannels(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSortSpecsBuild(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSortSpecsBuild(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSortSpecsSanitize(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableSortSpecsSanitize(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableUpdateBorders(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableUpdateBorders(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableUpdateColumnsWeightFromWidth(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableUpdateColumnsWeightFromWidth(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableUpdateLayout(ImGuiTablePtr table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TableUpdateLayout(ref ImGuiTable table)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool TempInputIsActive(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool TempInputScalar<T>(ImRect bb, uint id, ImU8String label, ImGuiDataType dataType, scoped ref T data, ImU8String format, T min, T max)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static bool TestBit(this ImBitVectorPtr self, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool TestBit(this ref ImBitVector self, int n)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TextEx(ReadOnlySpan<byte> text, ImGuiTextFlags flags)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Text.cs
+ImGuiP.static float TitleBarHeight(this ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static float TitleBarHeight(this ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect TitleBarRect(this ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect TitleBarRect(this ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TitleBarRect(ImRectPtr pOut, ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TitleBarRect(ImRectPtr pOut, ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TitleBarRect(ref ImRect pOut, ImGuiWindowPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TitleBarRect(ref ImRect pOut, ref ImGuiWindow self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector4 ToVec4(this ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static Vector4 ToVec4(this ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ToVec4(Vector4* pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ToVec4(Vector4* pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ToVec4(ref Vector4 pOut, ImRectPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void ToVec4(ref Vector4 pOut, ref ImRect self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Translate(this ImRectPtr self, Vector2 d)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Translate(this ref ImRect self, Vector2 d)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TranslateWindowsInViewport(ImGuiViewportPPtr viewport, Vector2 oldPos, Vector2 newPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TranslateWindowsInViewport(ref ImGuiViewportP viewport, Vector2 oldPos, Vector2 newPos)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TranslateX(this ImRectPtr self, float dx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TranslateX(this ref ImRect self, float dx)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TranslateY(this ImRectPtr self, float dy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TranslateY(this ref ImRect self, float dy)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool TreeNodeBehavior(uint id, ImGuiTreeNodeFlags flags, ImU8String label)	// Dalamud.Bindings.ImGui/Custom/ImGuiP.Misc.cs
+ImGuiP.static bool TreeNodeBehaviorIsOpen(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static bool TreeNodeBehaviorIsOpen(uint id, ImGuiTreeNodeFlags flags)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void TreePushOverrideID(uint id)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Update(this ImGuiMenuColumnsPtr self, float spacing, bool windowReappearing)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void Update(this ref ImGuiMenuColumns self, float spacing, bool windowReappearing)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateHoveredWindowAndCaptureFlags()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateInputEvents(bool trickleFastInputs)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateMergedFlags(this ImGuiDockNodePtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateMergedFlags(this ref ImGuiDockNode self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateMouseMovingWindowEndFrame()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateMouseMovingWindowNewFrame()	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateWindowParentAndRootLinks(ImGuiWindowPtr window, ImGuiWindowFlags flags, ImGuiWindowPtr parentWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateWindowParentAndRootLinks(ImGuiWindowPtr window, ImGuiWindowFlags flags, ref ImGuiWindow parentWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateWindowParentAndRootLinks(ref ImGuiWindow window, ImGuiWindowFlags flags, ImGuiWindowPtr parentWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateWindowParentAndRootLinks(ref ImGuiWindow window, ImGuiWindowFlags flags, ref ImGuiWindow parentWindow)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateWorkRect(this ImGuiViewportPPtr self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void UpdateWorkRect(this ref ImGuiViewportP self)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect WindowRectAbsToRel(ImGuiWindowPtr window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect WindowRectAbsToRel(ref ImGuiWindow window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void WindowRectAbsToRel(ImRectPtr pOut, ImGuiWindowPtr window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void WindowRectAbsToRel(ImRectPtr pOut, ref ImGuiWindow window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void WindowRectAbsToRel(ref ImRect pOut, ImGuiWindowPtr window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void WindowRectAbsToRel(ref ImRect pOut, ref ImGuiWindow window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect WindowRectRelToAbs(ImGuiWindowPtr window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static ImRect WindowRectRelToAbs(ref ImGuiWindow window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void WindowRectRelToAbs(ImRectPtr pOut, ImGuiWindowPtr window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void WindowRectRelToAbs(ImRectPtr pOut, ref ImGuiWindow window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void WindowRectRelToAbs(ref ImRect pOut, ImGuiWindowPtr window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs
+ImGuiP.static void WindowRectRelToAbs(ref ImRect pOut, ref ImGuiWindow window, ImRect r)	// Dalamud.Bindings.ImGui/Custom/Generated/Internals/Functions/ImGuiP.gen.cs

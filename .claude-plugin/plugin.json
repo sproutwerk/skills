@@ -1,0 +1,7 @@
+{
+  "name": "ffxivskills",
+  "description": "Agent skills for FFXIV plugin development, plugin integration, game-data queries, and scripting.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "skills": "./skills"
+}

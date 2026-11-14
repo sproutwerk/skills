@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "skill": "allagantools",
+      "path": "skills/allagantools",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/Critical-Impact/InventoryTools",
+          "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/allagantools/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/Critical-Impact/CriticalCommonLib",
+          "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/allagantools/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "autoretainer",
+      "path": "skills/autoretainer",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/PunishXIV/AutoRetainer",
+          "revision": "cc020df0efee3ea65a45117e2b89999108c702e8",
+          "version": "4.6.1.26",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/autoretainer/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/PunishXIV/AutoRetainerAPI",
+          "revision": "7ccf0f6b4c7923821a43ed1e92456c9d5d7132f2",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/autoretainer/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "bossmod",
+      "path": "skills/bossmod",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/awgil/ffxiv_bossmod",
+          "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+          "version": "7.5.8.2",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/bossmod/references/provenance.md"
+        }
+      ],
+      "comparison": {
+        "repository": "https://github.com/FFXIV-CombatReborn/BossmodReborn",
+        "revision": "35a908ad71b1a94fdbf342518ed78c7c72c458c0",
+        "provenance": "skills/bossmod/references/fork-boundary.md"
+      }
+    },
+    {
+      "skill": "clientstructs",
+      "path": "skills/clientstructs",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/aers/FFXIVClientStructs",
+          "revision": "80cb4a7b7e11a6702e2eb8839afd301a918c638e",
+          "gameVersion": "2026.11.03.0000.0000",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/clientstructs/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/NightmareXIV/ECommons",
+          "revision": "bc38dc71340fa3b266de58e3d6d876a73313b61e",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/clientstructs/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "dalamud",
+      "path": "skills/dalamud",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/goatcorp/Dalamud",
+          "revision": "43b34118bcf7213e575ec39517d033191b1acf17",
+          "version": "15.0.3.9",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/dalamud/references/NOTICE.md"
+        },
+        {
+          "repository": "https://github.com/goatcorp/dalamud-docs",
+          "revision": "3c7597d643d8a8c01ee55930303057a8ce7c6820",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/dalamud/references/NOTICE.md"
+        },
+        {
+          "repository": "https://github.com/goatcorp/SamplePlugin",
+          "revision": "b8477daaa678a5dd72cdcd4a32bc249d3c23a598",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/dalamud/references/NOTICE.md"
+        }
+      ]
+    },
+    {
+      "skill": "dalamudimgui",
+      "path": "skills/dalamudimgui",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/goatcorp/Dalamud",
+          "revision": "43b34118bcf7213e575ec39517d033191b1acf17",
+          "version": "15.0.3.9",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/dalamudimgui/references/PROVENANCE.txt"
+        },
+        {
+          "repository": "https://github.com/goatcorp/dalamud-docs",
+          "revision": "3c7597d643d8a8c01ee55930303057a8ce7c6820",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/dalamudimgui/references/PROVENANCE.txt"
+        }
+      ]
+    },
+    {
+      "skill": "doman-mahjong",
+      "path": "skills/doman-mahjong",
+      "origin": "Original guidance; external rules sources linked, not vendored.",
+      "review": {
+        "date": "2026-11-13",
+        "provenance": "skills/doman-mahjong/references/sources.md",
+        "decision": "Document FFXIV rules, generic scoring baselines, and unresolved runtime details; no live-game validation."
+      }
+    },
+    {
+      "skill": "ecommons",
+      "path": "skills/ecommons",
+      "origin": "Authored in this repository; selected upstream ECommons files bundled unchanged. Some bundled files carry third-party terms or no recorded license grant; see NOTICE.md.",
+      "upstream": [
+        {
+          "repository": "https://github.com/NightmareXIV/ECommons",
+          "revision": "bc38dc71340fa3b266de58e3d6d876a73313b61e",
+          "version": "3.2.1.26",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/ecommons/references/NOTICE.md"
+        }
+      ]
+    },
+    {
+      "skill": "lifestream",
+      "path": "skills/lifestream",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged. Upstream Lifestream has no recorded license grant; see NOTICE.md.",
+      "upstream": [
+        {
+          "repository": "https://github.com/NightmareXIV/Lifestream",
+          "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/lifestream/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/NightmareXIV/ECommons",
+          "revision": "958af5c7e735e1633b92070a5b67f8d6c48c30f3",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/lifestream/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "luna",
+      "path": "skills/luna",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/Ottermandias/Luna",
+          "revision": "52eb0fec6795b10c7e389c268486def9d18a9c36",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/luna/references/guide.md#recent-api-changes"
+        },
+        {
+          "repository": "https://github.com/Ottermandias/ImSharp",
+          "revision": "4d09327e3d7ea7d4cfda7fef2a0ca04dddda5cee",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/luna/references/guide.md#recent-api-changes"
+        },
+        {
+          "repository": "https://github.com/Ottermandias/Luna.Targa",
+          "revision": "8f66a2d897b9c5ad9b299a86039f1bac83fe4234",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/luna/references/guide.md#recent-api-changes"
+        }
+      ]
+    },
+    {
+      "skill": "nightmareui",
+      "path": "skills/nightmareui",
+      "origin": "Authored in this repository; NightmareUI and wrapper source bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/NightmareXIV/NightmareUI",
+          "revision": "aae510d183a6114baece32394a9359f002a33a5d",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/nightmareui/references/NOTICE.md"
+        },
+        {
+          "repository": "https://github.com/NightmareXIV/NightmareUI.OtterGuiWrapper",
+          "revision": "371b1f90633394805244b50f1c135e145c6aa98d",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/nightmareui/references/NOTICE.md"
+        }
+      ]
+    },
+    {
+      "skill": "ottergui",
+      "path": "skills/ottergui",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/Limiana/OtterGui",
+          "revision": "a08fda67dfb731f007234c78df32a2b3ddccc450",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/ottergui/references/NOTICE.md"
+        },
+        {
+          "repository": "https://github.com/Ottermandias/OtterGuiInternal",
+          "revision": "49631aab5c267953f9d442546488ea3bfdf52fa7",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/ottergui/references/NOTICE.md"
+        },
+        {
+          "repository": "https://github.com/Ottermandias/OtterGui",
+          "revision": "79771ee5f3d463f02c63bebbedaa0aff49e59718",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/ottergui/references/NOTICE.md"
+        },
+        {
+          "repository": "https://github.com/Taurenkey/OtterGui",
+          "revision": "32c445404fce79a3d76d72f83fdbfdbfa79452f2",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/ottergui/references/NOTICE.md"
+        }
+      ]
+    },
+    {
+      "skill": "punishlib",
+      "path": "skills/punishlib",
+      "origin": "Authored in this repository; PunishLib source bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/PunishXIV/PunishLib",
+          "revision": "96c0cefa8ebf948b3d3d71d85994c61dc8430b5c",
+          "version": "2.0.0.1",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/punishlib/references/NOTICE.md"
+        }
+      ]
+    },
+    {
+      "skill": "questionable",
+      "path": "skills/questionable",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/PunishXIV/Questionable",
+          "revision": "0a1510bd7be42f3e5063a8bccf398312d2d2f7e9",
+          "version": "15.756.3.60",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/questionable/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "somethingneeddoing",
+      "path": "skills/somethingneeddoing",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged. Upstream SomethingNeedDoing redistribution terms remain unresolved; see NOTICE.md.",
+      "upstream": [
+        {
+          "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+          "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+          "version": "15.13",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/somethingneeddoing/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/Jaksuhn/SomethingNeedDoing.wiki",
+          "revision": "129eccefa9f1f1979569c6835aeee9b4a6700089",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/somethingneeddoing/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "splatoonpresets",
+      "path": "skills/splatoonpresets",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/PunishXIV/Splatoon",
+          "revision": "f396ef6c74da85ad5d4d7e1e5ed9401f666bb8e4",
+          "version": "3.9.2.32",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/splatoonpresets/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "splatoonscripts",
+      "path": "skills/splatoonscripts",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged. Upstream Lifestream redistribution terms and the ChatTwo-credited part of ECommons Chat.cs remain unresolved; see NOTICE.md.",
+      "upstream": [
+        {
+          "repository": "https://github.com/PunishXIV/Splatoon",
+          "revision": "f396ef6c74da85ad5d4d7e1e5ed9401f666bb8e4",
+          "version": "3.9.2.32",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/splatoonscripts/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/NightmareXIV/ECommons",
+          "revision": "bc38dc71340fa3b266de58e3d6d876a73313b61e",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/splatoonscripts/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/NightmareXIV/Lifestream",
+          "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/splatoonscripts/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "vnavmesh",
+      "path": "skills/vnavmesh",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged. Upstream vnavmesh redistribution terms remain unresolved; see NOTICE.md.",
+      "upstream": [
+        {
+          "repository": "https://github.com/awgil/ffxiv_navmesh",
+          "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+          "version": "1.2.3.15",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/vnavmesh/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/xanunderscore/DotRecast",
+          "revision": "8002b30b9f196bcd9eb0a898e51abcea4177fb04",
+          "provenance": "skills/vnavmesh/references/provenance.md"
+        }
+      ]
+    },
+    {
+      "skill": "wrathcombo",
+      "path": "skills/wrathcombo",
+      "origin": "Authored in this repository; selected upstream files bundled unchanged.",
+      "upstream": [
+        {
+          "repository": "https://github.com/PunishXIV/WrathCombo",
+          "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+          "version": "1.0.4.27",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/wrathcombo/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/PunishXIV/WrathCombo.API",
+          "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+          "version": "0.5.8",
+          "provenance": "skills/wrathcombo/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/MKhayle/XIVComboPlugin",
+          "revision": "a8797120a65354f44433d9d91287c4bc06dab28f",
+          "purpose": "Inherited-project license and README context; not a claimed exact ancestor.",
+          "provenance": "skills/wrathcombo/NOTICE.md"
+        }
+      ]
+    },
+    {
+      "skill": "xivapi",
+      "path": "skills/xivapi",
+      "origin": "Authored in this repository; EXDSchema files and the saved OpenAPI description bundled unchanged. Neither has a recorded license grant; see NOTICE.md.",
+      "upstream": [
+        {
+          "repository": "https://github.com/xivdev/EXDSchema",
+          "revision": "a1e24a0c72058353f30f23beb996792cdb926868",
+          "reviewedAt": "2026-11-13",
+          "provenance": "skills/xivapi/references/provenance.md"
+        },
+        {
+          "repository": "https://github.com/ackwell/boilmaster",
+          "revision": "48c1413b1eb8e333799e8b467822a50a2c55a59d",
+          "version": "1-48c1413",
+          "reviewedAt": "2026-11-13",
+          "purpose": "Server that generates references/openapi.json, saved from https://v2.xivapi.com/api/openapi.json.",
+          "provenance": "skills/xivapi/references/provenance.md"
+        }
+      ]
+    }
+  ]
+}

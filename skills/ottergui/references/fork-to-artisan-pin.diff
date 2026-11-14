@@ -1,0 +1,708 @@
+diff --git a/Classes/MessageService.cs b/Classes/MessageService.cs
+index 9737f74..415ec00 100644
+--- a/Classes/MessageService.cs
++++ b/Classes/MessageService.cs
+@@ -1,10 +1,11 @@
++using Dalamud.Bindings.ImGui;
+ using Dalamud.Game.Text.SeStringHandling;
+ using Dalamud.Interface;
+ using Dalamud.Interface.Components;
+ using Dalamud.Interface.ImGuiNotification;
++using Dalamud.Interface.ImGuiNotification.EventArgs;
+ using Dalamud.Interface.Utility.Raii;
+ using Dalamud.Plugin.Services;
+-using Dalamud.Bindings.ImGui;
+ using OtterGui.Extensions;
+ using OtterGui.Log;
+ using OtterGui.Text;
+@@ -51,6 +52,9 @@ public class Notification : MessageService.IMessage
+ 
+     public string PrintTooltip
+         => _ex?.ToString() ?? string.Empty;
++
++    public void OnNotificationActions(INotificationDrawArgs args)
++    {}
+ }
+ 
+ public class MessageService(Logger log, IUiBuilder builder, IChatGui chat, INotificationManager notificationManager)
+@@ -96,6 +100,10 @@ public class MessageService(Logger log, IUiBuilder builder, IChatGui chat, INoti
+ 
+         public string PrintTooltip
+             => Message;
++
++        /// <summary> Will be subscribed to <see cref="IActiveNotification.DrawActions"/> when a notification is created. </summary>
++        /// <param name="args"> The arguments passed by the event. </param>
++        public void OnNotificationActions(INotificationDrawArgs args);
+     }
+ 
+     public readonly Logger               Log                 = log;
+@@ -144,7 +152,8 @@ public class MessageService(Logger log, IUiBuilder builder, IChatGui chat, INoti
+ 
+         var notificationMessage = message.NotificationMessage;
+         if (doNotify && notificationMessage.Length > 0)
+-            NotificationManager.AddNotification(new Dalamud.Interface.ImGuiNotification.Notification()
++        {
++            var notification = NotificationManager.AddNotification(new Dalamud.Interface.ImGuiNotification.Notification()
+             {
+                 Content         = message.NotificationMessage,
+                 Title           = message.NotificationTitle,
+@@ -152,6 +161,8 @@ public class MessageService(Logger log, IUiBuilder builder, IChatGui chat, INoti
+                 Minimized       = false,
+                 InitialDuration = TimeSpan.FromMilliseconds(message.NotificationDuration),
+             });
++            notification.DrawActions += message.OnNotificationActions;
++        }
+ 
+         var chatMessage = message.ChatMessage;
+         if (doChat && chatMessage.Payloads.Count > 0)
+diff --git a/Custom/IndividualHelpers.cs b/Custom/IndividualHelpers.cs
+index e9ce249..f81b613 100644
+--- a/Custom/IndividualHelpers.cs
++++ b/Custom/IndividualHelpers.cs
+@@ -33,6 +33,7 @@ public static class IndividualHelpers
+             ObjectKind.None      => "Unknown",
+             ObjectKind.BattleNpc => "Battle NPC",
+             ObjectKind.EventNpc  => "Event NPC",
++            ObjectKind.Mount     => "Mount",
+             ObjectKind.Companion => "Companion",
+             ObjectKind.Ornament  => "Accessory",
+             _                    => kind.ToString(),
+diff --git a/Filesystem/FileSystem.File.cs b/Filesystem/FileSystem.File.cs
+index d3043c3..59b6984 100644
+--- a/Filesystem/FileSystem.File.cs
++++ b/Filesystem/FileSystem.File.cs
+@@ -157,6 +157,20 @@ public partial class FileSystem<T>
+                 changes = true;
+             }
+         }
++        else
++        {
++            foreach (var value in objects)
++            {
++                // Add a new leaf using the given toName function.
++                var leaf = new Leaf(Root, toName(value), value, IdCounter++);
++                _leaves.Add(value, leaf);
++                while (SetChild(Root, leaf, out _) == Result.ItemExists)
++                {
++                    leaf.SetName(leaf.Name.IncrementDuplicate());
++                    changes = true;
++                }
++            }
++        }
+ 
+         Changed?.Invoke(FileSystemChangeType.Reload, Root, null, null);
+         return changes;
+diff --git a/ImGuiClip.cs b/ImGuiClip.cs
+index 8a84939..b862295 100644
+--- a/ImGuiClip.cs
++++ b/ImGuiClip.cs
+@@ -158,6 +158,7 @@ public static class ImGuiClip
+             {
+                 using (ImRaii.PushId(idx))
+                 {
++                    using var _ = ImUtf8.Group();
+                     draw(it.Current);
+                 }
+ 
+diff --git a/ItemSelector.cs b/ItemSelector.cs
+index 4901983..ea9405d 100644
+--- a/ItemSelector.cs
++++ b/ItemSelector.cs
+@@ -7,34 +7,37 @@ namespace OtterGui;
+ 
+ public class ItemSelector<T>
+ {
++    public event EventHandler<bool> ItemAdded;
++    public event EventHandler<bool> ItemDeleted;
++    public event EventHandler<bool> ItemSkipTriggered;
+     [Flags]
+     public enum Flags : byte
+     {
+-        None      = 0x00, // Just a list
+-        Delete    = 0x01, // Add a delete button for the current element (Trashcan), uses OnDelete
+-        Add       = 0x02, // Add an Add button to create a new empty element given a name (Plus), uses OnAdd
+-        Import    = 0x04, // Add an Import button to create a new element from the string in your clipboard (Clipboard), uses OnImport
++        None = 0x00, // Just a list
++        Delete = 0x01, // Add a delete button for the current element (Trashcan), uses OnDelete
++        Add = 0x02, // Add an Add button to create a new empty element given a name (Plus), uses OnAdd
++        Import = 0x04, // Add an Import button to create a new element from the string in your clipboard (Clipboard), uses OnImport
+         Duplicate = 0x08, // Add a Duplicate button to create copy of the currently selected element given a name, uses OnDuplicate
+ 
+         Filter = 0x10, // Add a filter up top that filters the visible elements and uses Filtered.
+-        Move   = 0x20, // Items can be moved by drag and drop, uses OnMove.
+-        Drop   = 0x40, // Items can be dropped onto, uses OnDrop. Create Sources with CreateDropSource.
++        Move = 0x20, // Items can be moved by drag and drop, uses OnMove.
++        Drop = 0x40, // Items can be dropped onto, uses OnDrop. Create Sources with CreateDropSource.
+ 
+         ButtonMask = 0x0F,
+-        All        = 0x7F,
++        All = 0x7F,
+     }
+ 
+     // Initial setup.
+-    protected readonly IList<T> Items;
+-    private readonly   Flags    _flags;
+-    private readonly   byte     _numButtons;
++    public IList<T> Items;
++    public Flags ListFlags;
++    private readonly byte _numButtons;
+ 
+     // Used by Filter
+     // Indices of the currently available items after Filtered.
+     protected readonly List<int> FilteredItems;
+-    protected          string    Filter      = string.Empty;
+-    protected          bool      FilterDirty = true;
+-    private            int       _lastSize;
++    protected string Filter = string.Empty;
++    protected bool FilterDirty = true;
++    private int _lastSize;
+ 
+     // Used by Add, Duplicate and Import buttons
+     private string _newName = string.Empty;
+@@ -50,22 +53,22 @@ public class ItemSelector<T>
+         get => _label;
+         init
+         {
+-            _label        = value;
++            _label = value;
+             DragDropLabel = $"{value}DragDrop";
+-            MoveLabel     = $"{value}Move";
++            MoveLabel = $"{value}Move";
+         }
+     }
+ 
+     public readonly string DragDropLabel = "##ItemSelectorDragDrop";
+-    public readonly string MoveLabel     = "##ItemSelectorMove";
++    public readonly string MoveLabel = "##ItemSelectorMove";
+ 
+     public ItemSelector(IList<T> items, Flags flags = Flags.None)
+     {
+-        Items         = items;
+-        _lastSize     = Items.Count;
+-        _flags        = flags;
++        Items = items;
++        _lastSize = Items.Count;
++        ListFlags = flags;
+         FilteredItems = Enumerable.Range(0, Items.Count).ToList();
+-        _numButtons = (byte)(_flags & Flags.ButtonMask) switch
++        _numButtons = (byte)(ListFlags & Flags.ButtonMask) switch
+         {
+             0x01 => 1,
+             0x02 => 1,
+@@ -82,7 +85,7 @@ public class ItemSelector<T>
+             0x0D => 3,
+             0x0E => 3,
+             0x0F => 4,
+-            _    => 0,
++            _ => 0,
+         };
+         Label = "##ItemSelector";
+         SetCurrent(0);
+@@ -132,12 +135,12 @@ public class ItemSelector<T>
+ 
+     // Selection
+     public int CurrentIdx = 0;
+-    public T?  Current { get; private set; }
++    public T? Current { get; set; }
+ 
+     protected void ClearCurrentSelection()
+     {
+         CurrentIdx = -1;
+-        Current    = default;
++        Current = default;
+     }
+ 
+     public void TryRestoreCurrent()
+@@ -147,17 +150,17 @@ public class ItemSelector<T>
+             Current = default;
+     }
+ 
+-    private void SetCurrent(int idx)
++    public void SetCurrent(int idx)
+     {
+         if (idx < Items.Count)
+         {
+             CurrentIdx = idx;
+-            Current    = Items[idx];
++            Current = Items[idx];
+         }
+         else if (Items.Count > 0)
+         {
+             CurrentIdx = Items.Count - 1;
+-            Current    = Items.Last();
++            Current = Items.Last();
+         }
+         else
+         {
+@@ -183,7 +186,7 @@ public class ItemSelector<T>
+ 
+ 
+     // Customization points.
+-    protected virtual bool OnDraw(int idx)
++    protected virtual bool OnDraw(int idx, out bool changes)
+         => throw new NotImplementedException();
+ 
+     protected virtual bool Filtered(int idx)
+@@ -213,14 +216,19 @@ public class ItemSelector<T>
+         ImGui.SetCursorPosX(ImGui.GetCursorPosX() + ImGui.GetStyle().FramePadding.X);
+         // Assume that OnDraw functions like a Selectable, if it returns true, select the value.
+         using var id = ImRaii.PushId(idx);
+-        if (OnDraw(idx) && idx != CurrentIdx)
++        if (OnDraw(idx, out bool changes) && idx != CurrentIdx)
+         {
+             CurrentIdx = idx;
+-            Current    = Items[idx];
++            Current = Items[idx];
++        }
++
++        if (changes)
++        {
++            ItemSkipTriggered.Invoke(this, changes);
+         }
+ 
+         // If the ItemSelector supports Move, every item is a Move-DragDropSource. The data is the index of the dragged element.
+-        if (_flags.HasFlag(Flags.Move))
++        if (ListFlags.HasFlag(Flags.Move))
+         {
+             using var source = ImRaii.DragDropSource();
+             if (source)
+@@ -232,7 +240,7 @@ public class ItemSelector<T>
+         }
+ 
+         // If the ItemSelector supports Move or Drop, every item is a DragDropTarget.
+-        if ((_flags & (Flags.Move | Flags.Drop)) == Flags.None)
++        if ((ListFlags & (Flags.Move | Flags.Drop)) == Flags.None)
+             return;
+ 
+         using var target = ImRaii.DragDropTarget();
+@@ -255,16 +263,16 @@ public class ItemSelector<T>
+ 
+     private void DrawFilter(float width)
+     {
+-        if (!_flags.HasFlag(Flags.Filter))
++        if (!ListFlags.HasFlag(Flags.Filter))
+             return;
+ 
+-        var       newFilter = Filter;
+-        using var style     = ImRaii.PushStyle(ImGuiStyleVar.FrameRounding, 0);
++        var newFilter = Filter;
++        using var style = ImRaii.PushStyle(ImGuiStyleVar.FrameRounding, 0);
+         ImGui.SetNextItemWidth(width);
+         var enterPressed = ImUtf8.InputText("##"u8, ref newFilter, "Filter..."u8, ImGuiInputTextFlags.EnterReturnsTrue);
+         if (newFilter != Filter)
+         {
+-            Filter      = newFilter;
++            Filter = newFilter;
+             FilterDirty = true;
+         }
+ 
+@@ -286,7 +294,7 @@ public class ItemSelector<T>
+         if (_lastSize != Items.Count)
+         {
+             FilterDirty = true;
+-            _lastSize   = Items.Count;
++            _lastSize = Items.Count;
+         }
+ 
+         if (!FilterDirty)
+@@ -309,17 +317,20 @@ public class ItemSelector<T>
+         if (ImGui.Button(FontAwesomeIcon.Plus.ToIconString(), Vector2.UnitX * width))
+             ImGui.OpenPopup(newNamePopupAdd);
+         using var font = ImRaii.PushFont(UiBuilder.DefaultFont);
+-        ImGuiUtil.HoverTooltip("Add New");
++        ImGuiUtil.HoverTooltip(AddButtonTooltip());
+ 
+         if (!OpenNameField(newNamePopupAdd, out var newName))
+             return;
+ 
+-        if (OnAdd(newName))
++        if (!string.IsNullOrEmpty(newName) && OnAdd(newName))
+         {
+             TryRestoreCurrent();
+             SetFilterDirty();
++            ItemAdded?.Invoke(this, true);
+         }
+     }
++    protected virtual string AddButtonTooltip()
++        => "Add new item.";
+ 
+     private void DrawImportButton(float width)
+     {
+@@ -346,7 +357,7 @@ public class ItemSelector<T>
+         newName = string.Empty;
+         if (ImGuiUtil.OpenNameField(popupName, ref _newName))
+         {
+-            newName  = _newName;
++            newName = _newName;
+             _newName = string.Empty;
+             return true;
+         }
+@@ -390,6 +401,7 @@ public class ItemSelector<T>
+         {
+             FilterDirty = true;
+             SetCurrent(CurrentIdx > 0 ? CurrentIdx - 1 : CurrentIdx);
++            ItemDeleted?.Invoke(this, true);
+         }
+     }
+ 
+@@ -398,28 +410,28 @@ public class ItemSelector<T>
+         if (_numButtons == 0)
+             return;
+ 
+-        using var font        = ImRaii.PushFont(UiBuilder.IconFont);
+-        var       buttonWidth = width / _numButtons;
++        using var font = ImRaii.PushFont(UiBuilder.IconFont);
++        var buttonWidth = width / _numButtons;
+ 
+-        if (_flags.HasFlag(Flags.Add))
++        if (ListFlags.HasFlag(Flags.Add))
+         {
+             DrawAddButton(buttonWidth);
+             ImGui.SameLine();
+         }
+ 
+-        if (_flags.HasFlag(Flags.Import))
++        if (ListFlags.HasFlag(Flags.Import))
+         {
+             DrawImportButton(buttonWidth);
+             ImGui.SameLine();
+         }
+ 
+-        if (_flags.HasFlag(Flags.Duplicate))
++        if (ListFlags.HasFlag(Flags.Duplicate))
+         {
+             DrawDuplicateButton(buttonWidth);
+             ImGui.SameLine();
+         }
+ 
+-        if (_flags.HasFlag(Flags.Delete))
++        if (ListFlags.HasFlag(Flags.Delete))
+         {
+             DrawDeleteButton(buttonWidth);
+             ImGui.SameLine();
+@@ -433,7 +445,7 @@ public class ItemSelector<T>
+         using var id = ImRaii.PushId(Label);
+         using var outerStyle = ImRaii.PushStyle(ImGuiStyleVar.FrameRounding, 0)
+             .Push(ImGuiStyleVar.WindowPadding, Vector2.Zero)
+-            .Push(ImGuiStyleVar.ItemSpacing,   Vector2.Zero);
++            .Push(ImGuiStyleVar.ItemSpacing, Vector2.Zero);
+         using var group = ImRaii.Group();
+         using (var child = ImRaii.Child(string.Empty, new Vector2(width, -ImGui.GetFrameHeight()), true))
+         {
+@@ -443,10 +455,10 @@ public class ItemSelector<T>
+             outerStyle.Pop(3);
+             DrawFilter(width);
+             UpdateFilteredItems();
+-            ImGuiClip.ClippedDraw(FilteredItems, InternalDraw, ImGui.GetTextLineHeightWithSpacing());
++            ImGuiClip.ClippedDraw(FilteredItems, InternalDraw, ImGui.GetTextLineHeightWithSpacing() + 0.25f);
+             outerStyle.Push(ImGuiStyleVar.FrameRounding, 0)
+                 .Push(ImGuiStyleVar.WindowPadding, Vector2.Zero)
+-                .Push(ImGuiStyleVar.ItemSpacing,   Vector2.Zero);
++                .Push(ImGuiStyleVar.ItemSpacing, Vector2.Zero);
+         }
+ 
+         DrawButtons(width);
+@@ -459,7 +471,7 @@ public static class ItemDetailsWindow
+     {
+         using var group = ImRaii.Group();
+         using var style = ImRaii.PushStyle(ImGuiStyleVar.WindowPadding, Vector2.Zero);
+-        using var id    = ImRaii.PushId(label);
++        using var id = ImRaii.PushId(label);
+         using var child = ImRaii.Child(string.Empty, ImGui.GetContentRegionAvail(), true, ImGuiWindowFlags.MenuBar);
+         if (!child)
+             return;
+@@ -479,3 +491,4 @@ public static class ItemDetailsWindow
+         drawDetails();
+     }
+ }
++
+diff --git a/OtterGui.csproj b/OtterGui.csproj
+index f4a4bef..3ff1d8f 100644
+--- a/OtterGui.csproj
++++ b/OtterGui.csproj
+@@ -1,4 +1,4 @@
+-<Project Sdk="Dalamud.NET.Sdk/14.0.1">
++<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+     <PropertyGroup>
+         <RootNamespace>OtterGui</RootNamespace>
+         <AssemblyName>OtterGui</AssemblyName>
+@@ -8,7 +8,6 @@
+         <Copyright>Copyright Â© 2025</Copyright>
+         <WarningLevel>4</WarningLevel>
+         <OutputPath>bin\$(Configuration)\</OutputPath>
+-        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+     </PropertyGroup>
+ 
+     <PropertyGroup>
+diff --git a/Services/DynamisIpc.cs b/Services/DynamisIpc.cs
+index a2cd7fd..c90894a 100644
+--- a/Services/DynamisIpc.cs
++++ b/Services/DynamisIpc.cs
+@@ -2,6 +2,7 @@ using Dalamud.Interface;
+ using Dalamud.Plugin;
+ using Dalamud.Plugin.Ipc;
+ using Dalamud.Bindings.ImGui;
++using Dalamud.Interface.Utility.Raii;
+ using OtterGui.Log;
+ using OtterGui.Text;
+ 
+@@ -15,13 +16,14 @@ public class DynamisIpc : IDisposable, IService
+     private readonly ICallGateSubscriber<uint, uint, ulong, Version, object?> _initialized;
+     private readonly ICallGateSubscriber<object?>                             _disposed;
+ 
+-    private ICallGateSubscriber<nint, object?>?                           _inspectObject;
+-    private ICallGateSubscriber<nint, uint, string, uint, uint, object?>? _inspectRegion;
+-    private Action<nint>?                                                 _drawPointerAction;
+-    private ICallGateSubscriber<nint, object?>?                           _imGuiDrawPointerTooltipDetails;
+-    private ICallGateSubscriber<nint, (string, Type?, uint, uint)>?       _getClass;
+-    private ICallGateSubscriber<nint, string?, Type?, (bool, uint)>?      _isInstanceOf;
+-    private ICallGateSubscriber<object?>?                                 _preloadDataYaml;
++    private ICallGateSubscriber<nint, string?, object?>?                           _inspectObject;
++    private ICallGateSubscriber<nint, uint, string, uint, uint, string?, object?>? _inspectRegion;
++    private Action<nint, Func<string?>?, string?, ulong, Vector2>?                 _drawPointerAction;
++    private ICallGateSubscriber<nint, object?>?                                    _imGuiDrawPointerTooltipDetails;
++    private ICallGateSubscriber<nint, Func<string?>?, object?>?                    _imGuiOpenPointerContextMenu;
++    private ICallGateSubscriber<nint, (string, Type?, uint, uint)>?                _getClass;
++    private ICallGateSubscriber<nint, string?, Type?, (bool, uint)>?               _isInstanceOf;
++    private ICallGateSubscriber<object?>?                                          _preloadDataYaml;
+ 
+     public bool IsSubscribed
+         => VersionMajor > 0;
+@@ -67,38 +69,62 @@ public class DynamisIpc : IDisposable, IService
+         _disposed.Unsubscribe(OnDisposed);
+     }
+ 
+-    public void InspectObject(nint address)
+-        => _inspectObject?.InvokeAction(address);
++    public void InspectObject(nint address, string? name = null)
++        => _inspectObject?.InvokeAction(address, name);
+ 
+-    public void InspectRegion(nint address, uint size, string typeName, uint typeTemplateId, uint classKindId)
+-        => _inspectRegion?.InvokeAction(address, size, typeName, typeTemplateId, classKindId);
++    public void InspectRegion(nint address, uint size, string typeName, uint typeTemplateId, uint classKindId, string? name = null)
++        => _inspectRegion?.InvokeAction(address, size, typeName, typeTemplateId, classKindId, name);
+ 
+     public void DrawTooltipDetails(nint address)
+         => _imGuiDrawPointerTooltipDetails?.InvokeAction(address);
+ 
++    public void OpenContextMenu(nint address, Func<string?>? name = null)
++        => _imGuiOpenPointerContextMenu?.InvokeAction(address, name);
++
+     public (string Name, Type? BestManagedType, uint EstimatedSize, uint Displacement) GetClass(nint address)
+         => _getClass?.InvokeFunc(address) ?? ("Unavailable", null, 0, 0);
+ 
+     public (bool IsInstance, uint Displacement) IsInstanceOf(nint address, string? className, Type? classType)
+         => _isInstanceOf?.InvokeFunc(address, className, classType) ?? (false, 0);
+ 
+-    public void DrawPointer(nint address)
++    public void DrawPointer(nint address, Func<string?>? name = null, string? customText = null, DrawPointerFlags flags = DrawPointerFlags.None,
++        ImGuiSelectableFlags selectableFlags = ImGuiSelectableFlags.None, Vector2 size = default)
+     {
+         if (_drawPointerAction is not null)
+         {
+-            _drawPointerAction.Invoke(address);
++            _drawPointerAction.Invoke(address, name, customText, unchecked((uint)selectableFlags | ((ulong)flags << 32)), size);
+         }
+         else
+         {
+-            if (address == nint.Zero)
+-                ImUtf8.CopyOnClickSelectable("nullptr"u8, "0x0"u8);
+-            else
+-                ImUtf8.CopyOnClickSelectable($"0x{address:X}", UiBuilder.MonoFont);
++            using (ImRaii.PushFont(UiBuilder.MonoFont,
++                       customText is null ? address != nint.Zero : flags.HasFlag(DrawPointerFlags.MonoFont)))
++            {
++                using var style = ImRaii.PushStyle(ImGuiStyleVar.Alpha, ImGui.GetStyle().Alpha * 0.5f,
++                    customText is null ? address == nint.Zero : flags.HasFlag(DrawPointerFlags.Semitransparent));
++                style.Push(ImGuiStyleVar.SelectableTextAlign, new Vector2(1.0f, 0.5f),
++                    size != default || flags.HasFlag(DrawPointerFlags.RightAligned));
++                if (ImUtf8.Selectable(customText ?? (address == nint.Zero ? "nullptr" : $"0x{address:X}"),
++                        flags.HasFlag(DrawPointerFlags.Selected), selectableFlags, size))
++                {
++                    try
++                    {
++                        ImUtf8.SetClipboardText($"0x{address:X}");
++                    }
++                    catch
++                    {
++                        // ignored
++                    }
++                }
++            }
++
++            ImUtf8.HoverTooltip("Click to copy to clipboard."u8);
+         }
+     }
+ 
+-    public unsafe void DrawPointer(void* address)
+-        => DrawPointer((nint)address);
++    public unsafe void DrawPointer(void* address, Func<string?>? name = null, string? customText = null,
++        DrawPointerFlags flags = DrawPointerFlags.None, ImGuiSelectableFlags selectableFlags = ImGuiSelectableFlags.None,
++        Vector2 size = default)
++        => DrawPointer((nint)address, name, customText, flags, selectableFlags, size);
+ 
+     public void DrawDebugInfo()
+     {
+@@ -144,9 +170,9 @@ public class DynamisIpc : IDisposable, IService
+             return;
+         }
+ 
+-        if (minor < 3)
++        if (minor < 6)
+         {
+-            _log.Debug($"Could not attach to Dynamis {VersionMajor}.{VersionMinor}, only 1.3 or higher is supported.");
++            _log.Debug($"Could not attach to Dynamis {VersionMajor}.{VersionMinor}, only 1.6 or higher is supported.");
+             return;
+         }
+ 
+@@ -156,13 +182,15 @@ public class DynamisIpc : IDisposable, IService
+ 
+         try
+         {
+-            _inspectObject = _pluginInterface.GetIpcSubscriber<nint, object?>("Dynamis.InspectObject.V1");
+-            _inspectRegion = _pluginInterface.GetIpcSubscriber<nint, uint, string, uint, uint, object?>("Dynamis.InspectRegion.V1");
++            _inspectObject = _pluginInterface.GetIpcSubscriber<nint, string?, object?>("Dynamis.InspectObject.V2");
++            _inspectRegion = _pluginInterface.GetIpcSubscriber<nint, uint, string, uint, uint, string?, object?>("Dynamis.InspectRegion.V2");
+             _imGuiDrawPointerTooltipDetails = _pluginInterface.GetIpcSubscriber<nint, object?>("Dynamis.ImGuiDrawPointerTooltipDetails.V1");
++            _imGuiOpenPointerContextMenu = _pluginInterface.GetIpcSubscriber<nint, Func<string?>?, object?>("Dynamis.ImGuiOpenPointerContextMenu.V1");
+             _getClass = _pluginInterface.GetIpcSubscriber<nint, (string, Type?, uint, uint)>("Dynamis.GetClass.V1");
+             _isInstanceOf = _pluginInterface.GetIpcSubscriber<nint, string?, Type?, (bool, uint)>("Dynamis.IsInstanceOf.V1");
+             _preloadDataYaml = _pluginInterface.GetIpcSubscriber<object?>("Dynamis.PreloadDataYaml.V1");
+-            _drawPointerAction = _pluginInterface.GetIpcSubscriber<Action<nint>>("Dynamis.GetImGuiDrawPointerDelegate.V1").InvokeFunc();
++            _drawPointerAction = _pluginInterface
++                .GetIpcSubscriber<Action<nint, Func<string?>?, string?, ulong, Vector2>>("Dynamis.GetImGuiDrawPointerDelegate.V3").InvokeFunc();
+             _log.Verbose("Preloading Dynamis data.yml...");
+             _preloadDataYaml.InvokeAction();
+             _log.Debug($"Attached to Dynamis {VersionMajor}.{VersionMinor}.");
+@@ -191,6 +219,7 @@ public class DynamisIpc : IDisposable, IService
+         _preloadDataYaml                = null;
+         _drawPointerAction              = null;
+         _imGuiDrawPointerTooltipDetails = null;
++        _imGuiOpenPointerContextMenu    = null;
+     }
+ 
+     private void UpdateVersion()
+@@ -214,4 +243,34 @@ public class DynamisIpc : IDisposable, IService
+             OnDisposed();
+         }
+     }
++
++    // See https://github.com/Exter-N/Dynamis/blob/main/Dynamis/UI/ImGuiComponents.cs
++    [Flags]
++    public enum DrawPointerFlags : uint
++    {
++        None = 0,
++
++        /// <summary>
++        /// Draws the ImGui selectable as selected.
++        /// </summary>
++        Selected = 1,
++
++        /// <summary>
++        /// Draws the supplied custom text in a monospace font.
++        /// Applied to the default text if the pointer is not null.
++        /// </summary>
++        MonoFont = 2,
++
++        /// <summary>
++        /// Draws the supplied custom text with halved opacity.
++        /// Applied to the default text if the pointer is null.
++        /// </summary>
++        Semitransparent = 4,
++
++        /// <summary>
++        /// Aligns the text to the right horizontally and centers it vertically.
++        /// Always applied when passed an explicit size.
++        /// </summary>
++        RightAligned = 8,
++    }
+ }
+diff --git a/Table/ColumnString.cs b/Table/ColumnString.cs
+index a2ac3fa..a512af9 100644
+--- a/Table/ColumnString.cs
++++ b/Table/ColumnString.cs
+@@ -11,6 +11,10 @@ public class ColumnString<TItem> : Column<TItem>
+     public    string FilterValue = string.Empty;
+     protected Regex? FilterRegex;
+ 
++    public virtual event EventHandler<TItem>? OnContextMenuRequest;
++
++    public void InvokeContextMenu(TItem e)
++        => OnContextMenuRequest?.Invoke(this, e);
+     public virtual string ToName(TItem item)
+         => item!.ToString() ?? string.Empty;
+ 
+diff --git a/Table/Table.cs b/Table/Table.cs
+index bdaf6c3..eddf752 100644
+--- a/Table/Table.cs
++++ b/Table/Table.cs
+@@ -16,10 +16,10 @@ public class Table<T>
+     protected          bool                   FilterDirty = true;
+     protected          bool                   SortDirty   = true;
+     protected readonly IReadOnlyCollection<T> Items;
+-    internal readonly  List<(T, int)>         FilteredItems;
++    public  List<(T, int)>         FilteredItems;
+ 
+     protected readonly string      Label;
+-    protected readonly Column<T>[] Headers;
++    public Column<T>[] Headers;
+ 
+     protected float ItemHeight  { get; set; }
+     public    float ExtraHeight { get; set; } = 0;
+diff --git a/Text/HelperObjects/ImTextExtensions.cs b/Text/HelperObjects/ImTextExtensions.cs
+index ff45437..6fff649 100644
+--- a/Text/HelperObjects/ImTextExtensions.cs
++++ b/Text/HelperObjects/ImTextExtensions.cs
+@@ -2,7 +2,7 @@ namespace OtterGui.Text.HelperObjects;
+ 
+ public static class ImTextExtensions
+ {
+-    private static byte _null;
++    private static byte _null = 0;
+ 
+     /// <summary> Clone the given byte span with an appended null-terminator. </summary>
+     public static TerminatedByteString CloneNullTerminated(this ReadOnlySpan<byte> input)
+diff --git a/Text/ImUtf8.RotatedText.cs b/Text/ImUtf8.RotatedText.cs
+index 19f3955..e5165a6 100644
+--- a/Text/ImUtf8.RotatedText.cs
++++ b/Text/ImUtf8.RotatedText.cs
+@@ -21,8 +21,6 @@ public static partial class ImUtf8
+ 
+         var textSize     = CalcTextSize(text, false);
+         var endVertexIdx = (int)dl.VtxCurrentIdx;
+-        var startVertex  = ImGui.GetWindowDrawList().VtxBuffer[startVertexIdx];
+-        var endVertex    = ImGui.GetWindowDrawList().VtxBuffer[endVertexIdx];
+         var (offset, dummy) = alignToFrame
+             ? (new Vector2(ImGui.GetStyle().FramePadding.Y,                   textSize.X),
+                 new Vector2(2 * ImGui.GetStyle().FramePadding.Y + textSize.Y, textSize.X))
+diff --git a/Text/ImUtf8.SliderAngle.cs b/Text/ImUtf8.SliderAngle.cs
+index a9a825f..8e41cf5 100644
+--- a/Text/ImUtf8.SliderAngle.cs
++++ b/Text/ImUtf8.SliderAngle.cs
+@@ -9,10 +9,10 @@ public static unsafe partial class ImUtf8
+ {
+     /// <summary> Draw a slider specifically for angles in degrees radians. </summary>
+     /// <param name="label"> The slider label as a UTF8 string. HAS to be null-terminated. </param>
+-    /// <param name="degreeRadians"> The angle in degrees radians. </param>
++    /// <param name="degreeRadians"> The angle in radian, i.e. [0, 2pi). </param>
+     /// <param name="format"> The printf format-string to display the degrees in as a UTF8 string. HAS to be null-terminated. Default is '%.0f deg' </param>
+-    /// <param name="minDegrees"> The minimum value for the degrees. This is only applied on manual input when the AlwaysClamp flag is set. </param>
+-    /// <param name="maxDegrees"> The maximum value for the degrees. This is only applied on manual input when the AlwaysClamp flag is set. </param>
++    /// <param name="minDegrees"> The minimum value for the degrees, i.e. [0, 360°]. This is only applied on manual input when the AlwaysClamp flag is set. </param>
++    /// <param name="maxDegrees"> The maximum value for the degrees, i.e. [0, 360°]. This is only applied on manual input when the AlwaysClamp flag is set. </param>
+     /// <param name="flags"> Additional flags controlling the sliders behavior. </param>
+     /// <returns> Whether the value changed in this frame. </returns>
+     [MethodImpl(MethodImplOptions.AggressiveInlining)]
+diff --git a/Widgets/FilteredCombo.cs b/Widgets/FilteredCombo.cs
+index 2cd8312..7fea52f 100644
+--- a/Widgets/FilteredCombo.cs
++++ b/Widgets/FilteredCombo.cs
+@@ -264,7 +264,7 @@ public abstract class FilterComboBase<T>
+         _available.EnsureCapacity(Items.Count);
+ 
+         // Keep the selected key if possible.
+-        var lastSelection = _lastSelection == -1 ? -1 : _available[_lastSelection];
++        var lastSelection = _lastSelection is -1 || _available.Count <= _lastSelection ? -1 : _available[_lastSelection];
+         _lastSelection = -1;
+ 
+         _available.Clear();

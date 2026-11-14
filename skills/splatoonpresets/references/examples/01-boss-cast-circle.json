@@ -1,0 +1,25 @@
+{
+  "Name": "EX1 - Ice Boulder (cast circle) [EXAMPLE/UNTESTED]",
+  "Description": "EXAMPLE/UNTESTED - format demo. Zone 1196 and action 39261 come from the upstream EX1 preset but this layout was not verified in combat. Confirm the cast id and radius from a recording before relying on it.",
+  "Group": "EX1 - Worqor Lar Dor",
+  "ZoneLockH": [1196],
+  "DCond": 1,
+  "ElementsL": [
+    {
+      "Name": "Ice Boulder AoE",
+      "type": 1,
+      "radius": 13.0,
+      "color": 3355443455,
+      "fillIntensity": 0.4,
+      "thicc": 2.0,
+      "refActorName": "*",
+      "refActorRequireCast": true,
+      "refActorCastId": [39261],
+      "castAnimation": 3,
+      "animationColor": 3355443455,
+      "refActorComparisonType": 0,
+      "onlyVisible": true,
+      "mechanicType": 1
+    }
+  ]
+}

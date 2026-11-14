@@ -1,0 +1,108 @@
+﻿using ECommons.Automation;
+using ECommons.GameHelpers;
+using ECommons.Reflection;
+using ECommons.Throttlers;
+using FFXIVClientStructs.FFXIV.Client.UI.Agent;
+using FFXIVClientStructs.FFXIV.Component.GUI;
+using Lifestream.Schedulers;
+using System.Runtime.CompilerServices;
+using Callback = ECommons.Automation.Callback;
+
+namespace Lifestream.Tasks.CrossWorld;
+
+internal static unsafe class TaskChangeWorld
+{
+    internal static bool WVErrorDetected = false;
+    internal static void Enqueue(string world)
+    {
+        try
+        {
+            Utils.AssertCanTravel(Player.Name, Player.Object.HomeWorld.RowId, Player.Object.CurrentWorld.RowId, world);
+        }
+        catch(Exception e) { e.Log(); return; }
+        if(C.WaitForScreenReady) P.TaskManager.Enqueue(Utils.WaitForScreen);
+        if(C.LeavePartyBeforeWorldChange)
+        {
+            if(Svc.Condition[ConditionFlag.RecruitingWorldOnly])
+            {
+                P.TaskManager.Enqueue(WorldChange.ClosePF);
+                P.TaskManager.Enqueue(WorldChange.OpenSelfPF);
+                P.TaskManager.Enqueue(WorldChange.EndPF);
+                P.TaskManager.Enqueue(WorldChange.WaitUntilNotRecruiting);
+            }
+            P.TaskManager.Enqueue(WorldChange.LeaveParty);
+        }
+        EnqueueStart(world);
+        P.TaskManager.Enqueue((Action)(() => EzThrottler.Throttle("RetryWorldVisit", Math.Max(10000, C.RetryWorldVisitInterval * 1000), true)));
+        P.TaskManager.Enqueue(() => RetryWorldVisit(world), TaskSettings.Timeout5M);
+    }
+
+    public static void EnqueueStart(string world)
+    {
+        WVErrorDetected = false;
+        P.TaskManager.Enqueue(CloseWorldTravelSelectAddon);
+        P.TaskManager.Enqueue(() => !IsOccupied());
+        P.TaskManager.Enqueue(WorldChange.TargetValidAetheryte);
+        P.TaskManager.Enqueue(WorldChange.InteractWithTargetedAetheryte);
+        P.TaskManager.Enqueue(WorldChange.SelectVisitAnotherWorld);
+        P.TaskManager.Enqueue(() => WorldChange.SelectWorldToVisit(world), $"{nameof(WorldChange.SelectWorldToVisit)}, {world}");
+        P.TaskManager.Enqueue(() => WorldChange.ConfirmWorldVisit(world), $"{nameof(WorldChange.ConfirmWorldVisit)}, {world}");
+    }
+
+    public static bool CloseWorldTravelSelectAddon()
+    {
+        if(TryGetAddonByName<AtkUnitBase>("WorldTravelSelect", out var addon))
+        {
+            if(addon->IsReady() && EzThrottler.Throttle("CloseAddonWTS"))
+            {
+                Callback.Fire(addon, true, -1);
+            }
+        }
+        else
+        {
+            return true;
+        }
+        return false;
+    }
+
+    private static int WorldVisitRand = 0;
+    private static bool RetryWorldVisit(string targetWorld)
+    {
+        if(Player.Available && Player.CurrentWorld == targetWorld)
+        {
+            return true;
+        }
+        if(C.RetryWorldVisit)
+        {
+            if(!IsScreenReady() || Svc.Condition[ConditionFlag.WaitingToVisitOtherWorld] || Svc.Condition[ConditionFlag.ReadyingVisitOtherWorld] || Svc.Condition[ConditionFlag.OccupiedInQuestEvent])
+            {
+                EzThrottler.Throttle("RetryWorldVisit", Math.Max(1000, C.RetryWorldVisitInterval * 1000 + WorldVisitRand), true);
+                return false;
+            }
+            if(Svc.Targets.Target == null && Player.Interactable)
+            {
+                var aetheryte = Svc.Objects.FirstOrDefault(x => x.IsTargetable && x.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Aetheryte && Player.DistanceTo(x) < 30f);
+                if(aetheryte != null && EzThrottler.Throttle("Target"))
+                {
+                    Svc.Targets.Target = aetheryte;
+                }
+            }
+            if(EzThrottler.Check("RetryWorldVisit"))
+            {
+                WorldVisitRand = Random.Shared.Next(0, C.RetryWorldVisitIntervalDelta * 1000);
+                P.TaskManager.BeginStack();
+                P.TaskManager.Enqueue(() =>
+                {
+                    var agent = AgentWorldTravel.Instance();
+                    if(agent->HomeWorldId == null) return true;
+                    PluginLog.Verbose($"HomeWorldId: {(nint)agent->HomeWorldId:X16}, timer: {agent->GetFoP<uint>("QueueTimer1").Reinterpret<uint, float>()}");
+                    return false;
+                }, new(abortOnTimeout: false, timeLimitMS: 20000));
+                TaskChangeWorld.Enqueue(targetWorld);
+                P.TaskManager.InsertStack();
+                return true;
+            }
+        }
+        return false;
+    }
+}

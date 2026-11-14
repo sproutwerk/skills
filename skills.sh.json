@@ -1,0 +1,62 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Plugin development",
+      "description": "Core libraries for writing FFXIV Dalamud plugins: the plugin API, native game structs, and shared helper libraries.",
+      "skills": [
+        "dalamud",
+        "clientstructs",
+        "ecommons",
+        "punishlib"
+      ]
+    },
+    {
+      "title": "Plugin UI",
+      "description": "ImGui and widget libraries for building FFXIV plugin windows and settings pages.",
+      "skills": [
+        "dalamudimgui",
+        "ottergui",
+        "luna",
+        "nightmareui"
+      ]
+    },
+    {
+      "title": "Game data",
+      "description": "Look up FFXIV items, shops, maps, and inventories without writing a sheet reader.",
+      "skills": [
+        "xivapi",
+        "allagantools"
+      ]
+    },
+    {
+      "title": "Splatoon",
+      "description": "Presets and C# scripts for Splatoon, the FFXIV plugin that draws mechanic overlays and markers.",
+      "skills": [
+        "splatoonpresets",
+        "splatoonscripts"
+      ]
+    },
+    {
+      "title": "Automation",
+      "description": "Drive other FFXIV plugins over IPC, and write SomethingNeedDoing scripts that tie them together.",
+      "skills": [
+        "somethingneeddoing",
+        "autoretainer",
+        "questionable",
+        "lifestream",
+        "vnavmesh",
+        "bossmod",
+        "wrathcombo"
+      ]
+    },
+    {
+      "title": "Doman Mahjong",
+      "description": "Rules, scoring, and solver design for FFXIV's Riichi Mahjong minigame.",
+      "skills": [
+        "doman-mahjong"
+      ]
+    }
+  ]
+}

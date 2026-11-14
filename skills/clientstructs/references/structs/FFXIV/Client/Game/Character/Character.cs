@@ -1,0 +1,238 @@
+using FFXIVClientStructs.FFXIV.Client.Game.Control;
+using FFXIVClientStructs.FFXIV.Client.Game.Control.MoveControl;
+using FFXIVClientStructs.FFXIV.Client.Game.Object;
+using FFXIVClientStructs.FFXIV.Client.UI.Misc;
+
+namespace FFXIVClientStructs.FFXIV.Client.Game.Character;
+
+// Client::Game::Character::Character
+//   Client::Game::Object::GameObject
+//   Client::Game::Character::CharacterData
+[GenerateInterop(isInherited: true)]
+[Inherits<GameObject>, Inherits<CharacterData>]
+[StructLayout(LayoutKind.Explicit, Size = 0x2370)]
+[VirtualTable("48 8D 05 ?? ?? ?? ?? 48 89 07 48 8D 8F ?? ?? ?? ?? 48 8D 05 ?? ?? ?? ?? 48 89 87 ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 8D 8F ?? ?? ?? ?? 33 ED 48 8D 05 ?? ?? ?? ??", 3, 88)]
+public unsafe partial struct Character {
+    [FieldOffset(0x1F0)] public MoveController MoveController;
+    [FieldOffset(0x630)] public EmoteController EmoteController;
+    [FieldOffset(0x670)] public MountContainer Mount;
+    [FieldOffset(0x6D8)] public CompanionContainer CompanionData;
+    [FieldOffset(0x6F8)] public DrawDataContainer DrawData;
+    [FieldOffset(0x960)] public OrnamentContainer OrnamentData;
+    [FieldOffset(0x9D8)] public TransformationContainer Transformation;
+    [FieldOffset(0x9D8), Obsolete("Use Transformation")] public ReaperShroudContainer ReaperShroud;
+    [FieldOffset(0xA30)] public TimelineContainer Timeline;
+    [FieldOffset(0xD80)] public LookAtContainer LookAt;
+    [FieldOffset(0x1960)] public LifeSkillContainer LifeSkillContainer;
+    [BitField<bool>("IsOffhandDrawn", 0), Obsolete("Use LifeSkillContainer.IsOffhandDrawn")]
+    [FieldOffset(0x1980)] public byte WeaponFlags;
+    [FieldOffset(0x1988)] public VfxContainer Vfx;
+    [FieldOffset(0x1A78)] public TargetStatusContainer TargetStatusContainer;
+    [FieldOffset(0x1A90)] public EffectContainer Effects;
+    [FieldOffset(0x1B10)] public CharacterSetupContainer CharacterSetup;
+
+    // 0x1AA8: start of some substructure
+    [FieldOffset(0x1B28)] public ModelContainer ModelContainer;
+    [FieldOffset(0x1B80)] public RepresentationContainer RepresentationContainer;
+
+    /// <remarks> Instance ID of an Event NPC. Used by QuestEventHandler. Seen for Event NPCs that turn into Battle NPCs (during quests, for example.) </remarks>
+    [FieldOffset(0x1BC0)] public uint EventNpcInstanceId;
+
+    [BitField<bool>(nameof(IsPartyMember), 0)]
+    [BitField<bool>(nameof(IsAllianceMember), 1)]
+    [BitField<bool>(nameof(IsFriend), 2)]
+    [FieldOffset(0x1CE2)] public byte RelationFlags;
+
+    // 0x40 = All attacks will be cancelled, character is doing the the 'winded' emote, used in e.g. 'Strange Bedfellows' and 'Combat Evolved' when quest expects an item to be used on the character
+    [FieldOffset(0x1CE8)] public byte ActorControlFlags;
+
+    [FieldOffset(0x21E0)] public Balloon Balloon;
+    [FieldOffset(0x2260)] public NpcYellBalloon YellBalloon;
+    [FieldOffset(0x22E8)] public float Alpha; // TODO: array of 4 (see 41 83 F8 ?? 73 ?? 41 8B C0 F3 0F 11 8C 81)
+    [FieldOffset(0x22F8), Obsolete("Use ChildObject")] public Companion* CompanionObject; // minion
+    /// <summary> Depending on it's ObjectKind, this may be a <see cref="Companion"/>*, Mount (<see cref="Character"/>*), or <see cref="Ornament"/>*. </summary>
+    [FieldOffset(0x22F8)] public Character* ChildObject;
+    [FieldOffset(0x2300), FixedSizeArray(isString: true)] internal FixedSizeArray7<byte> _freeCompanyTag;
+
+    /// <summary>
+    /// The current (hard) target for this Character. This will not be set for the LocalPlayer.
+    /// </summary>
+    /// <remarks>
+    /// Developers should generally use <see cref="GetTargetId"/> over reading this field directly, as it will
+    /// properly handle resolving the target for the local player.
+    /// </remarks>
+    [FieldOffset(0x2308)] public GameObjectId TargetId;
+
+    /// <summary>
+    /// The current soft target for this Character. This will not be set for the LocalPlayer.
+    /// </summary>
+    /// <remarks>
+    /// Developers should generally use <see cref="GetSoftTargetId"/> over reading this field directly, as it will
+    /// properly handle resolving the soft target for the local player.
+    /// </remarks>
+    [FieldOffset(0x2310)] public GameObjectId SoftTargetId;
+
+    [FieldOffset(0x231C)] public float CastRotation;
+
+    [FieldOffset(0x2338)] public uint NameId;
+    [FieldOffset(0x233C)] public uint EventHandlerNameId; // coming from (Quest)EventHandler.vf242 (lua function "GetBattleNpcNameId"), set in the Character.Update function
+    [FieldOffset(0x2340)] public uint TransformationNameId; // set/unset via statuses
+    [FieldOffset(0x2344)] public uint CompanionOwnerId; // TODO: Find a better name as it is used to index into FurnitureMemory for IndoorHousing
+    [FieldOffset(0x2348)] public ObjectType ObjectType;
+
+    [FieldOffset(0x2350)] public ulong AccountId;
+    [FieldOffset(0x2358)] public ulong ContentId;
+    [FieldOffset(0x2360)] public ushort CurrentWorld;
+    [FieldOffset(0x2362)] public ushort HomeWorld;
+    [FieldOffset(0x2364)] public CharacterModes Mode;
+    [FieldOffset(0x2365)] public byte ModeParam; // Different purpose depending on mode. See CharacterModes for more info.
+    [FieldOffset(0x2366)] public byte GMRank;
+
+    /// <remarks> See <see cref="Sound.SoundVolumeCategory"/>. </remarks>
+    [FieldOffset(0x2369)] public byte SoundVolumeCategory;
+    [FieldOffset(0x236A)] public byte SoundVolumeCategoryOverride;
+    [FieldOffset(0x236B)] private byte SoundFlags; // 0x40 = SoundVolumeCategory determined
+
+    [FieldOffset(0x600), Obsolete("Moved to MoveController.MovementState")] public MovementStateOptions MovementState;
+    [FieldOffset(0x628), Obsolete] public byte Flags628;
+
+    [Obsolete("Moved to MoveController.IsSwimming")]
+    public bool IsSwimming {
+        get => MoveController.IsSwimming;
+        set => MoveController.IsSwimming = value;
+    }
+
+    public bool IsWeaponDrawn => Timeline.IsWeaponDrawn;
+    public bool IsCasting => VirtualTable != null && GetCastInfo() is var info && info != null && info->IsCasting;
+
+    /// <summary>
+    /// Gets the (hard) target ID for this character. If this character is the LocalPlayer, this will instead read the
+    /// target ID from the <see cref="TargetSystem"/>. Used for calculating ToT via /assist.
+    /// </summary>
+    /// <returns>Returns the object ID of this character's target.</returns>
+    [MemberFunction("E8 ?? ?? ?? ?? 4C 8B E0 48 8B 4F")]
+    public partial GameObjectId GetTargetId();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 48 3B FD 74 36")]
+    public partial void SetTargetId(GameObjectId id);
+
+    /// <summary>
+    /// Gets the soft target ID for this character. If this character is the LocalPlayer, this will instead read the
+    /// soft target ID from the <see cref="TargetSystem"/>.
+    /// </summary>
+    /// <returns>Returns the object ID of this character's target.</returns>
+    [MemberFunction("E8 ?? ?? ?? ?? 48 8B F0 EB 12")]
+    public partial GameObjectId GetSoftTargetId();
+
+    [MemberFunction("E8 ?? ?? ?? ?? EB 05 4C 3B E0")]
+    public partial void SetSoftTargetId(GameObjectId id);
+
+    public bool IsMounted() => Mount.MountId != 0;
+
+    [MemberFunction("E8 ?? ?? ?? ?? 45 84 FF 75 40")]
+    public partial void SetMode(CharacterModes mode, byte modeParam);
+
+    /// <summary> Can only be used for Mounts, Minions, and Ornaments. Literally just checks if the game object at index - 1 is a character and returns that. </summary>
+    [MemberFunction("E8 ?? ?? ?? ?? 48 3B 47 ?? 75 ?? 48 8B CE")]
+    public partial Character* GetParentCharacter();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 38 43 ?? 0F 85")]
+    public partial bool HasStatus(uint statusId);
+
+    /// <summary>Check if this character is in a jumping/falling animation.</summary>
+    [MemberFunction("E8 ?? ?? ?? ?? 84 C0 75 46 48 8B 4B 08")]
+    public partial bool IsJumping();
+
+    /// <summary> Check if the character is using the World Visit system. </summary>
+    [MemberFunction("E8 ?? ?? ?? ?? 84 C0 8B CF")]
+    public partial bool IsWanderer();
+
+    /// <summary> Check if the character is using the Data Center Travel system. </summary>
+    [MemberFunction("E8 ?? ?? ?? ?? 84 C0 75 ?? 40 0F B6 C6")]
+    public partial bool IsTraveler();
+
+    /// <summary> Check if the character is using the Cross-region Data Center Travel system. </summary>
+    [MemberFunction("E8 ?? ?? ?? ?? 84 C0 74 ?? 80 4E ?? ?? ?? ?? ?? 48 8B CB FF 92")]
+    public partial bool IsVoyager();
+
+    /// <summary>
+    /// Checks if Character is in a PvP state <br/>
+    /// Will need to be called multiple times before returning correct result
+    /// </summary>
+    [MemberFunction("E8 ?? ?? ?? ?? 84 C0 75 05 8B 4D F4")]
+    public partial bool IsInPvP();
+
+    /// <summary>
+    /// Resolves the correct emote id, based on the targets height or distance.
+    /// </summary>
+    /// <param name="emoteId">The base emote id.</param>
+    /// <param name="options">The PlayEmote options.</param>
+    /// <returns> The adjusted emote id for the target. </returns>
+    /// <remarks> For example, this is used for Throw/Snowball, Dote, Splash, All Saints' Charm, Bouquet or Photograph. </remarks>
+    [MemberFunction("E8 ?? ?? ?? ?? 48 8B 5D ?? 0F B7 F8")]
+    public partial ushort ResolveTargetedEmoteId(ushort emoteId, EmoteController.PlayEmoteOption* options); // TODO: judging from the address, this might be a static function
+
+    [VirtualFunction(78)]
+    public partial StatusManager* GetStatusManager();
+
+    [VirtualFunction(79)]
+    internal partial StatusManager* GetStatusManager2();
+
+    /// <summary>
+    /// Gets the <see cref="CastInfo"/> struct for this Character.
+    /// May be null for certain Character subclasses, e.g. <see cref="Companion"/>.
+    /// </summary>
+    /// <returns>Returns a pointer to a CastInfo struct, or <c>null</c>.</returns>
+    [VirtualFunction(80)]
+    public partial CastInfo* GetCastInfo();
+
+    [VirtualFunction(81)]
+    internal partial CastInfo* GetCastInfo2();
+
+    [VirtualFunction(82)]
+    public partial ActionEffectHandler* GetActionEffectHandler();
+
+    [VirtualFunction(83)]
+    public partial StdDeque<ScreenLogEntry>* GetScreenLogManager();
+
+    [VirtualFunction(84)]
+    public partial ForayInfo* GetForayInfo();
+
+    [VirtualFunction(85)]
+    internal partial ForayInfo* GetForayInfo2();
+}
+
+// TODO: move to FFXIVClientStructs.FFXIV.Client.Game.Control.MoveControl
+public enum MovementStateOptions : byte {
+    Normal = 0,
+    Flying = 1,
+    Diving = 2,
+    // Spectating = 3,
+}
+
+// LogMessages for errors starting at 7700
+public enum CharacterModes : byte {
+    None = 0, // Mode is never used
+    Normal = 1, // Param always 0
+    Dead = 2,
+    EmoteLoop = 3, // Param is an EmoteMode entry
+    Mounted = 4, // Param always 0
+    Crafting = 5, // Param always 0
+    Gathering = 6,
+    MateriaAttach = 7,
+    AnimLock = 8, // Param always 0
+    Carrying = 9, // Param is a Carry entry
+    RidingPillion = 10, // Param is the pillion seat number
+    InPositionLoop = 11, // Param is an EmoteMode entry
+    RaceChocobo = 12,
+    TripleTriad = 13,
+    Lovm = 14, // Lord of Verminion
+    // CustomMatch = 15, // PvP, untested
+    Performance = 16, // Param is Perform row id (the instrument)
+}
+
+[StructLayout(LayoutKind.Explicit, Size = 2)]
+public struct ForayInfo {
+    [FieldOffset(0x00)] public byte Level;
+    [FieldOffset(0x01)] public byte Element;
+}

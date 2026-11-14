@@ -1,0 +1,22 @@
+PunishLib/AboutPlugin.cs:18: internal Action WithLoveBy => Developer == null ? WithLoveByPunish : WithLoveByOther;
+PunishLib/API/API.cs:13: internal static class API
+PunishLib/API/API.cs:15: internal static string APITestEndPoint = "https://puni.sh/api/test/auth?authKey=";
+PunishLib/Configuration/SharedConfig.cs:11: internal class SharedConfig
+PunishLib/Configuration/SharedConfig.cs:13: internal static string FileDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PunishConfig");
+PunishLib/Configuration/SharedConfig.cs:14: internal static string FilePath => Path.Combine(FileDir, "PunishSharedConfig.json");
+PunishLib/Configuration/SharedConfig.cs:15: internal SharedConfigStorage Storage;
+PunishLib/Configuration/SharedConfig.cs:16: internal SharedConfig() 
+PunishLib/Configuration/SharedConfig.cs:24: internal string APIKey
+PunishLib/Configuration/SharedConfig.cs:30: internal string FFXIVGameVersion
+PunishLib/Configuration/SharedConfig.cs:36: internal bool UnsupportedConfiguration
+PunishLib/Configuration/SharedConfig.cs:42: internal string InstalledPlugins
+PunishLib/Configuration/SharedConfig.cs:47: internal string ClientLanguage
+PunishLib/ImGuiMethods/ImageLoadingResult.cs:6: internal class ImageLoadingResult
+PunishLib/ImGuiMethods/ImageLoadingResult.cs:8: internal IDalamudTextureWrap texture = null;
+PunishLib/ImGuiMethods/ImageLoadingResult.cs:9: internal bool isCompleted = false;
+PunishLib/ImGuiMethods/ImGuiEx.cs:11: internal static class ImGuiEx
+PunishLib/ImGuiMethods/InfoBox.cs:141: internal static Dictionary<string, InfoBox> InfoBoxCache = new();
+PunishLib/PunishLibMain.cs:20: internal static string PluginName = "";
+PunishLib/PunishLibMain.cs:21: internal static IDalamudPluginInterface PluginInterface;
+PunishLib/PunishLibMain.cs:22: internal static AboutPlugin About;
+PunishLib/PunishLibMain.cs:23: internal static SharedConfig SharedConfig;

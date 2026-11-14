@@ -1,0 +1,92 @@
+{
+  "Name": "M11S - Boss cast safe spots (conditional + configurations) [EXAMPLE/UNTESTED]",
+  "Description": "EXAMPLE/UNTESTED - format demo. Zone 1325, NameId 14305 and action 46114 are real; the safe-spot coordinates are ILLUSTRATIVE and the SAFE marker is not a verified solution. Strat B is a full replacement list and deliberately omits the danger donut. Take positions from a recording before use.",
+  "Group": "M11S - Arcadion",
+  "ZoneLockH": [1325],
+  "DCond": 1,
+  "Phase": 0,
+  "JobLockH": [],
+  "ConditionalAnd": true,
+  "DefaultConfigurationName": "Strat A (default)",
+  "SelectedSubconfigurationID": "00000000-0000-0000-0000-000000000000",
+  "ElementsL": [
+    {
+      "Name": "COND boss casting",
+      "type": 1,
+      "radius": 0.0,
+      "thicc": 0.0,
+      "refActorNPCNameID": 14305,
+      "refActorComparisonType": 6,
+      "refActorRequireCast": true,
+      "refActorCastId": [46114],
+      "refActorUseCastTime": true,
+      "refActorCastTimeMin": 0.0,
+      "refActorCastTimeMax": 9.4,
+      "refActorUseOvercast": true,
+      "Conditional": true,
+      "ConditionalReset": true,
+      "Nodraw": true
+    },
+    {
+      "Name": "Safe spot NW",
+      "type": 0,
+      "refX": 92.0,
+      "refY": 92.0,
+      "refZ": 0.0,
+      "radius": 1.5,
+      "color": 3355508480,
+      "fillIntensity": 0.5,
+      "overlayText": "SAFE",
+      "mechanicType": 2
+    },
+    {
+      "Name": "Danger donut",
+      "type": 1,
+      "radius": 6.0,
+      "Donut": 20.0,
+      "color": 3355443455,
+      "fillIntensity": 0.3,
+      "refActorNPCNameID": 14305,
+      "refActorComparisonType": 6,
+      "onlyTargetable": true,
+      "mechanicType": 1
+    }
+  ],
+  "Subconfigurations": [
+    {
+      "Guid": "6f1c2b7e-2d3a-4c58-9d1e-8a5b0c9e4f21",
+      "Name": "Strat B (mirrored, no donut)",
+      "Elements": [
+        {
+          "Name": "COND boss casting",
+          "type": 1,
+          "radius": 0.0,
+          "thicc": 0.0,
+          "refActorNPCNameID": 14305,
+          "refActorComparisonType": 6,
+          "refActorRequireCast": true,
+          "refActorCastId": [46114],
+          "refActorUseCastTime": true,
+          "refActorCastTimeMin": 0.0,
+          "refActorCastTimeMax": 9.4,
+          "refActorUseOvercast": true,
+          "Conditional": true,
+          "ConditionalReset": true,
+          "Nodraw": true
+        },
+        {
+          "Name": "Safe spot NE",
+          "type": 0,
+          "refX": 108.0,
+          "refY": 92.0,
+          "refZ": 0.0,
+          "radius": 1.5,
+          "color": 3355508480,
+          "fillIntensity": 0.5,
+          "overlayText": "SAFE",
+          "mechanicType": 2
+        }
+      ]
+    }
+  ]
+}

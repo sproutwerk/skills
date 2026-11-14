@@ -1,0 +1,53 @@
+public static class DalamudReflector
+    public static void RegisterOnInstalledPluginsChangedEvents(params Action[] actions)
+    public static bool GetDtrEntryState(string name)
+    public static void SetDtrEntryState(string name, bool enable)
+    public static void SetKeyState(VirtualKey key, int state)
+    public static object GetPluginManager()
+    public static async Task<List<object>?> GetPluginMaster(string masterURL)
+    public static object GetService(string serviceFullName)
+    public static bool TryGetLocalPlugin(out object localPlugin, out AssemblyLoadContext context, out Type type) =>
+    public static bool TryGetLocalPlugin(object instance, out object localPlugin, out AssemblyLoadContext context, out Type type)
+    public static bool TryGetDalamudPlugin(string internalName, out object instance, bool suppressErrors = false, bool ignoreCache = false) => TryGetDalamudPlugin(internalName, out instance, out _, suppressErrors, ignoreCache);
+    public static bool TryGetDalamudPlugin(string internalName, out object instance, out AssemblyLoadContext context, bool suppressErrors = false, bool ignoreCache = false)
+    public static bool TryGetDalamudStartInfo(out DalamudStartInfo dalamudStartInfo, IDalamudPluginInterface pluginInterface = null)
+    public static string GetPluginName()
+    public static bool IsOnStaging()
+    public static bool HasRepo(string repoURL)
+    public static void AddRepo(string repoURL, bool enabled)
+    public static async Task<bool> AddPlugin(string masterURL, string
+    public static void RemoveCurrentPlugin()
+    public static void ReloadPluginMasters()
+    public static void SaveDalamudConfig()
+    public static void DeleteSharedData(string name)
+    public static void SetImGuiAssertsState(bool? enableAsserts = false, bool? enableVerboseAssertLogging = false, bool? enableAssertsAtStartup = false)
+public static partial class ReflectionHelper
+    public static object GetFoP(this object obj, string name)
+    public static T GetFoP<T>(this object obj, string name)
+    public static void SetFoP(this object obj, string name, object value)
+    public static object GetStaticFoP(this object obj, string type, string name)
+    public static object GetStaticFoP(this Type obj, string name)
+    public static T GetStaticFoP<T>(this object obj, string type, string name)
+    public static void SetStaticFoP(this object obj, string type, string name, object value)
+    public static object Call(this object obj, string name, object[] @params, bool matchExactArgumentTypes = false)
+    public static T Call<T>(this object obj, string name, object[] @params, bool matchExactArgumentTypes = false)
+    public static MethodInfo? GetAccessibleSetMethod(PropertyInfo property)
+public static partial class ReflectionHelper
+    public static object Call(this object instance, string methodName, IEnumerable<string> methodTypeArguments, object[] parameters) => Call(instance, [instance.GetType().Assembly], methodName, methodTypeArguments, parameters);
+    public static object Call(this object obj, IEnumerable<Assembly>? assemblies, string methodName, IEnumerable<string>? methodTypeArguments, object[] parameters)
+    public static T Call<T>(this object obj, IEnumerable<Assembly> assemblies, string methodName, IEnumerable<string> methodTypeArguments, object[] parameters) => (T)Call(obj, assemblies, methodName, methodTypeArguments, parameters);
+public static partial class ReflectionHelper
+    public static object CallStatic(this object obj, string type, string name, object[] values)
+    public static T CallStatic<T>(this object obj, string type, string name, object[] values) => (T)CallStatic(obj, type, name, values);
+    public static object CallStatic(IEnumerable<Assembly> assemblies, string typeName, IEnumerable<string> typeArguments, string methodName, IEnumerable<string> methodTypeArguments, object[] parameters)
+public static partial class ReflectionHelper
+    public static MethodInfo FindStaticMethodInAssemblies(IEnumerable<Assembly> assemblies, string typeName, Type[] typeArguments, string methodName, Type[] methodTypeArguments, Type[] parameterTypes)
+    public static List<Type> FindTypesInAssemblies(IEnumerable<Assembly> assemblies, IEnumerable<string> typeNames)
+    public static List<Type> FindTypesInAssemblies(IEnumerable<Assembly> assemblies, IEnumerable<(string TypeName, Type[] TypeArguments)> typeNames)
+    public static Type[] GetTypes(this IEnumerable<object> objects)
+    public static Delegate CreateDelegate(MethodInfo methodInfo, object target)
+    public static IFieldPropertyUnion[] GetFieldPropertyUnions(this Type type, BindingFlags bindingFlags = BindingFlags.Default, bool propertyFirst = false)
+    public static IFieldPropertyUnion? GetFieldPropertyUnion(this Type type, string name, BindingFlags bindingFlags = BindingFlags.Default)
+    public static Type GetTypeFromRuntimeAssembly(string assemblyName, string type)
+    public static DelegateInfo AnalyzeDelegateField(IFieldPropertyUnion field)
+    public static void AssignDelegateToField(IFieldPropertyUnion field, object target, Delegate delegateInstance)

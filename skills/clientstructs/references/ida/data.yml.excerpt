@@ -1,0 +1,182 @@
+version: 2026.11.03.0000.0000
+
+globals:
+  0x14211EE9C: g_Common::Math::HalfPI
+  0x14211EEAC: g_Common::Math::PI
+  0x14211EEC8: g_Common::Math::TwoPI
+  0x1421200B0: g_MemoryPoolConfig # { int BlockSize; int BlockCount; }[10], last entry is special for the lookup table
+  0x1428EA18C: g_SQEX::CDev::Engine::Sd::Driver::RootSound_PlayerCategoryVolumes
+  0x14290B5C0: g_MemoryPoolsStart
+  0x14290B610: g_MemoryPoolsEnd
+  0x142C784B8: g_SQEX::CDev::Engine::Sd::Driver::Bus_Buses
+  0x142C784C8: g_SQEX::CDev::Engine::Sd::Driver::Bus_BusCount
+  0x142C78720: g_SQEX::Sd::Driver::Core::CoreMasterVoice_Instances
+  0x142C78750: g_SQEX::Sd::Driver::Core::CoreSubmixVoice_Instances
+  0x142F6729C: g_SQEX::Sd::Driver::Core::CoreSystem_SampleRate
+  0x142F6730C: g_SQEX::Sd::Driver::Core::CoreSystem_ChannelCount
+  0x142F67320: g_SQEX::Sd::Driver::Core::CoreSystem_FrameCount
+  0x142F673A0: g_SQEX::Sd::Driver::Core::CoreSystem_SpatialAudioActive
+  0x142F673C0: g_SQEX::Sd::Driver::Core::CoreSystem_CaptureMode
+  0x142F67930: g_SQEX::Sd::Driver::WASAPI::AudioRenderer_Instances
+  0x142F69028: g_SQEX::CDev::Engine::Sd::Driver::RootSound_IgnorePlayerCategoryVolume
+#fail   0x141F0C404: g_ConfigFileName
+  0x14212A170: g_NumberArraySizes
+  0x14212A380: g_StringArraySizes
+  0x14212A6E0: g_ExtendArraySizes
+  0x142136080: g_UIColorTable
+  0x14217F520: g_HUDScaleTable
+  0x1428B0380: g_ClientInstanceLimit
+  0x1428B09A0: g_EmptyUtf8String # empty Utf8String with just the null terminator
+  0x1428B0A10: g_WindowStyle
+  0x1428B1A78: g_FPS
+  # ... (globals continue)
+
+functions:
+  0x140001370: GetOrInitNvAPI
+  0x14005B120: VectorConstructorIterator
+  0x14005B170: VectorDestructorIterator
+  0x14005E020: WinMain
+#fail   0x1400581B0: std::string::ctor_FromSubStr #(other, idx, len)
+#fail   0x1400582F0: std::string::ctor_FromCharArr #(arr, len)
+  0x1401E86E0: std::_Throw_tree_length_error
+  0x141D75AEC: std::_Xlength_error
+  0x1401E7AA0: std::deque::_Growmap
+  0x1406E1D10: IntToString
+#fail   0x1402404F0: HalfToFloat
+  0x14005F4E0: GetStdOut
+  0x14005F4F0: vsprintf_s
+  0x14005F550: vswprintf_s
+  # ... (functions continue)
+
+classes:
+
+  Client::System::Framework::Framework:
+    instances:
+      - ea: 0x142904928
+        pointer: true
+      - ea: 0x14290BE90
+        name: InstancePointer2
+        pointer: true
+    vtbls:
+      - ea: 0x142129480
+    vfuncs:
+      0: dtor
+      1: Setup
+      2: Destroy
+      3: Free
+      4: Tick
+    funcs:
+      0x1400CEA00: ctor
+      0x1400D1E20: Exit
+      0x1400D2A30: ExitFromWindow
+      0x1400D2410: SetInactive
+      0x1400D24D0: UpdateClipCursor
+      0x1400D25D0: PauseResumeFrameTicks
+      0x1400D28F0: GetNetworkModuleProxy
+      0x1400D1EB0: FpsPercentileStart
+      0x1400D2000: FpsPercentileStop
+      0x1400D2190: FpsPercentileInit
+      0x1400D21E0: FpsPercentileWrite
+      0x1400D2910: GetUIModule
+      0x1400D2930: GetUIClipboard
+      0x1400D2940: GetUIInputData
+      0x1400D2B10: GetBuildRevision # static
+      0x1400D3560: TaskBegin
+      0x1400D37E0: TaskDraw2DBegin
+      # ...
+
+  Client::Game::InventoryManager:
+    instances:
+      - ea: 0x142AD8590
+    funcs:
+      0x1408970C0: ctor
+      0x14086A690: Initialize
+      0x14086AEE0: Update
+      0x14086BA90: ClearOperationByContextId
+      0x14086CE50: GetInventoryContainer  # (this, containerId)
+      0x14086CF00: GetInventorySlot  # (this, containerId, slotId)
+      0x14086D7E0: IsContainerLoaded
+      0x14086E180: MoveItemSlot # (srcContainer, srcSlot, dstContainer, dstSlot, 1)
+      0x140875440: GetInventoryItemCount # (this, itemId, hq, 1, 1, 0)
+      0x140875B90: GetItemCountInContainer # (this, itemId, containerId, hq, 0)
+      0x140106EC0: GetSizeByIndex # static
+      0x140876840: GetEquippedItemIdForSlot
+      0x140888BC0: CanEquip # static
+      0x140879BD0: GetPermittedGearsetCount
+      0x140883690: GetLimitedTomestoneCount
+      0x1408746C0: GetEmptySlotsInBag
+      0x140874900: GetFirstEmptyInventorySlot
+      # ...
+
+  Component::GUI::AtkUnitBase:
+    vtbls:
+      - ea: 0x142180160
+        base: Component::GUI::AtkEventListener
+    vfuncs:
+      3: Open
+      4: Close
+      5: Show
+      6: Hide
+      7: SetPosition
+      8: SetX
+      9: SetY
+      10: GetX
+      11: GetY
+      12: GetPosition
+      13: SetAlpha
+      14: SetScale
+      15: GetSize
+      16: Hide2
+      17: SetScaleToHudLayoutScale
+      18: ShouldCollideWithWindow
+      20: OnMove
+      22: HandleCursorTypeChange
+      23: ShouldIgnoreInputs
+      24: GetRootNode
+      27: GetWindowBounds
+      30: GetRootBounds
+      31: SetDepthLayer
+      32: ShouldAllowCursorFocus
+      35: GetUnitBaseForFocus
+      37: Focus
+      41: Initialize
+      42: Finalizer
+      43: Update
+      44: Draw
+      46: LoadUldResourceHandle
+      47: CheckWindowCollisionAtCoords
+      49: OnSetup
+      51: OnRefresh
+      52: OnRequestedUpdate
+      54: FireCloseCallback
+      56: SetSizeFromConfig
+      57: HandleCustomInput
+      58: OnOpenTransitionStarted
+      59: OnFocusChange
+      60: OnScreenSizeChange
+      61: OnConfigLoaded
+      62: OnMouseOver
+      63: OnMouseOut
+      66: IsFullyLoaded
+      67: PlaySoundEffect
+      69: HandleDPadInput
+      71: HandleBackButtonInput
+    funcs:
+      0x14066F610: ctor
+      0x14066F840: Destructor
+      0x14066FCF0: FireCallbackAndHideOrClose
+      0x14066FD00: FireCallbackInt  # this creates an int AtkValue and puts its argument into it before calling Callback
+      0x14066FF40: FireCallbackWithResult # calls AtkEventInterface.ReceiveEventWithResult
+      0x1406700A0: RegisterEvent
+      0x1406700E0: UnregisterEvent
+      0x140670130: SetPosition
+      0x1406702A0: SetAlpha
+      0x1406702D0: GetScale
+      0x1406704F0: GetGlobalUIScale
+      0x140670500: SetGlobalUIScale
+      0x140670670: SetScale
+      0x1406709C0: SetSize
+      0x140670B70: GetScaledWidth
+      0x140670BB0: GetScaledHeight
+      0x140670BF0: CalculateBounds
+      # ...

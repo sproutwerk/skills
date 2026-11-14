@@ -1,0 +1,3 @@
+interface:
+  display_name: "vnavmesh"
+  short_description: "FFXIV navigation IPC, path following, and troubleshooting"

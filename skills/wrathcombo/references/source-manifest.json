@@ -1,0 +1,571 @@
+{
+  "reviewedAt": "2026-11-13",
+  "files": [
+    {
+      "path": "references/source/WrathCombo/.gitmodules",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": ".gitmodules",
+      "gitBlob": "c4a23429fc1f39ebd770358e94f14dde1f4bc865",
+      "sha256": "c64fbc0690f102db78d07e68ea92d1be0e1db771c22e722920ff8f2eb4d0245d"
+    },
+    {
+      "path": "references/source/WrathCombo/Directory.Build.props",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "Directory.Build.props",
+      "gitBlob": "0f9c4b2608394bfcfecc756f1199eedf5d31a9ac",
+      "sha256": "2ac85abfc2ee96919809c67d57a30db2b98ba7acd02f2e062b4a39ba6833a95f"
+    },
+    {
+      "path": "references/source/WrathCombo/Directory.Build.targets",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "Directory.Build.targets",
+      "gitBlob": "838c22ee01575ea352827eea0ac6ff6e1f25ed4d",
+      "sha256": "04c7b254f802cced787556e5f8479620bb6781e848d0d48cf236dd86be77a2c5"
+    },
+    {
+      "path": "references/source/WrathCombo/LICENSE",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "LICENSE",
+      "gitBlob": "b352bae3c49332d5520c5bba2b2813b66f399b4c",
+      "sha256": "9882c378f43128746d1391b090246ebf76ffdefbd920a1d56eab5cc65d3423bc"
+    },
+    {
+      "path": "references/source/WrathCombo/README.md",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "README.md",
+      "gitBlob": "aa3b19267b81619d7d5372c253f2b6cec2c2a58f",
+      "sha256": "04a35a891dd0d8afb87659425810992ebb7d07623ca1575f1533bfd6ef1ccbb8"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/AutoRotation/AutoRotationConfig.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/AutoRotation/AutoRotationConfig.cs",
+      "gitBlob": "2d600a2d75890d6cc9ce3c5ba0f3627e5438129f",
+      "sha256": "a9a577c61a6e96630c6bdc373a57640351d1e92e678cac89b4195a3293c14645"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/AutoRotation/AutoRotationConfigIPCWrapper.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/AutoRotation/AutoRotationConfigIPCWrapper.cs",
+      "gitBlob": "9a56c377b196b0438612dbc5a994207b0f49a330",
+      "sha256": "d2ca8491cdf4723f328c48fec13af44ed61489094f2fa05a4584fb68d3dd8b24"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/AutoRotation/AutoRotationController.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/AutoRotation/AutoRotationController.cs",
+      "gitBlob": "35f1d267cb1383d1d6f2587b24f003b4b3392ece",
+      "sha256": "7d1924135e5fda04500a4ac9577741f62866507de2b289d3eaf31c95bec50e36"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/CustomCombo/CustomCombo.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/CustomCombo/CustomCombo.cs",
+      "gitBlob": "6f0c56cf3ca71d349d9a5e1d57c5582be181e0cd",
+      "sha256": "c3927c62ab1d03cd1f70f58f4058b9905988f6a9c283df898506c723c4ef2119"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/ActionRequestIPC/ActionDescriptor.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/ActionRequestIPC/ActionDescriptor.cs",
+      "gitBlob": "0463f055ba17670b6a07831942288829fce1b183",
+      "sha256": "17740f066cc8bbe4f824247af25e1a590f81c069961c53b1454d4882cd2519c6"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/ActionRequestIPC/ActionRequest.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/ActionRequestIPC/ActionRequest.cs",
+      "gitBlob": "78dcf63cb731f1862bdf6600b049e377aa2d8c38",
+      "sha256": "b293cbd2532804acb7caffb06d505558a61c7abd67fda0c561215f63514ab61a"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/ActionRequestIPC/ActionRequestDebugUI.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/ActionRequestIPC/ActionRequestDebugUI.cs",
+      "gitBlob": "f8ef2f6509bc03607da8635b2c5e35ea213420c1",
+      "sha256": "51bd974353564dcff042b1cb5145ef1faf43e05703c3a6e2174757b4ca6dd66a"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/ActionRequestIPC/ActionRequestIPCProvider.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/ActionRequestIPC/ActionRequestIPCProvider.cs",
+      "gitBlob": "6c129ba85e358c0a5bf9ce77b6d89834534a4fa6",
+      "sha256": "4e5e5ca293ff0a9c84df1e40ba9104adc007104e97a49ccfc97ca4a02d48afe4"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/HelpAutoRotConfig.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/HelpAutoRotConfig.cs",
+      "gitBlob": "cb3e9dceb8bd1f64271c7aba30fc538e7dbfac68",
+      "sha256": "74bd96635d1879d8c3995e8c96202c3d559389537be721d161ff8b98768639f4"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/Helper.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/Helper.cs",
+      "gitBlob": "baf674805a1cef674659d8d616724ea6c88f6077",
+      "sha256": "35404b7c2b82c7b4881546fae381528cc1b605d1e2f16d79feeeccab558818f5"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/Leasing.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/Leasing.cs",
+      "gitBlob": "73265b253ea853ca27abff6240d5f85051f66c4a",
+      "sha256": "07c5b53505088d1021a177a107118508450b93b91a548c12157e3ecf97e3623a"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/ProvideAutoRotConfig.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/ProvideAutoRotConfig.cs",
+      "gitBlob": "8953b9e5f3ca344a07f7c9757f0bc2b80b6bbb8c",
+      "sha256": "e887324d909926452c160353abc124525e6cd38cec8574722737b8751236a9ab"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/ProvidePositionalHint.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/ProvidePositionalHint.cs",
+      "gitBlob": "eb9c12f2f5b8384fce950074c2556304617e354f",
+      "sha256": "0f6b7dd76e25b971cc658f7f2082f126b9be78606bcafaa12bbe2cd7701e6c61"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/Provider.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/Provider.cs",
+      "gitBlob": "7ae0cb8cecc1c1144fa4ed9303ca182179b1fe9b",
+      "sha256": "9118b0f2103602f415b3fdee9a359df8a356944c1e7c9e3003c77000abc78d5f"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/Search.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/Search.cs",
+      "gitBlob": "e3f09614a44022fd95c9a4eaa2b5b7bf45b591dc",
+      "sha256": "416d844ece13a036e1b9785c699c2e0dd6a71e9336a0bd2f74d6c1ee685453b8"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/UIHelper.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/UIHelper.cs",
+      "gitBlob": "7c17bd00f50cec4e6d2a34a172f82d641f886bb6",
+      "sha256": "7d277715a8944727f41e76bd9f1dc9552e64cd42c3406855d1ae2cc39365733a"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/UpcomingPositionalHintService.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/UpcomingPositionalHintService.cs",
+      "gitBlob": "a303a00c371e20773808575343f10cbe39f3c03e",
+      "sha256": "57a4534211c24869e752b9dc57d943513aa18640256c7be980665d9c6e9661c9"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC/Utility.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC/Utility.cs",
+      "gitBlob": "849258d181a44c1260439302eb6dd313b8dc1d2b",
+      "sha256": "a9052f1d81cf2ef4144617a6d11f5b2ac1ce6b8c08233d2a3eddac0efe51e068"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/WrathCombo.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/WrathCombo.cs",
+      "gitBlob": "95a62a09fdfd93c44180f7258956052b52ad4be8",
+      "sha256": "1d8eca932d470f1136cdb4a2df1a1d5c17686f036f6110089e1da3908384cc76"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/WrathCombo.csproj",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/WrathCombo.csproj",
+      "gitBlob": "477345c283db98962d2b24d501beb480b63fbc3a",
+      "sha256": "8dada08040d20f9d1cf5f6bd9684d4ca1b7797cc3a152e1d2e5f36b446fc14cd"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/WrathCombo.json",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/WrathCombo.json",
+      "gitBlob": "68f8cfc41f0d6a4466db65a6087176d018ec29fb",
+      "sha256": "5a26e034218518a732af167a9595eca5777b134fac2ef441cf29fe2112b0d354"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Attribute/ConfigValueTypeAttribute.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Attribute/ConfigValueTypeAttribute.cs",
+      "gitBlob": "dec2d414c6e9185c28cd184504221e6bd903ebef",
+      "sha256": "7fae29b9edf63acf3277939f5149ec9454a17a57144608503b5605e3624277df"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Docs/Changes.md",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Docs/Changes.md",
+      "gitBlob": "97bce6190476b86f3c6f1a52b1fbf7a9abf3de76",
+      "sha256": "165f766e64ba1962bebcc3cf48fd4c1a6bb9c8ae4d35722a362e493ab8c9ea6f"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/AutoRotationConfigOption.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/AutoRotationConfigOption.cs",
+      "gitBlob": "4c533eaf543809d38ce50cb2c5e6950b94e04e22",
+      "sha256": "82e1c011448715bebd287c79fdce520ca1ebaaca1a04cae597bbb6d11853bb13"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/BailMessage.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/BailMessage.cs",
+      "gitBlob": "08f61f75af5394a5edbdee1a7d72eac4bc72cbcc",
+      "sha256": "50df7850433e39cf796671aec13742929b852373adb3b86c3b187b04b874fb11"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/CancellationReason.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/CancellationReason.cs",
+      "gitBlob": "66747a5ca1815552098a69737086e23e0cffff00",
+      "sha256": "2743d9fe0b2b0435b9714a3a5dd13c11c58ace05943f2b6c195ef816e3ef8a8d"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/ComboSimplicityLevelKeys.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/ComboSimplicityLevelKeys.cs",
+      "gitBlob": "5788f15c28259f57c7895fdb9d2aaeedc248a4ca",
+      "sha256": "128b011ff1e1b3b0b6fcfe030ab4728252609afea24853d005316b9dbed70608"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/ComboStateKeys.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/ComboStateKeys.cs",
+      "gitBlob": "a1ef3c1a0fcffadce9c7b8ad7a5526e4624a1db5",
+      "sha256": "559c6866f079f53d4bea687bbadc099b3a0b222dcae763121455db35f650082c"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/ComboTargetTypeKeys.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/ComboTargetTypeKeys.cs",
+      "gitBlob": "f5d1ef1309c434f8928a69d6965e2ee204bc9d81",
+      "sha256": "32efd8d0372cd4512cb6ffc8516c686af21535f5730bdb20328f07c5fb259570"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/DPSRotationMode.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/DPSRotationMode.cs",
+      "gitBlob": "6add1583966fd9284b03722c4d54d62ac2eead26",
+      "sha256": "d012fd3d2de3f99ad15ff08427c344d7c1c915ac620a9649d7a2bae3b22412fc"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/HealerRotationMode.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/HealerRotationMode.cs",
+      "gitBlob": "9d6a8b318385c51f8531dd4d0064eb467dce0278",
+      "sha256": "feedddaaa256464cedebea1e640e5ec5c8a454feb857e6c584c6a831da6e6b29"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/PositionalDirection.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/PositionalDirection.cs",
+      "gitBlob": "9f671e2c4c2506b700a09a0f15f7f55ffd3e3016",
+      "sha256": "21b64cf9fbcf0ac581f0c17d93a4da85cce64e9ce0ef62e3696d61d3239b5828"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Enum/SetResult.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Enum/SetResult.cs",
+      "gitBlob": "000ae7ca7229962e5d7c27fddef23298e6171f7b",
+      "sha256": "ca9f893e434a90030b2b3f6b8f0d1320d6b0a5af01162a6273c5d8ca4dd675d8"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Error/APIBehindException.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Error/APIBehindException.cs",
+      "gitBlob": "d24a65d787ab7a669e738ce7196177b3976ea511",
+      "sha256": "ed7895f536a95c4190d52189e00cedfce002a7534c699d3ca2be554199838f6c"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Error/Exception.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Error/Exception.cs",
+      "gitBlob": "a8d089c82c0fae67232f2a5dd161d5933b72bba6",
+      "sha256": "8500a6294490d76cba4ab96dc3d1f4ef91aa7fcf36b0141bbac70e9464301f4b"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Error/IPCException.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Error/IPCException.cs",
+      "gitBlob": "4ee0903a564cf848a9c90d5b93f81c798701593b",
+      "sha256": "118d9d63cdbcc6a2f5d938167f24db212df5808c896f24948592564645495beb"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Error/UnexpectedException.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Error/UnexpectedException.cs",
+      "gitBlob": "4a9918629688e47c8940f65dca0ad1a0011be315",
+      "sha256": "668d8b11eea424aca4245aa602bcbdc64a858630faf56094ff788dc3dbc46866"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Error/UninitializedException.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Error/UninitializedException.cs",
+      "gitBlob": "0e0af9c1a62d266a7261dc0217ed18b047f965f8",
+      "sha256": "02f15e607fb9c3661ea5701ff715ee6c7f314c3eaf89fea560847dd748b47994"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Extension/AutoRotationConfigOptionExtensions.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Extension/AutoRotationConfigOptionExtensions.cs",
+      "gitBlob": "994c5422c64eb0aa30ec6db29f1cbca4fd9cb5c2",
+      "sha256": "92b2cb17053a96fc62b743589f9738bb1e2e8bcb211f1ca1a9c844fb0e313ea5"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Extension/BailMessageExtensions.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Extension/BailMessageExtensions.cs",
+      "gitBlob": "d59279d22ff68326416dd66159cd04d8aeb9a3b7",
+      "sha256": "b11746f1711933da1cc61eaec68b725b400a9bc6dccee64e5012c37c16465c08"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Extension/CancellationReasonExtensions.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Extension/CancellationReasonExtensions.cs",
+      "gitBlob": "e230e9fa6b56fb5ad969e3ed438eda80232ab326",
+      "sha256": "e017f31464b75f3429ceecf4546e7802574fee4cbcf2b2464deee76b1c7cad7e"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/ActionRequest.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/ActionRequest.cs",
+      "gitBlob": "ebb0864604357cbb886cdbc35ed40ee4176e6865",
+      "sha256": "cb43e1fbd65471a791f0c59de9c5d521b1dba675ba7c9f93958ca48c1698929c"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/AutoRotationConfiguration.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/AutoRotationConfiguration.cs",
+      "gitBlob": "7975425a2207bf27e8ac141b882906794212cfcb",
+      "sha256": "3c88a8f00e224e34dada23630b3a59844496b178e35c2d0b5508088f2df78537"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/Positional.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/Positional.cs",
+      "gitBlob": "0608d818ce17b5611e3fb7d3f96658f985775f2b",
+      "sha256": "257422f4ae163852101e179320896a9d89c94e0cfd128cb1c01fd283ec1ed0d1"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/RawMethods/ActionRequest.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/RawMethods/ActionRequest.cs",
+      "gitBlob": "eef65f983abb2566bcc017a3597390f1a6c978a3",
+      "sha256": "ef709e2346804194b82eb28da484111f1064f1a9a513d98a8cfaaa1cd7b4018c"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/RawMethods/AutoRotationConfiguration.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/RawMethods/AutoRotationConfiguration.cs",
+      "gitBlob": "9d66e4a01a00c4c711d223598ee1445de6547d21",
+      "sha256": "50e9e22f440d9953106f67b2901ccddfa95aa87f0532ac564f7ddff561802888"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/RawMethods/Positional.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/RawMethods/Positional.cs",
+      "gitBlob": "16042f0c60d8ba038d9c8bdfbc3d9914d7c33c0c",
+      "sha256": "d121be25fe36c155d581ea41ea6761c0a5a0849a063cf117917da32390dd8204"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/RawMethods/Settings.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/RawMethods/Settings.cs",
+      "gitBlob": "553ad84b731c52e3d470d1f4aaadcda3bf038073",
+      "sha256": "35a347669907194fffe05055b104dbb02c028b8ad765c266f86d92b3c05d34aa"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/RawMethods/Utility.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/RawMethods/Utility.cs",
+      "gitBlob": "e21ec246c26dfb234806c49e038bf7b349f155c5",
+      "sha256": "8617ef8596a5534a2aa371751775388b47ee99e6077e2384c9e7c87eb079bb61"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/RawMethods/_Helper.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/RawMethods/_Helper.cs",
+      "gitBlob": "78e90de68f48b415ad5cbef0e06a9be92351a9f6",
+      "sha256": "4daf7207d760b0b193ed5f4a392362f35a2309a74437645a58d44f1480d9d31c"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/Settings.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/Settings.cs",
+      "gitBlob": "0cb651d778e39322063127215958172315303560",
+      "sha256": "d53ab5351503c4857d03901ab50010f1cda80000e03c5500d6e59bd50fe58d74"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/Utility.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/Utility.cs",
+      "gitBlob": "0157bc8719c2abffd590fdecb057789cf901d213",
+      "sha256": "9b46d8b39c8d87d52e8c9b31844600b8159b92fc9ca445b8bcb334a4d1a08e97"
+    },
+    {
+      "path": "references/source/WrathCombo.API/IPC/_Helper.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "IPC/_Helper.cs",
+      "gitBlob": "d4c7d64c5dfd408c38e352cd8649af8678bbcbf1",
+      "sha256": "2e0d071cea21d865d4f6f27738b5c128c61582b5b2bd905d5b42130d5347f18d"
+    },
+    {
+      "path": "references/source/WrathCombo.API/PositionalHintSnapshot.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "PositionalHintSnapshot.cs",
+      "gitBlob": "9d47e02055d3985cdb05b178ae191743830a1606",
+      "sha256": "5096144d2eccec68ef4fc0de45c5ee8f4f2416573d554602bac6d441e19c9693"
+    },
+    {
+      "path": "references/source/WrathCombo.API/README.md",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "README.md",
+      "gitBlob": "1f2ba32d7fc369eee2b0591b58f251482c781840",
+      "sha256": "4a13e16a733b4876ca17525c50f3ff348a67c345bc94797fbff73d1e0906ec57"
+    },
+    {
+      "path": "references/source/WrathCombo.API/Wrapper.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "Wrapper.cs",
+      "gitBlob": "95938f8823ce45465a1fde4f27b789797edc6f73",
+      "sha256": "ae21ea8678989229c9eedfb0be50252f414aacc24ac6a1f90d0a1fd867e76a51"
+    },
+    {
+      "path": "references/source/WrathCombo.API/WrathCombo.API.csproj",
+      "repository": "https://github.com/PunishXIV/WrathCombo.API",
+      "revision": "b40c88cea6e6b62981d9822637a74fd50ed9c44b",
+      "upstreamPath": "WrathCombo.API.csproj",
+      "gitBlob": "b36fc818c70b9ad940e6656fdbc1e874c9b3f21f",
+      "sha256": "038502a2f3b5bec8b12ad9ad308b81efaebc0c2633ace40bf8d002d266487be6"
+    },
+    {
+      "path": "LICENSES/WrathCombo-BSD-3-Clause.txt",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "LICENSE",
+      "gitBlob": "b352bae3c49332d5520c5bba2b2813b66f399b4c",
+      "sha256": "9882c378f43128746d1391b090246ebf76ffdefbd920a1d56eab5cc65d3423bc"
+    },
+    {
+      "path": "LICENSES/XIVComboPlugin-GPL-3.0.txt",
+      "repository": "https://github.com/MKhayle/XIVComboPlugin",
+      "revision": "a8797120a65354f44433d9d91287c4bc06dab28f",
+      "upstreamPath": "LICENSE",
+      "gitBlob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "references/source/XIVComboPlugin/README.md",
+      "repository": "https://github.com/MKhayle/XIVComboPlugin",
+      "revision": "a8797120a65354f44433d9d91287c4bc06dab28f",
+      "upstreamPath": "README.md",
+      "gitBlob": "7a76f778538d3bc0c16a85c0c4e2d5a45cc45cc9",
+      "sha256": "36dd0cdc8ce6a853d0328661b77d474c9f4737854bbddae577b09d70c2abdbfb"
+    },
+    {
+      "path": "LICENSES/AGPL-3.0.txt",
+      "url": "https://www.gnu.org/licenses/agpl-3.0.txt",
+      "retrievedAt": "2026-10-25",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Commands.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Commands.cs",
+      "gitBlob": "66f61f9167033c30901a8b8895a06996419f58dc",
+      "sha256": "9fe9110893c6d79c2777320a2f9d871f684979700635310da0a02ccab7467463"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Core/ConfigurationHelper.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Core/ConfigurationHelper.cs",
+      "gitBlob": "334873fc1a6b895ae6f71e329f5126158ead6df1",
+      "sha256": "b80446123551cd807335863d292d8e8a2fd5dea6efc8d22816674cc097792f8c"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Data/Conflicts/ConflictingPluginsChecks.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Data/Conflicts/ConflictingPluginsChecks.cs",
+      "gitBlob": "24e20daf92266bd004158bee5f211b6964db44a5",
+      "sha256": "c732b9400712eacc8f3e1fb61aff230c1cb512ec81977c95b7b13425e3d52d49"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC_Subscriber/BossMod.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC_Subscriber/BossMod.cs",
+      "gitBlob": "4f81d4f6ed99a733d9f554e34e5466cb32378988",
+      "sha256": "c668dd41984a50ee94957980fac280af4e7a1aa176a07a9a415e4549b9738824"
+    },
+    {
+      "path": "references/source/WrathCombo/WrathCombo/Services/IPC_Subscriber/Orbwalker.cs",
+      "repository": "https://github.com/PunishXIV/WrathCombo",
+      "revision": "a457838183c3cf5a1065ccbd3d70afd1851b3372",
+      "upstreamPath": "WrathCombo/Services/IPC_Subscriber/Orbwalker.cs",
+      "gitBlob": "d0e97421e5ff04469030e93abfd2f4cb4e7d8c67",
+      "sha256": "e3a5bd26a1acdab14f89de07201bca4c543428831e4add5f82026c4992d099a1"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+﻿using System.Reflection;
+
+namespace BossMod;
+
+public static class BossModuleRegistry
+{
+    public static readonly Event Modified = new();
+
+    public class Info
+    {
+        public Type ModuleType;
+        public Type StatesType;
+        public Type? ConfigType;
+        public Type? ObjectIDType;
+        public Type? ActionIDType;
+        public Type? StatusIDType;
+        public Type? TetherIDType;
+        public Type? IconIDType;
+        public uint PrimaryActorOID;
+        public Func<ModuleInit, BossModule> ModuleFactory;
+
+        public string Contributors = "";
+        public BossModuleInfo.Expansion Expansion;
+        public BossModuleInfo.Category Category;
+        public BossModuleInfo.GroupType GroupType;
+        public uint GroupID;
+        public uint NameID;
+        public int SortOrder;
+        public int PlanLevel;
+        public bool Incomplete;
+        public bool BitmapEnabled;
+
+        public static Info? Build(Type module)
+        {
+            var infoAttr = module.GetCustomAttribute<ModuleInfoAttribute>();
+            var statesType = infoAttr?.StatesType ?? module.Module.GetType($"{module.FullName}States");
+            var configType = infoAttr?.ConfigType ?? module.Module.GetType($"{module.FullName}Config");
+            var oidType = infoAttr?.ObjectIDType ?? module.Module.GetType($"{module.Namespace}.OID");
+            var aidType = infoAttr?.ActionIDType ?? module.Module.GetType($"{module.Namespace}.AID");
+            var sidType = infoAttr?.StatusIDType ?? module.Module.GetType($"{module.Namespace}.SID");
+            var tidType = infoAttr?.TetherIDType ?? module.Module.GetType($"{module.Namespace}.TetherID");
+            var iidType = infoAttr?.IconIDType ?? module.Module.GetType($"{module.Namespace}.IconID");
+
+            if (statesType == null || !statesType.IsSubclassOf(typeof(StateMachineBuilder)) || statesType.GetConstructor([module]) == null)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} has incorrect associated states type: it should be derived from StateMachineBuilder and have a constructor accepting module");
+                return null;
+            }
+
+            if (configType != null && !configType.IsSubclassOf(typeof(ConfigNode)))
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} has incorrect associated config type: it should be derived from ConfigNode");
+                configType = null;
+            }
+
+            if (oidType != null && !oidType.IsEnum)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} has incorrect associated object ID type: it should be an enum");
+                oidType = null;
+            }
+
+            if (aidType != null && !aidType.IsEnum)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} has incorrect associated action ID type: it should be an enum");
+                aidType = null;
+            }
+
+            if (sidType != null && !sidType.IsEnum)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} has incorrect associated status ID type: it should be an enum");
+                sidType = null;
+            }
+
+            if (tidType != null && !tidType.IsEnum)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} has incorrect associated tether ID type: it should be an enum");
+                tidType = null;
+            }
+
+            if (iidType != null && !iidType.IsEnum)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} has incorrect associated icon ID type: it should be an enum");
+                iidType = null;
+            }
+
+            var primaryOID = infoAttr?.PrimaryActorOID ?? 0;
+            if (primaryOID == 0 && oidType != null)
+            {
+                if (Enum.TryParse(oidType, "Boss", out var oid))
+                    primaryOID = (uint)oid!;
+            }
+            if (primaryOID == 0)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} has no associated primary actor OID: either specify one explicitly or ensure OID enum has Boss entry");
+                return null;
+            }
+
+            var splitNamespace = module.Namespace?.Split('.') ?? []; // expected to be 'BossMod.expansion.category.rest'
+
+            var expansion = infoAttr?.Expansion ?? BossModuleInfo.Expansion.Count;
+            if (expansion == BossModuleInfo.Expansion.Count && splitNamespace.Length > 1 && Enum.TryParse(splitNamespace[1], out BossModuleInfo.Expansion parsedExpansion))
+            {
+                expansion = parsedExpansion;
+            }
+            if (expansion == BossModuleInfo.Expansion.Count)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} does not have valid expansion assigned; consider fixing namespace or specifying value manually");
+                expansion = BossModuleInfo.Expansion.Global;
+            }
+
+            var category = infoAttr?.Category ?? BossModuleInfo.Category.Count;
+            if (category == BossModuleInfo.Category.Count && splitNamespace.Length > 2 && Enum.TryParse(splitNamespace[2], out BossModuleInfo.Category parsedCategory))
+            {
+                category = parsedCategory;
+            }
+            if (category == BossModuleInfo.Category.Count)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} does not have valid category assigned; consider fixing namespace or specifying value manually");
+                category = BossModuleInfo.Category.Uncategorized;
+            }
+
+            var groupType = infoAttr?.GroupType ?? BossModuleInfo.GroupType.None;
+            var groupID = infoAttr?.GroupID ?? 0;
+            var nameID = infoAttr?.NameID ?? 0;
+            if (groupType == BossModuleInfo.GroupType.None && groupID == 0)
+            {
+                Service.Log($"[ModuleRegistry] Module {module.FullName} does not have group type/id assignments.");
+            }
+
+            var sortOrder = infoAttr?.SortOrder ?? 0;
+            if (sortOrder == 0 && int.TryParse(module.Name.SkipWhile(c => !char.IsAsciiDigit(c)).TakeWhile(char.IsAsciiDigit).ToArray(), out var inferredSortOrder))
+            {
+                sortOrder = inferredSortOrder;
+            }
+            if (sortOrder == 0)
+            {
+                sortOrder = (int)primaryOID;
+            }
+
+            var bitmapEnabled = (infoAttr?.BitmapType ?? BossModuleInfo.BitmapType.Auto) switch
+            {
+                // basic assumption is that only "outdoor" content needs a map loaded (including quest battles which generally take place in roped-off areas of overworld zones or cities)
+                // most multiplayer duties have static or relatively simple arena bounds that are controlled by map effects
+                // even for dynamic arenas, bitmaps are likely to be counterproductive since non-permanent sections of the arena geometry are marked with the 0x2000000 flag, meaning vnav does not generate tiles on them
+                BossModuleInfo.BitmapType.Auto => category is BossModuleInfo.Category.Foray or BossModuleInfo.Category.Hunt or BossModuleInfo.Category.FATE or BossModuleInfo.Category.Quest or BossModuleInfo.Category.PVP,
+                BossModuleInfo.BitmapType.Enabled => true,
+                _ => false
+            };
+
+            return new Info(module, statesType)
+            {
+                ConfigType = configType,
+                ObjectIDType = oidType,
+                ActionIDType = aidType,
+                StatusIDType = sidType,
+                TetherIDType = tidType,
+                IconIDType = iidType,
+                PrimaryActorOID = primaryOID,
+
+                Contributors = infoAttr?.Contributors ?? "",
+                Expansion = expansion,
+                Category = category,
+                GroupType = groupType,
+                GroupID = groupID,
+                NameID = nameID,
+                SortOrder = sortOrder,
+                PlanLevel = infoAttr?.PlanLevel ?? 0,
+                Incomplete = infoAttr?.Incomplete ?? false,
+                BitmapEnabled = bitmapEnabled
+            };
+        }
+
+        private Info(Type moduleType, Type statesType)
+        {
+            ModuleType = moduleType;
+            StatesType = statesType;
+            ModuleFactory = New<BossModule>.ConstructorDerived<ModuleInit>(moduleType);
+        }
+    }
+
+    private static readonly Dictionary<uint, Info> _modulesByOID = []; // [primary-actor-oid] = module info
+    private static readonly Dictionary<string, Info> _modulesByType = []; // [type fullname] = module info
+
+    private static bool ScanAssembly(Assembly assembly)
+    {
+        var modified = false;
+
+        foreach (var t in Utils.GetDerivedTypes<BossModule>(assembly).Where(t => !t.IsAbstract && t != typeof(DemoModule)))
+        {
+            var info = Info.Build(t);
+            if (info == null)
+                continue;
+            if (t.FullName == null)
+                continue;
+            modified = true;
+            _modulesByType[t.FullName] = info;
+            if (!_modulesByOID.TryAdd(info.PrimaryActorOID, info))
+                Service.Log($"[ModuleRegistry] Two boss modules have same primary actor OID: {t.FullName} and {_modulesByOID[info.PrimaryActorOID].ModuleType.FullName}");
+        }
+
+        return modified;
+    }
+
+    private static bool UnloadFrom(Assembly assembly)
+    {
+        var modified = false;
+
+        foreach (var (k, _) in _modulesByType.Where(k => k.Value.ModuleType.Assembly == assembly).ToList())
+            modified |= _modulesByType.Remove(k);
+
+        foreach (var (k, _) in _modulesByOID.Where(k => k.Value.ModuleType.Assembly == assembly).ToList())
+            modified |= _modulesByOID.Remove(k);
+
+        return modified;
+    }
+
+    public static void Reload(IEnumerable<Assembly> old, IEnumerable<Assembly> @new)
+    {
+        var modified = false;
+
+        foreach (var a in old)
+            modified |= UnloadFrom(a);
+
+        foreach (var a in @new)
+            modified |= ScanAssembly(a);
+
+        foreach (var m in _modulesByType.Values)
+            modified |= _modulesByOID.TryAdd(m.PrimaryActorOID, m);
+
+        if (modified)
+            Modified.Fire();
+    }
+
+    private static readonly BossModuleConfig _config = Service.Config.Get<BossModuleConfig>();
+
+    public static IReadOnlyDictionary<uint, Info> RegisteredModules => _modulesByOID;
+
+    public static Info? FindByOID(uint oid) => _modulesByOID.GetValueOrDefault(oid);
+    public static Info? FindByName(string typeName) => _modulesByType.GetValueOrDefault(typeName);
+    public static Info? FindByType(Type t) => t.FullName == null ? null : FindByName(t.FullName);
+
+    public static BossModule? CreateModule(Info? info, WorldState ws, Actor primary) => info?.ModuleFactory(new(ws, primary, info));
+
+    public static BossModule? CreateModuleForActor(WorldState ws, Actor primary, bool allowIncomplete, bool allowStrikingDummy)
+    {
+        var info = primary.Type is ActorType.Enemy or ActorType.EventObj ? FindByOID(primary.OID) : null;
+        if (info is not { } inf)
+            return null;
+
+        if (_config.DisabledModules.Contains(inf.ModuleType.ToString()))
+            return null;
+        if (_config.DisabledCategories.Contains(inf.Category))
+            return null;
+
+        if (inf.Incomplete && !allowIncomplete)
+            return null;
+
+        if (inf.ModuleType == typeof(StrikingDummy.StrikingDummy) && !allowStrikingDummy)
+            return null;
+
+        return CreateModule(inf, ws, primary);
+    }
+
+    // TODO: this is a hack...
+    public static BossModule? CreateModuleForConfigPlanning(Type module)
+    {
+        var info = FindByType(module);
+        return info != null ? CreateModule(info, new(TimeSpan.TicksPerSecond, "fake"), new(0, info.PrimaryActorOID, -1, 0, "", 0, ActorType.None, Class.None, 0, new())) : null;
+    }
+
+    // TODO: this is a hack...
+    public static BossModule? CreateModuleForTimeline(uint oid) => CreateModule(FindByOID(oid), new(TimeSpan.TicksPerSecond, "fake"), new(0, oid, -1, 0, "", 0, ActorType.None, Class.None, 0, new()));
+}

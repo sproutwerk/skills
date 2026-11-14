@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": ".gitmodules",
+      "path": "references/source/Lifestream/.gitmodules",
+      "sha256": "6235198932ccc51f3a0d10ef405d268a76ccf685af62df2bcf46da76362cd312"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "README.md",
+      "path": "references/source/Lifestream/README.md",
+      "sha256": "729e2508e0c65ff7a25aa7d2b471b8a1f8683011dacae7a8f81fe28df35ed256"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "CONTRIBUTING.md",
+      "path": "references/source/Lifestream/CONTRIBUTING.md",
+      "sha256": "44f2fa3c70d03d10c799acac441be14b5bb1578419c4b1f2f2dae8abccbef5c1"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Lifestream.csproj",
+      "path": "references/source/Lifestream/Lifestream/Lifestream.csproj",
+      "sha256": "62a08f7c9756dfccb503934d7c8bc638290628abc8370b5303bca85a6f55377b"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Lifestream.json",
+      "path": "references/source/Lifestream/Lifestream/Lifestream.json",
+      "sha256": "16d2f116685d4026195f0412603005634d0c709347ad5a347cc46162e64d5dde"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Lifestream.cs",
+      "path": "references/source/Lifestream/Lifestream/Lifestream.cs",
+      "sha256": "bf7a00a90fe5f9a2a08c54c0d94a759ea32fb9b1364160d2fbefd2904b80df55"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Utils.cs",
+      "path": "references/source/Lifestream/Lifestream/Utils.cs",
+      "sha256": "16e35ad667f9bb48643b5fde1e861f52ad6f261fd85efa15a8e482ecfcae6b36"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Lang.cs",
+      "path": "references/source/Lifestream/Lifestream/Lang.cs",
+      "sha256": "d2d5f30f6fb1ca710b6365cead83f915822f9789ae2386d5f6440664fec63857"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/IPC/IPCProvider.cs",
+      "path": "references/source/Lifestream/Lifestream/IPC/IPCProvider.cs",
+      "sha256": "71580c12c025621a5473ae13854316230c00c8eae45f6772df532694f670666c"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/IPC/IpcUtils.cs",
+      "path": "references/source/Lifestream/Lifestream/IPC/IpcUtils.cs",
+      "sha256": "6fd9bcea2f8f545540054b84de796acf3295a9626178b55d3db1a49db73609eb"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/IPC/VnavmeshIPC.cs",
+      "path": "references/source/Lifestream/Lifestream/IPC/VnavmeshIPC.cs",
+      "sha256": "fa1184e9903471f234cecc44e7b1bee7a48fa0282586e4c1cc0e1d9e9f25faa5"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Services/TeleportService.cs",
+      "path": "references/source/Lifestream/Lifestream/Services/TeleportService.cs",
+      "sha256": "6a0f64d5769a427f7c78280e1c5158561fb6958ce14491fae955d3513863e8f9"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Services/TerritoryWatcher.cs",
+      "path": "references/source/Lifestream/Lifestream/Services/TerritoryWatcher.cs",
+      "sha256": "bc760d214f57a3a79c928df03301e984fbbbbefa3e4c5d43d4335dfb633e0eb7"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Services/InstanceHandler.cs",
+      "path": "references/source/Lifestream/Lifestream/Services/InstanceHandler.cs",
+      "sha256": "497d4da0fd54f2650e2a6ae9b8f13d689364b3b9b34fb0508098899f530adad0"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Systems/Legacy/DataStore.cs",
+      "path": "references/source/Lifestream/Lifestream/Systems/Legacy/DataStore.cs",
+      "sha256": "b335450cbaf9d0631a67a9d2d8e62d062748d0bbbc4e76e02afdad3d91de62be"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Systems/Legacy/TinyAetheryte.cs",
+      "path": "references/source/Lifestream/Lifestream/Systems/Legacy/TinyAetheryte.cs",
+      "sha256": "15facfd8497333710ce4b9a194e7e67221dffe0e87fc94f45f441efbfb6fed26"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Systems/CharaSelectVisit.cs",
+      "path": "references/source/Lifestream/Lifestream/Systems/CharaSelectVisit.cs",
+      "sha256": "18b56376d16fbc0e93cb1d45bd056af8de8a61c35efcb874fc2a69ef2b26e56f"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Schedulers/WorldChange.cs",
+      "path": "references/source/Lifestream/Lifestream/Schedulers/WorldChange.cs",
+      "sha256": "93a3cfc102a8c508bf841e857845244f7e842cccd586605addcd8991bcf9f6f3"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Movement/FollowPath.cs",
+      "path": "references/source/Lifestream/Lifestream/Movement/FollowPath.cs",
+      "sha256": "14c07219f0febb4338f8c3759761e796d1883ff3b27be44924a22165d9c76a1c"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Movement/MovementConfig.cs",
+      "path": "references/source/Lifestream/Lifestream/Movement/MovementConfig.cs",
+      "sha256": "2d5fd31e88a06a4b5550b00ee3c9f51aaa41add9dd162949643467281d21ba6a"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Movement/README.md",
+      "path": "references/source/Lifestream/Lifestream/Movement/README.md",
+      "sha256": "01a92182d61a893ed04d4f0936d7cad7b52da38264708194a1eb04d903abc2f2"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/TaskSettings.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/TaskSettings.cs",
+      "sha256": "9066f645e80fab0f27a495c14272569f841d0431f68b721a0fc0e376189eb2d2"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/CrossWorld/TaskTPAndChangeWorld.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/CrossWorld/TaskTPAndChangeWorld.cs",
+      "sha256": "069b39f8b97a4261667e6b3c4c0470a794bafe40eac6f8cc4ba444e756226dcb"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/CrossWorld/TaskChangeWorld.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/CrossWorld/TaskChangeWorld.cs",
+      "sha256": "243be4a8266a984e366f86dbf7d142c933e6257d49bdac896fcb725013abe77c"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/SameWorld/TaskTpToAethernetDestination.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/SameWorld/TaskTpToAethernetDestination.cs",
+      "sha256": "959c2104bf2b48bdee2f7fe7235d9d491a9df621cc5e7e9c1171bd8b2af4b421"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/SameWorld/TaskTryTpToAethernetDestination.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/SameWorld/TaskTryTpToAethernetDestination.cs",
+      "sha256": "9b97622ca7f8040e206c7b345559b0acfd83518d7fe92306840ee59931800452"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/SameWorld/TaskAetheryteAethernetTeleport.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/SameWorld/TaskAetheryteAethernetTeleport.cs",
+      "sha256": "22114379353a520e7e750c7068bfbdaa05aedacec279fb95b0ba3c766aec5feb"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/SameWorld/TaskAethernetTeleport.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/SameWorld/TaskAethernetTeleport.cs",
+      "sha256": "98b30375586fe187d386693cfba15091e2c835c120dad981ad8b5a5d9e72c8e3"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/SameWorld/TaskChangeInstance.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/SameWorld/TaskChangeInstance.cs",
+      "sha256": "44ffcdb4930d4d9043f957ee8bb90b571fa64a282b72eccc3d397da60717854e"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/Shortcuts/TaskPropertyShortcut.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/Shortcuts/TaskPropertyShortcut.cs",
+      "sha256": "3544b8d7bfe37bc06eb364a5096dd38ce1dfd08ef63258db223e7fb3043fccbd"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/Utility/TaskGeneratePath.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/Utility/TaskGeneratePath.cs",
+      "sha256": "eeafeb6970f06687c94f66bd0c7c8f3914851691bd417965a7cbc3b594a20291"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Tasks/Login/TaskConnectAndOpenCharaSelect.cs",
+      "path": "references/source/Lifestream/Lifestream/Tasks/Login/TaskConnectAndOpenCharaSelect.cs",
+      "sha256": "78ca0405d5f94f32fb2b6390c9a73516eaa34b0c45a32276884d5a01105a89dd"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/Config.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/Config.cs",
+      "sha256": "c3f1d10c21d0fcdbdcfaf99a009f0045dbf15700649aae05703404dab92f23f1"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/CustomAlias.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/CustomAlias.cs",
+      "sha256": "6ad01fe392ec42c073de733873e9e98e16e16c5567a7b1a16d3e61828d7a12d8"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/CustomAliasCommand.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/CustomAliasCommand.cs",
+      "sha256": "80471f3feab0a885ac109b7ad504ab4347697ede9052bb5dd7397218b335bfe2"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/CustomAliasKind.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/CustomAliasKind.cs",
+      "sha256": "05b402c8f5fba233220d6bc596d37cbe628b0a4caa5d255142c02fa7fdac3de5"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/StaticAlias.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/StaticAlias.cs",
+      "sha256": "7cbc6e529f0eb8d21f6743468e2c002106413eb3fb7d7d499f2cb3790ed8d6d5"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/AddressBookEntry.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/AddressBookEntry.cs",
+      "sha256": "ce92174a66b62d10ca1d37c854c676db4e1ea959a9de26ec0c2d4f879378ab4d"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/HousePathData.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/HousePathData.cs",
+      "sha256": "30c00cd6c64a9a126ab0cfffdef7ece70851070960b376d5b71e2e485b3bac3d"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/HouseEnterMode.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/HouseEnterMode.cs",
+      "sha256": "1af65ef432e67a0fb3eb4400d202014d42cf90fda07b1fae2bf8b988c5d21d88"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Data/LiCommandBehavior.cs",
+      "path": "references/source/Lifestream/Lifestream/Data/LiCommandBehavior.cs",
+      "sha256": "6eefa6a3f030f6670c6bb679dd4a7591f738a70b1ca9dd17f2fc3381d0d46b38"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Enums/WorldChangeAetheryte.cs",
+      "path": "references/source/Lifestream/Lifestream/Enums/WorldChangeAetheryte.cs",
+      "sha256": "88e2636bf92d334b75a858913545a7c302928034256d8aa1c4e571b187e59070"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/Lifestream",
+      "revision": "b36320170faafc8315f7585edb45cfbcd34e7046",
+      "upstreamPath": "Lifestream/Enums/ResidentialAetheryteKind.cs",
+      "path": "references/source/Lifestream/Lifestream/Enums/ResidentialAetheryteKind.cs",
+      "sha256": "d16b9e9e0506687b9364d0510146c3953d37d23ab46612d5dbc59cf6eaac672c"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/ECommons",
+      "revision": "958af5c7e735e1633b92070a5b67f8d6c48c30f3",
+      "upstreamPath": "LICENSE.md",
+      "path": "LICENSES/ECommons-LICENSE.md",
+      "sha256": "59d9e5847b1d40a625a8723abb80db43ddffb11efe50f8088e2fb42a3f15bab0"
+    },
+    {
+      "repository": "https://github.com/NightmareXIV/ECommons",
+      "revision": "958af5c7e735e1633b92070a5b67f8d6c48c30f3",
+      "upstreamPath": "ECommons/ErrorCode.cs",
+      "path": "references/source/ECommons/ECommons/ErrorCode.cs",
+      "sha256": "7b79a94373203058f995f5e1e7e6668dd681c02f8b8465cdcb385fc8be028aec"
+    }
+  ]
+}

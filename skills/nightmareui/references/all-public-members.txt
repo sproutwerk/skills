@@ -1,0 +1,193 @@
+NightmareUI/NightmareUI/Censoring/CensorConfig.cs:10: public class CensorConfig
+NightmareUI/NightmareUI/Censoring/CensorConfig.cs:12: [DataMember(Name = "Seed")][Obfuscation(Exclude = true)] public string Seed = Guid.NewGuid().ToString();
+NightmareUI/NightmareUI/Censoring/CensorConfig.cs:13: [DataMember(Name = "Enabled")][Obfuscation(Exclude = true)] public bool Enabled = false;
+NightmareUI/NightmareUI/Censoring/CensorConfig.cs:14: [DataMember(Name = "LesserCensor")][Obfuscation(Exclude = true)] public bool LesserCensor = false;
+NightmareUI/NightmareUI/Censoring/Censor.cs:9: public static class Censor
+NightmareUI/NightmareUI/Censoring/Censor.cs:11: public static readonly IReadOnlyDictionary<CensorType, string[]> CensorData = new Dictionary<CensorType, string[]>()
+NightmareUI/NightmareUI/Censoring/Censor.cs:20: public static CensorConfig Config { get; set; } = new();
+NightmareUI/NightmareUI/Censoring/Censor.cs:44: public static string Character(string name, string world)
+NightmareUI/NightmareUI/Censoring/Censor.cs:63: public static string Character(string name)
+NightmareUI/NightmareUI/Censoring/Censor.cs:85: public static string World(string world)
+NightmareUI/NightmareUI/Censoring/Censor.cs:99: public static string Hide(string s, string placeholder = "Hidden")
+NightmareUI/NightmareUI/Censoring/Censor.cs:111: public static string Hide(object s, string placeholder = "Hidden")
+NightmareUI/NightmareUI/Censoring/Censor.cs:123: public enum CensorType { Animal, Adjective, World }
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:15: public class WorldSelector
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:18: public static WorldSelector Instance
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:30: public string EmptyName { get; set; } = null;
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:31: public bool DisplayCurrent { get; set; } = false;
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:32: public bool DefaultAllOpen { get; set; } = false;
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:33: public Predicate<uint>? ShouldHideWorld { get; set; } = null;
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:37: public WorldSelector(string id = "##world")
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:42: public void Draw(ref int worldConfig, ImGuiComboFlags flags = ImGuiComboFlags.HeightLarge)
+NightmareUI/NightmareUI/ImGuiElements/WorldSelector.cs:62: public void DrawInternal(ref int worldConfig)
+NightmareUI/NightmareUI/NightmareUIState.cs:10: public sealed unsafe class NightmareUIState
+NightmareUI/NightmareUI/NightmareUIState.cs:12: [Obfuscation] public Dictionary<string, string> ActiveTab = [];
+NightmareUI/NightmareUI/NightmareUIState.cs:13: [Obfuscation] public HashSet<uint> CollapsedHeaders = [];
+NightmareUI/NightmareUI/NuiTools.cs:16: public static class NuiTools
+NightmareUI/NightmareUI/NuiTools.cs:18: public static NightmareUIState State { get; private set; } = new();
+NightmareUI/NightmareUI/NuiTools.cs:20: public static void SetState(NightmareUIState state)
+NightmareUI/NightmareUI/NuiTools.cs:25: public static void ButtonTabs(ButtonInfo[][] buttons2d, int maxButtons = int.MaxValue) => ButtonTabs(GenericHelpers.GetCallStackID(), buttons2d, maxButtons);
+NightmareUI/NightmareUI/NuiTools.cs:26: public static void ButtonTabs(string id, ButtonInfo[][] buttons2d, int maxButtons = int.MaxValue, bool child = true, float heightMultiplier = 1f, bool scaling = true)
+NightmareUI/NightmareUI/NuiTools.cs:105: public record class ButtonInfo
+NightmareUI/NightmareUI/NuiTools.cs:107: public readonly string Name;
+NightmareUI/NightmareUI/NuiTools.cs:108: public readonly string InternalName;
+NightmareUI/NightmareUI/NuiTools.cs:109: public readonly Action Action;
+NightmareUI/NightmareUI/NuiTools.cs:110: public readonly FontAwesomeIcon Icon;
+NightmareUI/NightmareUI/NuiTools.cs:112: public ButtonInfo(string name, Action action)
+NightmareUI/NightmareUI/NuiTools.cs:119: public ButtonInfo(string name, string internalName, Action action)
+NightmareUI/NightmareUI/NuiTools.cs:126: public ButtonInfo(string name, Action action, FontAwesomeIcon icon) : this(name, action)
+NightmareUI/NightmareUI/NuiTools.cs:131: public ButtonInfo(string name, string internalName, Action action, FontAwesomeIcon icon) : this(name, internalName, action)
+NightmareUI/NightmareUI/NuiTools.cs:138: public static bool RenderResidentialIcon(this uint residentialAetheryte, float? size = null)
+NightmareUI/NightmareUI/PrimaryUI/Components/CondIf.cs:8: public CondIf(Func<bool> predicate)
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:14: public ImGuiWidget(NuiBuilder builder, string label, Action<string> drawAction, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:22: public ImGuiWidget(NuiBuilder builder, float width, string label, Action<string> drawAction, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:25: public bool ShouldHighlight => Widgets.OfType<ImGuiWidget>().Any(z => z.ShouldHighlight);
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:27: public static Vector2 CellPadding { get; } =  new(7f);
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:12: public class NuiBuilder
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:16: public string Filter = "";
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:18: public bool ShouldHighlight => Sections.Any(z => z.ShouldHighlight);
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:20: public NuiBuilder() { }
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:22: public NuiBuilder Section(string name, Vector4? color = null, bool collapsible = false, Action? rightFloat = null, Func<bool>? visible = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:35: public NuiBuilder Widget(string name, Action<string> drawAction, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:42: public NuiBuilder Widget(float width, Action drawAction)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:53: public NuiBuilder Widget(Action drawAction)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:60: public NuiBuilder If(Func<bool> cond)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:67: public NuiBuilder Else()
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:74: public NuiBuilder EndIf()
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:81: public NuiBuilder Indent()
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:88: public NuiBuilder Unindent()
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:95: public delegate ref bool RefBoolDelegate();
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:96: public delegate ref int RefIntDelegate();
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:97: public delegate ref float RefFloatDelegate();
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:98: public delegate ref string RefStringDelegate();
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:99: public delegate ref T RefEnumDelegate<T>() where T : Enum, IConvertible;
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:101: public NuiBuilder TextWrapped(string text)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:108: public NuiBuilder TextWrapped(Vector4? col, string text)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:115: public NuiBuilder EnumCombo<T>(float width, string name, RefEnumDelegate<T> value, IDictionary<T, string>? names = null, string? help = null) where T : Enum, IConvertible
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:126: public NuiBuilder EnumComboFullWidth<T>(float? width, string name, RefEnumDelegate<T> value, Func<T, bool> filter = null, IDictionary<T, string>? names = null, string? help = null) where T : Enum, IConvertible
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:152: public NuiBuilder Checkbox(string name, RefBoolDelegate value, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:159: public NuiBuilder CheckboxInverted(string name, RefBoolDelegate value, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:166: public NuiBuilder SliderIntAsFloat(float width, string name, RefIntDelegate value, int min, int max, float divider = 1000, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:177: public NuiBuilder InputInt(float width, string name, RefIntDelegate value, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:188: public NuiBuilder InputText(float width, string name, RefStringDelegate value, int maxLength = 512, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:199: public NuiBuilder InputFloat(float width, string name, RefFloatDelegate value, string? help = null, string? format = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:210: public NuiBuilder InputInt(float width, string name, RefIntDelegate value, int step, int step_fast, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:221: public NuiBuilder DragInt(float width, string name, RefIntDelegate value, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:232: public NuiBuilder DragInt(float width, string name, RefIntDelegate value, float v_speed, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:243: public NuiBuilder DragInt(float width, string name, RefIntDelegate value, float v_speed, int v_min, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:254: public NuiBuilder DragInt(float width, string name, RefIntDelegate value, float v_speed, int v_min, int v_max, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:265: public NuiBuilder SliderInt(float width, string name, RefIntDelegate value, int min, int max, string? help = null, ImGuiSliderFlags flags = ImGuiSliderFlags.None)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:276: public NuiBuilder SliderFloat(float width, string name, RefFloatDelegate value, float min, float max, string? help = null, ImGuiSliderFlags flags = ImGuiSliderFlags.None)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:287: public NuiBuilder Widget(float width, string name, Action<string> drawAction, string? help = null)
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:294: public NuiBuilder Separator()
+NightmareUI/NightmareUI/PrimaryUI/NuiBuilder.cs:305: public NuiBuilder Draw(bool noCollapse = false)
+NightmareUI/NightmareUI/PrimaryUI/Nui.cs:8: public static class Nui
+NightmareUI/NightmareUI/PrimaryUI/Nui.cs:10: public static void Checkbox(string label, ref bool value, string? help = null, Action? callback = null)
+NightmareUI/NightmareUI/PrimaryUI/Nui.cs:17: public static void Widget(string label, Action<string> drawAction, string? help = null)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:21: public sealed class ConfigFileSystem: FileSystem<ConfigFileSystemEntry>
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:23: public FileSystemSelector Selector { get; private set; }
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:24: public ICollection<ConfigFileSystemEntry> DataStorage { get; private set; }
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:26: public Func<ConfigFileSystemEntry> DefaultValueSelector;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:27: public Action DrawWhenNoSelection { get; set; } = null;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:29: public ConfigFileSystem(Func<ICollection<ConfigFileSystemEntry>> getDataAction)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:54: public void Reload()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:89: public void Draw(float? width = null)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:155: public class FileSystemSelector : NightmareUI.OtterGuiWrapper.FileSystems.Configuration.SimplifiedSelector.FileSystemSelector<ConfigFileSystemEntry, FileSystemSelector.State>
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:157: public string Filter => this.FilterValue;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:158: public bool Sorted = false;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:159: public override ISortMode<ConfigFileSystemEntry> SortMode => Sorted?ISortMode<ConfigFileSystemEntry>.FoldersFirst:ISortMode<ConfigFileSystemEntry>.InternalOrder;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:162: public FileSystemSelector(ConfigFileSystem fs) : base(fs, Svc.KeyState, new(), (e) => e.Log())
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:167: protected override bool FoldersDefaultOpen => true;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:168: protected override uint CollapsedFolderColor => ImGuiColors.DalamudViolet.ToUint();
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:169: protected override uint ExpandedFolderColor => CollapsedFolderColor;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:171: protected sealed override void DrawLeafName(Leaf leaf, in State state, bool selected)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:181: public record struct State { }
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:182: protected override bool ApplyFilters(IPath path)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystem.cs:186: protected override bool ApplyFiltersAndState(IPath path, out ConfigFileSystem.FileSystemSelector.State state)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:15: public class ConfigFileSystemEntry
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:18: public virtual NuiBuilder? Builder { get; init; }
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:19: public virtual int DisplayPriority { get; init; } = 0;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:21: public virtual bool ShouldHighlight()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:27: public virtual bool ShouldDisplay()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:32: public virtual Vector4? GetColor()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:42: public virtual string Path
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:51: public virtual bool NoFrame { get; set; } = false;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:53: public virtual void Draw()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemHelpers.cs:10: public static class ConfigFileSystemHelpers
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemHelpers.cs:12: public static IEnumerable<T?> CreateInstancesOf<T>() where T:ConfigFileSystemEntry
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:15: public partial class FileSystemSelector<T, TStateStorage> where T : class where TStateStorage : struct
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:17: public delegate void SelectionChangeDelegate(T? oldSelection, T? newSelection, in TStateStorage state);
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:19: protected readonly HashSet<FileSystem<T>.IPath> _selectedPaths = [];
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:22: protected FileSystem<T>.Leaf? SelectedLeaf;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:25: public T? Selected
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:28: public IReadOnlySet<FileSystem<T>.IPath> SelectedPaths
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:32: public event SelectionChangeDelegate? SelectionChanged;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:35: public void ClearSelection()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:38: public void RemovePathFromMultiSelection(FileSystem<T>.IPath path)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:82: protected virtual void Select(FileSystem<T>.Leaf? leaf, bool clear, in TStateStorage storage = default)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:96: protected readonly FileSystem<T> FileSystem;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:98: public virtual ISortMode<T> SortMode
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:106: public string Label
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:116: protected virtual uint FolderLineColor
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:120: protected virtual uint ExpandedFolderColor
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:123: protected virtual uint CollapsedFolderColor
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:127: protected virtual bool FoldersDefaultOpen
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:130: public readonly Action<Exception> ExceptionHandler;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:132: public readonly bool AllowMultipleSelection;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:134: protected readonly Logger Log;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:136: public FileSystemSelector(FileSystem<T> fileSystem, IKeyState keyState, Logger log, Action<Exception>? exceptionHandler = null,
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:151: protected const ImGuiTreeNodeFlags LeafFlags = ImGuiTreeNodeFlags.Leaf | ImGuiTreeNodeFlags.Bullet | ImGuiTreeNodeFlags.NoTreePushOnOpen;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:156: protected virtual void DrawLeafName(FileSystem<T>.Leaf leaf, in TStateStorage state, bool selected)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:162: public void Draw(float width)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.cs:187: public void SelectByValue(T value)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.Draw.cs:16: public partial class FileSystemSelector<T, TStateStorage>
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.Draw.cs:179: public bool DrawFilter = true;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:12: public partial class FileSystemSelector<T, TStateStorage> : IDisposable
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:19: public TStateStorage       StateStorage;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:20: public FileSystem<T>.IPath Path;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:21: public byte                Depth;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:30: public virtual void Dispose()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:36: protected string FilterValue { get; private set; } = string.Empty;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:41: public void SetFilterDirty()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:44: protected string FilterTooltip = string.Empty;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:48: protected virtual bool ChangeFilter(string filterValue)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:63: protected virtual (float RemainingWidth, bool ClearText) CustomFilters(float width)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:111: protected virtual bool ApplyFilters(FileSystem<T>.IPath path)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:116: protected virtual TStateStorage GetState(FileSystem<T>.IPath path)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.State.cs:121: protected virtual bool ApplyFiltersAndState(FileSystem<T>.IPath path, out TStateStorage state)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.Utility.cs:11: public partial class FileSystemSelector<T, TStateStorage>
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/SimplifiedSelector/FileSystemSelector.Utility.cs:17: protected void EnqueueFsAction(Action action)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:30: public sealed class GenericFileSystem<TData> : FileSystem<TData> where TData : class, IFileSystemStorage, new()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:33: public readonly FileSystemSelector Selector;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:34: public readonly ICollection<TData> DataStorage;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:35: public GenericFileSystem(ICollection<TData> dataStorage, string dataFilePrefix)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:55: public bool Create(TData newItem, string newName, out string error)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:81: public void DoDelete(TData item)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:92: public bool FindLeaf(TData? item, [NotNullWhen(true)] out Leaf? leaf)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:100: public IEnumerable<Folder> GetAllFolders()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:105: public IEnumerable<Leaf> GetAllLeaves()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:110: public bool TryGetPathByID(Guid id, [NotNullWhen(true)] out string? path)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:133: public void Save()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:154: public class FileSystemSelector : FileSystemSelector<TData, FileSystemSelector.State>
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:159: public override ISortMode<TData> SortMode => ISortMode<TData>.FoldersFirst;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:162: public FileSystemSelector(GenericFileSystem<TData> fs) : base(fs, Svc.KeyState, new(), (e) => e.Log())
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:171: public float Width = 0f;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:172: protected override float CurrentWidth => Width;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:174: public void Draw(float width)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:180: protected override uint CollapsedFolderColor => ImGuiColors.DalamudViolet.ToUint();
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:181: protected override uint ExpandedFolderColor => CollapsedFolderColor;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:183: public event Action<Leaf, State, bool> OnAfterDrawLeafName;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:185: protected override void DrawLeafName(Leaf leaf, in State state, bool selected)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:193: public delegate void OnBeforeCopyDelegate(TData original, ref TData copy);
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:195: public event OnBeforeCopyDelegate OnBeforeCopy;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:209: public delegate void OnImportPopupOpenDelegate(string clipboardText, ref string newName);
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:210: public event OnImportPopupOpenDelegate OnImportPopupOpen;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:256: public delegate void OnBeforeItemCreationDelegate(ref TData item);
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:258: public event OnBeforeItemCreationDelegate OnBeforeItemCreation = null;
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:339: protected override void DrawPopups()
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:344: public record struct State { }
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/GenericFileSystem.cs:345: protected override bool ApplyFilters(IPath path)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/IFileSystemStorage.cs:8: public interface IFileSystemStorage
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/IFileSystemStorage.cs:10: public Guid GUID { get; set; }
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/IFileSystemStorage.cs:11: public string? GetCustomName();
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Generic/IFileSystemStorage.cs:12: public void SetCustomName(string s);

@@ -1,0 +1,3 @@
+interface:
+  display_name: "SomethingNeedDoing"
+  short_description: "FFXIV SND Lua scripts, native macros, triggers, and debugging"

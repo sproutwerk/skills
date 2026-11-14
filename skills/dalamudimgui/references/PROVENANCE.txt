@@ -1,0 +1,14 @@
+Dalamud: 43b34118bcf7213e575ec39517d033191b1acf17 2026-11-10 15:20:20 +0100
+DalamudVersion: 15.0.3.9
+submodules:
+  -80cb4a7b7e11a6702e2eb8839afd301a918c638e lib/FFXIVClientStructs
+  -53ae49bc558aa8ba9f4fad3515aa17fab99d7ffa lib/Hexa.NET.ImGui
+  -a39a756938ba32e5125bad87d1b4abe359d802b1 lib/Lumina.Excel
+  -33ac3b62c7d1eb28ae6b71d4dd78aa133ef96488 lib/Nomade040-nmd
+  -4a455528f61b5a375b1f9d44e7d296d47f18bb18 lib/TsudaKageyu-minhook
+  -ecd32e56fe2f1d9072e01a090bc447b4f932e5d4 lib/cimgui
+  -60c332cfdf306d78ad6a3663c63c0b94f8fcfc48 lib/cimguizmo
+  -75fd5126118954d276057051a313d0118ad6cc3d lib/cimplot
+  -b122c8be1d78b19f6d0a6efc5bb79bfcbb30dd51 lib/libdeflate
+  -fef6b0dd70f9d7fa0750b0d0b9fbb471203b94cd lib/mimalloc
+dalamud-docs: 3c7597d643d8a8c01ee55930303057a8ce7c6820 2026-11-13 19:42:30 +0100

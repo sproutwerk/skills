@@ -1,0 +1,53 @@
+# Copyright (c) 2026 sproutwerk. SPDX-License-Identifier: MIT
+name: Skills
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: skills-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  install:
+    name: skills.sh installation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      DISABLE_TELEMETRY: "1"
+      DO_NOT_TRACK: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24"
+      - name: Discover and install every skill in a temporary project
+        run: bash .github/scripts/check-skills-sh.sh "$GITHUB_WORKSPACE"
+
+  maintenance:
+    name: Go helper tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        dir:
+          - maintenance/dalamudimgui
+          - maintenance/ottergui
+          - skills/xivapi/scripts/xivapi
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version-file: ${{ matrix.dir }}/go.mod
+          cache: false
+      - run: go vet ./... && go test ./...
+        working-directory: ${{ matrix.dir }}

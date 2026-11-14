@@ -1,0 +1,616 @@
+﻿using Dalamud.Game.ClientState.Conditions;
+using Dalamud.Game.ClientState.Objects.SubKinds;
+using ECommons.Automation.NeoTaskManager;
+using ECommons.Configuration;
+using ECommons.GameFunctions;
+using ECommons.GameHelpers.LegacyPlayer;
+using FFXIVClientStructs.FFXIV.Client.Game.Event;
+using Splatoon.Gui.Priority;
+using Splatoon.SplatoonScripting.Priority;
+using System.Collections.ObjectModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
+#nullable enable
+namespace Splatoon.SplatoonScripting;
+
+public unsafe class Controller
+{
+    internal SplatoonScript Script;
+    internal Dictionary<string, Layout> Layouts = [];
+    internal Dictionary<string, Element> Elements = [];
+    internal List<TickScheduler> TickSchedulers = [];
+    internal object? Configuration;
+    internal long AutoResetAt = long.MaxValue;
+
+    internal int autoIncrement = 0;
+    internal int AutoIncrement => ++autoIncrement;
+
+    internal Controller(SplatoonScript s)
+    {
+        Script = s;
+    }
+
+    public Splatoon Plugin => Splatoon.P;
+
+    [Obsolete("Use SplatoonScript.BasePlayer")]
+    public IPlayerCharacter BasePlayer => Splatoon.BasePlayer;
+
+    internal TaskManager? TaskManagerInternal = null;
+
+    /// <summary>
+    /// Provides per-script instance of NeoTaskManager that will be initialized upon first call and disposed upon script disabling.
+    /// </summary>
+    public TaskManager TaskManager
+    {
+        get
+        {
+            return TaskManagerInternal ??= new(Script.TaskManagerConfiguration);
+        }
+        internal set
+        {
+            TaskManagerInternal = value;
+        }
+    }
+
+    /// <summary>
+    /// Indicates whether player is in combat.
+    /// </summary>
+    public bool InCombat => Svc.Condition[ConditionFlag.InCombat];
+
+    /// <summary>
+    /// Indicates phase of a battle.
+    /// </summary>
+    public int Phase => P.Phase;
+
+    /// <summary>
+    /// Amount of seconds that have passed since combat start. Returns -1 if not in combat.
+    /// </summary>
+    public float CombatSeconds => InCombat ? (float)CombatMiliseconds / 1000f : -1;
+
+    /// <summary>
+    /// Amount of miliseconds that have passed since combat start. Returns -1 if not in combat.
+    /// </summary>
+    public float CombatMiliseconds => InCombat ? Environment.TickCount64 - P.CombatStarted : -1;
+
+    public int Scene => *global::Splatoon.Memory.Scene.ActiveScene;
+
+    public uint AttentionColor => Utils.GetAttentionColor().ToUint();
+
+    /// <summary>
+    /// Loads if unloaded and returns script configuration file.
+    /// </summary>
+    /// <typeparam name="T">Configuration class, implementing IEzConfig</typeparam>
+    /// <returns>Loaded configuration</returns>
+    public T GetConfig<T>() where T : new()
+    {
+        Configuration ??= EzConfig.LoadConfiguration<T>(Script.InternalData.ConfigurationPath, false);
+        return (T)Configuration;
+    }
+
+    /// <summary>
+    /// Saves script's configuration, if present.
+    /// </summary>
+    public void SaveConfig()
+    {
+        if(Configuration != null)
+        {
+            //PluginLog.Information($"Saving to {Script.InternalData.ConfigurationPath}");
+            EzConfig.SaveConfiguration(Configuration, Script.InternalData.ConfigurationPath, true, false);
+        }
+    }
+
+    /// <summary>
+    /// Attempts to register previously exported from plugin layout for further usage. End user will be able to edit this layout as they wish and results of the edit will be saved. Enabled layouts are subject for immediate processing when the script is enabled.
+    /// </summary>
+    /// <param name="UniqueName">Internal unique (within current script) name of the layout.</param>
+    /// <param name="ExportString">An exported layout string.</param>
+    /// <param name="layout">Decoded layout object.</param>
+    /// <param name="overwrite">Whether to overwrite existing layout with same name if it's present.</param>
+    /// <returns>Whether layout was successfully registered.</returns>
+    public bool TryRegisterLayoutFromCode(string UniqueName, string ExportString, [NotNullWhen(true)] out Layout? layout, bool overwrite = false)
+    {
+        return ScriptingEngine.TryDecodeLayout(ExportString, out layout) && TryRegisterLayout(UniqueName, layout, overwrite);
+    }
+
+    public bool TryRegisterLayoutFromCode(string ExportString, [NotNullWhen(true)] out Layout? layout, bool overwrite = false)
+    {
+        var ret = ScriptingEngine.TryDecodeLayout(ExportString, out layout) && TryRegisterLayout(layout.Name, layout, overwrite);
+        if(ret) ElementNamesAsKeys.Add(layout.Name);
+        return ret;
+    }
+
+    /// <summary>
+    /// Attempts to register previously constructed layout for further usage. End user will be able to edit this layout as they wish and results of the edit will be saved. Enabled layouts are subject for immediate processing when the script is enabled.
+    /// </summary>
+    /// <param name="UniqueName">Internal unique (within current script) name of the layout.</param>
+    /// <param name="layout">Layout object.</param>
+    /// <param name="overwrite">Whether to overwrite existing layout with same name if it's present.</param>
+    /// <returns>Whether layout was successfully registered.</returns>
+    public bool TryRegisterLayout(string UniqueName, Layout layout, bool overwrite = false)
+    {
+        if(!overwrite && Layouts.ContainsKey(UniqueName))
+        {
+            PluginLog.Warning($"There is a layout named {UniqueName} already.");
+            return false;
+        }
+        Layouts[UniqueName] = layout;
+        return true;
+    }
+
+    public bool TryRegisterLayout(Layout layout, bool overwrite = false)
+    {
+        return TryRegisterLayout($"unnamed-{AutoIncrement}", layout, overwrite);
+    }
+
+    public void RegisterLayoutFromCode(string key, string code)
+    {
+        if(!TryRegisterLayoutFromCode(key, code, out _, false))
+        {
+            throw new InvalidOperationException($"Duplicate layout registration: {key}");
+        }
+    }
+
+    public void RegisterLayoutFromCode(string code)
+    {
+        if(!TryRegisterLayoutFromCode(code, out _, false))
+        {
+            throw new InvalidOperationException($"Duplicate layout registration: {code.Trim(100)}");
+        }
+    }
+
+    /// <summary>
+    /// Attempts to register previously constructed element for further usage. End user will be able to edit this element as they wish and results of the edit will be saved. Enabled elements are subject for immediate processing when the script is enabled.
+    /// </summary>
+    /// <param name="UniqueName">Internal unique (within current script) name of the element.</param>
+    /// <param name="element">Element object.</param>
+    /// <param name="overwrite">Whether to overwrite existing element with same name if it's present.</param>
+    /// <returns>Whether element was successfully registered.</returns>
+    public bool TryRegisterElement(string UniqueName, Element element, bool overwrite = false)
+    {
+        if(!overwrite && Layouts.ContainsKey(UniqueName))
+        {
+            PluginLog.Warning($"There is an element named {UniqueName} already.");
+            return false;
+        }
+        Elements[UniqueName] = element;
+        return true;
+    }
+
+    /// <summary>
+    /// Attempts to register previously exported from plugin element for further usage. End user will be able to edit this element as they wish and results of the edit will be saved. Enabled elements are subject for immediate processing when the script is enabled.
+    /// </summary>
+    /// <param name="UniqueName">Internal unique (within current script) name of the element</param>
+    /// <param name="ExportString">An exported element string.</param>
+    /// <param name="element">Decoded element object.</param>
+    /// <param name="overwrite">Whether to overwrite existing element with same name if it's present.</param>
+    /// <returns>Whether element was successfully registered.</returns>
+    public bool TryRegisterElementFromCode(string UniqueName, string ExportString, [NotNullWhen(true)] out Element? element, bool overwrite = false)
+    {
+        return ScriptingEngine.TryDecodeElement(ExportString, out element) && TryRegisterElement(UniqueName, element, overwrite);
+    }
+
+    /// <summary>
+    /// Attempts to register previously exported from plugin element for further usage. End user will be able to edit this element as they wish and results of the edit will be saved. Enabled elements are subject for immediate processing when the script is enabled. Element name will be used as key.
+    /// </summary>
+    /// <param name="ExportString">An exported element string.</param>
+    /// <param name="element">Decoded element object.</param>
+    /// <param name="overwrite">Whether to overwrite existing element with same name if it's present.</param>
+    /// <returns>Whether element was successfully registered.</returns>
+    public bool TryRegisterElementFromCode(string ExportString, [NotNullWhen(true)] out Element? element, bool overwrite = false)
+    {
+        var ret = ScriptingEngine.TryDecodeElement(ExportString, out element) && TryRegisterElement(element.Name, element, overwrite);
+        if(ret) ElementNamesAsKeys.Add(element.Name);
+        return ret;
+    }
+
+    internal HashSet<string> ElementNamesAsKeys = [];
+    internal HashSet<string> LayoutNamesAsKeys = [];
+
+    /// <summary>
+    /// Tries to get previously registered layout by name.
+    /// </summary>
+    /// <param name="name">Layout's internal name.</param>
+    /// <param name="layout">Result.</param>
+    /// <returns>Whether operation succeeded.</returns>
+    public bool TryGetLayoutByName(string name, [NotNullWhen(true)] out Layout? layout)
+    {
+        return Layouts.TryGetValue(name, out layout);
+    }
+
+    /// <summary>
+    /// Tries to get previously registered element by name.
+    /// </summary>
+    /// <param name="name">Element's internal name.</param>
+    /// <param name="element">Result.</param>
+    /// <returns>Whether operation succeeded.</returns>
+    public bool TryGetElementByName(string name, [NotNullWhen(true)] out Element? element)
+    {
+        return Elements.TryGetValue(name, out element);
+    }
+
+    /// <summary>
+    /// Unregisters previously registered layout.
+    /// </summary>
+    /// <param name="name">Layout name.</param>
+    /// <returns>Whether operation succeeded.</returns>
+    public bool TryUnregisterLayout(string name)
+    {
+        return Layouts.Remove(name);
+    }
+
+    /// <summary>
+    /// Unregisters previously registered element.
+    /// </summary>
+    /// <param name="name">Element name.</param>
+    /// <returns>Whether operation succeeded.</returns>
+    public bool TryUnregisterElement(string name)
+    {
+        return Elements.Remove(name);
+    }
+
+    public void RegisterElement(string UniqueName, Element element, bool overwrite = false)
+    {
+        if(!TryRegisterElement(UniqueName, element, overwrite))
+        {
+            throw new InvalidOperationException($"RegisterElement failed: Could not register element {UniqueName}");
+        }
+    }
+
+    public void RegisterElementFromCode(string ExportString, bool overwrite = false)
+    {
+        if(!TryRegisterElementFromCode(ExportString, out var ret, overwrite))
+        {
+            throw new InvalidOperationException($"RegisterElementFromCode failed: Could not register element {ExportString.Trim(100)}");
+        }
+    }
+
+    public void RegisterElementsFromMultilineCode(string ExportStringPerLine, bool overwrite = false)
+    {
+        foreach(var ExportString in ExportStringPerLine.Split("\n", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+        {
+            if(!TryRegisterElementFromCode(ExportString, out var ret, overwrite))
+            {
+                throw new InvalidOperationException($"RegisterElementFromCode failed: Could not register element {ExportString.Trim(100)}");
+            }
+        }
+    }
+
+    public Element RegisterElementFromCode(string UniqueName, string ExportString, bool overwrite = false)
+    {
+        if(TryRegisterElementFromCode(UniqueName, ExportString, out var ret, overwrite))
+        {
+            return ret;
+        }
+        else
+        {
+            throw new InvalidOperationException($"RegisterElementFromCode failed: Could not register element {UniqueName}");
+        }
+    }
+
+    public Element? GetElementByName(string name)
+    {
+        if(TryGetElementByName(name, out var ret))
+        {
+            return ret;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Returns a dictionary of currently registered layouts.
+    /// </summary>
+    /// <returns>Read only dictionary of currently registered layouts.</returns>
+    public ReadOnlyDictionary<string, Layout> GetRegisteredLayouts()
+    {
+        return new ReadOnlyDictionary<string, Layout>(Layouts);
+    }
+
+    /// <summary>
+    /// Returns a dictionary of currently registered elements.
+    /// </summary>
+    /// <returns>Read only dictionary of currently registered elements.</returns>
+    public ReadOnlyDictionary<string, Element> GetRegisteredElements()
+    {
+        return new ReadOnlyDictionary<string, Element>(Elements);
+    }
+
+    /// <summary>
+    /// Removes all layouts.
+    /// </summary>
+    public void ClearRegisteredLayouts()
+    {
+        Layouts.Clear();
+    }
+
+    /// <summary>
+    /// Removes all elements
+    /// </summary>
+    public void ClearRegisteredElements()
+    {
+        Elements.Clear();
+    }
+
+    /// <summary>
+    /// Removes all elements and layouts
+    /// </summary>
+    public void Clear()
+    {
+        ClearRegisteredElements();
+        ClearRegisteredLayouts();
+    }
+
+    /// <summary>
+    /// Retrieve valid and visible party members. Non cross-world parties only. Duty recorder supported.
+    /// </summary>
+    /// <returns>Enumberator of PlayerCharacter objects.</returns>
+    public IEnumerable<IPlayerCharacter> GetPartyMembers()
+    {
+        return FakeParty.Get();
+    }
+
+    public void ApplySingleLayoutOverride(string key, Layout value)
+    {
+        Layouts[key] = value.DSFClone();
+        OriginalLayoutsDirect[key] = value.DSFClone();
+    }
+
+    public void ApplySingleElementOverride(string key, Element value)
+    {
+        Elements[key] = value.DSFClone();
+        OriginalElementsDirect[key] = value.DSFClone();
+    }
+
+    public void ApplyOverrides()
+    {
+        PluginLog.Information($"Applying overrides for {Script.InternalData.FullName}, Elements={Script.InternalData.Overrides.Elements.Count}, Layouts={Script.InternalData.Overrides.Layouts.Count}, config key={Script.InternalData.CurrentConfigurationKey}");
+        foreach(var x in Script.InternalData.Overrides.Elements)
+        {
+            if(Elements.ContainsKey(x.Key))
+            {
+                PluginLog.Debug($"[{Script.InternalData.FullName}] Overriding {x.Key} element with custom data");
+                Elements[x.Key] = x.Value.DSFClone();
+                OriginalElementsDirect[x.Key] = x.Value.DSFClone();
+            }
+        }
+        foreach(var x in Script.InternalData.Overrides.Layouts)
+        {
+            if(Layouts.ContainsKey(x.Key))
+            {
+                PluginLog.Debug($"[{Script.InternalData.FullName}] Overriding {x.Key} layout with custom data");
+                Layouts[x.Key] = x.Value.DSFClone();
+                OriginalLayoutsDirect[x.Key] = x.Value.DSFClone();
+            }
+        }
+    }
+
+    public void SaveOverrides()
+    {
+        if(Script.InternalData.Overrides.Elements.Count > 0 || Script.InternalData.Overrides.Layouts.Count > 0)
+        {
+            EzConfig.SaveConfiguration(Script.InternalData.Overrides, Script.InternalData.OverridesPath, true, false);
+        }
+        else
+        {
+            if(File.Exists(Script.InternalData.OverridesPath))
+            {
+                PluginLog.Debug($"No overrides for {Script.InternalData.FullName}, deleting {Script.InternalData.OverridesPath}");
+                File.Delete(Script.InternalData.OverridesPath);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Resets the state of the script, calling your OnReset method AND performing additional cleanup tasks.
+    /// </summary>
+    public void Reset()
+    {
+        ScriptingProcessor.OnReset(Script);
+    }
+
+    /// <summary>
+    /// Schedules a task to be executed in specified amount of time. All tasks are cleaned up when script is reset.
+    /// </summary>
+    /// <param name="action"></param>
+    /// <param name="delayMs"></param>
+    public void Schedule(Action action, int delayMs)
+    {
+        TickSchedulers.Add(new(() =>
+        {
+            try
+            {
+                action();
+            }
+            catch(Exception ex)
+            {
+                ScriptingProcessor.LogError(Script, ex, nameof(Schedule));
+            }
+            TickSchedulers.RemoveAll(x => x.Disposed);
+        }, delayMs));
+    }
+
+    /// <summary>
+    /// Cancels all scheduled tasks. Auto-called upon calling Reset.
+    /// </summary>
+    public void CancelSchedulers()
+    {
+        PluginLog.Debug($"CancelSchedulers called for script {Script.InternalData.Name}");
+        TickSchedulers.Each(x => x.Dispose());
+        TickSchedulers.Clear();
+    }
+
+    /// <summary>
+    /// Schedules reset of script after specified amount of miliseconds have passed. 
+    /// </summary>
+    /// <param name="delayMs"></param>
+    public void ScheduleReset(uint delayMs = uint.MaxValue)
+    {
+        AutoResetAt = Environment.TickCount64 + delayMs;
+    }
+
+    public uint GetMapEffect<T>(T mapEffect) where T : Enum
+    {
+        return GetMapEffect(Unsafe.As<T, uint>(ref mapEffect));
+    }
+
+    public uint GetMapEffect(uint mapEffectIndex)
+    {
+        var cd = EventFramework.Instance()->GetInstanceContentDirector();
+        if(cd == null || cd->MapEffects == null)
+        {
+            return 0;
+        }
+        if(mapEffectIndex < cd->MapEffects->Items.Length)
+        {
+            return cd->MapEffects->Items[(int)mapEffectIndex].State;
+        }
+        return 0;
+    }
+
+    /// <summary>
+    /// Disables all layouts and elements
+    /// </summary>
+    /// <param name="elements"></param>
+    /// <param name="layouts"></param>
+    public void Hide(bool elements = true, bool layouts = true)
+    {
+        if(elements)
+        {
+            foreach(var x in GetRegisteredElements())
+            {
+                x.Value.Enabled = false;
+            }
+        }
+        if(layouts)
+        {
+            foreach(var x in GetRegisteredLayouts())
+            {
+                x.Value.Enabled = false;
+            }
+        }
+    }
+
+    public RolePosition RolePosition
+    {
+        get
+        {
+            if(P.PriorityPopupWindow?.Assignments != null)
+            {
+                for(var i = 0; i < P.PriorityPopupWindow.Assignments.Count; i++)
+                {
+                    var ass = P.PriorityPopupWindow.Assignments[i];
+                    if(ass.IsInParty(false, out var m) && m.NameWithWorld == Splatoon.BasePlayer.GetNameWithWorld())
+                    {
+                        return PriorityPopupWindow.RolePositions.SafeSelect(i);
+                    }
+                }
+            }
+            return default;
+        }
+    }
+
+    /// <summary>
+    /// Displays a centered line in an attention window. <br />
+    /// Important: your action will not be called in the same frame as you call this method. You must prepare data beforehand and pass it into window after.<br />
+    /// Important: your action can be called multiple times. Do not put mutating calls here.<br />
+    /// To keep window open, you must keep calling this function continuously. 
+    /// </summary>
+    public void DisplayAttentionWindowLine(Action action)
+    {
+        if(P.Config.DisabledAttentionWindowScripts.Contains(Script.InternalData.FullName)) return;
+        S.AttentionOverlayWindow.Title = this.Script.InternalData.Name.Replace("_", " ") ?? "";
+        S.AttentionOverlayWindow.ActionQueueCommand.Add((action, true));
+    }
+
+    /// <summary>
+    /// Displays a centered text in an attention window. <br />
+    /// To keep window open, you must keep calling this function continuously. 
+    /// </summary>
+    public void DisplayAttentionWindowLine(string text)
+    {
+        DisplayAttentionWindowLine(() => ImGuiEx.Text(text));
+    }
+
+
+    /// <summary>
+    /// Displays a centered text in an attention window. <br />
+    /// To keep window open, you must keep calling this function continuously. 
+    /// Arguments can be displayed via $1, $2, $3, etc. starting from 1;
+    /// </summary>
+    public void DisplayAttentionWindowLine(string text, params string[] arguments)
+    {
+        for(var i = 0; i < arguments.Length; i++)
+        {
+            var a = arguments[i];
+            text = text.Replace($"${i + 1}", a);
+        }
+        DisplayAttentionWindowLine(() => ImGuiEx.Text(text));
+    }
+
+    /// <summary>
+    /// Displays a centered text in an attention window. <br />
+    /// To keep window open, you must keep calling this function continuously. 
+    /// Arguments can be displayed via $1, $2, $3, etc. starting from 1;
+    /// </summary>
+    public void DisplayAttentionWindowLine(Vector4? color, string text, params string[] arguments)
+    {
+        for(var i = 0; i < arguments.Length; i++)
+        {
+            var a = arguments[i];
+            text = text.Replace($"${i + 1}", a);
+        }
+        DisplayAttentionWindowLine(() => ImGuiEx.Text(color, text));
+    }
+
+    /// <summary>
+    /// Prefer <see cref="DisplayAttentionWindowLine(Action)"/> where possible. <br />
+    /// Draws a raw action inside attention window. <br />
+    /// Important: your action will not be called in the same frame as you call this method. You must prepare data beforehand and pass it into window after.<br />
+    /// Important: your action can be called multiple times. Do not put mutating calls here.<br />
+    /// To keep window open, you must keep calling this function continuously. 
+    /// </summary>
+    public void DisplayAttentionWindowRaw(Action action)
+    {
+        if(P.Config.DisabledAttentionWindowScripts.Contains(Script.InternalData.FullName)) return;
+        S.AttentionOverlayWindow.Title = this.Script.InternalData.Name.Replace("_", " ") ?? "";
+        S.AttentionOverlayWindow.ActionQueueCommand.Add((action, false));
+    }
+
+    /// <summary>
+    /// <b>This will send message to server.</b> Queues command for execution. This allows you to send multiple commands in a succession like a macro. Multiline text will be split and enqueued as individual messages. Each line must start with forward slash /. During replay messages are not being sent.
+    /// </summary>
+    /// <param name="text"></param>
+    /// <param name="test">If true, command won't be sent. You do not need to handle replays manually.</param>
+    public void DangerousEnqueueCommand(string text, bool test)
+    {
+        S.MessageService.EnqueueText(this.Script.InternalData.FullName, test, text);
+    }
+
+    /// <summary>
+    /// Clears queued messages. This is also called every time script is reset
+    /// </summary>
+    public void CancelQueuedCommands()
+    {
+        S.MessageService.StopAll(this.Script.InternalData.FullName);
+    }
+
+    /// <summary>
+    /// Provides access to unmodified copies of elements that were registered during OnSetup call. Will never be rendered, they are only for reference purposes.
+    /// </summary>
+    public ReadOnlyDictionary<string, Element> OriginalElements => OriginalElementsDirect.AsReadOnly();
+
+    /// <summary>
+    /// Provides access to unmodified copies of layouts that were registered during OnSetup call. Will never be rendered, they are only for reference purposes.
+    /// </summary>
+    public ReadOnlyDictionary<string, Layout> OriginalLayouts => OriginalLayoutsDirect.AsReadOnly();
+    internal void StoreOriginalElements()
+    {
+        this.OriginalElementsDirect = this.Elements.DSFClone();
+        this.OriginalLayoutsDirect = this.Layouts.DSFClone();
+        PluginLog.Debug($"Stored {this.OriginalElementsDirect?.Count} original elements and {this.OriginalLayoutsDirect?.Count} original layouts");
+    }
+    internal Dictionary<string, Layout> OriginalLayoutsDirect { get; private set; }
+    internal Dictionary<string, Element> OriginalElementsDirect { get; private set; }
+}

@@ -1,0 +1,656 @@
+AnimUtil.static Vector2 Lerp(Vector2 firstVector, Vector2 secondVector, float by)	// Dalamud/Interface/Animation/AnimUtil.cs
+AnimUtil.static float Lerp(float firstFloat, float secondFloat, float by)	// Dalamud/Interface/Animation/AnimUtil.cs
+BufferBackedImDrawData.static BufferBackedImDrawData Create()	// Dalamud/Interface/Utility/BufferBackedImDrawData.cs
+BufferBackedImDrawData.void Dispose()	// Dalamud/Interface/Utility/BufferBackedImDrawData.cs
+BufferBackedImDrawData.readonly void UpdateDrawDataStatistics()	// Dalamud/Interface/Utility/BufferBackedImDrawData.cs
+ChildDisposable.static implicit operator bool(ChildDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/ChildDisposable.cs
+ChildDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/ChildDisposable.cs
+ChildDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/ChildDisposable.cs
+ChildDisposable.static bool operator false(ChildDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/ChildDisposable.cs
+ChildDisposable.static bool operator true(ChildDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/ChildDisposable.cs
+ChildFrameDisposable.static implicit operator bool(ChildFrameDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/ChildFrameDisposable.cs
+ChildFrameDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/ChildFrameDisposable.cs
+ChildFrameDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/ChildFrameDisposable.cs
+ChildFrameDisposable.static bool operator false(ChildFrameDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/ChildFrameDisposable.cs
+ChildFrameDisposable.static bool operator true(ChildFrameDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/ChildFrameDisposable.cs
+ClipRectDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/ClipRectDisposable.cs
+ClipRectDisposable.void Pop(int count = 1)	// Dalamud/Interface/Utility/Raii/Disposables/ClipRectDisposable.cs
+ClipRectDisposable.static void PopUnsafe(int count = 1)	// Dalamud/Interface/Utility/Raii/Disposables/ClipRectDisposable.cs
+ClipRectDisposable.ClipRectDisposable Push(in Rectangle rectangle, bool intersectWithCurrentClipRect = false)	// Dalamud/Interface/Utility/Raii/Disposables/ClipRectDisposable.cs
+ClipRectDisposable.ClipRectDisposable Push(in Rectangle rectangle, bool intersectWithCurrentClipRect = false, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/ClipRectDisposable.cs
+ClipRectDisposable.ClipRectDisposable Push(in Vector2 topLeft, in Vector2 bottomRight, bool intersectWithCurrentClipRect = false)	// Dalamud/Interface/Utility/Raii/Disposables/ClipRectDisposable.cs
+ClipRectDisposable.ClipRectDisposable Push(in Vector2 topLeft, in Vector2 bottomRight, bool intersectWithCurrentClipRect = false, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/ClipRectDisposable.cs
+ColorDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs
+ColorDisposable.ColorDisposable Pop(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs
+ColorDisposable.static void PopUnsafe(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs
+ColorDisposable.ColorDisposable Push(ImGuiCol type, Vector4 color, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs
+ColorDisposable.ColorDisposable Push(ImGuiCol type, Vector4? color, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs
+ColorDisposable.ColorDisposable Push(ImGuiCol type, uint color, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs
+ColorDisposable.ColorDisposable PushDefault(ImGuiCol type)	// Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs
+ColorDisposable.static ColorDisposable PushDefaultColors()	// Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs
+ColorHelpers.static uint ApplyOpacity(uint rgba, float opacity)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 Darken(this Vector4 color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static uint Darken(uint color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 Desaturate(this Vector4 color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static uint Desaturate(uint color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 Fade(this Vector4 color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static uint Fade(uint color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 HsvToRgb(HsvaColor hsv)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 Lighten(this Vector4 color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static uint Lighten(uint color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 NormalizeToUnitRange(this Vector4 color)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static HsvaColor RgbaToHsv(Vector4 color)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 RgbaUintToVector4(uint color)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static uint RgbaVector4ToUint(Vector4 color)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 Saturate(this Vector4 color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static uint Saturate(uint color, float amount)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static uint SwapEndianness(uint rgba)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static uint SwapRedBlue(uint x)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 Vector(this KnownColor knownColor)	// Dalamud/Interface/ColorHelpers.cs
+ColorHelpers.static Vector4 WithAlpha(this Vector4 color, float alpha)	// Dalamud/Interface/ColorHelpers.cs
+Column.virtual int Compare(TItem lhs, TItem rhs)	// Dalamud/Interface/Utility/Table/Column.cs
+Column.int CompareInv(TItem lhs, TItem rhs)	// Dalamud/Interface/Utility/Table/Column.cs
+Column.virtual void DrawColumn(TItem item, int idx)	// Dalamud/Interface/Utility/Table/Column.cs
+Column.virtual bool DrawFilter()	// Dalamud/Interface/Utility/Table/Column.cs
+Column.virtual bool FilterFunc(TItem item)	// Dalamud/Interface/Utility/Table/Column.cs
+ColumnFlags.override bool DrawFilter()	// Dalamud/Interface/Utility/Table/ColumnFlags.cs
+ColumnSelect.override bool DrawFilter()	// Dalamud/Interface/Utility/Table/ColumnSelect.cs
+ColumnString.override int Compare(TItem lhs, TItem rhs)	// Dalamud/Interface/Utility/Table/ColumnString.cs
+ColumnString.override void DrawColumn(TItem item, int idx)	// Dalamud/Interface/Utility/Table/ColumnString.cs
+ColumnString.override bool DrawFilter()	// Dalamud/Interface/Utility/Table/ColumnString.cs
+ColumnString.override bool FilterFunc(TItem item)	// Dalamud/Interface/Utility/Table/ColumnString.cs
+ColumnString.virtual string ToName(TItem item)	// Dalamud/Interface/Utility/Table/ColumnString.cs
+ColumnsDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/ColumnsDisposable.cs
+ColumnsDisposable.float GetOffset(int index)	// Dalamud/Interface/Utility/Raii/Disposables/ColumnsDisposable.cs
+ColumnsDisposable.float GetWidth(int index)	// Dalamud/Interface/Utility/Raii/Disposables/ColumnsDisposable.cs
+ColumnsDisposable.void Next()	// Dalamud/Interface/Utility/Raii/Disposables/ColumnsDisposable.cs
+ColumnsDisposable.void SetOffset(int index, float value)	// Dalamud/Interface/Utility/Raii/Disposables/ColumnsDisposable.cs
+ColumnsDisposable.void SetWidth(int index, float width)	// Dalamud/Interface/Utility/Raii/Disposables/ColumnsDisposable.cs
+ComboDisposable.static implicit operator bool(ComboDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/ComboDisposable.cs
+ComboDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/ComboDisposable.cs
+ComboDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/ComboDisposable.cs
+ComboDisposable.static bool operator false(ComboDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/ComboDisposable.cs
+ComboDisposable.static bool operator true(ComboDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/ComboDisposable.cs
+DalamudAssetFontAndFamilyId.ImFontPtr AddToBuildToolkit(IFontAtlasBuildToolkitPreBuild tk, in SafeFontConfig config)	// Dalamud/Interface/FontIdentifier/DalamudAssetFontAndFamilyId.cs
+DalamudAssetFontAndFamilyId.override bool Equals(object? obj)	// Dalamud/Interface/FontIdentifier/DalamudAssetFontAndFamilyId.cs
+DalamudAssetFontAndFamilyId.int FindBestMatch(int weight, int stretch, int style)	// Dalamud/Interface/FontIdentifier/DalamudAssetFontAndFamilyId.cs
+DalamudAssetFontAndFamilyId.override int GetHashCode()	// Dalamud/Interface/FontIdentifier/DalamudAssetFontAndFamilyId.cs
+DalamudAssetFontAndFamilyId.override string ToString()	// Dalamud/Interface/FontIdentifier/DalamudAssetFontAndFamilyId.cs
+DalamudColors.void Apply()	// Dalamud/Interface/Style/DalamudColors.cs
+DalamudDefaultFontAndFamilyId.ImFontPtr AddToBuildToolkit(IFontAtlasBuildToolkitPreBuild tk, in SafeFontConfig config)	// Dalamud/Interface/FontIdentifier/DalamudDefaultFontAndFamilyId.cs
+DalamudDefaultFontAndFamilyId.override bool Equals(object? obj)	// Dalamud/Interface/FontIdentifier/DalamudDefaultFontAndFamilyId.cs
+DalamudDefaultFontAndFamilyId.int FindBestMatch(int weight, int stretch, int style)	// Dalamud/Interface/FontIdentifier/DalamudDefaultFontAndFamilyId.cs
+DalamudDefaultFontAndFamilyId.override int GetHashCode()	// Dalamud/Interface/FontIdentifier/DalamudDefaultFontAndFamilyId.cs
+DalamudDefaultFontAndFamilyId.override string ToString()	// Dalamud/Interface/FontIdentifier/DalamudDefaultFontAndFamilyId.cs
+DalamudTextureWrapExtensions.static bool ResourceEquals(this IDalamudTextureWrap? a, IDalamudTextureWrap? b)	// Dalamud/Interface/Textures/DalamudTextureWrapExtensions.cs
+DisabledDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/DisabledDisposable.cs
+DisabledDisposable.void Pop(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/DisabledDisposable.cs
+DisabledDisposable.static void PopUnsafe(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/DisabledDisposable.cs
+DisabledDisposable.DisabledDisposable Push()	// Dalamud/Interface/Utility/Raii/Disposables/DisabledDisposable.cs
+DisabledDisposable.DisabledDisposable Push(bool condition)	// Dalamud/Interface/Utility/Raii/Disposables/DisabledDisposable.cs
+DragDropSourceDisposable.static implicit operator bool(DragDropSourceDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/DragDropSourceDisposable.cs
+DragDropSourceDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/DragDropSourceDisposable.cs
+DragDropSourceDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/DragDropSourceDisposable.cs
+DragDropSourceDisposable.static bool operator false(DragDropSourceDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/DragDropSourceDisposable.cs
+DragDropSourceDisposable.static bool operator true(DragDropSourceDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/DragDropSourceDisposable.cs
+DragDropTargetDisposable.static implicit operator bool(DragDropTargetDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/DragDropTargetDisposable.cs
+DragDropTargetDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/DragDropTargetDisposable.cs
+DragDropTargetDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/DragDropTargetDisposable.cs
+DragDropTargetDisposable.static bool operator false(DragDropTargetDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/DragDropTargetDisposable.cs
+DragDropTargetDisposable.static bool operator true(DragDropTargetDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/DragDropTargetDisposable.cs
+Easing.void Reset()	// Dalamud/Interface/Animation/Easing.cs
+Easing.void Restart()	// Dalamud/Interface/Animation/Easing.cs
+Easing.void Start()	// Dalamud/Interface/Animation/Easing.cs
+Easing.void Stop()	// Dalamud/Interface/Animation/Easing.cs
+Easing.abstract void Update()	// Dalamud/Interface/Animation/Easing.cs
+EnabledDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/EnabledDisposable.cs
+FileDialogManager.void Draw()	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void OpenFileDialog(string title, string filters, Action<bool, List<string>> callback, int selectionCountMax, string? startPath = null, bool isModal = false)	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void OpenFileDialog(string title, string filters, Action<bool, string> callback)	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void OpenFolderDialog(string title, Action<bool, string> callback)	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void OpenFolderDialog(string title, Action<bool, string> callback, string? startPath, bool isModal = false)	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void Reset()	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void SaveFileDialog(string title, string filters, string defaultFileName, string defaultExtension, Action<bool, string> callback)	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void SaveFileDialog(string title, string filters, string defaultFileName, string defaultExtension, Action<bool, string> callback, string? startPath, bool isModal = false)	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void SaveFolderDialog(string title, string defaultFolderName, Action<bool, string> callback)	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FileDialogManager.void SaveFolderDialog(string title, string defaultFolderName, Action<bool, string> callback, string? startPath, bool isModal = false)	// Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs
+FilterStruct.void Clear()	// Dalamud/Interface/ImGuiFileDialog/FileDialog.Structs.cs
+FilterStruct.bool Empty()	// Dalamud/Interface/ImGuiFileDialog/FileDialog.Structs.cs
+FilterStruct.bool FilterExists(string filter)	// Dalamud/Interface/ImGuiFileDialog/FileDialog.Structs.cs
+FluentGlyphRangeBuilder.ushort[] Build(bool addFallbackCodepoints = true, bool addEllipsisCodepoints = true)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.ushort[] BuildExact()	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder Clear()	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(IEnumerable<UnicodeRange> ranges)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(IEnumerable<byte> utf8Sequence)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(IEnumerable<char> utf16Sequence)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(ReadOnlySpan<byte> utf8Sequence)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(ReadOnlySpan<char> utf16Sequence)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(UnicodeRange range)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(UnicodeRange range1, UnicodeRange range2)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(UnicodeRange range1, UnicodeRange range2, UnicodeRange range3)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(UnicodeRange range1, UnicodeRange range2, UnicodeRange range3, UnicodeRange range4, params UnicodeRange[] evenMoreRanges)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(char codepoint)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(char from, char to)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(int codepoint)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(int from, int to)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(string @string)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(uint codepoint)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder With(uint from, uint to)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder WithLanguage(CultureInfo cultureInfo)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FluentGlyphRangeBuilder.FluentGlyphRangeBuilder WithLanguage(string languageTag)	// Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs
+FontAtlasBuildToolkitUtilities.static FluentGlyphRangeBuilder BeginGlyphRange(this IEnumerable<char> chars)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static FluentGlyphRangeBuilder BeginGlyphRange(this ReadOnlySpan<char> chars)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static FluentGlyphRangeBuilder BeginGlyphRange(this UnicodeRange range)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static FluentGlyphRangeBuilder BeginGlyphRange(this string chars)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static unsafe ImFontConfigPtr FindConfigPtr(this IFontAtlasBuildToolkit toolkit, ImFontPtr fontPtr)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static IFontAtlasBuildToolkit OnPostBuild(this IFontAtlasBuildToolkit toolkit, Action<IFontAtlasBuildToolkitPostBuild> action)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static IFontAtlasBuildToolkit OnPreBuild(this IFontAtlasBuildToolkit toolkit, Action<IFontAtlasBuildToolkitPreBuild> action)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static ushort[] ToGlyphRange(this IEnumerable<char> enumerable, bool addFallbackCodepoints = true, bool addEllipsisCodepoints = true)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static ushort[] ToGlyphRange(this ReadOnlySpan<char> span, bool addFallbackCodepoints = true, bool addEllipsisCodepoints = true)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAtlasBuildToolkitUtilities.static ushort[] ToGlyphRange(this string @string, bool addFallbackCodepoints = true, bool addEllipsisCodepoints = true)	// Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs
+FontAwesomeExtensions.static IEnumerable<string> GetCategories(this FontAwesomeIcon icon)	// Dalamud/Interface/FontAwesome/FontAwesomeExtensions.cs
+FontAwesomeExtensions.static IEnumerable<string> GetSearchTerms(this FontAwesomeIcon icon)	// Dalamud/Interface/FontAwesome/FontAwesomeExtensions.cs
+FontAwesomeExtensions.static char ToIconChar(this FontAwesomeIcon icon)	// Dalamud/Interface/FontAwesome/FontAwesomeExtensions.cs
+FontAwesomeExtensions.static string ToIconString(this FontAwesomeIcon icon)	// Dalamud/Interface/FontAwesome/FontAwesomeExtensions.cs
+FontAwesomeHelpers.static string[] GetCategories()	// Dalamud/Interface/FontAwesome/FontAwesomeHelpers.cs
+FontAwesomeHelpers.static List<FontAwesomeIcon> GetIcons()	// Dalamud/Interface/FontAwesome/FontAwesomeHelpers.cs
+FontAwesomeHelpers.static List<FontAwesomeIcon> SearchIcons(string search, string category)	// Dalamud/Interface/FontAwesome/FontAwesomeHelpers.cs
+FontDisposable.static FontDisposable DefaultFont()	// Dalamud/Interface/Utility/Raii/Disposables/FontDisposable.cs
+FontDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/FontDisposable.cs
+FontDisposable.void Pop(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/FontDisposable.cs
+FontDisposable.static void PopUnsafe(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/FontDisposable.cs
+FontDisposable.FontDisposable Push(ImFontPtr font, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/FontDisposable.cs
+FontDisposable.static FontDisposable PushDefaultFont()	// Dalamud/Interface/Utility/Raii/Disposables/FontDisposable.cs
+FontHandleWrapper.void Dispose()	// Dalamud/Interface/UiBuilder.cs
+FontHandleWrapper.ILockedImFont Lock()	// Dalamud/Interface/UiBuilder.cs
+FontHandleWrapper.void Pop()	// Dalamud/Interface/UiBuilder.cs
+FontHandleWrapper.IDisposable Push()	// Dalamud/Interface/UiBuilder.cs
+FontHandleWrapper.override string ToString()	// Dalamud/Interface/UiBuilder.cs
+FontHandleWrapper.ILockedImFont? TryLock(out string? errorMessage)	// Dalamud/Interface/UiBuilder.cs
+FontHandleWrapper.Task<IFontHandle> WaitAsync()	// Dalamud/Interface/UiBuilder.cs
+FontHandleWrapper.Task<IFontHandle> WaitAsync(CancellationToken cancellationToken)	// Dalamud/Interface/UiBuilder.cs
+ForwardingSharedImmediateTexture.IDalamudTextureWrap? GetWrapOrDefault(IDalamudTextureWrap? defaultWrap = null)	// Dalamud/Interface/Textures/ForwardingSharedImmediateTexture.cs
+ForwardingSharedImmediateTexture.IDalamudTextureWrap GetWrapOrEmpty()	// Dalamud/Interface/Textures/ForwardingSharedImmediateTexture.cs
+ForwardingSharedImmediateTexture.Task<IDalamudTextureWrap> RentAsync(CancellationToken cancellationToken = default)	// Dalamud/Interface/Textures/ForwardingSharedImmediateTexture.cs
+ForwardingSharedImmediateTexture.bool TryGetWrap(out IDalamudTextureWrap? texture, out Exception? exception)	// Dalamud/Interface/Textures/ForwardingSharedImmediateTexture.cs
+ForwardingTextureWrap.virtual unsafe IDalamudTextureWrap CreateWrapSharingLowLevelResource()	// Dalamud/Interface/Textures/TextureWraps/ForwardingTextureWrap.cs
+ForwardingTextureWrap.void Dispose()	// Dalamud/Interface/Textures/TextureWraps/ForwardingTextureWrap.cs
+ForwardingTextureWrap.override string ToString()	// Dalamud/Interface/Textures/TextureWraps/ForwardingTextureWrap.cs
+GameFontAndFamilyId.ImFontPtr AddToBuildToolkit(IFontAtlasBuildToolkitPreBuild tk, in SafeFontConfig config)	// Dalamud/Interface/FontIdentifier/GameFontAndFamilyId.cs
+GameFontAndFamilyId.override bool Equals(object? obj)	// Dalamud/Interface/FontIdentifier/GameFontAndFamilyId.cs
+GameFontAndFamilyId.int FindBestMatch(int weight, int stretch, int style)	// Dalamud/Interface/FontIdentifier/GameFontAndFamilyId.cs
+GameFontAndFamilyId.override int GetHashCode()	// Dalamud/Interface/FontIdentifier/GameFontAndFamilyId.cs
+GameFontAndFamilyId.override string ToString()	// Dalamud/Interface/FontIdentifier/GameFontAndFamilyId.cs
+GameFontStyle.readonly int CalculateBaseWidthAdjustment(FdtReader reader, FdtReader.FontTableEntry glyph)	// Dalamud/Interface/GameFonts/GameFontStyle.cs
+GameFontStyle.readonly int CalculateBaseWidthAdjustment(in FdtReader.FontTableHeader header, in FdtReader.FontTableEntry glyph)	// Dalamud/Interface/GameFonts/GameFontStyle.cs
+GameFontStyle.static GameFontFamilyAndSize GetRecommendedFamilyAndSize(GameFontFamily family, float size)	// Dalamud/Interface/GameFonts/GameFontStyle.cs
+GameFontStyle.readonly GameFontStyle Scale(float scale)	// Dalamud/Interface/GameFonts/GameFontStyle.cs
+GameFontStyle.override readonly string ToString()	// Dalamud/Interface/GameFonts/GameFontStyle.cs
+GameIconLookup.static implicit operator GameIconLookup(int iconId)	// Dalamud/Interface/Textures/GameIconLookup.cs
+GameIconLookup.static implicit operator GameIconLookup(uint iconId)	// Dalamud/Interface/Textures/GameIconLookup.cs
+GameIconLookup.override string ToString()	// Dalamud/Interface/Textures/GameIconLookup.cs
+GroupDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/GroupDisposable.cs
+GroupDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/GroupDisposable.cs
+HeaderDisposable.static implicit operator bool(HeaderDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/HeaderDisposable.cs
+HeaderDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/HeaderDisposable.cs
+HeaderDisposable.static bool operator false(HeaderDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/HeaderDisposable.cs
+HeaderDisposable.static bool operator true(HeaderDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/HeaderDisposable.cs
+HorizontalButtonGroup.HorizontalButtonGroup Add(string text, Action action)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+HorizontalButtonGroup.void Draw()	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+HorizontalButtonGroup.HorizontalButtonGroup SetCentered(bool centered)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+HorizontalButtonGroup.HorizontalButtonGroup WithExtraMargin(float extraMargin)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+HorizontalButtonGroup.HorizontalButtonGroup WithHeight(float height)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+HorizontalButtonGroup.HorizontalButtonGroup WithPaddingBetweenButtons(float padding)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+HsvaColor.record struct HsvaColor(float H, float S, float V, float A)	// Dalamud/Interface/ColorHelpers.cs
+IdDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/IdDisposable.cs
+IdDisposable.void Pop(int count = 1)	// Dalamud/Interface/Utility/Raii/Disposables/IdDisposable.cs
+IdDisposable.static void PopUnsafe(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/IdDisposable.cs
+IdDisposable.IdDisposable Push(ImU8String id, bool enabled = true)	// Dalamud/Interface/Utility/Raii/Disposables/IdDisposable.cs
+IdDisposable.IdDisposable Push(int id, bool enabled = true)	// Dalamud/Interface/Utility/Raii/Disposables/IdDisposable.cs
+IdDisposable.unsafe IdDisposable Push(nint id, bool enabled = true)	// Dalamud/Interface/Utility/Raii/Disposables/IdDisposable.cs
+ImGuiClip.static int ClippedDraw<T>(IEnumerable<T> data, int skips, Action<T> draw, int? count = null, int startIndex = 0)	// Dalamud/Interface/Utility/ImGuiClip.cs
+ImGuiClip.static void ClippedDraw<T>(IReadOnlyList<T> data, Action<T, int> draw, float lineHeight)	// Dalamud/Interface/Utility/ImGuiClip.cs
+ImGuiClip.static void ClippedDraw<T>(IReadOnlyList<T> data, Action<T> draw, float lineHeight)	// Dalamud/Interface/Utility/ImGuiClip.cs
+ImGuiClip.static void ClippedDraw<T>(IReadOnlyList<T> data, Action<T> draw, int itemsPerLine, float lineHeight)	// Dalamud/Interface/Utility/ImGuiClip.cs
+ImGuiClip.static void DrawEndDummy(int remainder, float height)	// Dalamud/Interface/Utility/ImGuiClip.cs
+ImGuiClip.static int FilteredClippedDraw<T>(IEnumerable<T> data, int skips, Func<T, bool> checkFilter, Action<T> draw, int startIndex = 0)	// Dalamud/Interface/Utility/ImGuiClip.cs
+ImGuiClip.static int GetNecessarySkips(float height)	// Dalamud/Interface/Utility/ImGuiClip.cs
+ImGuiComponents.static Vector4 ColorPickerWithPalette(int id, string description, Vector4 originalColor)	// Dalamud/Interface/Components/ImGuiComponents.ColorPickerWithPalette.cs
+ImGuiComponents.static Vector4 ColorPickerWithPalette(int id, string description, Vector4 originalColor, ImGuiColorEditFlags flags)	// Dalamud/Interface/Components/ImGuiComponents.ColorPickerWithPalette.cs
+ImGuiComponents.static bool DisabledButton(FontAwesomeIcon icon, int? id = null, Vector4? defaultColor = null, Vector4? activeColor = null, Vector4? hoveredColor = null, float alphaMult = .5f)	// Dalamud/Interface/Components/ImGuiComponents.DisabledButton.cs
+ImGuiComponents.static bool DisabledButton(string labelWithId, Vector4? defaultColor = null, Vector4? activeColor = null, Vector4? hoveredColor = null, float alphaMult = .5f)	// Dalamud/Interface/Components/ImGuiComponents.DisabledButton.cs
+ImGuiComponents.static void DisabledToggleButton(string id, bool v)	// Dalamud/Interface/Components/ImGuiComponents.ToggleSwitch.cs
+ImGuiComponents.static float GetIconButtonWithTextWidth(FontAwesomeIcon icon, string text)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static void HelpMarker(string helpText)	// Dalamud/Interface/Components/ImGuiComponents.HelpMarker.cs
+ImGuiComponents.static void HelpMarker(string helpText, FontAwesomeIcon icon, Vector4? color = null)	// Dalamud/Interface/Components/ImGuiComponents.HelpMarker.cs
+ImGuiComponents.static bool IconButton(FontAwesomeIcon icon)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(FontAwesomeIcon icon, Vector2 size)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(FontAwesomeIcon icon, Vector4? defaultColor, Vector4? activeColor = null, Vector4? hoveredColor = null, Vector2? size = null)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(int id, FontAwesomeIcon icon)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(int id, FontAwesomeIcon icon, Vector2 size)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(int id, FontAwesomeIcon icon, Vector4? defaultColor, Vector4? activeColor = null, Vector4? hoveredColor = null, Vector2? size = null)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(string iconText)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(string iconText, Vector2 size)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(string iconText, Vector4? defaultColor, Vector4? activeColor = null, Vector4? hoveredColor = null, Vector2? size = null)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(string id, FontAwesomeIcon icon)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(string id, FontAwesomeIcon icon, Vector2 size)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButton(string id, FontAwesomeIcon icon, Vector4? defaultColor, Vector4? activeColor = null, Vector4? hoveredColor = null, Vector2? size = null)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButtonSelect<T>(string label, ref T val, IEnumerable<FontAwesomeIcon> optionIcons, IEnumerable<T> optionValues, uint columns = 0, Vector2? buttonSize = null, Vector4? defaultColor = null, Vector4? activeColor = null, Vector4? hoveredColor = null)	// Dalamud/Interface/Components/ImGuiComponents.IconButtonSelect.cs
+ImGuiComponents.static unsafe bool IconButtonSelect<T>(string label, ref T val, IEnumerable<KeyValuePair<FontAwesomeIcon, T>> options, uint columns = 0, Vector2? buttonSize = null, Vector4? defaultColor = null, Vector4? activeColor = null, Vector4? hoveredColor = null)	// Dalamud/Interface/Components/ImGuiComponents.IconButtonSelect.cs
+ImGuiComponents.static bool IconButtonWithText(FontAwesomeIcon icon, string text, Vector2 size)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static bool IconButtonWithText(FontAwesomeIcon icon, string text, Vector4? defaultColor = null, Vector4? activeColor = null, Vector4? hoveredColor = null, Vector2? size = null)	// Dalamud/Interface/Components/ImGuiComponents.IconButton.cs
+ImGuiComponents.static void Test()	// Dalamud/Interface/Components/ImGuiComponents.Test.cs
+ImGuiComponents.static void TextWithLabel(string label, string value, string hint = "")	// Dalamud/Interface/Components/ImGuiComponents.TextWithLabel.cs
+ImGuiComponents.static bool ToggleButton(string id, ref bool v)	// Dalamud/Interface/Components/ImGuiComponents.ToggleSwitch.cs
+ImGuiExtensions.static unsafe void AddTextClippedEx(this ImDrawListPtr drawListPtr, Vector2 posMin, Vector2 posMax, string text, Vector2? textSizeIfKnown, Vector2 align, Vector4? clipRect)	// Dalamud/Interface/Utility/ImGuiExtensions.cs
+ImGuiHelpers.static unsafe void AddBlurBehind(ImDrawListPtr drawList, Vector2 min, Vector2 max, float blurStrength = 1.5f, float rounding = 4f, Vector4 tintColor = default, Vector4 luminosityColor = default, float noiseOpacity = 0.17f)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe void AdjustGlyphMetrics(this ImFontPtr fontPtr, float scale, float round = 0f)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe void* AllocateMemory(nuint length)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static HorizontalButtonGroup BeginHorizontalButtonGroup()	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe ushort[] BuildRangesToArray(this ImFontGlyphRangesBuilderPtr builder, bool addFallbackCodepoints = true, bool addEllipsisCodepoints = true)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void CenterCursorFor(float itemWidth)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void CenterCursorForText(ImU8String text)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static SeStringDrawResult CenteredSeString(ReadOnlySpan<byte> sss, scoped in SeStringDrawParams style = default)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void CenteredText(ImU8String text)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static bool CheckIsWindowOnMainViewport()	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void ClickToCopyText(ImU8String text, ImU8String textCopy = default, Vector4? color = null)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static SeStringDrawResult CompileSeStringWrapped(string text, scoped in SeStringDrawParams style = default, ImGuiId imGuiId = default, ImGuiButtonFlags buttonFlags = ImGuiButtonFlags.MouseButtonDefault)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe void CopyGlyphsAcrossFonts(ImFontPtr source, ImFontPtr target, bool missingOnly, bool rebuildLookupTable = true, int rangeLow = 32, int rangeHigh = 0xFFFE)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void CopyGlyphsAcrossFonts(ImFontPtr? source, ImFontPtr? target, bool missingOnly, bool rebuildLookupTable = true, int rangeLow = 32, int rangeHigh = 0xFFFE)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static ushort[] CreateImGuiRangesFrom(IEnumerable<UnicodeRange> ranges)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static ushort[] CreateImGuiRangesFrom(params UnicodeRange[] ranges)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe List<Vector4> DefaultColorPalette(int swatchCount = 32)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void ForceNextWindowMainViewport()	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static Vector2 GetButtonSize(ImU8String text)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static VirtualKey ImGuiKeyToVirtualKey(ImGuiKey key)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe bool IsNotNullAndLoaded(this ImFontPtr ptr)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe IDisposable NewFontGlyphRangeBuilderPtrScoped(out ImFontGlyphRangesBuilderPtr builder)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe ImFontPtr OrElse(this ImFontPtr self, ImFontPtr other)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static unsafe void PrependBlurBehind(ImDrawListPtr drawList, Vector2 min, Vector2 max, float blurStrength = 1.5f, float rounding = 4f, Vector4 tintColor = default, Vector4 luminosityColor = default, float noiseOpacity = 0.17f)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void SafeTextColoredWrapped(Vector4 color, ImU8String text)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void SafeTextWrapped(ImU8String text)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void ScaledDummy(Vector2 size)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void ScaledDummy(float size)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void ScaledDummy(float x, float y)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void ScaledIndent(float size)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void ScaledRelativeSameLine(float offset, float spacing = -1.0f)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static Vector2 ScaledVector2(float x)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static Vector2 ScaledVector2(float x, float y)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static Vector4 ScaledVector4(float x, float y, float z, float w)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static SeStringDrawResult SeStringWrapped(ReadOnlySpan<byte> sss, scoped in SeStringDrawParams style = default, ImGuiId imGuiId = default, ImGuiButtonFlags buttonFlags = ImGuiButtonFlags.MouseButtonDefault)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void SetNextWindowPosRelativeMainViewport(Vector2 position, ImGuiCond condition = ImGuiCond.None, Vector2 pivot = default)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static void SetWindowPosRelativeMainViewport(ImU8String name, Vector2 position, ImGuiCond condition = ImGuiCond.None)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiHelpers.static ImGuiKey VirtualKeyToImGuiKey(VirtualKey key)	// Dalamud/Interface/Utility/ImGuiHelpers.cs
+ImGuiId.static implicit operator bool(ImGuiId id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(Memory<byte> id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(Memory<char> id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(ReadOnlyMemory<byte> id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(ReadOnlyMemory<char> id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(ReadOnlySpan<byte> id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(ReadOnlySpan<char> id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(Span<byte> id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(Span<char> id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(byte id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(byte[] id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(char id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(char[] id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(int id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(nint id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(nuint id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(sbyte id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(short id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(string id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(uint id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static implicit operator ImGuiId(ushort id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static unsafe implicit operator ImGuiId(double id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static unsafe implicit operator ImGuiId(float id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.static unsafe implicit operator ImGuiId(void* id)	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.bool IsEmpty()	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiId.unsafe bool PushId()	// Dalamud/Interface/Utility/ImGuiId.cs
+ImGuiTable.static void DrawTabbedTable<T>(string label, IEnumerable<T> data, Action<T> drawRow, ImGuiTableFlags flags = ImGuiTableFlags.None, params string[] columnTitles)	// Dalamud/Interface/Utility/ImGuiTable.cs
+ImGuiTable.static void DrawTable<T>(string label, IEnumerable<T> data, Action<T> drawRow, ImGuiTableFlags flags = ImGuiTableFlags.None, params string[] columnTitles)	// Dalamud/Interface/Utility/ImGuiTable.cs
+ImGuiViewportTextureArgs.record struct ImGuiViewportTextureArgs()	// Dalamud/Interface/Textures/ImGuiViewportTextureArgs.cs
+ImGuiViewportTextureArgs.override string ToString()	// Dalamud/Interface/Textures/ImGuiViewportTextureArgs.cs
+ImRaii.static PlotAlignedDisposable AlignedPlots(ReadOnlySpan<byte> groupId, bool vertical = true)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotAlignedDisposable AlignedPlots(string groupId, bool vertical = true)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static ChildDisposable Child(ImU8String strId)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ChildDisposable Child(ImU8String strId, Vector2 size)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ChildDisposable Child(ImU8String strId, Vector2 size, bool border)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ChildDisposable Child(ImU8String strId, Vector2 size, bool border, ImGuiWindowFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ChildFrameDisposable ChildFrame(uint id, Vector2 size)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ChildFrameDisposable ChildFrame(uint id, Vector2 size, ImGuiWindowFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ColumnsDisposable Columns(int count, ImU8String id, bool border = false)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ComboDisposable Combo(ImU8String label, ImU8String previewValue)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ComboDisposable Combo(ImU8String label, ImU8String previewValue, ImGuiComboFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable ContextPopup(ImU8String id)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable ContextPopup(ImU8String id, ImGuiPopupFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable ContextPopupItem(ImU8String id)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable ContextPopupItem(ImU8String id, ImGuiPopupFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ColorDisposable DefaultColors()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static FontDisposable DefaultFont()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PlotColorDisposable DefaultPlotColors()	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotStyleDisposable DefaultPlotStyle()	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static StyleDisposable DefaultStyle()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static DisabledDisposable Disabled()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static DisabledDisposable Disabled(bool disabled)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static DragDropSourceDisposable DragDropSource()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static DragDropSourceDisposable DragDropSource(ImGuiDragDropFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PlotDragDropSourceDisposable DragDropSourceAxis(ImAxis axis, ImGuiDragDropFlags flags = ImGuiDragDropFlags.None)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotDragDropSourceDisposable DragDropSourceItem(ReadOnlySpan<byte> labelId, ImGuiDragDropFlags flags = ImGuiDragDropFlags.None)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotDragDropSourceDisposable DragDropSourceItem(string labelId, ImGuiDragDropFlags flags = ImGuiDragDropFlags.None)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotDragDropSourceDisposable DragDropSourcePlot(ImGuiDragDropFlags flags = ImGuiDragDropFlags.None)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static DragDropTargetDisposable DragDropTarget()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PlotDragDropTargetDisposable DragDropTargetAxis(ImAxis axis)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotDragDropTargetDisposable DragDropTargetLegend()	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotDragDropTargetDisposable DragDropTargetPlot()	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static EnabledDisposable Enabled()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static GroupDisposable Group()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static HeaderDisposable Header(ImU8String label, ImGuiTreeNodeFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static HeaderDisposable Header(ImU8String label, ref bool visible, ImGuiTreeNodeFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ItemWidthDisposable ItemWidth(float width)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ItemWidthDisposable ItemWidth(float width, bool condition)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PlotLegendDisposable LegendPopup(ReadOnlySpan<byte> labelId, ImGuiMouseButton mouseButton = ImGuiMouseButton.Right)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotLegendDisposable LegendPopup(string labelId, ImGuiMouseButton mouseButton = ImGuiMouseButton.Right)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static ListBoxDisposable ListBox(ImU8String label)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ListBoxDisposable ListBox(ImU8String label, Vector2 size)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static MainMenuBarDisposable MainMenuBar()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static MenuDisposable Menu(ImU8String label)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static MenuDisposable Menu(ImU8String label, bool enabled)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static MenuBarDisposable MenuBar()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PlotDisposable Plot(ReadOnlySpan<byte> titleId, Vector2 size, ImPlotFlags flags)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotDisposable Plot(string titleId, Vector2 size, ImPlotFlags flags)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PopupDisposable Popup(ImU8String id)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable Popup(ImU8String id, ImGuiWindowFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable PopupModal(ImU8String id)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable PopupModal(ImU8String id, ImGuiWindowFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable PopupModal(ImU8String id, ref bool open)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PopupDisposable PopupModal(ImU8String id, ref bool open, ImGuiWindowFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ClipRectDisposable PushClipRect(in Rectangle rectangle, bool intersectWithCurrentClipRect = false)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ClipRectDisposable PushClipRect(in Rectangle rectangle, bool intersectWithCurrentClipRect = false, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ClipRectDisposable PushClipRect(in Vector2 upperLeftCorner, in Vector2 lowerRightCorner, bool intersectWithCurrentClipRect = false)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ClipRectDisposable PushClipRect(in Vector2 upperLeftCorner, in Vector2 lowerRightCorner, bool intersectWithCurrentClipRect = false, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ColorDisposable PushColor(ImGuiCol idx, Vector4 color, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ColorDisposable PushColor(ImGuiCol idx, Vector4? color, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static ColorDisposable PushColor(ImGuiCol idx, uint color, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PlotColorDisposable PushColor(ImPlotCol idx, Vector4 color, bool condition = true)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotColorDisposable PushColor(ImPlotCol idx, uint color, bool condition = true)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static FontDisposable PushFont(ImFontPtr font, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static IdDisposable PushId(ImU8String id, bool enabled = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static IdDisposable PushId(int id, bool enabled = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static IdDisposable PushId(nint id, bool enabled = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static IndentDisposable PushIndent(float f, bool scaled = true, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static IndentDisposable PushIndent(int i = 1, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PlotStyleDisposable PushStyle(ImPlotStyleVar idx, Vector2 value, bool condition = true)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotStyleDisposable PushStyle(ImPlotStyleVar idx, float value, bool condition = true)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotStyleDisposable PushStyle(ImPlotStyleVar idx, int value, bool condition = true)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static StyleDisposable PushStyle(ImGuiStyleVar idx, Vector2 value, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static StyleDisposable PushStyle(ImGuiStyleVar idx, float value, bool condition = true)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static PlotSubDisposable Subplots(ReadOnlySpan<byte> titleId, int rows, int cols, Vector2 size, ImPlotSubplotFlags flags = ImPlotSubplotFlags.None)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotSubDisposable Subplots(ReadOnlySpan<byte> titleId, int rows, int cols, Vector2 size, ImPlotSubplotFlags flags, ref float rowRatios, ref float colRatios)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotSubDisposable Subplots(string titleId, int rows, int cols, Vector2 size, ImPlotSubplotFlags flags = ImPlotSubplotFlags.None)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static PlotSubDisposable Subplots(string titleId, int rows, int cols, Vector2 size, ImPlotSubplotFlags flags, ref float rowRatios, ref float colRatios)	// Dalamud/Interface/Utility/Raii/Plot.cs
+ImRaii.static TabBarDisposable TabBar(ImU8String label)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TabBarDisposable TabBar(ImU8String label, ImGuiTabBarFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TabItemDisposable TabItem(ImU8String label)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TabItemDisposable TabItem(ImU8String label, ImGuiTabItemFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TabItemDisposable TabItem(ImU8String label, ref bool open)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TabItemDisposable TabItem(ImU8String label, ref bool open, ImGuiTabItemFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static unsafe TabItemDisposable TabItem(byte* label, ImGuiTabItemFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TableDisposable Table(ImU8String table, int numColumns)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TableDisposable Table(ImU8String table, int numColumns, ImGuiTableFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TableDisposable Table(ImU8String table, int numColumns, ImGuiTableFlags flags, Vector2 outerSize)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TableDisposable Table(ImU8String table, int numColumns, ImGuiTableFlags flags, Vector2 outerSize, float innerWidth)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TextWrapDisposable TextWrapPos(float pos)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TextWrapDisposable TextWrapPos(float pos, bool condition)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TooltipDisposable Tooltip()	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TreeNodeDisposable TreeNode(ImU8String label)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImRaii.static TreeNodeDisposable TreeNode(ImU8String label, ImGuiTreeNodeFlags flags)	// Dalamud/Interface/Utility/Raii/ImGui.cs
+ImVectorWrapper.void Add(in T item)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void AddRange(IEnumerable<T> items)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void AddRange(ReadOnlySpan<T> items)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void Clear()	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void Clear(bool skipDestroyer)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.bool Compact(int reservation)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.static unsafe ImVectorWrapper<ImFontConfig> ConfigDataWrapped(this ImFontAtlasPtr obj)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.bool Contains(in T item)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void CopyTo(T[] array, int arrayIndex)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.static ImVectorWrapper<T> CreateFromEnumerable<T>(IEnumerable<T> sourceEnumerable, ImVectorWrapper<T>.ImGuiNativeDestroyDelegate? destroyer = null, int minCapacity = 0)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.static ImVectorWrapper<T> CreateFromSpan<T>(ReadOnlySpan<T> sourceSpan, ImVectorWrapper<T>.ImGuiNativeDestroyDelegate? destroyer = null, int minCapacity = 0)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void Dispose()	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.bool EnsureCapacity(int capacity)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.bool EnsureCapacityExponential(int capacity)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.static unsafe ImVectorWrapper<ImFontPtr> FontsWrapped(this ImFontAtlasPtr obj)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.IEnumerator<T> GetEnumerator()	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.static unsafe ImVectorWrapper<ImGuiHelpers.ImFontGlyphReal> GlyphsWrapped(this ImFontPtr obj)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.static unsafe ImVectorWrapper<ImGuiHelpers.ImFontGlyphHotDataReal> IndexedHotDataWrapped(this ImFontPtr obj)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.static unsafe ImVectorWrapper<ushort> IndexLookupWrapped(this ImFontPtr obj)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.int IndexOf(in T item)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void Insert(int index, in T item)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void InsertRange(int index, IEnumerable<T> items)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void InsertRange(int index, ReadOnlySpan<T> items)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.bool Remove(in T item)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void RemoveAt(int index, bool skipDestroyer = false)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void RemoveRange(int index, int count, bool skipDestroyer = false)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void ReplaceRange(int index, int count, ReadOnlySpan<T> replacement, bool skipDestroyer = false)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.void Resize(int size, in T defaultValue = default, bool skipDestroyer = false)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.bool SetCapacity(int capacity)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+ImVectorWrapper.static unsafe ImVectorWrapper<ImFontAtlasTexture> TexturesWrapped(this ImFontAtlasPtr obj)	// Dalamud/Interface/Utility/ImVectorWrapper.cs
+InCirc.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InCirc.cs
+InCubic.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InCubic.cs
+InElastic.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InElastic.cs
+InOutCirc.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InOutCirc.cs
+InOutCubic.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InOutCubic.cs
+InOutElastic.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InOutElastic.cs
+InOutQuint.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InOutQuint.cs
+InOutSine.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InOutSine.cs
+InQuint.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InQuint.cs
+InSine.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/InSine.cs
+IndentDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/IndentDisposable.cs
+IndentDisposable.IndentDisposable Indent(float indent, bool scaled = true, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/IndentDisposable.cs
+IndentDisposable.IndentDisposable Indent(int indent = 1, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/IndentDisposable.cs
+IndentDisposable.IndentDisposable Unindent(float indent, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/IndentDisposable.cs
+ItemWidthDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/ItemWidthDisposable.cs
+ItemWidthDisposable.void Pop(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/ItemWidthDisposable.cs
+ItemWidthDisposable.static void PopUnsafe(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/ItemWidthDisposable.cs
+ItemWidthDisposable.ItemWidthDisposable Push(float width)	// Dalamud/Interface/Utility/Raii/Disposables/ItemWidthDisposable.cs
+ItemWidthDisposable.ItemWidthDisposable Push(float width, bool condition)	// Dalamud/Interface/Utility/Raii/Disposables/ItemWidthDisposable.cs
+LineEvaluator.static Vector2 ClosestPointOnLine(Vector2 point, Vector2 lineStart, Vector2 lineEnd)	// Dalamud/Interface/Utility/LineEvaluator.cs
+LineEvaluator.float Evaluate(Vector2 point)	// Dalamud/Interface/Utility/LineEvaluator.cs
+LineEvaluator.readonly struct LineEvaluator(Vector2 lineStart, Vector2 lineEnd)	// Dalamud/Interface/Utility/LineEvaluator.cs
+ListBoxDisposable.static implicit operator bool(ListBoxDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/ListBoxDisposable.cs
+ListBoxDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/ListBoxDisposable.cs
+ListBoxDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/ListBoxDisposable.cs
+ListBoxDisposable.static bool operator false(ListBoxDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/ListBoxDisposable.cs
+ListBoxDisposable.static bool operator true(ListBoxDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/ListBoxDisposable.cs
+MainMenuBarDisposable.static implicit operator bool(MainMenuBarDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/MainMenuBarDisposable.cs
+MainMenuBarDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/MainMenuBarDisposable.cs
+MainMenuBarDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/MainMenuBarDisposable.cs
+MainMenuBarDisposable.static bool operator false(MainMenuBarDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/MainMenuBarDisposable.cs
+MainMenuBarDisposable.static bool operator true(MainMenuBarDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/MainMenuBarDisposable.cs
+MenuBarDisposable.static implicit operator bool(MenuBarDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/MenuBarDisposable.cs
+MenuBarDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/MenuBarDisposable.cs
+MenuBarDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/MenuBarDisposable.cs
+MenuBarDisposable.static bool operator false(MenuBarDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/MenuBarDisposable.cs
+MenuBarDisposable.static bool operator true(MenuBarDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/MenuBarDisposable.cs
+MenuDisposable.static implicit operator bool(MenuDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/MenuDisposable.cs
+MenuDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/MenuDisposable.cs
+MenuDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/MenuDisposable.cs
+MenuDisposable.static bool operator false(MenuDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/MenuDisposable.cs
+MenuDisposable.static bool operator true(MenuDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/MenuDisposable.cs
+NotificationUtilities.static INotificationIcon ToNotificationIcon(this FileInfo fileInfo)	// Dalamud/Interface/ImGuiNotification/NotificationUtilities.cs
+NotificationUtilities.static INotificationIcon ToNotificationIcon(this FontAwesomeIcon iconChar)	// Dalamud/Interface/ImGuiNotification/NotificationUtilities.cs
+NotificationUtilities.static INotificationIcon ToNotificationIcon(this SeIconChar iconChar)	// Dalamud/Interface/ImGuiNotification/NotificationUtilities.cs
+OutCirc.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/OutCirc.cs
+OutCubic.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/OutCubic.cs
+OutElastic.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/OutElastic.cs
+OutQuint.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/OutQuint.cs
+OutSine.override void Update()	// Dalamud/Interface/Animation/EasingFunctions/OutSine.cs
+PlotAlignedDisposable.static implicit operator bool(PlotAlignedDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/PlotAlignedDisposable.cs
+PlotAlignedDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PlotAlignedDisposable.cs
+PlotAlignedDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/PlotAlignedDisposable.cs
+PlotAlignedDisposable.static bool operator false(PlotAlignedDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotAlignedDisposable.cs
+PlotAlignedDisposable.static bool operator true(PlotAlignedDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotAlignedDisposable.cs
+PlotColorDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs
+PlotColorDisposable.static PlotColorDisposable PlotDefaultColors()	// Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs
+PlotColorDisposable.PlotColorDisposable PlotPushDefault(ImPlotCol type)	// Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs
+PlotColorDisposable.PlotColorDisposable Pop(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs
+PlotColorDisposable.static void PopUnsafe(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs
+PlotColorDisposable.PlotColorDisposable Push(ImPlotCol type, Vector4 color, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs
+PlotColorDisposable.PlotColorDisposable Push(ImPlotCol type, Vector4? color, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs
+PlotColorDisposable.PlotColorDisposable Push(ImPlotCol type, uint color, bool condition = true)	// Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs
+PlotDisposable.static implicit operator bool(PlotDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDisposable.cs
+PlotDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PlotDisposable.cs
+PlotDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/PlotDisposable.cs
+PlotDisposable.static bool operator false(PlotDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDisposable.cs
+PlotDisposable.static bool operator true(PlotDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDisposable.cs
+PlotDragDropSourceDisposable.static implicit operator bool(PlotDragDropSourceDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropSourceDisposable.cs
+PlotDragDropSourceDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropSourceDisposable.cs
+PlotDragDropSourceDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropSourceDisposable.cs
+PlotDragDropSourceDisposable.static bool operator false(PlotDragDropSourceDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropSourceDisposable.cs
+PlotDragDropSourceDisposable.static bool operator true(PlotDragDropSourceDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropSourceDisposable.cs
+PlotDragDropTargetDisposable.static implicit operator bool(PlotDragDropTargetDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropTargetDisposable.cs
+PlotDragDropTargetDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropTargetDisposable.cs
+PlotDragDropTargetDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropTargetDisposable.cs
+PlotDragDropTargetDisposable.static bool operator false(PlotDragDropTargetDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropTargetDisposable.cs
+PlotDragDropTargetDisposable.static bool operator true(PlotDragDropTargetDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropTargetDisposable.cs
+PlotLegendDisposable.static implicit operator bool(PlotLegendDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/PlotLegendDisposable.cs
+PlotLegendDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PlotLegendDisposable.cs
+PlotLegendDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/PlotLegendDisposable.cs
+PlotLegendDisposable.static bool operator false(PlotLegendDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotLegendDisposable.cs
+PlotLegendDisposable.static bool operator true(PlotLegendDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotLegendDisposable.cs
+PlotStyleDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.static Vector2 GetStyle(ImPlotStyleVar idx)	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.static PlotStyleDisposable PlotDefaultStyle()	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.PlotStyleDisposable PlotPushDefault(ImPlotStyleVar type)	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.PlotStyleDisposable Pop(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.static void PopUnsafe(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.PlotStyleDisposable Push(ImPlotStyleVar type, Vector2 value)	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.PlotStyleDisposable Push(ImPlotStyleVar type, Vector2 value, bool condition)	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.PlotStyleDisposable Push(ImPlotStyleVar type, float value)	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotStyleDisposable.PlotStyleDisposable Push(ImPlotStyleVar type, float value, bool condition)	// Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs
+PlotSubDisposable.static implicit operator bool(PlotSubDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/PlotSubDisposable.cs
+PlotSubDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PlotSubDisposable.cs
+PlotSubDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/PlotSubDisposable.cs
+PlotSubDisposable.static bool operator false(PlotSubDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotSubDisposable.cs
+PlotSubDisposable.static bool operator true(PlotSubDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PlotSubDisposable.cs
+PopupDisposable.static implicit operator bool(PopupDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/PopupDisposable.cs
+PopupDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/PopupDisposable.cs
+PopupDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/PopupDisposable.cs
+PopupDisposable.static bool operator false(PopupDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PopupDisposable.cs
+PopupDisposable.static bool operator true(PopupDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/PopupDisposable.cs
+RawImageSpecification.static RawImageSpecification A8(int width, int height)	// Dalamud/Interface/Textures/RawImageSpecification.cs
+RawImageSpecification.static RawImageSpecification Bgra32(int width, int height)	// Dalamud/Interface/Textures/RawImageSpecification.cs
+RawImageSpecification.static RawImageSpecification Rgba32(int width, int height)	// Dalamud/Interface/Textures/RawImageSpecification.cs
+RawImageSpecification.override string ToString()	// Dalamud/Interface/Textures/RawImageSpecification.cs
+Rectangle.Rectangle Add(Vector2 point)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.bool Contains(Vector2 point)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.Rectangle Expand(Vector2 amount)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.Rectangle Expand(float amount)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.static Rectangle FromSize(Vector2 minimum, Vector2 size)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.static Rectangle FromSize(Vector2 size)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.static Rectangle FromSize(float sizeX, float sizeY)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.static implicit operator ImRect(Rectangle rect)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.Rectangle Orient()	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.bool Overlaps(in Rectangle rect)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.bool OverlapsLine(Vector2 lineStart, Vector2 lineEnd)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.readonly record struct Rectangle(Vector2 Minimum, Vector2 Maximum)	// Dalamud/Interface/Utility/Rectangle.cs
+Rectangle.static implicit operator Rectangle(ImRect rect)	// Dalamud/Interface/Utility/Rectangle.cs
+SafeFontConfig.unsafe SafeFontConfig()	// Dalamud/Interface/ManagedFontAtlas/SafeFontConfig.cs
+SafeFontConfig.unsafe SafeFontConfig(ImFontConfigPtr config)	// Dalamud/Interface/ManagedFontAtlas/SafeFontConfig.cs
+SafeFontConfig.readonly void ThrowOnInvalidValues()	// Dalamud/Interface/ManagedFontAtlas/SafeFontConfig.cs
+SeStringDrawState.void Dispose()	// Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawState.cs
+SeStringDrawState.readonly void Draw(ImTextureID igTextureId, Vector2 offset, Vector2 size, Vector2 uv0, Vector2 uv1, uint color = uint.MaxValue)	// Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawState.cs
+SeStringDrawState.readonly void Draw(ImTextureID igTextureId, Vector2 offset, Vector2 xy0, Vector2 xy1, Vector2 uv0, Vector2 uv1, uint color = uint.MaxValue, Vector2 dyItalic = default)	// Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawState.cs
+SeStringDrawState.void SetCurrentChannel(SeStringDrawChannel channelIndex)	// Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawState.cs
+SeStringReplacementEntity.static implicit operator bool(in SeStringReplacementEntity e)	// Dalamud/Interface/ImGuiSeStringRenderer/SeStringReplacementEntity.cs
+SideBarItem.bool CheckExistence()	// Dalamud/Interface/ImGuiFileDialog/FileDialog.Structs.cs
+SingleFontChooserDialog.void Cancel()	// Dalamud/Interface/ImGuiFontChooserDialog/SingleFontChooserDialog.cs
+SingleFontChooserDialog.static SingleFontChooserDialog CreateAuto(UiBuilder uiBuilder)	// Dalamud/Interface/ImGuiFontChooserDialog/SingleFontChooserDialog.cs
+SingleFontChooserDialog.void Dispose()	// Dalamud/Interface/ImGuiFontChooserDialog/SingleFontChooserDialog.cs
+SingleFontChooserDialog.void Draw()	// Dalamud/Interface/ImGuiFontChooserDialog/SingleFontChooserDialog.cs
+SingleFontChooserDialog.static Vector2 GetDefaultPopupSizeNonClamped()	// Dalamud/Interface/ImGuiFontChooserDialog/SingleFontChooserDialog.cs
+SingleFontChooserDialog.void SetPopupPositionAndSizeToCurrentWindowCenter()	// Dalamud/Interface/ImGuiFontChooserDialog/SingleFontChooserDialog.cs
+SingleFontChooserDialog.void SetPopupPositionAndSizeToCurrentWindowCenter(Vector2 preferredPopupSize)	// Dalamud/Interface/ImGuiFontChooserDialog/SingleFontChooserDialog.cs
+StyleDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.static Vector2 GetStyle(ImGuiStyleVar idx)	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.StyleDisposable Pop(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.static void PopUnsafe(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.StyleDisposable Push(ImGuiStyleVar type, Vector2 value)	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.StyleDisposable Push(ImGuiStyleVar type, Vector2 value, bool condition)	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.StyleDisposable Push(ImGuiStyleVar type, float value)	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.StyleDisposable Push(ImGuiStyleVar type, float value, bool condition)	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.StyleDisposable PushDefault(ImGuiStyleVar type)	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleDisposable.static StyleDisposable PushDefaultStyle()	// Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs
+StyleModel.abstract void Apply()	// Dalamud/Interface/Style/StyleModel.cs
+StyleModel.static StyleModel? Deserialize(string model)	// Dalamud/Interface/Style/StyleModel.cs
+StyleModel.static StyleModel? GetConfiguredStyle()	// Dalamud/Interface/Style/StyleModel.cs
+StyleModel.static IEnumerable<StyleModel>? GetConfiguredStyles()	// Dalamud/Interface/Style/StyleModel.cs
+StyleModel.static StyleModel GetFromCurrent()	// Dalamud/Interface/Style/StyleModel.cs
+StyleModel.void Pop()	// Dalamud/Interface/Style/StyleModel.cs
+StyleModel.abstract void Push()	// Dalamud/Interface/Style/StyleModel.cs
+StyleModel.string Serialize()	// Dalamud/Interface/Style/StyleModel.cs
+StyleModel.static void TransferOldModels()	// Dalamud/Interface/Style/StyleModel.cs
+StyleModelV1.override void Apply()	// Dalamud/Interface/Style/StyleModelV1.cs
+StyleModelV1.static StyleModelV1 Get()	// Dalamud/Interface/Style/StyleModelV1.cs
+StyleModelV1.override void Push()	// Dalamud/Interface/Style/StyleModelV1.cs
+SystemFontFamilyId.override bool Equals(object? obj)	// Dalamud/Interface/FontIdentifier/SystemFontFamilyId.cs
+SystemFontFamilyId.int FindBestMatch(int weight, int stretch, int style)	// Dalamud/Interface/FontIdentifier/SystemFontFamilyId.cs
+SystemFontFamilyId.override int GetHashCode()	// Dalamud/Interface/FontIdentifier/SystemFontFamilyId.cs
+SystemFontFamilyId.override string ToString()	// Dalamud/Interface/FontIdentifier/SystemFontFamilyId.cs
+SystemFontId.ImFontPtr AddToBuildToolkit(IFontAtlasBuildToolkitPreBuild tk, in SafeFontConfig config)	// Dalamud/Interface/FontIdentifier/SystemFontId.cs
+SystemFontId.override bool Equals(object? obj)	// Dalamud/Interface/FontIdentifier/SystemFontId.cs
+SystemFontId.override int GetHashCode()	// Dalamud/Interface/FontIdentifier/SystemFontId.cs
+SystemFontId.override string ToString()	// Dalamud/Interface/FontIdentifier/SystemFontId.cs
+TabBarDisposable.static implicit operator bool(TabBarDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/TabBarDisposable.cs
+TabBarDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/TabBarDisposable.cs
+TabBarDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/TabBarDisposable.cs
+TabBarDisposable.static bool operator false(TabBarDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/TabBarDisposable.cs
+TabBarDisposable.static bool operator true(TabBarDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/TabBarDisposable.cs
+TabItemDisposable.static implicit operator bool(TabItemDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/TabItemDisposable.cs
+TabItemDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/TabItemDisposable.cs
+TabItemDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/TabItemDisposable.cs
+TabItemDisposable.static bool operator false(TabItemDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/TabItemDisposable.cs
+TabItemDisposable.static bool operator true(TabItemDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/TabItemDisposable.cs
+Table.void Draw(float itemHeight)	// Dalamud/Interface/Utility/Table/Table.cs
+TableDisposable.static implicit operator bool(TableDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/TableDisposable.cs
+TableDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/TableDisposable.cs
+TableDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/TableDisposable.cs
+TableDisposable.static bool operator false(TableDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/TableDisposable.cs
+TableDisposable.static bool operator true(TableDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/TableDisposable.cs
+TextWrapDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/TextWrapDisposable.cs
+TextWrapDisposable.void Pop(int num = 1)	// Dalamud/Interface/Utility/Raii/Disposables/TextWrapDisposable.cs
+TextWrapDisposable.TextWrapDisposable Push(float localX)	// Dalamud/Interface/Utility/Raii/Disposables/TextWrapDisposable.cs
+TextWrapDisposable.TextWrapDisposable Push(float localX, bool condition)	// Dalamud/Interface/Utility/Raii/Disposables/TextWrapDisposable.cs
+TextureModificationArgs.record struct TextureModificationArgs()	// Dalamud/Interface/Textures/TextureModificationArgs.cs
+TextureModificationArgs.override string ToString()	// Dalamud/Interface/Textures/TextureModificationArgs.cs
+TooltipDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/TooltipDisposable.cs
+TooltipDisposable.static void EndUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/TooltipDisposable.cs
+TreeNodeDisposable.static implicit operator bool(TreeNodeDisposable value)	// Dalamud/Interface/Utility/Raii/Disposables/TreeNodeDisposable.cs
+TreeNodeDisposable.void Dispose()	// Dalamud/Interface/Utility/Raii/Disposables/TreeNodeDisposable.cs
+TreeNodeDisposable.static bool operator false(TreeNodeDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/TreeNodeDisposable.cs
+TreeNodeDisposable.static void PopUnsafe()	// Dalamud/Interface/Utility/Raii/Disposables/TreeNodeDisposable.cs
+TreeNodeDisposable.static bool operator true(TreeNodeDisposable i)	// Dalamud/Interface/Utility/Raii/Disposables/TreeNodeDisposable.cs
+UiBuilder.IFontAtlas CreateFontAtlas(FontAtlasAutoRebuildMode autoRebuildMode, bool isGlobalScaled = true, string? debugName = null)	// Dalamud/Interface/UiBuilder.cs
+UiBuilder.UldWrapper LoadUld(string uldPath)	// Dalamud/Interface/UiBuilder.cs
+UiBuilder.Task<T> RunWhenUiPrepared<T>(Func<T> func, bool runInFrameworkThread = false)	// Dalamud/Interface/UiBuilder.cs
+UiBuilder.Task<T> RunWhenUiPrepared<T>(Func<Task<T>> func, bool runInFrameworkThread = false)	// Dalamud/Interface/UiBuilder.cs
+UiBuilder.Task WaitForUi()	// Dalamud/Interface/UiBuilder.cs
+UldWrapper.void Dispose()	// Dalamud/Interface/UldWrapper.cs
+UldWrapper.IDalamudTextureWrap? LoadTexturePart(string texturePath, int part)	// Dalamud/Interface/UldWrapper.cs
+Window.void BringToFront()	// Dalamud/Interface/Windowing/Window.cs
+Window.abstract void Draw()	// Dalamud/Interface/Windowing/Window.cs
+Window.virtual bool DrawConditions()	// Dalamud/Interface/Windowing/Window.cs
+Window.virtual void OnClose()	// Dalamud/Interface/Windowing/Window.cs
+Window.virtual void OnOpen()	// Dalamud/Interface/Windowing/Window.cs
+Window.virtual void OnSafeToRemove()	// Dalamud/Interface/Windowing/Window.cs
+Window.virtual void PostDraw()	// Dalamud/Interface/Windowing/Window.cs
+Window.virtual void PreDraw()	// Dalamud/Interface/Windowing/Window.cs
+Window.virtual void PreOpenCheck()	// Dalamud/Interface/Windowing/Window.cs
+Window.void Toggle()	// Dalamud/Interface/Windowing/Window.cs
+Window.virtual void Update()	// Dalamud/Interface/Windowing/Window.cs
+WindowSystem.void AddWindow(IWindow window)	// Dalamud/Interface/Windowing/WindowSystem.cs
+WindowSystem.void Draw()	// Dalamud/Interface/Windowing/WindowSystem.cs
+WindowSystem.void RemoveAllWindows()	// Dalamud/Interface/Windowing/WindowSystem.cs
+WindowSystem.void RemoveWindow(IWindow window)	// Dalamud/Interface/Windowing/WindowSystem.cs
+WindowSystemPersistence.PresetModel.PresetWindow? GetWindow(uint id)	// Dalamud/Interface/Windowing/Persistence/WindowSystemPersistence.cs
+WindowSystemPersistence.void SaveWindow(uint id, PresetModel.PresetWindow window)	// Dalamud/Interface/Windowing/Persistence/WindowSystemPersistence.cs

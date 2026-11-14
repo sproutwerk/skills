@@ -1,0 +1,87 @@
+PunishLib/AboutPlugin.cs:13: public class AboutPlugin
+PunishLib/AboutPlugin.cs:15: public string Sponsor { get; set; }
+PunishLib/AboutPlugin.cs:16: public string Developer { get; set; }
+PunishLib/API/API.cs:16: public async static Task<bool> ValidateKey()
+PunishLib/Configuration/EzConfig.cs:12: public static class EzConfig
+PunishLib/Configuration/EzConfig.cs:15: public static string DefaultConfigurationFileName => Path.Combine(Svc.PluginInterface.GetPluginConfigDirectory(), DefaultConfigurationName);
+PunishLib/Configuration/EzConfig.cs:16: public static IEzConfig Config { get; private set; }
+PunishLib/Configuration/EzConfig.cs:18: public static T Init<T>() where T : IEzConfig, new()
+PunishLib/Configuration/EzConfig.cs:24: public static void Migrate<T>() where T : IEzConfig, new()
+PunishLib/Configuration/EzConfig.cs:45: public static void Save()
+PunishLib/Configuration/EzConfig.cs:53: public static void SaveConfiguration(this IEzConfig Configuration, string path, bool indented = false, bool appendConfigDirectory = true)
+PunishLib/Configuration/EzConfig.cs:74: public static T LoadConfiguration<T>(string path, bool appendConfigDirectory = true) where T : IEzConfig, new()
+PunishLib/Configuration/IEzConfig.cs:3: public interface IEzConfig
+PunishLib/Configuration/IgnoreDefaultValueAttribute.cs:11: public class IgnoreDefaultValueAttribute : Attribute
+PunishLib/Configuration/SharedConfigKey.cs:9: public enum SharedConfigKey
+PunishLib/Configuration/SharedConfigStorage.cs:9: public class SharedConfigStorage : IEzConfig
+PunishLib/Configuration/SharedConfigStorage.cs:11: public Dictionary<int, string> Strings = new();
+PunishLib/Configuration/SharedConfigStorage.cs:12: public Dictionary<int, bool> Bools = new();
+PunishLib/GenericHelpers.cs:13: public static class GenericHelpers
+PunishLib/GenericHelpers.cs:15: public static uint ToUint(this Vector4 color)
+PunishLib/GenericHelpers.cs:20: public static void Safe(System.Action a, bool suppressErrors = false)
+PunishLib/GenericHelpers.cs:31: public static bool TryGetFirst<K, V>(this IDictionary<K, V> dictionary, Func<KeyValuePair<K, V>, bool> predicate, out KeyValuePair<K, V> keyValuePair)
+PunishLib/ImGuiMethods/AboutTab.cs:27: public static class AboutTab
+PunishLib/ImGuiMethods/AboutTab.cs:45: public static void Draw(string pluginName)
+PunishLib/ImGuiMethods/AboutTab.cs:245: public string Name { get; set; } 
+PunishLib/ImGuiMethods/AboutTab.cs:247: public string Version { get; set; }
+PunishLib/ImGuiMethods/IconButtons.cs:7: public static class IconButtons
+PunishLib/ImGuiMethods/IconButtons.cs:17: public static bool IconTextButton(FontAwesomeIcon icon, string text, Vector2 size = new(), bool iconOnRight = false)
+PunishLib/ImGuiMethods/ImGuiEx.cs:14: public static void ImGuiLineCentered(string id, Action func)
+PunishLib/ImGuiMethods/ImGuiEx.cs:27: public static void Text(string s)
+PunishLib/ImGuiMethods/ImGuiEx.cs:32: public static void Text(Vector4 col, string s)
+PunishLib/ImGuiMethods/ImGuiGroup.cs:12: public static partial class ImGuiGroup
+PunishLib/ImGuiMethods/ImGuiGroup.cs:14: public record GroupBoxOptions
+PunishLib/ImGuiMethods/ImGuiGroup.cs:16: public bool Collapsible { get; init; } = false;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:17: public uint HeaderTextColor { get; init; } = ImGui.GetColorU32(ImGuiCol.Text);
+PunishLib/ImGuiMethods/ImGuiGroup.cs:18: public Action HeaderTextAction { get; init; } = null;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:19: public uint BorderColor { get; init; } = ImGui.GetColorU32(ImGuiCol.Border);
+PunishLib/ImGuiMethods/ImGuiGroup.cs:20: public Vector2 BorderPadding { get; init; } = ImGui.GetStyle().WindowPadding;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:21: public float BorderRounding { get; init; } = ImGui.GetStyle().FrameRounding;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:22: public ImDrawFlags DrawFlags { get; init; } = ImDrawFlags.None;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:23: public float BorderThickness { get; init; } = 2f;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:24: public float Width { get; set; }
+PunishLib/ImGuiMethods/ImGuiGroup.cs:25: public float MaxX { get; set; }
+PunishLib/ImGuiMethods/ImGuiGroup.cs:29: public static bool BeginGroupBox(string id = null, float minimumWindowPercent = 1.0f, GroupBoxOptions options = null)
+PunishLib/ImGuiMethods/ImGuiGroup.cs:83: public static bool BeginGroupBox(string text, GroupBoxOptions options) => BeginGroupBox(text, 1.0f, options);
+PunishLib/ImGuiMethods/ImGuiGroup.cs:85: public static bool BeginGroupBox(uint borderColor, float minimumWindowPercent = 1.0f) => BeginGroupBox(null, minimumWindowPercent, new GroupBoxOptions { BorderColor = borderColor });
+PunishLib/ImGuiMethods/ImGuiGroup.cs:87: public static unsafe void EndGroupBox()
+PunishLib/ImGuiMethods/ImGuiGroup.cs:143: public static unsafe ImGuiWindow* GetCurrentWindow() => (ImGuiWindow*)igGetCurrentWindow();
+PunishLib/ImGuiMethods/ImGuiGroup.cs:144: public static unsafe ImGuiWindowFlags GetCurrentWindowFlags() => GetCurrentWindow()->Flags;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:145: public static unsafe bool CurrentWindowHasCloseButton() => GetCurrentWindow()->HasCloseButton != 0;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:149: public struct ImGuiWindow
+PunishLib/ImGuiMethods/ImGuiGroup.cs:151: [FieldOffset(0xC)] public ImGuiWindowFlags Flags;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:153: [FieldOffset(0xD5)] public byte HasCloseButton;
+PunishLib/ImGuiMethods/ImGuiGroup.cs:156: [FieldOffset(0x130)] public Vector2 CursorMaxPos;
+PunishLib/ImGuiMethods/InfoBox.cs:16: public class InfoBox
+PunishLib/ImGuiMethods/InfoBox.cs:18: public Vector4 BorderColor { get; set; } = ImGuiColors.DalamudGrey3;
+PunishLib/ImGuiMethods/InfoBox.cs:19: public Vector4 LabelColor { get; set; } = ImGuiColors.DalamudWhite;
+PunishLib/ImGuiMethods/InfoBox.cs:20: public Action ContentsAction { get; set; } = () => { ImGui.Text("Action Not Set"); };
+PunishLib/ImGuiMethods/InfoBox.cs:21: public float CurveRadius { get; set; } = 15.0f;
+PunishLib/ImGuiMethods/InfoBox.cs:22: public Vector2 Size { get; set; } = Vector2.Zero;
+PunishLib/ImGuiMethods/InfoBox.cs:23: public float BorderThickness { get; set; } = 2.0f;
+PunishLib/ImGuiMethods/InfoBox.cs:24: public int SegmentResolution { get; set; } = 10;
+PunishLib/ImGuiMethods/InfoBox.cs:25: public Vector2 Offset { get; set; } = Vector2.Zero;
+PunishLib/ImGuiMethods/InfoBox.cs:26: public string Label { get; set; } = "Label Not Set";
+PunishLib/ImGuiMethods/InfoBox.cs:27: public bool AutoResize { get; set; } = true;
+PunishLib/ImGuiMethods/InfoBox.cs:31: public bool Debug { get; set; } = false;
+PunishLib/ImGuiMethods/InfoBox.cs:33: public void Draw()
+PunishLib/ImGuiMethods/InfoBox.cs:60: public void DrawCentered(float percentSize = 0.80f)
+PunishLib/ImGuiMethods/InfoBox.cs:134: public void DrawStretched()
+PunishLib/ImGuiMethods/InfoBox.cs:142: public static ReadOnlyDictionary<string, InfoBox> InfoBoxCacheRO => new(InfoBoxCache);
+PunishLib/ImGuiMethods/InfoBox.cs:143: public static void DrawBox(string label, Action action)
+PunishLib/Motd.cs:12: public static class Motd
+PunishLib/Motd.cs:15: public static void PrintOnce()
+PunishLib/PunishConfig.cs:11: public class PunishConfig
+PunishLib/PunishConfig.cs:13: public string APIKey { get; set; }
+PunishLib/PunishConfig.cs:15: public string FFXIVGameVersion { get; set; }
+PunishLib/PunishConfig.cs:17: public bool UnsupportedConfiguration { get;set; }
+PunishLib/PunishConfig.cs:20: public static class PunishConfigMethods
+PunishLib/PunishConfig.cs:22: public static string SavedPath { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PunishConfig", "PunishConfig.json"); } }
+PunishLib/PunishConfig.cs:23: public static void Save(this PunishConfig config)
+PunishLib/PunishConfig.cs:32: public static PunishConfig Load()
+PunishLib/PunishLibMain.cs:18: public class PunishLibMain
+PunishLib/PunishLibMain.cs:24: public static PunishConfig PunishConfig;
+PunishLib/PunishLibMain.cs:26: public static void Init(IDalamudPluginInterface pluginInterface, string pluginName, AboutPlugin about = null, params PunishOption[] opts)
+PunishLib/PunishLibMain.cs:39: public static void Init(IDalamudPluginInterface pluginInterface, string pluginName, params PunishOption[] opts) => Init(pluginInterface, pluginName, null, opts);
+PunishLib/PunishLibMain.cs:41: public static void Dispose() { }
+PunishLib/PunishOption.cs:9: public enum PunishOption

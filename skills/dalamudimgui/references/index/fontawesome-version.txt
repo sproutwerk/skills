@@ -1,0 +1,1 @@
+Font-Awesome Version: 7.1.0

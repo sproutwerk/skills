@@ -1,0 +1,52 @@
+{
+  "Name": "M4S - Tethered add donut [EXAMPLE/UNTESTED]",
+  "Description": "EXAMPLE/UNTESTED - format demo. Zone 1232 and NameId 13057 are real; refActorTetherParam2 84 is a PLACEHOLDER. Read the real tether param from the Splatoon log (Tether create: ... TetherParam:(p1, p2, p3)) and use p2. Not verified in combat.",
+  "Group": "M4S - Wicked Thunder",
+  "ZoneLockH": [1232],
+  "DCond": 1,
+  "ConditionalAnd": false,
+  "ElementsL": [
+    {
+      "Name": "Donut around add tethered to me",
+      "type": 1,
+      "radius": 5.0,
+      "Donut": 10.0,
+      "color": 3355508480,
+      "fillIntensity": 0.35,
+      "thicc": 3.0,
+      "refActorNPCNameID": 13057,
+      "refActorComparisonType": 6,
+      "onlyTargetable": true,
+      "onlyVisible": true,
+      "refActorTether": true,
+      "refActorIsTetherSource": true,
+      "refActorTetherTimeMin": 0.0,
+      "refActorTetherTimeMax": 30.0,
+      "refActorTetherParam2": 84,
+      "refActorTetherConnectedWithPlayer": ["<me>"],
+      "tether": true,
+      "ExtraTetherLength": 0.0,
+      "mechanicType": 1
+    },
+    {
+      "Name": "Hint on self",
+      "type": 1,
+      "radius": 0.0,
+      "thicc": 0.0,
+      "overlayText": "TETHERED - keep distance",
+      "overlayVOffset": 1.5,
+      "overlayFScale": 1.5,
+      "overlayBGColor": 4278190080,
+      "overlayTextColor": 4278255360,
+      "refActorType": 0,
+      "refActorComparisonType": 5,
+      "refActorPlaceholder": ["<me>"],
+      "refActorTether": true,
+      "refActorIsTetherSource": false,
+      "refActorTetherTimeMin": 0.0,
+      "refActorTetherTimeMax": 30.0,
+      "refActorTetherParam2": 84,
+      "mechanicType": 6
+    }
+  ]
+}

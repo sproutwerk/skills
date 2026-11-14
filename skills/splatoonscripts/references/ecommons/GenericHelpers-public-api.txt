@@ -1,0 +1,61 @@
+public static unsafe partial class GenericHelpers
+    public static string GetTemporaryId() => $"{UidPrefix}{UidCnt++:X}";
+    public static T Run<T>(Func<T> func)
+    public static void Run(System.Action action)
+    public static bool NextBool(this Random random)
+    public static string[] Split(this string s, IEnumerable<string> separators, StringSplitOptions options = StringSplitOptions.None)
+    public static bool ApproximatelyEquals(this Vector3 one, Vector3 two, float diff = 0.01f)
+    public static bool ApproximatelyEquals(this float one, float two, float diff = 0.01f)
+    public static uint Sum(this IEnumerable<uint> sequence)
+    public static void RemoveAll<K, V>(this IDictionary<K, V> dictionary, Predicate<KeyValuePair<K, V>> predicate)
+    public static T MaxSafe<T>(this IEnumerable<T> collection) where T : IComparable<T>
+    public static T MinSafe<T>(this IEnumerable<T> collection) where T : IComparable<T>
+    public static K MaxSafe<T, K>(this IEnumerable<T> collection, Func<T, K> selector) where K : IComparable<K>
+    public static K MinSafe<T, K>(this IEnumerable<T> collection, Func<T, K> selector) where K : IComparable<K>
+    public static string GetDisplayTag(this Guid guid)
+    public static void Regenerate(this ref Guid guid)
+    public static string RemoveWhitespaces(this string s)
+    public static bool TryGetValue<T>(this T? nullable, out T value) where T : struct
+    public static uint[] Range(uint inclusiveStart, uint inclusiveEnd)
+    public static int[] Range(int inclusiveStart, int inclusiveEnd)
+    public static bool AddressEquals(this IGameObject obj, IGameObject other)
+    public static string GetCallStackID(int maxFrames = 3)
+    public static bool UseAsyncKeyCheck = false;
+    public static bool IsKeyPressed(int key)
+    public static bool IsKeyPressed(LimitedKeys key) => IsKeyPressed((int)key);
+    public static bool IsAnyKeyPressed(IEnumerable<LimitedKeys> keys) => keys.Any(IsKeyPressed);
+    public static bool IsKeyPressed(IEnumerable<LimitedKeys> keys)
+    public static bool IsKeyPressed(IEnumerable<int> keys)
+    public static bool IsTarget(this IGameObject obj)
+    public static bool IsNullOr<T>(this T source, Predicate<T> testFunction)
+    public static T[] CreateArray<T>(this T element, uint num)
+    public static T JSONClone<T>(this T obj, JsonSerializerSettings jsonSettings = null)
+    public static T DSFClone<T>(this T obj)
+    public static void DeleteFileToRecycleBin(string path)
+    public static bool If<T>(this T obj, Func<T, bool> func)
+    public static bool NotNull<T>(this T obj, [NotNullWhen(true)] out T outobj)
+    public static bool IsOccupied()
+    public static bool TryDecodeSender(SeString sender, out Sender senderStruct)
+    public static SeStringBuilder Add(this SeStringBuilder seStringBuilder, IEnumerable<Payload> payloads)
+    public static string GetTerritoryName(this Number terr)
+    public static bool TryGetWorldByName(string world, out Lumina.Excel.Sheets.World worldId) => ExcelWorldHelper.TryGetWorldByName(world, out worldId);
+    public static Vector4 Invert(this Vector4 v)
+    public static ref int ValidateRange(this ref int i, int min, int max)
+    public static ref float ValidateRange(this ref float i, float min, float max)
+    public static bool IsNoConditions()
+    public static bool Invert(this bool b, bool invert)
+    public static void ShellStart(string s)
+    public static ushort GetParsedSeSetingColor(int percent)
+    public static void Safe(System.Action action, bool suppressErrors = false)
+    public static void Safe(System.Action a, Action<string, object[]> logAction)
+    public static void Safe(System.Action a, Action<string> fail, bool suppressErrors = false)
+    public static bool TryExecute(System.Action action)
+    public static bool TryExecute<T>(Func<T> function, out T result)
+    public static bool EqualsAny<T>(this T obj, params T[] values)
+    public static bool EqualsAny<T>(this T obj, IEnumerable<T> values)
+    public static void SetMinSize(this Window window, float width = 100, float height = 100) => SetMinSize(window, new Vector2(width, height));
+    public static void SetMinSize(this Window window, Vector2 minSize)
+    public static void SetSizeConstraints(this Window window, Vector2 minSize, Vector2 maxSize)
+    public static SeString ReadSeString(IntPtr memoryAddress, int maxLength) => GenericHelpers.ReadSeString(memoryAddress, maxLength);
+    public static void ReadRaw(IntPtr memoryAddress, int length, out byte[] value) => value = MemoryHelper.ReadRaw(memoryAddress, length);
+    public static byte[] ReadRaw(IntPtr memoryAddress, int length) => MemoryHelper.ReadRaw(memoryAddress, length);

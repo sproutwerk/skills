@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": ".gitmodules",
+      "path": "references/source/InventoryTools/.gitmodules",
+      "sha256": "029dfe5f3ab716aae72a163a611deab989f45d5004960b852a2f5d39e1cb3ec3"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "README.md",
+      "path": "references/source/InventoryTools/README.md",
+      "sha256": "a91e4ca8518ca400e478bceeca333bc60399a6cea96c27c0f681308e3cd8a2e6"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "LICENSE",
+      "path": "references/source/InventoryTools/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "global.json",
+      "path": "references/source/InventoryTools/global.json",
+      "sha256": "5cfbeee59eff3f78754a206b308258864c521746bb41b2945b99245d97d27314"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/InventoryTools.json",
+      "path": "references/source/InventoryTools/InventoryTools/InventoryTools.json",
+      "sha256": "71314faf3c78c51b54914d8ab4edb206af48755e0309b49b43fd43d7b5c4c7c5"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/InventoryTools.csproj",
+      "path": "references/source/InventoryTools/InventoryTools/InventoryTools.csproj",
+      "sha256": "59fccc461d3dde307d41202370fb00dc4adcae7279038805f394b40a1da835b9"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/packages.lock.json",
+      "path": "references/source/InventoryTools/InventoryTools/packages.lock.json",
+      "sha256": "07bd49d41e0b44c55314505d0d6fdc8301587cb6e15ba0dfbd5cbd8443822a29"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/CHANGELOG.md",
+      "path": "references/source/InventoryTools/InventoryTools/CHANGELOG.md",
+      "sha256": "9589f30a7dfde6487189eac7fe6dbe66b3b360084f087a291d8e0dd96e19ab59"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/IPC/IPCService.cs",
+      "path": "references/source/InventoryTools/InventoryTools/IPC/IPCService.cs",
+      "sha256": "9dff1eda9c57829617e055948add42d62f58ab8c82e89c421b363bf9308e753f"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/InventoryToolsPlugin.cs",
+      "path": "references/source/InventoryTools/InventoryTools/InventoryToolsPlugin.cs",
+      "sha256": "ca06e95e37315fe0385b6480d77490256195560ce917ac0d6c027b0aa575f15e"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/Host/ServiceConfigurator.cs",
+      "path": "references/source/InventoryTools/InventoryTools/Host/ServiceConfigurator.cs",
+      "sha256": "7b80dddd864d07b1fdaf66df3ea9d7df20dcf198db1f5f220d22ccd9ea7581d5"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/Logic/Editors/InventoryScopeCalculator.cs",
+      "path": "references/source/InventoryTools/InventoryTools/Logic/Editors/InventoryScopeCalculator.cs",
+      "sha256": "7591cd2d603ec93c531dd70ec35256a2dd1277834ccf67d2ac3dab0b657a6a90"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/Logic/Editors/InventorySearchScope.cs",
+      "path": "references/source/InventoryTools/InventoryTools/Logic/Editors/InventorySearchScope.cs",
+      "sha256": "80529b6c64fa3c43f2f03d748584a1da81d9ee68a253c2d20fb246b1d5f2e739"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/Logic/FilterType.cs",
+      "path": "references/source/InventoryTools/InventoryTools/Logic/FilterType.cs",
+      "sha256": "669b195e00b5f0e7bf948cd05432a476bd227e7764646c5bcfb6dccec470c3ad"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryTools/Lists/ListService.cs",
+      "path": "references/source/InventoryTools/InventoryTools/Lists/ListService.cs",
+      "sha256": "54dc28dcb1dc1036e97e6d438eabec317b9d6359faca1e083e29a333d5757d62"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "InventoryToolsTesting/Tests/IpcItemCountTests.cs",
+      "path": "references/source/InventoryTools/InventoryToolsTesting/Tests/IpcItemCountTests.cs",
+      "sha256": "91f9a4f94602ed4d9b319362fe32e12c71277646129df75bcc17b9c945143cf3"
+    },
+    {
+      "repository": "InventoryTools",
+      "revision": "ad1ff01fede1848dfcd05b76a9ae13b0760d1222",
+      "upstreamPath": "LICENSE",
+      "path": "LICENSES/InventoryTools-GPL-3.0.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "LICENSE",
+      "path": "references/source/CriticalCommonLib/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "readme.md",
+      "path": "references/source/CriticalCommonLib/readme.md",
+      "sha256": "cfa09dfbbf7bbef3573300864c0c7e62d620d4ca071a3ac8ec335332b69a6ef0"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "CriticalCommonLib.csproj",
+      "path": "references/source/CriticalCommonLib/CriticalCommonLib.csproj",
+      "sha256": "943dadcc174170da92ce8ea077229ad3f24b0778f6f8d55cd2a2bfae1ba0df46"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "packages.lock.json",
+      "path": "references/source/CriticalCommonLib/packages.lock.json",
+      "sha256": "98e1221249df4c0edb759068aaa6804910773f4adef2012e236945d1ba7e95c3"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "Models/InventoryItem.cs",
+      "path": "references/source/CriticalCommonLib/Models/InventoryItem.cs",
+      "sha256": "79a502adaccc2329f8563cd4cda7070fde0a916f1d00c0dbe5535e679afce9a5"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "Models/InventoryCategory.cs",
+      "path": "references/source/CriticalCommonLib/Models/InventoryCategory.cs",
+      "sha256": "715408284ec563d90c41d17e5cf81899a9a6e5fd453ac033e767d81496d15842"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "Models/Character.cs",
+      "path": "references/source/CriticalCommonLib/Models/Character.cs",
+      "sha256": "df1c9a30c65d83de1a611585a0cc9207d31c655d8a5ad193d6b16e4448ffef1b"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "Models/Inventory.cs",
+      "path": "references/source/CriticalCommonLib/Models/Inventory.cs",
+      "sha256": "91a0ae7fae8f576cf5f90bd098030cb7d523e152edebc5d84ca55df0f434f64c"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "Services/CharacterMonitor.cs",
+      "path": "references/source/CriticalCommonLib/Services/CharacterMonitor.cs",
+      "sha256": "87508da14bcad3a3b682bb194002a256cb4e5cab26f97287c09192d3a60caaa2"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "Services/InventoryMonitor.cs",
+      "path": "references/source/CriticalCommonLib/Services/InventoryMonitor.cs",
+      "sha256": "fca8cdc4e22fc1645792195220d34602022dcf9bda05f5027f62dc0c0f4af4c7"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "Services/ICharacterMonitor.cs",
+      "path": "references/source/CriticalCommonLib/Services/ICharacterMonitor.cs",
+      "sha256": "91fafd8b07dd402fdfd0302c27f5b1a86c5faba158f660dc3386de1004b408cc"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "Services/IInventoryMonitor.cs",
+      "path": "references/source/CriticalCommonLib/Services/IInventoryMonitor.cs",
+      "sha256": "25d83118c1ce5517404ce61f240fe9f3755b585332b3376b84b545365f4515c1"
+    },
+    {
+      "repository": "CriticalCommonLib",
+      "revision": "420f6880b16497a6d6356f6dbeda963364e4d5ef",
+      "upstreamPath": "LICENSE",
+      "path": "LICENSES/CriticalCommonLib-GPL-3.0.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    }
+  ]
+}

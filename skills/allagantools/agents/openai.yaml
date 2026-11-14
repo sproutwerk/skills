@@ -1,0 +1,3 @@
+interface:
+  display_name: "Allagan Tools"
+  short_description: "FFXIV Allagan Tools inventory queries, filters, and IPC"

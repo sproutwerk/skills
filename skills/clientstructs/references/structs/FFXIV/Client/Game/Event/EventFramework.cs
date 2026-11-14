@@ -1,0 +1,204 @@
+using FFXIVClientStructs.FFXIV.Client.Game.InstanceContent;
+using FFXIVClientStructs.FFXIV.Client.Game.MassivePcContent;
+using FFXIVClientStructs.FFXIV.Client.Game.Object;
+using FFXIVClientStructs.FFXIV.Client.Game.UI;
+using FFXIVClientStructs.FFXIV.Common.Lua;
+using FFXIVClientStructs.FFXIV.Component.Text;
+using static FFXIVClientStructs.FFXIV.Client.Game.GameMain;
+
+namespace FFXIVClientStructs.FFXIV.Client.Game.Event;
+
+// Client::Game::Event::EventFramework
+// ctor "E8 ?? ?? ?? ?? 48 89 05 ?? ?? ?? ?? 48 83 C4 28 E9"
+[GenerateInterop]
+[StructLayout(LayoutKind.Explicit, Size = 0x4800)]
+public unsafe partial struct EventFramework {
+    [StaticAddress("48 8B 05 ?? ?? ?? ?? 48 85 C0 74 ?? 83 B8 ?? ?? ?? ?? ?? 7C", 3, isPointer: true)]
+    public static partial EventFramework* Instance();
+
+    /// <summary>
+    /// Global copy of the SceneData passed to <see cref="ProcessInitializeScene"/>.
+    /// </summary>
+    [StaticAddress("48 8D 0D ?? ?? ?? ?? 80 A3", 3)]
+    public static partial SceneData* GetInitializingSceneData();
+
+    [FieldOffset(0x00)] public EventHandlerModule EventHandlerModule;
+    [FieldOffset(0xC0)] public DirectorModule DirectorModule;
+    [FieldOffset(0x160)] public LuaActorModule LuaActorModule;
+    [FieldOffset(0x1B0)] public EventSceneModule EventSceneModule;
+
+    [FieldOffset(0x3F18)] public int LoadState; //0=Exd, 1=EventHandler, 2=Director, 3=LuaActor, 4=EventScene, 5=Idle?, 6=Ready?
+    [FieldOffset(0x3F20)] public LuaState* LuaState;
+    [FieldOffset(0x3F28)] public LuaThread LuaThread;
+
+    [FieldOffset(0x3F80)] public EventState EventState1;
+    [FieldOffset(0x3FE0)] public EventState EventState2;
+    // Written by ProcessEventPlay
+    [FieldOffset(0x4010)] public GameObjectId SceneGameObjectId;
+    [FieldOffset(0x4018)] public short Scene;
+    [FieldOffset(0x4020)] public ushort SceneFlags;
+    [FieldOffset(0x4028)] public SceneData SceneData;
+
+    [FieldOffset(0x4468)] public StdList<QueuedFormatStringCallback> QueuedFormatStringCallbacks;
+    [FieldOffset(0x4478)] public StdList<QueuedActionTimelineCallback> QueuedActionTimelineCallbacks;
+
+    [FieldOffset(0x45D8)] public DailyQuestMap DailyQuests;
+    [FieldOffset(0x45E8)] public Utf8String DailySelectTitle; // Addon#102442 for SelectIconString
+    [FieldOffset(0x4650)] public Utf8String DailySelectSubTitle; // Addon#102443 for SelectIconString
+    [FieldOffset(0x46B8)] public Utf8String DailySelectAllowance; // formatted Addon#102444 for SelectIconString
+
+    [FieldOffset(0x476A), FixedSizeArray] internal FixedSizeArray8<Festival> _festivals; // copied from PlayerState, used by GPose (maybe more) to check if Fan Festival frames/stamps should be displayed
+
+    [MemberFunction("E8 ?? ?? ?? ?? 33 D2 48 8B D8 48 85 C0 0F 84")]
+    public partial ContentDirector* GetContentDirector();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 41 8B 5E 18 48 8B F8")]
+    public partial InstanceContentDirector* GetInstanceContentDirector();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 48 8B D0 48 85 C0 74 ?? 80 B8")]
+    public partial PublicContentDirector* GetPublicContentDirector();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 48 85 DB 74 ?? 48 8D 83")]
+    public partial MassivePcContentDirector* GetMassivePcContentDirector();
+
+    [MemberFunction("40 53 48 83 EC 20 48 83 3D ?? ?? ?? ?? ?? 8B D9 74 1D")]
+    public static partial PublicContentDirector* GetPublicContentDirectorByType(PublicContentDirectorType publicContentDirectorType);
+
+    /// <summary>
+    /// When EventHandlerSelector is active, this function is used to select specific event handler to interact with.
+    /// </summary>
+    /// <param name="index">Index of the option in EventHandlerSelector singleton.</param>
+    [MemberFunction("E8 ?? ?? ?? ?? 89 AE ?? ?? ?? ?? 80 BE")]
+    public partial void InteractWithHandlerFromSelector(int index);
+
+    [MemberFunction("E8 ?? ?? ?? ?? 44 0F B6 65 ?? 4C 8B F8")]
+    public partial EventHandler* GetEventHandlerById(uint id);
+    public EventHandler* GetEventHandlerById(ushort id) => GetEventHandlerById((uint)(id | 0x10000));
+
+    [MemberFunction("E8 ?? ?? ?? ?? 84 C0 75 ?? 80 4B ?? ?? 48 8B CB")]
+    public partial bool CheckInteractRange(GameObject* source, GameObject* target, byte interactionType, bool logErrorsToUser);
+
+    [MemberFunction("48 89 5C 24 ?? 48 89 7C 24 ?? 41 56 48 83 EC ?? 48 8B D9 48 89 6C 24")]
+    public partial void SetTerritoryTypeId(ushort territoryType);
+
+    [MemberFunction("E8 ?? ?? ?? ?? 83 7E 20 00 48 8B 7C 24")]
+    public partial void MaterializeItem(EventId eventID, InventoryType inventoryType, short inventorySlot, int extraParam = 0);
+
+    public void MaterializeItem(InventoryItem* itemSlot, MaterializeEntryId entryId)
+        => MaterializeItem(new EventId { ContentId = EventHandlerContent.Materialize, EntryId = (ushort)entryId }, itemSlot->Container, itemSlot->Slot, 0);
+
+    [MemberFunction("E8 ?? ?? ?? ?? 4C 8B 46 ?? 49 BF")]
+    public partial void GetEventMapMarkers(ushort territoryId, StdVector<MapMarkerData>* markerVector);
+
+    [MemberFunction("E8 ?? ?? ?? ?? 8B D8 3B 85")]
+    public static partial uint GetCurrentContentId();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 38 46 ?? 75")]
+    public static partial ContentType GetCurrentContentType();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 8B D8 EB ?? 0F B7 DF")]
+    public static partial ushort GetContentFinderCondition(ContentType contentType, uint contentId);
+
+    [MemberFunction("48 83 EC 28 48 8B 05 ?? ?? ?? ?? 48 85 C0 74 2C")]
+    public static partial bool CanLeaveCurrentContent();
+
+    [MemberFunction("E8 ?? ?? ?? ?? 48 8B 43 ?? 41 B2")]
+    public static partial void LeaveCurrentContent(bool forced = false);
+
+    // For ObjectKind.ReactionEventObject (12)
+    [MemberFunction("48 89 5C 24 ?? 57 48 83 EC ?? 48 8B FA 48 8B D9 E8 ?? ?? ?? ?? 4C 8D 83")]
+    public partial void InteractWithReactionEventObject(GameObject* obj);
+
+    [MemberFunction("48 89 5C 24 ?? 48 89 74 24 ?? 57 48 83 EC ?? 8B 81 ?? ?? ?? ?? 41 0F B7 F1")]
+    public partial void ProcessEventPlay(GameObject* gameObject, EventId eventId, short scene, ulong sceneFlags, uint* sceneData, byte sceneDataCount);
+
+    [MemberFunction("48 89 5C 24 ?? 57 48 83 EC ?? 41 0F B6 F9 41 0F B7 D8 E8 ?? ?? ?? ?? 48 8B C8 48 85 C0 74 ?? 66 39 58 ?? 75 ?? 0F B6 80 ?? ?? ?? ?? A8 ?? 74 ?? ?? ?? ?? 24 ?? 4C 8B 4C 24 ?? 44 0F B6 C7 88 81 ?? ?? ?? ?? 0F B7 D3 0F B6 44 24 ?? 88 44 24 ?? 41 FF 92")]
+    public partial void ProcessEventYield(EventId eventId, short scene, byte yieldId, int* intParams, byte intParamCount);
+
+    [MemberFunction("E8 ?? ?? ?? ?? EB ?? 48 8D B7 ?? ?? ?? ?? 80 A7")]
+    public partial void ProcessInitializeScene(GameObject* gameObject, EventId eventId, short scene, ulong sceneFlags, uint* sceneData, byte sceneDataCount);
+
+    [MemberFunction("40 53 57 48 83 EC ?? 48 8B 05 ?? ?? ?? ?? 48 33 C4 48 89 44 24 ?? 41 8B F9")]
+    public partial void ProcessDirectorUpdate(EventId eventId, uint category, uint arg1, uint arg2, uint arg3, uint arg4, uint arg5, uint arg6);
+
+    /// <summary>
+    /// Finds one or more <see cref="Director"/>(s) in <see cref="DirectorModule.DirectorList"/>
+    /// with a matching <paramref name="eventId"/>, and sets the data to the values provided
+    /// before calling <see cref="Director"/>.SetSequence and <see cref="Director"/>.Synchronize.
+    /// </summary>
+    /// <param name="eventId"><see cref="EventId"/> to look for in <see cref="DirectorModule.DirectorList"/>.</param>
+    /// <param name="sequence">Value to set in <see cref="Director.Sequence"/>.</param>
+    /// <param name="unknown">Value to set in <see cref="Director.Unk2E9"/></param>
+    /// <param name="unionDataBuffer">Buffer that will be copied to <see cref="Director.UnionData"/>.</param>
+    /// <param name="length">The number of bytes that will be copied from <paramref name="unionDataBuffer"/>. The game always provides a value of 12, but it supports other values.</param>
+    [MemberFunction("89 54 24 10 48 89 4C 24 ?? 53 56 57 41 55 41 57 48 83 EC 30 48 8B 99")]
+    public partial void SetDirectorData(EventId eventId, byte sequence, byte unknown, byte* unionDataBuffer, ulong length);
+
+    private T* GetInstanceContentDirector<T>(InstanceContentType instanceContentType) where T : unmanaged {
+        var instanceDirector = GetInstanceContentDirector();
+        if (instanceDirector == null || instanceDirector->InstanceContentType != instanceContentType)
+            return null;
+        return (T*)instanceDirector;
+    }
+
+    public InstanceContentDeepDungeon* GetInstanceContentDeepDungeon()
+        => GetInstanceContentDirector<InstanceContentDeepDungeon>(InstanceContentType.DeepDungeon);
+
+    public InstanceContentOceanFishing* GetInstanceContentOceanFishing()
+        => GetInstanceContentDirector<InstanceContentOceanFishing>(InstanceContentType.OceanFishing);
+
+    public CraftEventHandler* GetCraftEventHandler()
+        => (CraftEventHandler*)GetEventHandlerById(0xA0001);
+
+    [GenerateInterop]
+    [StructLayout(LayoutKind.Explicit, Size = 0xA8)]
+    public partial struct QueuedFormatStringCallback {
+        [FieldOffset(0x00)] public Utf8String String;
+        [FieldOffset(0x68)] public StdDeque<TextParameter> Parameters;
+        [FieldOffset(0x90)] public FormatStringCallbackInterface* Callback;
+        [FieldOffset(0x98)] public ulong CallbackParam;
+        [BitField<bool>(nameof(IsCallbackCalled), 0)]
+        [BitField<bool>(nameof(IsComplete), 1)] // unsure. most likely like how QueuedActionTimelineCallback does it. it checks for & 3, so both flags
+        [FieldOffset(0xA0)] private byte Flags;
+    }
+
+    [StructLayout(LayoutKind.Explicit, Size = 0x38)]
+    public struct QueuedActionTimelineCallback {
+        [FieldOffset(0x00)] public AnimationData Animation;
+        [FieldOffset(0x10)] public HandlerData Handler;
+        [FieldOffset(0x20)] public CallbackData Callback;
+
+        [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+        public struct AnimationData {
+            [FieldOffset(0x00)] public Character.Character* Character;
+            [FieldOffset(0x08)] public ushort ActionTimelineId;
+        }
+
+        [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+        public struct HandlerData {
+            [FieldOffset(0x00)] public ActionTimelineCallbackInterface* Callback;
+            [FieldOffset(0x08)] public ulong CallbackParam;
+        }
+
+        [StructLayout(LayoutKind.Explicit, Size = 0x10)]
+        public struct CallbackData {
+            [FieldOffset(0x00)] public bool IsCallbackCalled; // if this is true, the handler was called
+            [FieldOffset(0x02)] public bool IsComplete; // if this is true, it will remove it from the list and free its memory
+        }
+    }
+}
+
+[GenerateInterop]
+[StructLayout(LayoutKind.Explicit, Size = 0x400)]
+public partial struct SceneData {
+    [FieldOffset(0x000), FixedSizeArray] internal FixedSizeArray255<int> _values;
+    [FieldOffset(0x3FC)] public byte Count;
+}
+
+public enum ContentType : byte {
+    None, // used for raids
+    Instance,
+    Party, // SkyIsland - used in early phases of the Diadem
+    Public,
+    GoldSaucer
+}

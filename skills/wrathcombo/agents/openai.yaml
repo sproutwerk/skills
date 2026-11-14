@@ -1,0 +1,3 @@
+interface:
+  display_name: "WrathCombo"
+  short_description: "FFXIV WrathCombo IPC, leases, and rotation integration"

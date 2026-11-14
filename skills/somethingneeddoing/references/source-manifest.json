@@ -1,0 +1,1076 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "README.md",
+      "path": "references/source/SomethingNeedDoing/README.md",
+      "sha256": "a9137faeeaa08a207f720ee2f55bdfb68c03d1b8af86d8e59e118b4d10ae083c"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": ".gitmodules",
+      "path": "references/source/SomethingNeedDoing/.gitmodules",
+      "sha256": "498ce2b5676e8f176a886aceab8354414d4e5572998601a8ecf26e4b5094653c"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Attributes/ChangelogAttribute.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Attributes/ChangelogAttribute.cs",
+      "sha256": "29efb6848c05cca02daffe97f1d5fd3689bc7f417bb5c6bc481387b1b6f9c10a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Attributes/GenericDocAttribute.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Attributes/GenericDocAttribute.cs",
+      "sha256": "94a955d441a51ca381a4aece79639ffe0b3d6860f4b062c4ed621a825ca067c9"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Attributes/LuaDocsAttribute.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Attributes/LuaDocsAttribute.cs",
+      "sha256": "eb917c0618b86e7228f30a01c801fe9818ced2141d7a7ff652aca299cf918825"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Attributes/LuaFunctionAttribute.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Attributes/LuaFunctionAttribute.cs",
+      "sha256": "1d4417be6bf40acd89a510568cbc100f60066296bc8ec5136f66c72e302dd940"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Config.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Config.cs",
+      "sha256": "f477f239b00412519b380ca0870a163e2a6a843fb56826ff0abede4df1836900"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Enums.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Enums.cs",
+      "sha256": "ebd2bcadfb4c3aaa906c5a544c70c52a67c5790938564785fa39854d589fda67"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Events/MacroEventArgs.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Events/MacroEventArgs.cs",
+      "sha256": "182019fbd47614200c19273f78c9e4b1283e53e10817644e14f4131429679d10"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Exceptions/LuaException.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Exceptions/LuaException.cs",
+      "sha256": "73472b57133f43fd6a57778745d71e48aa40127697d700ba61c398d6ce0ea312"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Exceptions/MacroException.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Exceptions/MacroException.cs",
+      "sha256": "e9e4fc099bfd0fc0f4a9170bc2e5dd9c12e986d2701033d5f53cd1ba42fd5252"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Exceptions/MacroGateCompleteException.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Exceptions/MacroGateCompleteException.cs",
+      "sha256": "5c5b772299df63ba3d102db7edfa00056ea2816810120934e271515322e5c9d7"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Exceptions/MacroPauseException.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Exceptions/MacroPauseException.cs",
+      "sha256": "a641c0d8e2d9f97182dc9e8229a13bd211c8c6d4a9d422598f8434f9d44b6bfb"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Exceptions/MacroSyntaxError.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Exceptions/MacroSyntaxError.cs",
+      "sha256": "52199215c6138927cc061bd9e003977adc5f3b883ba43e10278797e538947fe1"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Exceptions/MacroTimeoutException.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Exceptions/MacroTimeoutException.cs",
+      "sha256": "7d02f6aadb9b72333d86ebb885e63a7d12c4154ae66d86f2f85fae18c1324d6f"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Github/GitHubRef.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Github/GitHubRef.cs",
+      "sha256": "31326e3710230443cda53e0cd6468387c52b441ae93d7663aff2cd0910f851d2"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Github/GitService.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Github/GitService.cs",
+      "sha256": "f29fefd7ed3113dd15c89d7db3f84947d05fcbb868c13870b2f8ea0571a234f6"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IDisableable.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IDisableable.cs",
+      "sha256": "2a1c3ef6404556c7b4db8ad5ac1dc10f4e3d225b4dd046821781a6af5e18884d"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IGitService.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IGitService.cs",
+      "sha256": "f14d3bf3689c37067775e3e7204c3b6405d72cd131264faaf8e5115d7e799fb6"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IIPC.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IIPC.cs",
+      "sha256": "5f7020d1dd1089ff654849ada5a3a7ca004a816ecc7a6263831ad2a9d1cb41f2"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/ILuaModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/ILuaModule.cs",
+      "sha256": "fee6a85abbe9131b3ccb6ebf9fcee764ca8800adf80b24c0b535caf7be0852f5"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IMacro.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IMacro.cs",
+      "sha256": "fb27c2eac192d4acc01c9be6d338054ed3b757199369c74041f066fef611584c"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IMacroCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IMacroCommand.cs",
+      "sha256": "792af49cda758e0a862ba813421e625af9b2e1c4e412322fae2788169607c580"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IMacroDependency.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IMacroDependency.cs",
+      "sha256": "640555877e82504aaccb4e5328609e008c441ebf10e3566d005b43f384661ace"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IMacroEngine.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IMacroEngine.cs",
+      "sha256": "70aff85f2d95c673b8ba7835be218812d955479fe0ecd91978641ed981913794"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IMacroModifier.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IMacroModifier.cs",
+      "sha256": "c12eade589c7ad0acbcb05be4854f84c8e4fd9bfd6b8f7f70ca666e362f94ea2"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IMacroScheduler.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IMacroScheduler.cs",
+      "sha256": "a370c5422bec2f49f06132ad23a601657fdf87e48588dfe484053305910878e3"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Interfaces/IWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Interfaces/IWrapper.cs",
+      "sha256": "bf26ffccc6f3cb7deb51cab3b4c4e13584fa34ca1620dfdcd2615e5cd951cbdd"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/MacroConfigItem.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/MacroConfigItem.cs",
+      "sha256": "341828284b9117e12fda54ee15a435c689cd27f137210eb8b7b11bbf010a19e4"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/MacroContext.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/MacroContext.cs",
+      "sha256": "bf7b425e573350e3e3da4f42561dbbbbb5efcdd143ebffb1d35cdbb1f6241daa"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/MacroFunctions.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/MacroFunctions.cs",
+      "sha256": "329ee2a50cd6a53d2e7589445cccf75234fd774161345f973cd8b8587335cc5c"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/MacroMetadata.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/MacroMetadata.cs",
+      "sha256": "6e1ee8bd5913e4e5cf35e0343f8125acc31cd5c1528d215d023f1a419e7cf96e"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/ConfigMacro.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/ConfigMacro.cs",
+      "sha256": "0ed60eb72719ed3068f0dd26058ecbcdd5165c3fd98f7d40b138ac891f58dfda"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/Dependencies/CachedDependency.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/Dependencies/CachedDependency.cs",
+      "sha256": "ac66190e3211d4e53a63aa29ae041efb1c4f85dd2c07ff43736458da306fdfc5"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/Dependencies/DependencyFactory.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/Dependencies/DependencyFactory.cs",
+      "sha256": "f868d68c8d372dd235b3246711565acab6fd24ae186458efd15e2be75c60f241"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/Dependencies/GitDependency.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/Dependencies/GitDependency.cs",
+      "sha256": "7e99d776b78977a0f77c60da8268487f02f6eaaad28686940ae636d7a22a8887"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/Dependencies/HttpDependency.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/Dependencies/HttpDependency.cs",
+      "sha256": "e4e612faaa1a0686991cc43e6e96dcbac9e5c9fd2744dc4289dbbe5e2ac64fd7"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/Dependencies/LocalDependency.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/Dependencies/LocalDependency.cs",
+      "sha256": "fffbf9533f6831d15805a136ebad31137cbaf826e7c02f3946926d3ac365373f"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/Dependencies/LocalMacroDependency.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/Dependencies/LocalMacroDependency.cs",
+      "sha256": "2b276c6f626aa8b887af03c529a24bdbfaac9d89750309f8cfd832a4031a552c"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/GitInfo.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/GitInfo.cs",
+      "sha256": "a4e7a73c1cc7f3fdc692c26ce51e6ce584ffc2e977c1c0c2396d03d1a59a8660"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/Macros/TemporaryMacro.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/Macros/TemporaryMacro.cs",
+      "sha256": "63e9e782091bb139ee4283464460d04549a58628b96e92d67fd2bc7c31a7f8d1"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Core/MetadataParser.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Core/MetadataParser.cs",
+      "sha256": "7e360f3dd8f9d4a6b556ccd6e6f2f38c434c93d014716ee99577655f235f3f83"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/DalamudPackager.targets",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/DalamudPackager.targets",
+      "sha256": "69ca275528c01f211624dd60aef9c032e19a506e533544a15426bc9bd74ec1ce"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/ARDiscard.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/ARDiscard.cs",
+      "sha256": "25b2a24e2e85159399990b4a05e3f9776908e90d06e88877521df39844b85e4b"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/AllaganTools.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/AllaganTools.cs",
+      "sha256": "77b9bc9124082c2a81942d1c7db756c83b4794e6714eaf104846102da2f62492"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Artisan.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Artisan.cs",
+      "sha256": "c8ea424feed1b2f91e89e958b51019de0d712ed191d2a40e9516d399ddbe9a37"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/AutoDuty.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/AutoDuty.cs",
+      "sha256": "2c222c7123b7331c09a80665dc32a6c8fc5fbfa7ba17116a0b6b2b58a72fec35"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/AutoHook.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/AutoHook.cs",
+      "sha256": "57d742e08fdaa40236d67f38bb82931d669aab5a8d12a6de90c785e4333d71d9"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/AutoRetainer.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/AutoRetainer.cs",
+      "sha256": "7abdac2b4ffcde1d2166d7f1c9124a97b078c7b8471338b3d9aba265c55ca18c"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/BossMod.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/BossMod.cs",
+      "sha256": "3ff10dd35246d3e6a95b2bea5e0c7cfd54957ae3fe3ea2d5803f488349dc28b3"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/CBT.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/CBT.cs",
+      "sha256": "f08869402bec54fb688512bb353c9362f97741bdef03be20041e15a2e3ea4035"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/DeliverooIPC.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/DeliverooIPC.cs",
+      "sha256": "1b945986ba9eac3662fe699be9a6eba7b2156e0df3eeaab7acb1ab0799e6165f"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Dropbox.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Dropbox.cs",
+      "sha256": "9f6a4c8704601ddf3acdd508f4c4e0c03292419f293b9dd0080b936201e55c28"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Henchman.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Henchman.cs",
+      "sha256": "14fbfd1531c47fd1bc72e3ff566c111fe074bd76baa874a532bda498314b449c"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Lifestream.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Lifestream.cs",
+      "sha256": "88f82dbd1652a96727f26ded44f1d32ae568a1e9c94dd45f376b71bbbf8c048a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Navmesh.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Navmesh.cs",
+      "sha256": "b0f57912b402fc99a52a92ff69d33f978f40eab3093ac9703237d90893e2f5d7"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/PandorasBoxIPC.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/PandorasBoxIPC.cs",
+      "sha256": "63cd7ca42b589c72ce826b7d67a5be00ee65a8005922592e6c251f095cf5830e"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Questionable.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Questionable.cs",
+      "sha256": "58e241a706b694c7925b9e6608b9bd1a0b02895f48cf55c6dcf8fbe72297b6a0"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/SomethingNeedDoing.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/SomethingNeedDoing.cs",
+      "sha256": "2ec9081bfabe52a534e9d378c07a131fb74dc817e6ee43c6f81b0e9e9f6e4363"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/TextAdvance.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/TextAdvance.cs",
+      "sha256": "2a7031b61e2d6d052fc60f73d81dd3e9f1968037059527efb6061ed11ab1ba68"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Tippy.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Tippy.cs",
+      "sha256": "506960b27cb86a3cd38dae08e1db15034ed6845df8343fec6900b2584c5ed102"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Visland.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Visland.cs",
+      "sha256": "ef768e52932586e04a232bde4eed5a44d2ed5e67f0d13aa1c03b7733f5428f7e"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/Wrath.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/Wrath.cs",
+      "sha256": "bb74eec99bc195e0ebcc8d063aa0584c907cd8db96ac41de0c6c5cf92406cf3a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/External/YesAlready.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/External/YesAlready.cs",
+      "sha256": "677bf941a697ad27919651cfe3f9f8b75a55746041ef804fc94252435124005d"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Globals.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Globals.cs",
+      "sha256": "d49a684bf34d82244f2707d656e26e3ca825cb0f22a379e98baef5e12f731c8e"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Gui/ChangelogWindow.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Gui/ChangelogWindow.cs",
+      "sha256": "c66b82ea2529c7b7260e0b4a88c0b42d3bc6830178289f6606c3754438d008b7"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Gui/Modals/FirstTimeWarningModal.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Gui/Modals/FirstTimeWarningModal.cs",
+      "sha256": "61c5b3b3c018731b0e47690f255d3b70b2963a46e6edd321b2ac9c61d8e9b398"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Gui/Tabs/HelpGeneralTab.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Gui/Tabs/HelpGeneralTab.cs",
+      "sha256": "ef0be664aad3792df31e64bc6e4d05cb392b59f92c77337a96be1f59376b809d"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/LuaCodeSnippets.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/LuaCodeSnippets.cs",
+      "sha256": "2ca10249cd701cb0ec855a1e18fc9f17dfdcdd8019dcebb214aa4999a6347b16"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/LuaModuleBase.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/LuaModuleBase.cs",
+      "sha256": "1865507380cee7f3e1c001cbf9e736a893e50f9d1e37b10e6e6e5b90452ef2f1"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/LuaModuleManager.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/LuaModuleManager.cs",
+      "sha256": "9c3385ed75d87f5e709bd89199c0baa20f007bcd90a1952451e8a0f8c278d455"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/LuaReflection.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/LuaReflection.cs",
+      "sha256": "c02f9c06cd2ae314ab1862e42d9cb6300982473229093e55dfb33b058cb309ee"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/ActionsModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/ActionsModule.cs",
+      "sha256": "794d0e8cf97786cbb7c89f79d9ecc5ab1894ec714b2e3b0d520efd4706bcd8a8"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/AddonModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/AddonModule.cs",
+      "sha256": "1b78af71fb2210c10e7e50119bea175d46d6a46b25062c3df08b624a56f19dce"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/ConfigModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/ConfigModule.cs",
+      "sha256": "0ca55330def3eb69f5e78d36f5c9cbca6a183e211cd106a609c858e8611265ae"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/DalamudModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/DalamudModule.cs",
+      "sha256": "28b34940cda10378b530e3e0a90ce8d97d77abdbe16489d09fba41a08d977317"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/Engines/IEngine.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/Engines/IEngine.cs",
+      "sha256": "b21201cd91a0d7822d6467d3b8858842f0f404e39e48eb039b72c145d2d5a278"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/Engines/LuaEngine.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/Engines/LuaEngine.cs",
+      "sha256": "2a2bc44b4f933cd005242192534b86d981d22de1cceb45e9cc571996309c6fe3"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/Engines/NativeEngine.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/Engines/NativeEngine.cs",
+      "sha256": "c05fe032493763f9ed1a6d9347b836dfdcf4ed7f54e3cdc40ee5ac8ce6921834"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/EnginesModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/EnginesModule.cs",
+      "sha256": "0274964d5fadfedce52ba4fb4c8d782b9589b090a170acb70a723d46691be8fa"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/EntityModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/EntityModule.cs",
+      "sha256": "0155797f57b6ff542cd5c67e88212448e21a3f4d87eed36583171fd237301437"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/ExcelModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/ExcelModule.cs",
+      "sha256": "a8e5f45c3935c16f017f53c55e608c927384ea6e4d9edfde71323e99dc6c32bb"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/FateModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/FateModule.cs",
+      "sha256": "5c5e72ee82f34b50b2c7c27a31dc1b500f6402953b58219a245d19d6ec74eb43"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/IPCModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/IPCModule.cs",
+      "sha256": "3e7219454fff9139b8e635dcec535a995012c2885da3f4d9661f0ab260de1d71"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/InstancedContentModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/InstancedContentModule.cs",
+      "sha256": "c65f70866c07af838335875001fe7694173dddc2ff3eb928e8b0984a71d5b103"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/InstancesModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/InstancesModule.cs",
+      "sha256": "5d0d6ede80cd9d86809f6ef733ef2e977bfb8847b2ad0d63284bf6dba6f39c9b"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/InventoryModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/InventoryModule.cs",
+      "sha256": "f52ddc511385e91ee4aba179178e47bfe24aeef90638ee4825f08ead6435c5d3"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/PlayerModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/PlayerModule.cs",
+      "sha256": "44651092508bc8dbeab8338881464070d9ea50a46a057ef08893204fcb98d64a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/QuestsModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/QuestsModule.cs",
+      "sha256": "f576693b217851ff1a69a335e4a373e45fcce0995fb5adf3915b3c814f857623"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Modules/SystemModule.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Modules/SystemModule.cs",
+      "sha256": "e85ab418f8e9582f3bf0d1882aec300f863ca4e65757070d815997b57d589630"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/NLuaMacroEngine.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/NLuaMacroEngine.cs",
+      "sha256": "5772114bd157a65bb57597138f95b3e98614efa217b349f791a8c393dccdbecf"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/ActionWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/ActionWrapper.cs",
+      "sha256": "4186e88c392c460c8b663f097576ffe239900290a847c5ebcdc0adfcabebf552"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/AddonWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/AddonWrapper.cs",
+      "sha256": "0de04c213c292415ff36299624066679e84fae407653482b27de9a8c02a430d5"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/BuddyWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/BuddyWrapper.cs",
+      "sha256": "cb0e38ad24dec2e7d4f90c13fd75a5a802fbebc4a68f32222bfbaaba52e2679f"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/EntityWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/EntityWrapper.cs",
+      "sha256": "ba322f382951dd96fb5c603e6b14c8e559f3e6b5ffaf6471ebae2ce866064714"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/FateWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/FateWrapper.cs",
+      "sha256": "a2fe298fcc8b513cc039d8ff1d88ea9dbc45cbf740e52bdd5b5774d263e98da3"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/FreeCompanyWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/FreeCompanyWrapper.cs",
+      "sha256": "43c25b0813d1739f83755aae95062885de27b7c96351a980726e86a452319c36"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/JobWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/JobWrapper.cs",
+      "sha256": "ed0952c010b647380451cadae1fb6117c20aedc6a3b3d54925676d7e17d12e7d"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/LimitBreakWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/LimitBreakWrapper.cs",
+      "sha256": "f77596106d60c95afaf683e5cbc6c595a8a742d5353abc925ae93a5d30407481"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/OceanFishingWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/OceanFishingWrapper.cs",
+      "sha256": "8305307f74bfe135e0abaea6633742f1566c4038e0b9a27f829a3bb8b5622454"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/LuaMacro/Wrappers/StatusWrapper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/LuaMacro/Wrappers/StatusWrapper.cs",
+      "sha256": "296438e0ebeb29703f224bf5d6e9d3e39e8c038daf3104d7ae17bd639d02ddf5"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Managers/GitMacroManager.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Managers/GitMacroManager.cs",
+      "sha256": "46e5e01ad0434a7732d68f209cfd7fd0b07116aea3dc22b549b6c50f778c1ed1"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Managers/MacroHierarchyManager.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Managers/MacroHierarchyManager.cs",
+      "sha256": "47bd2eb0015a67c1386dc12bfde7ecc3367d5a4db38f1b1a9174a2c796d3304f"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Managers/MacroScheduler.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Managers/MacroScheduler.cs",
+      "sha256": "8afc74f4474b26c56d71b301573d3f4e8c7abde5db5d5e5ff6acb59cdfa7eaaf"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Managers/TriggerEventManager.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Managers/TriggerEventManager.cs",
+      "sha256": "7baf88c72861a32bbfe68d17589ebed0167b97860a707ff6d6fcd6eec0048961"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Managers/TriggerEventSources.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Managers/TriggerEventSources.cs",
+      "sha256": "b94b9b188d699cc6a26ca0ff23ad6aab78e64a8453e6265bb5fad499c7b40779"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/ActionCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/ActionCommand.cs",
+      "sha256": "b0d9bd3f83c57c6e777e53b05780867e50556402a262d4cc52e52f6eee0d17ee"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/CallbackCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/CallbackCommand.cs",
+      "sha256": "fece3651665a13acc1cc24c8dc83a35f080d82fc70e05f6eb399b33f534726ea"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/ClickCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/ClickCommand.cs",
+      "sha256": "ad73e0c4909aa7f738307f6259eac61f3fc6c3268b2847b986ac738dfc94e0a5"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/EquipItemCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/EquipItemCommand.cs",
+      "sha256": "cf6bfc90fa703f765b370a3a4f3d0d082dbefa6dcbbb3d41e2b3f7a1fc4a7e8f"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/GateCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/GateCommand.cs",
+      "sha256": "9165db199e2b998177bb288aec7c9c8ccfca0c62b5766b64e76c9166b1d34857"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/HoldCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/HoldCommand.cs",
+      "sha256": "6b75b26c4379eafd0193e477eaf1a31b93b0b6745d96663b96120df555e06a23"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/InteractCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/InteractCommand.cs",
+      "sha256": "530d6d13c8162b689dcd2acb54ded8b6cb6a099d5535a8bfea49ed64cd9ddab2"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/ItemCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/ItemCommand.cs",
+      "sha256": "16a6f823553666d6ff93d0f070f1bbd9939a810d7b963172f21a72f539d439f8"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/KeyItemCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/KeyItemCommand.cs",
+      "sha256": "a271ad2cbe8448034834f680870f1cd39437760a90c9a6baaab988b9e9b51f82"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/LoopCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/LoopCommand.cs",
+      "sha256": "94096865b93bffb1003ed2282bea9ed288751950aa374370fcffe3cc5c3e5ab2"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/NativeCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/NativeCommand.cs",
+      "sha256": "623a3b88dade313ec60120ea5868b16e569b1c650685aa8d119a542ab9735e6d"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/RecipeCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/RecipeCommand.cs",
+      "sha256": "274d5bac591b856eb6e2f22f88941496fd9277a1875763d78da77ed102f6af8a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/ReleaseCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/ReleaseCommand.cs",
+      "sha256": "7a1c59ce12e7af09cdc1f82c3bbef9264b82ec0c6bddfd912267cf62522162da"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/RequireCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/RequireCommand.cs",
+      "sha256": "53f32fcfafa2950b0d0b9319c60b2658a6876d5641d159daf9ec77262244bece"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/RequireCommandBase.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/RequireCommandBase.cs",
+      "sha256": "1ce0b9f479cb5855add378b15cc38ba35a868833c04348d649af95863296352b"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/RequireRepairCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/RequireRepairCommand.cs",
+      "sha256": "2224933af989d5b46496a6a8579ae084dec425b2586c30d8871fc5ce094e1a96"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/RequireSpiritbondCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/RequireSpiritbondCommand.cs",
+      "sha256": "902577918bd8015df29864db3f6dadaeb67fef0200e3cb3d0a10a0942e1a5202"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/RunMacroCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/RunMacroCommand.cs",
+      "sha256": "4383597908928c22835afcde76bf5a0aac340d519595bd6c0ef9938cfb00bd92"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/SendCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/SendCommand.cs",
+      "sha256": "99dbbbd289e3cb475c1840c4dacc02f80af7f91142c863efb23be7e88bbd923b"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/TargetCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/TargetCommand.cs",
+      "sha256": "e89f81054220566bf15593874e523817d51d51553d0bc282a439094de1acd0ff"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/TargetEnemyCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/TargetEnemyCommand.cs",
+      "sha256": "3e7c94742f60a3b80a822411501de5636fe6add5825a776f94c153470a16647f"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/WaitAddonCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/WaitAddonCommand.cs",
+      "sha256": "a07e043c00cfea40a1febe11838849afbcee7da3ca77e59ad0d5a0857576e98e"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Commands/WaitCommand.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Commands/WaitCommand.cs",
+      "sha256": "2757731862eb2bdf0cc3490b75ea1b0e0e5cb055036094b55d62ab7d50d0caab"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/CraftLoopBuilder.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/CraftLoopBuilder.cs",
+      "sha256": "62339ee43298b6dd3a038d0a899655c14d58d95ca0c1517588e07c02f0075e6a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/MacroCommandBase.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/MacroCommandBase.cs",
+      "sha256": "5f4e1f27bb8cdbb703078ca6fa33dd6db879a8effa5d2e695394962d550b68fc"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/MacroParser.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/MacroParser.cs",
+      "sha256": "f441f4adb968d4fd094949ddc8e40fdf6574a8c8ac134762eeb5dbdd5bed9879"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/ModifierDefinition.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/ModifierDefinition.cs",
+      "sha256": "a094dc4a2c1307b15571d3eb705eaf2a518581baa1b6baf5b3254720d944fdbe"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/Modifiers/Modifiers.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/Modifiers/Modifiers.cs",
+      "sha256": "c14c814feef942ef8164bd6607659cb9cab2e3633b67f8423cbc9629b24cd51a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/NativeMacro/NativeMacroEngine.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/NativeMacro/NativeMacroEngine.cs",
+      "sha256": "7fcc689f44e294cdf96f4253941d1b4e039b7506b18215e1f0261fbc0ce5ff43"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Plugin.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Plugin.cs",
+      "sha256": "9516e493bd0a261ffdf8bc48fdbba9931b9abd36da1c20043dc055a226d93966"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Services/CommandService.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Services/CommandService.cs",
+      "sha256": "1000c7aa110d8646bbb851f2eacb796957ad6f97fbee260124b66f886df3f805"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Services/StubGeneratorService.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Services/StubGeneratorService.cs",
+      "sha256": "f50269b8351ec6df7ccb6fbc7c21e620cd3362415e5070dd5f64770b0586fec4"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/SomethingNeedDoing.csproj",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/SomethingNeedDoing.csproj",
+      "sha256": "02040c0e778d2b24a89dcd81f1f74594298e3d8c05611746068f8ec9ad5c0bd9"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Utils/ChatExtensions.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Utils/ChatExtensions.cs",
+      "sha256": "55eb3292cdafa43dcf08b01431ccb8b062981977cb9ffc55f1e5b3675fd609f6"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Utils/ConfigMacroExtensions.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Utils/ConfigMacroExtensions.cs",
+      "sha256": "5be580e6e900a00d46a1d36fe6922b0aa3e86f8fa5e81fe0ac298b4735b4d5a0"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Utils/FrameworkLogger.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Utils/FrameworkLogger.cs",
+      "sha256": "10040e4a24f8c8afc83252ed4468fdf1a42849882b09261266d4a8943f010d30"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Utils/Game.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Utils/Game.cs",
+      "sha256": "b54bdae5b97637b599cfe310593939fbe8a5f8c4bb30e2f3db0056cae7c74f80"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Utils/LuaExtensions.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Utils/LuaExtensions.cs",
+      "sha256": "00c349f22fe0d46d89c260ca56b0039108afa63a7e1e7dc6ac37c0614b4d606d"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Utils/MacroPause.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Utils/MacroPause.cs",
+      "sha256": "33e36576f8bbce663aa5a61f9d76f05bfc6350591488438c1e5c9e0076b05ba1"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing",
+      "revision": "527ca83892506c74fea4d5e07b9b9436e50ef95d",
+      "upstreamPath": "SomethingNeedDoing/Utils/PathHelper.cs",
+      "path": "references/source/SomethingNeedDoing/SomethingNeedDoing/Utils/PathHelper.cs",
+      "sha256": "53d388120676c858fba76b827423bb82973c0baa98b0d2cfa4a333b1cd095a4a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing.wiki",
+      "revision": "129eccefa9f1f1979569c6835aeee9b4a6700089",
+      "upstreamPath": "Dependencies-and-Conflicts.md",
+      "path": "references/source/SomethingNeedDoing.wiki/Dependencies-and-Conflicts.md",
+      "sha256": "3ceb07dbeddcfeba04eb65923c38939d26d85401f1e361183dcd28313d652930"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing.wiki",
+      "revision": "129eccefa9f1f1979569c6835aeee9b4a6700089",
+      "upstreamPath": "GitHub-Integration.md",
+      "path": "references/source/SomethingNeedDoing.wiki/GitHub-Integration.md",
+      "sha256": "e0f49b7b63ec3ddd4cd9a5e816a743e131656e12178684eb6232b575a9dcb00e"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing.wiki",
+      "revision": "129eccefa9f1f1979569c6835aeee9b4a6700089",
+      "upstreamPath": "Home.md",
+      "path": "references/source/SomethingNeedDoing.wiki/Home.md",
+      "sha256": "955f438929411b26ec73de6fe1ce7732135ddf61efbcca39111f697bdf549177"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing.wiki",
+      "revision": "129eccefa9f1f1979569c6835aeee9b4a6700089",
+      "upstreamPath": "How-to-use....md",
+      "path": "references/source/SomethingNeedDoing.wiki/How-to-use....md",
+      "sha256": "4d73ab6e3821caa01ce44690d3ea80ec00ca7c84f7b6cd123331f3c6803c8b05"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing.wiki",
+      "revision": "129eccefa9f1f1979569c6835aeee9b4a6700089",
+      "upstreamPath": "Macro-Configs.md",
+      "path": "references/source/SomethingNeedDoing.wiki/Macro-Configs.md",
+      "sha256": "8cdcaf287e559b882c62f2b63c8ff16dc22793440bc455317f876b5644a60d7a"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing.wiki",
+      "revision": "129eccefa9f1f1979569c6835aeee9b4a6700089",
+      "upstreamPath": "Macros-and-Scripting.md",
+      "path": "references/source/SomethingNeedDoing.wiki/Macros-and-Scripting.md",
+      "sha256": "cab68418442ffe6d5a5a54590bb7e359a6392a4316bd63f1f7c6466a70803c06"
+    },
+    {
+      "repository": "https://github.com/Jaksuhn/SomethingNeedDoing.wiki",
+      "revision": "129eccefa9f1f1979569c6835aeee9b4a6700089",
+      "upstreamPath": "Trigger-Events.md",
+      "path": "references/source/SomethingNeedDoing.wiki/Trigger-Events.md",
+      "sha256": "01ada6e5763f1cef6579a26cd0324b335de528048d0e2f19c9e406d0699e4267"
+    }
+  ]
+}

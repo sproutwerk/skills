@@ -1,0 +1,924 @@
+using System.Numerics;
+using System.Threading;
+using System.Threading.Tasks;
+
+using CheapLoc;
+
+using Dalamud.Bindings.ImGui;
+using Dalamud.Configuration.Internal;
+using Dalamud.Game;
+using Dalamud.Game.Gui;
+using Dalamud.Interface.FontIdentifier;
+using Dalamud.Interface.ImGuiNotification;
+using Dalamud.Interface.ImGuiNotification.Internal;
+using Dalamud.Interface.Internal;
+using Dalamud.Interface.Internal.DesignSystem;
+using Dalamud.Interface.ManagedFontAtlas;
+using Dalamud.Interface.ManagedFontAtlas.Internals;
+using Dalamud.Interface.Utility;
+using Dalamud.Plugin.Internal.Types;
+using Dalamud.Utility;
+
+using Serilog;
+
+namespace Dalamud.Interface;
+
+/// <summary>
+/// This interface represents the Dalamud UI that is drawn on top of the game.
+/// It can be used to draw custom windows and overlays.
+/// </summary>
+public interface IUiBuilder
+{
+    /// <summary>
+    /// The event that gets called when Dalamud is ready to draw your windows or overlays.
+    /// When it is called, you can use static ImGui calls.
+    /// </summary>
+    event Action? Draw;
+
+    /// <summary>
+    /// The event that is called when the game's DirectX device is requesting you to resize your buffers.
+    /// </summary>
+    event Action? ResizeBuffers;
+
+    /// <summary>
+    /// Event that is fired when the plugin should open its configuration interface.
+    /// </summary>
+    event Action? OpenConfigUi;
+
+    /// <summary>
+    /// Event that is fired when the plugin should open its main interface.
+    /// </summary>
+    event Action? OpenMainUi;
+
+    /// <summary>
+    /// Gets or sets an action that is called when plugin UI or interface modifications are supposed to be shown.
+    /// These may be fired consecutively.
+    /// </summary>
+    event Action? ShowUi;
+
+    /// <summary>
+    /// Gets or sets an action that is called when plugin UI or interface modifications are supposed to be hidden.
+    /// These may be fired consecutively.
+    /// </summary>
+    event Action? HideUi;
+
+    /// <inheritdoc cref="InterfaceManager.DefaultGlobalScaleChanged"/>
+    event Action? DefaultGlobalScaleChanged;
+
+    /// <inheritdoc cref="InterfaceManager.DefaultFontChanged"/>
+    event Action? DefaultFontChanged;
+
+    /// <inheritdoc cref="InterfaceManager.DefaultStyleChanged"/>
+    event Action? DefaultStyleChanged;
+
+    /// <summary>
+    /// Gets the handle to the default Dalamud font - supporting all game languages and icons.
+    /// </summary>
+    /// <remarks>
+    /// A font handle corresponding to this font can be obtained with:
+    /// <code>
+    /// fontAtlas.NewDelegateFontHandle(
+    ///     e => e.OnPreBuild(
+    ///         tk => tk.AddDalamudDefaultFont(UiBuilder.DefaultFontSizePx)));
+    /// </code>
+    /// </remarks>
+    IFontHandle DefaultFontHandle { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud icon font based on FontAwesome 5 Free solid.
+    /// </summary>
+    /// <remarks>
+    /// A font handle corresponding to this font can be obtained with:
+    /// <code>
+    /// fontAtlas.NewDelegateFontHandle(
+    ///     e => e.OnPreBuild(
+    ///         tk => tk.AddFontAwesomeIconFont(new() { SizePt = UiBuilder.DefaultFontSizePt })));
+    /// // or use
+    ///         tk => tk.AddFontAwesomeIconFont(new() { SizePx = UiBuilder.DefaultFontSizePx })));
+    /// </code>
+    /// </remarks>
+    IFontHandle IconFontHandle { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud monospaced font based on Inconsolata Regular.
+    /// </summary>
+    /// <remarks>
+    /// A font handle corresponding to this font can be obtained with:
+    /// <code>
+    /// fontAtlas.NewDelegateFontHandle(
+    ///     e => e.OnPreBuild(
+    ///         tk => tk.AddDalamudAssetFont(
+    ///             DalamudAsset.InconsolataRegular,
+    ///             new() { SizePt = UiBuilder.DefaultFontSizePt })));
+    /// // or use
+    ///             new() { SizePx = UiBuilder.DefaultFontSizePx })));
+    /// </code>
+    /// </remarks>
+    IFontHandle MonoFontHandle { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud icon font based on FontAwesome 5 free solid with a fixed width and vertically centered glyphs.
+    /// </summary>
+    IFontHandle IconFontFixedWidthHandle { get; }
+
+    /// <summary>
+    /// Gets the default font specifications.
+    /// </summary>
+    IFontSpec DefaultFontSpec { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud font size in points.
+    /// </summary>
+    float FontDefaultSizePt { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud font size in pixels.
+    /// </summary>
+    float FontDefaultSizePx { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud font - supporting all game languages and icons.<br />
+    /// <strong>Accessing this static property outside of <see cref="Draw"/> is dangerous and not supported.</strong>
+    /// </summary>
+    ImFontPtr FontDefault { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud icon font based on FontAwesome 5 Free solid.<br />
+    /// <strong>Accessing this static property outside of <see cref="Draw"/> is dangerous and not supported.</strong>
+    /// </summary>
+    ImFontPtr FontIcon { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud monospaced font based on Inconsolata Regular.<br />
+    /// <strong>Accessing this static property outside of <see cref="Draw"/> is dangerous and not supported.</strong>
+    /// </summary>
+    ImFontPtr FontMono { get; }
+
+    /// <summary>
+    /// Gets the default Dalamud icon font based on FontAwesome 5 Free solid with a fixed width and vertically centered glyphs. <br />
+    /// <strong>Accessing this static property outside of <see cref="Draw"/> is dangerous and not supported.</strong>
+    /// </summary>
+    ImFontPtr FontIconFixedWidth { get; }
+
+    /// <summary>Gets the game's active Direct3D device.</summary>
+    /// <value>Pointer to the instance of IUnknown that the game is using and should be containing an ID3D11Device,
+    /// or 0 if it is not available yet.</value>
+    /// <remarks>Use
+    /// <a href="https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)">
+    /// QueryInterface</a> with IID of <c>IID_ID3D11Device</c> if you want to ensure that the interface type contained
+    /// within is indeed an instance of ID3D11Device.</remarks>
+    nint DeviceHandle { get; }
+
+    /// <summary>Gets the game's main window handle.</summary>
+    /// <value>HWND of the main game window, or 0 if it is not available yet.</value>
+    nint WindowHandlePtr { get; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this plugin should hide its UI automatically when the game's UI is hidden.
+    /// </summary>
+    bool DisableAutomaticUiHide { get; set; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this plugin should hide its UI automatically when the user toggles the UI.
+    /// </summary>
+    bool DisableUserUiHide { get; set; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this plugin should hide its UI automatically during cutscenes.
+    /// </summary>
+    bool DisableCutsceneUiHide { get; set; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this plugin should hide its UI automatically while gpose is active.
+    /// </summary>
+    bool DisableGposeUiHide { get; set; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the game's cursor should be overridden with the ImGui cursor.
+    /// </summary>
+    bool OverrideGameCursor { get; set; }
+
+    /// <summary>
+    /// Gets the count of Draw calls made since plugin creation.
+    /// </summary>
+    ulong FrameCount { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether a cutscene is playing.
+    /// </summary>
+    bool CutsceneActive { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether this plugin should modify the game's interface at this time.
+    /// </summary>
+    bool ShouldModifyUi { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether UI functions can be used.
+    /// </summary>
+    bool UiPrepared { get; }
+
+    /// <summary>
+    /// Gets the plugin-private font atlas.
+    /// </summary>
+    IFontAtlas FontAtlas { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether to use "reduced motion". This usually means that you should use less
+    /// intrusive animations, or disable them entirely.
+    /// </summary>
+    bool ShouldUseReducedMotion { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether the user has enabled the "Enable sound effects for plugin windows" setting.<br />
+    /// This setting is effected by the in-game "System Sounds" option and volume.
+    /// </summary>
+    bool PluginUISoundEffectsEnabled { get; }
+
+    /// <summary>
+    /// Loads an ULD file that can load textures containing multiple icons in a single texture.
+    /// </summary>
+    /// <param name="uldPath">The path of the requested ULD file.</param>
+    /// <returns>A wrapper around said ULD file.</returns>
+    UldWrapper LoadUld(string uldPath);
+
+    /// <summary>
+    /// Waits for UI to become available for use.
+    /// </summary>
+    /// <returns>A task that completes when the game's Present has been called at least once.</returns>
+    Task WaitForUi();
+
+    /// <summary>
+    /// Waits for UI to become available for use.
+    /// </summary>
+    /// <param name="func">Function to call.</param>
+    /// <param name="runInFrameworkThread">Specifies whether to call the function from the framework thread.</param>
+    /// <returns>A task that completes when the game's Present has been called at least once.</returns>
+    /// <typeparam name="T">Return type.</typeparam>
+    Task<T> RunWhenUiPrepared<T>(Func<T> func, bool runInFrameworkThread = false);
+
+    /// <summary>
+    /// Waits for UI to become available for use.
+    /// </summary>
+    /// <param name="func">Function to call.</param>
+    /// <param name="runInFrameworkThread">Specifies whether to call the function from the framework thread.</param>
+    /// <returns>A task that completes when the game's Present has been called at least once.</returns>
+    /// <typeparam name="T">Return type.</typeparam>
+    Task<T> RunWhenUiPrepared<T>(Func<Task<T>> func, bool runInFrameworkThread = false);
+
+    /// <summary>
+    /// Creates an isolated <see cref="IFontAtlas"/>.
+    /// </summary>
+    /// <param name="autoRebuildMode">Specify when and how to rebuild this atlas.</param>
+    /// <param name="isGlobalScaled">Whether the fonts in the atlas is global scaled.</param>
+    /// <param name="debugName">Name for debugging purposes.</param>
+    /// <returns>A new instance of <see cref="IFontAtlas"/>.</returns>
+    /// <remarks>
+    /// Use this to create extra font atlases, if you want to create and dispose fonts without having to rebuild all
+    /// other fonts together.<br />
+    /// If <paramref name="autoRebuildMode"/> is not <see cref="FontAtlasAutoRebuildMode.OnNewFrame"/>,
+    /// the font rebuilding functions must be called manually.
+    /// </remarks>
+    IFontAtlas CreateFontAtlas(
+        FontAtlasAutoRebuildMode autoRebuildMode,
+        bool isGlobalScaled = true,
+        string? debugName = null);
+}
+
+/// <summary>
+/// This class represents the Dalamud UI that is drawn on top of the game.
+/// It can be used to draw custom windows and overlays.
+/// </summary>
+public sealed class UiBuilder : IDisposable, IUiBuilder
+{
+    private readonly LocalPlugin plugin;
+    private readonly HitchDetector hitchDetector;
+    private readonly string namespaceName;
+    private readonly InterfaceManager interfaceManager = Service<InterfaceManager>.Get();
+    private readonly Framework framework = Service<Framework>.Get();
+
+    [ServiceManager.ServiceDependency]
+    private readonly DalamudConfiguration configuration = Service<DalamudConfiguration>.Get();
+
+    private readonly DisposeSafety.ScopedFinalizer scopedFinalizer = new();
+    private readonly Lazy<IFontAtlas> fontAtlas;
+
+    private bool hasErrorWindow = false;
+    private Exception? lastError = null;
+    private bool lastFrameUiHideState = false;
+
+    private IFontHandle? defaultFontHandle;
+    private IFontHandle? iconFontHandle;
+    private IFontHandle? monoFontHandle;
+    private IFontHandle? iconFontFixedWidthHandle;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="UiBuilder"/> class and registers it.
+    /// You do not have to call this manually.
+    /// </summary>
+    /// <param name="plugin">The plugin.</param>
+    /// <param name="namespaceName">The plugin namespace.</param>
+    internal UiBuilder(LocalPlugin plugin, string namespaceName)
+    {
+        try
+        {
+            this.hitchDetector = new HitchDetector($"UiBuilder({namespaceName})", this.configuration.UiBuilderHitch);
+            this.namespaceName = namespaceName;
+            this.plugin = plugin;
+
+            this.interfaceManager.Draw += this.OnDraw;
+            this.scopedFinalizer.Add(() => this.interfaceManager.Draw -= this.OnDraw);
+
+            this.interfaceManager.ResizeBuffers += this.OnResizeBuffers;
+            this.scopedFinalizer.Add(() => this.interfaceManager.ResizeBuffers -= this.OnResizeBuffers);
+
+            this.interfaceManager.DefaultStyleChanged += this.OnDefaultStyleChanged;
+            this.scopedFinalizer.Add(() => this.interfaceManager.DefaultStyleChanged -= this.OnDefaultStyleChanged);
+
+            this.interfaceManager.DefaultGlobalScaleChanged += this.OnDefaultGlobalScaleChanged;
+            this.scopedFinalizer.Add(() => this.interfaceManager.DefaultGlobalScaleChanged -= this.OnDefaultGlobalScaleChanged);
+
+            this.interfaceManager.DefaultFontChanged += this.OnDefaultFontChanged;
+            this.scopedFinalizer.Add(() => this.interfaceManager.DefaultFontChanged -= this.OnDefaultFontChanged);
+
+            this.fontAtlas = new Lazy<IFontAtlas>(() => this.scopedFinalizer.Add(
+                                                      Service<FontAtlasFactory>
+                                                          .Get()
+                                                          .CreateFontAtlas(
+                                                              namespaceName,
+                                                              FontAtlasAutoRebuildMode.Async)));
+        }
+        catch
+        {
+            this.scopedFinalizer.Dispose();
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public event Action? Draw;
+
+    /// <inheritdoc/>
+    public event Action? ResizeBuffers;
+
+    /// <inheritdoc/>
+    public event Action? OpenConfigUi;
+
+    /// <inheritdoc/>
+    public event Action? OpenMainUi;
+
+    /// <inheritdoc/>
+    public event Action? ShowUi;
+
+    /// <inheritdoc/>
+    public event Action? HideUi;
+
+    /// <inheritdoc/>
+    public event Action? DefaultGlobalScaleChanged;
+
+    /// <inheritdoc/>
+    public event Action? DefaultFontChanged;
+
+    /// <inheritdoc/>
+    public event Action? DefaultStyleChanged;
+
+    /// <summary>
+    /// Gets the default Dalamud font size in points.
+    /// </summary>
+    public static float DefaultFontSizePt => Service<FontAtlasFactory>.Get().DefaultFontSpec.SizePt;
+
+    /// <summary>
+    /// Gets the default Dalamud font size in pixels.
+    /// </summary>
+    public static float DefaultFontSizePx => Service<FontAtlasFactory>.Get().DefaultFontSpec.SizePx;
+
+    /// <summary>
+    /// Gets the default Dalamud font - supporting all game languages and icons.<br />
+    /// <strong>Accessing this static property outside of <see cref="Draw"/> is dangerous and not supported.</strong>
+    /// </summary>
+    public static ImFontPtr DefaultFont => InterfaceManager.DefaultFont;
+
+    /// <summary>
+    /// Gets the default Dalamud icon font based on FontAwesome 5 Free solid.<br />
+    /// <strong>Accessing this static property outside of <see cref="Draw"/> is dangerous and not supported.</strong>
+    /// </summary>
+    public static ImFontPtr IconFont => InterfaceManager.IconFont;
+
+    /// <summary>
+    /// Gets the default Dalamud monospaced font based on Inconsolata Regular.<br />
+    /// <strong>Accessing this static property outside of <see cref="Draw"/> is dangerous and not supported.</strong>
+    /// </summary>
+    public static ImFontPtr MonoFont => InterfaceManager.MonoFont;
+
+    /// <summary>
+    /// Gets the default Dalamud icon font based on FontAwesome 5 Free solid with a fixed width and vertically centered glyphs. <br />
+    /// <strong>Accessing this static property outside of <see cref="Draw"/> is dangerous and not supported.</strong>
+    /// </summary>
+    public static ImFontPtr IconFontFixedWidth => InterfaceManager.IconFontFixedWidth;
+
+    /// <summary>
+    /// Gets the default font specifications.
+    /// </summary>
+    public IFontSpec DefaultFontSpec => Service<FontAtlasFactory>.Get().DefaultFontSpec;
+
+    /// <inheritdoc/>
+    public float FontDefaultSizePt => Service<FontAtlasFactory>.Get().DefaultFontSpec.SizePt;
+
+    /// <inheritdoc/>
+    public float FontDefaultSizePx => Service<FontAtlasFactory>.Get().DefaultFontSpec.SizePx;
+
+    /// <inheritdoc/>
+    public ImFontPtr FontDefault => InterfaceManager.DefaultFont;
+
+    /// <inheritdoc/>
+    public ImFontPtr FontIcon => InterfaceManager.IconFont;
+
+    /// <inheritdoc/>
+    public ImFontPtr FontMono => InterfaceManager.MonoFont;
+
+    /// <inheritdoc/>
+    public ImFontPtr FontIconFixedWidth => InterfaceManager.IconFontFixedWidth;
+
+    /// <summary>
+    /// Gets the handle to the default Dalamud font - supporting all game languages and icons.
+    /// </summary>
+    /// <remarks>
+    /// A font handle corresponding to this font can be obtained with:
+    /// <code>
+    /// fontAtlas.NewDelegateFontHandle(
+    ///     e => e.OnPreBuild(
+    ///         tk => tk.AddDalamudDefaultFont(UiBuilder.DefaultFontSizePx)));
+    /// </code>
+    /// </remarks>
+    public IFontHandle DefaultFontHandle =>
+        this.defaultFontHandle ??=
+            this.scopedFinalizer.Add(
+                new FontHandleWrapper(
+                    this.InterfaceManagerWithScene?.DefaultFontHandle
+                    ?? throw new InvalidOperationException("Scene is not yet ready.")));
+
+    /// <summary>
+    /// Gets the default Dalamud icon font based on FontAwesome 5 Free solid.
+    /// </summary>
+    /// <remarks>
+    /// A font handle corresponding to this font can be obtained with:
+    /// <code>
+    /// fontAtlas.NewDelegateFontHandle(
+    ///     e => e.OnPreBuild(
+    ///         tk => tk.AddFontAwesomeIconFont(new() { SizePt = UiBuilder.DefaultFontSizePt })));
+    /// // or use
+    ///         tk => tk.AddFontAwesomeIconFont(new() { SizePx = UiBuilder.DefaultFontSizePx })));
+    /// </code>
+    /// </remarks>
+    public IFontHandle IconFontHandle =>
+        this.iconFontHandle ??=
+            this.scopedFinalizer.Add(
+                new FontHandleWrapper(
+                    this.InterfaceManagerWithScene?.IconFontHandle
+                    ?? throw new InvalidOperationException("Scene is not yet ready.")));
+
+    /// <summary>
+    /// Gets the default Dalamud icon font based on FontAwesome 5 free solid with a fixed width and vertically centered glyphs.
+    /// </summary>
+    public IFontHandle IconFontFixedWidthHandle =>
+        this.iconFontFixedWidthHandle ??=
+            this.scopedFinalizer.Add(
+                new FontHandleWrapper(
+                    this.InterfaceManagerWithScene?.IconFontFixedWidthHandle
+                    ?? throw new InvalidOperationException("Scene is not yet ready.")));
+
+    /// <summary>
+    /// Gets the default Dalamud monospaced font based on Inconsolata Regular.
+    /// </summary>
+    /// <remarks>
+    /// A font handle corresponding to this font can be obtained with:
+    /// <code>
+    /// fontAtlas.NewDelegateFontHandle(
+    ///     e => e.OnPreBuild(
+    ///         tk => tk.AddDalamudAssetFont(
+    ///             DalamudAsset.InconsolataRegular,
+    ///             new() { SizePt = UiBuilder.DefaultFontSizePt })));
+    /// // or use
+    ///             new() { SizePx = UiBuilder.DefaultFontSizePx })));
+    /// </code>
+    /// </remarks>
+    public IFontHandle MonoFontHandle =>
+        this.monoFontHandle ??=
+            this.scopedFinalizer.Add(
+                new FontHandleWrapper(
+                    this.InterfaceManagerWithScene?.MonoFontHandle
+                    ?? throw new InvalidOperationException("Scene is not yet ready.")));
+
+    /// <inheritdoc/>
+    public nint DeviceHandle => this.InterfaceManagerWithScene?.Backend?.DeviceHandle ?? 0;
+
+    /// <inheritdoc/>
+    public nint WindowHandlePtr => this.InterfaceManagerWithScene is { } imws ? imws.GameWindowHandle : 0;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this plugin should hide its UI automatically when the game's UI is hidden.
+    /// </summary>
+    public bool DisableAutomaticUiHide { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this plugin should hide its UI automatically when the user toggles the UI.
+    /// </summary>
+    public bool DisableUserUiHide { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this plugin should hide its UI automatically during cutscenes.
+    /// </summary>
+    public bool DisableCutsceneUiHide { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this plugin should hide its UI automatically while gpose is active.
+    /// </summary>
+    public bool DisableGposeUiHide { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the game's cursor should be overridden with the ImGui cursor.
+    /// </summary>
+    public bool OverrideGameCursor
+    {
+        get => this.interfaceManager.OverrideGameCursor;
+        set => this.interfaceManager.OverrideGameCursor = value;
+    }
+
+    /// <summary>
+    /// Gets the count of Draw calls made since plugin creation.
+    /// </summary>
+    public ulong FrameCount { get; private set; } = 0;
+
+    /// <summary>
+    /// Gets a value indicating whether a cutscene is playing.
+    /// </summary>
+    public bool CutsceneActive => UiHideState.CutsceneActive;
+
+    /// <summary>
+    /// Gets a value indicating whether this plugin should modify the game's interface at this time.
+    /// </summary>
+    public bool ShouldModifyUi => this.interfaceManager.IsDispatchingEvents;
+
+    /// <summary>
+    /// Gets a value indicating whether UI functions can be used.
+    /// </summary>
+    public bool UiPrepared =>
+        Service<InterfaceManager.InterfaceManagerWithScene>.GetNullable(ExceptionPropagationMode.None) != null;
+
+    /// <summary>
+    /// Gets the plugin-private font atlas.
+    /// </summary>
+    public IFontAtlas FontAtlas => this.fontAtlas.Value;
+
+    /// <summary>
+    /// Gets a value indicating whether to use "reduced motion". This usually means that you should use less
+    /// intrusive animations, or disable them entirely.
+    /// </summary>
+    public bool ShouldUseReducedMotion => Service<DalamudConfiguration>.Get().ReduceMotions ?? false;
+
+    /// <inheritdoc />
+    public bool PluginUISoundEffectsEnabled => Service<DalamudConfiguration>.Get().EnablePluginUISoundEffects;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether statistics about UI draw time should be collected.
+    /// </summary>
+#if DEBUG
+    internal static bool DoStats { get; set; } = true;
+#else
+    internal static bool DoStats { get; set; } = false;
+#endif
+
+    /// <summary> Gets draw statistics for this plugin. </summary>
+    internal PluginDrawStatistics PluginDrawStatistics { get; } = new();
+
+    /// <summary>
+    /// Gets a value indicating whether this UiBuilder has a configuration UI registered.
+    /// </summary>
+    internal bool HasConfigUi => this.OpenConfigUi != null;
+
+    /// <summary>
+    /// Gets a value indicating whether this UiBuilder has a configuration UI registered.
+    /// </summary>
+    internal bool HasMainUi => this.OpenMainUi != null;
+
+    private InterfaceManager? InterfaceManagerWithScene =>
+        Service<InterfaceManager.InterfaceManagerWithScene>.GetNullable(ExceptionPropagationMode.None)?.Manager;
+
+    private Task<InterfaceManager> InterfaceManagerWithSceneAsync =>
+        Service<InterfaceManager.InterfaceManagerWithScene>.GetAsync().ContinueWith(task => task.Result.Manager);
+
+    /// <summary>
+    /// Loads an ULD file that can load textures containing multiple icons in a single texture.
+    /// </summary>
+    /// <param name="uldPath">The path of the requested ULD file.</param>
+    /// <returns>A wrapper around said ULD file.</returns>
+    public UldWrapper LoadUld(string uldPath)
+        => new(this, uldPath);
+
+    /// <summary>
+    /// Waits for UI to become available for use.
+    /// </summary>
+    /// <returns>A task that completes when the game's Present has been called at least once.</returns>
+    public Task WaitForUi() => this.InterfaceManagerWithSceneAsync;
+
+    /// <summary>
+    /// Waits for UI to become available for use.
+    /// </summary>
+    /// <param name="func">Function to call.</param>
+    /// <param name="runInFrameworkThread">Specifies whether to call the function from the framework thread.</param>
+    /// <returns>A task that completes when the game's Present has been called at least once.</returns>
+    /// <typeparam name="T">Return type.</typeparam>
+    public Task<T> RunWhenUiPrepared<T>(Func<T> func, bool runInFrameworkThread = false)
+    {
+        if (runInFrameworkThread)
+        {
+            return this.InterfaceManagerWithSceneAsync
+                       .ContinueWith(_ => this.framework.RunOnFrameworkThread(func))
+                       .Unwrap();
+        }
+        else
+        {
+            return this.InterfaceManagerWithSceneAsync
+                       .ContinueWith(_ => func());
+        }
+    }
+
+    /// <summary>
+    /// Waits for UI to become available for use.
+    /// </summary>
+    /// <param name="func">Function to call.</param>
+    /// <param name="runInFrameworkThread">Specifies whether to call the function from the framework thread.</param>
+    /// <returns>A task that completes when the game's Present has been called at least once.</returns>
+    /// <typeparam name="T">Return type.</typeparam>
+    public Task<T> RunWhenUiPrepared<T>(Func<Task<T>> func, bool runInFrameworkThread = false)
+    {
+        if (runInFrameworkThread)
+        {
+            return this.InterfaceManagerWithSceneAsync
+                       .ContinueWith(_ => this.framework.RunOnFrameworkThread(func))
+                       .Unwrap();
+        }
+        else
+        {
+            return this.InterfaceManagerWithSceneAsync
+                       .ContinueWith(_ => func())
+                       .Unwrap();
+        }
+    }
+
+    /// <summary>
+    /// Creates an isolated <see cref="IFontAtlas"/>.
+    /// </summary>
+    /// <param name="autoRebuildMode">Specify when and how to rebuild this atlas.</param>
+    /// <param name="isGlobalScaled">Whether the fonts in the atlas is global scaled.</param>
+    /// <param name="debugName">Name for debugging purposes.</param>
+    /// <returns>A new instance of <see cref="IFontAtlas"/>.</returns>
+    /// <remarks>
+    /// Use this to create extra font atlases, if you want to create and dispose fonts without having to rebuild all
+    /// other fonts together.<br />
+    /// If <paramref name="autoRebuildMode"/> is not <see cref="FontAtlasAutoRebuildMode.OnNewFrame"/>,
+    /// the font rebuilding functions must be called manually.
+    /// </remarks>
+    public IFontAtlas CreateFontAtlas(
+        FontAtlasAutoRebuildMode autoRebuildMode,
+        bool isGlobalScaled = true,
+        string? debugName = null) =>
+        this.scopedFinalizer.Add(
+            Service<FontAtlasFactory>
+                .Get()
+                .CreateFontAtlas(
+                    this.namespaceName + ":" + (debugName ?? "custom"),
+                    autoRebuildMode,
+                    isGlobalScaled,
+                    this.plugin));
+
+    /// <summary>
+    /// Unregister the UiBuilder. Do not call this in plugin code.
+    /// </summary>
+    void IDisposable.Dispose()
+    {
+        this.scopedFinalizer.Dispose();
+    }
+
+    /// <summary>Clean up resources allocated by this instance of <see cref="UiBuilder"/>.</summary>
+    /// <remarks>Dalamud internal use only.</remarks>
+    internal void DisposeInternal() => this.scopedFinalizer.Dispose();
+
+    /// <summary>
+    /// Open the registered configuration UI, if it exists.
+    /// </summary>
+    internal void OpenConfig()
+    {
+        this.OpenConfigUi?.InvokeSafely();
+    }
+
+    /// <summary>
+    /// Open the registered configuration UI, if it exists.
+    /// </summary>
+    internal void OpenMain()
+    {
+        this.OpenMainUi?.InvokeSafely();
+    }
+
+    /// <summary>
+    /// Notify this UiBuilder about plugin UI being hidden.
+    /// </summary>
+    internal void NotifyHideUi()
+    {
+        this.HideUi?.InvokeSafely();
+    }
+
+    /// <summary>
+    /// Notify this UiBuilder about plugin UI being shown.
+    /// </summary>
+    internal void NotifyShowUi()
+    {
+        this.ShowUi?.InvokeSafely();
+    }
+
+    private void OnDraw()
+    {
+        this.hitchDetector.Start();
+
+        var gameGui = Service<GameGui>.GetNullable();
+        if (gameGui == null)
+            return;
+
+        if ((UiHideState.GameUiHidden && this.configuration.ToggleUiHide &&
+             !(this.DisableUserUiHide || this.DisableAutomaticUiHide)) ||
+            (UiHideState.CutsceneActive && this.configuration.ToggleUiHideDuringCutscenes &&
+             !(this.DisableCutsceneUiHide || this.DisableAutomaticUiHide)) ||
+            (UiHideState.GPosing && this.configuration.ToggleUiHideDuringGpose &&
+             !(this.DisableGposeUiHide || this.DisableAutomaticUiHide)))
+        {
+            if (!this.lastFrameUiHideState)
+            {
+                this.lastFrameUiHideState = true;
+                this.HideUi?.InvokeSafely();
+            }
+
+            return;
+        }
+
+        if (this.lastFrameUiHideState)
+        {
+            this.lastFrameUiHideState = false;
+            this.ShowUi?.InvokeSafely();
+        }
+
+        if (DoStats) this.PluginDrawStatistics.StartUpdate();
+
+        if (this.hasErrorWindow)
+        {
+            this.DrawErrorWindow();
+        }
+        else
+        {
+            try
+            {
+                this.Draw?.Invoke();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "[{0}] UiBuilder OnBuildUi caught exception", this.namespaceName);
+                this.hasErrorWindow = true;
+                this.lastError = ex;
+            }
+        }
+
+        this.FrameCount++;
+
+        if (DoStats) this.PluginDrawStatistics.EndUpdate();
+
+        this.hitchDetector.Stop();
+    }
+
+    private void DrawErrorWindow()
+    {
+        ImGui.SetNextWindowPos(ImGuiHelpers.MainViewport.GetCenter(), ImGuiCond.Appearing, new Vector2(0.5f));
+        ImGui.SetNextWindowSizeConstraints(new Vector2(800 * ImGuiHelpers.GlobalScale, 0), new Vector2(float.MaxValue));
+        ImGuiHelpers.ForceNextWindowMainViewport();
+        if (!ImGui.Begin($"{this.namespaceName} Error", ref this.hasErrorWindow, ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.AlwaysAutoResize))
+        {
+            ImGui.End();
+            return;
+        }
+
+        DalamudComponents.DrawErrorDisplay(
+            Loc.Localize("UiBuilderErrorOccurred", "An error occurred while rendering this plugin. Please contact the developer for details."),
+            this.lastError,
+            [
+                (Loc.Localize("UiBuilderErrorRecoverButton", "Attempt to retry"), () =>
+                    {
+                        this.hasErrorWindow = false;
+                        this.lastError = null;
+                    }),
+                (Loc.Localize("UiBuilderErrorReloadButton", "Reload Plugin"), () =>
+                {
+                    var pluginName = this.plugin.Name;
+                    this.hasErrorWindow = false;
+                    this.lastError = null;
+                    _ = this.plugin.ReloadAsync().ContinueWith(
+                        t =>
+                        {
+                            var notificationManager = Service<NotificationManager>.Get();
+                            if (t.IsCompletedSuccessfully)
+                            {
+                                notificationManager.AddNotification(
+                                    string.Format(
+                                        Loc.Localize("UiBuilderReloadSuccess", "The plugin '{0}' was reloaded successfully."),
+                                        pluginName),
+                                    Loc.Localize("UiBuilderReloadSuccessTitle", "Plugin reloaded!"),
+                                    NotificationType.Success);
+                            }
+                            else
+                            {
+                                notificationManager.AddNotification(
+                                    string.Format(
+                                        Loc.Localize("UiBuilderReloadFailure", "The plugin '{0}' could not be reloaded."),
+                                        pluginName),
+                                    Loc.Localize("UiBuilderReloadFailureTitle", "Plugin reload failed!"),
+                                    NotificationType.Error);
+                            }
+                        });
+                })
+            ]);
+
+        ImGui.End();
+    }
+
+    private void OnResizeBuffers()
+    {
+        this.ResizeBuffers?.InvokeSafely();
+    }
+
+    private void OnDefaultStyleChanged()
+        => this.DefaultStyleChanged.InvokeSafely();
+
+    private void OnDefaultGlobalScaleChanged()
+        => this.DefaultGlobalScaleChanged.InvokeSafely();
+
+    private void OnDefaultFontChanged()
+        => this.DefaultFontChanged.InvokeSafely();
+
+    private class FontHandleWrapper : IFontHandle
+    {
+        private IFontHandle? wrapped;
+
+        public FontHandleWrapper(IFontHandle wrapped)
+        {
+            this.wrapped = wrapped;
+            this.wrapped.ImFontChanged += this.WrappedOnImFontChanged;
+        }
+
+        public event IFontHandle.ImFontChangedDelegate? ImFontChanged;
+
+        public Exception? LoadException => this.WrappedNotDisposed.LoadException;
+
+        public bool Available => this.WrappedNotDisposed.Available;
+
+        private IFontHandle WrappedNotDisposed =>
+            this.wrapped ?? throw new ObjectDisposedException(nameof(FontHandleWrapper));
+
+        public void Dispose()
+        {
+            if (this.wrapped is not { } w)
+                return;
+
+            this.wrapped = null;
+            w.ImFontChanged -= this.WrappedOnImFontChanged;
+            // Note: do not dispose w; we do not own it
+        }
+
+        public ILockedImFont? TryLock(out string? errorMessage)
+        {
+            if (this.wrapped is { } w)
+                return w.TryLock(out errorMessage);
+
+            errorMessage = nameof(ObjectDisposedException);
+            return null;
+        }
+
+        public ILockedImFont Lock() =>
+            this.wrapped?.Lock() ?? throw new ObjectDisposedException(nameof(FontHandleWrapper));
+
+        public IDisposable Push() => this.WrappedNotDisposed.Push();
+
+        public void Pop() => this.WrappedNotDisposed.Pop();
+
+        public Task<IFontHandle> WaitAsync() =>
+            this.wrapped?.WaitAsync().ContinueWith(_ => (IFontHandle)this)
+            ?? Task.FromException<IFontHandle>(new ObjectDisposedException(nameof(FontHandleWrapper)));
+
+        public Task<IFontHandle> WaitAsync(CancellationToken cancellationToken) =>
+            this.wrapped?.WaitAsync(cancellationToken)
+                .ContinueWith(_ => (IFontHandle)this, cancellationToken)
+            ?? Task.FromException<IFontHandle>(new ObjectDisposedException(nameof(FontHandleWrapper)));
+
+        public override string ToString() =>
+            $"{nameof(FontHandleWrapper)}({this.wrapped?.ToString() ?? "disposed"})";
+
+        private void WrappedOnImFontChanged(IFontHandle obj, ILockedImFont lockedFont) =>
+            this.ImFontChanged?.Invoke(obj, lockedFont);
+    }
+}

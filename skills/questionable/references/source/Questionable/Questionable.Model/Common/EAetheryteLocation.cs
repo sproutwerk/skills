@@ -1,0 +1,477 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
+using Questionable.Model.Common.Converter;
+namespace Questionable.Model.Common;
+
+[JsonConverter(typeof(AetheryteConverter))]
+public enum EAetheryteLocation
+{
+    None = 0,
+
+    Gridania = 2,
+    GridaniaArcher = 25,
+    GridaniaLeatherworker = 26,
+    GridaniaLancer = 27,
+    GridaniaConjurer = 28,
+    GridaniaBotanist = 29,
+    GridaniaAmphitheatre = 30,
+    GridaniaBlueBadgerGate = 31,
+    GridaniaYellowSerpentGate = 32,
+    GridaniaWhiteWolfGate = 54,
+    GridaniaAirship = 94,
+
+    CentralShroudBentbranchMeadows = 3,
+    EastShroudHawthorneHut = 4,
+    SouthShroudQuarrymill = 5,
+    SouthShroudCampTranquil = 6,
+    NorthShroudFallgourdFloat = 7,
+
+    Uldah = 9,
+    UldahAdventurers = 33,
+    UldahThaumaturge = 34,
+    UldahGladiator = 35,
+    UldahMiner = 36,
+    UldahAlchemist = 37,
+    UldahWeaver = 47,
+    UldahGoldsmith = 50,
+    UldahChamberOfRule = 51,
+    UldahAirship = 95,
+    UldahGateOfTheSultana = 38,
+    UldahGateOfNald = 39,
+    UldahGateOfThal = 40,
+    UldahSapphireAvenue = 125,
+
+    WesternThanalanHorizon = 17,
+    EasternThanalanCampDrybone = 18,
+    SouthernThanalanLittleAlaMhigo = 19,
+    SouthernThanalanForgottenSprings = 20,
+    NorthernThanalanCampBluefog = 21,
+    NorthernThanalanCeruleumProcessingPlant = 22,
+    CentralThanalanBlackBrushStation = 53,
+
+    Limsa = 8,
+    LimsaAftcastle = 41,
+    LimsaCulinarian = 42,
+    LimsaArcanist = 43,
+    LimsaFisher = 44,
+    LimsaMarauder = 48,
+    LimsaHawkersAlley = 49,
+    LimsaZephyrGate = 45,
+    LimsaTempestGate = 46,
+    LimsaAirship = 93,
+
+    LowerLaNosceaMorabyDrydocks = 10,
+    EasternLaNosceaCostaDelSol = 11,
+    EasternLaNosceaWineport = 12,
+    WesternLaNosceaSwiftperch = 13,
+    WesternLaNosceaAleport = 14,
+    UpperLaNosceaCampBronzeLake = 15,
+    OuterLaNosceaCampOverlook = 16,
+    MiddleLaNosceaSummerfordFarms = 52,
+
+    CoerthasCentralHighlandsCampDragonhead = 23,
+    MorDhona = 24,
+    WolvesDenPier = 55,
+
+    GoldSaucer = 62,
+    GoldSaucerEntranceCardSquares = 63,
+    GoldSaucerWonderSquareEast = 64,
+    GoldSaucerWonderSquareWest = 65,
+    GoldSaucerEventSquare = 66,
+    GoldSaucerCactpotBoard = 67,
+    GoldSaucerRoundSquare = 68,
+    GoldSaucerChocoboSquare = 69,
+    GoldSaucerMinionSquare = 89,
+
+    Ishgard = 70,
+    IshgardForgottenKnight = 80,
+    IshgardSkysteelManufactory = 81,
+    IshgardBrume = 82,
+    IshgardAthenaeumAstrologicum = 83,
+    IshgardJeweledCrozier = 84,
+    IshgardSaintReymanaudsCathedral = 85,
+    IshgardTribunal = 86,
+    IshgardLastVigil = 87,
+    IshgardGatesOfJudgement = 88,
+    IshgardFirmament = 100001,
+
+    FirmamentMendicantsCourt = 2011373,
+    FirmamentMattock = 2011374,
+    FirmamentNewNest = 2011384,
+    FirmanentSaintRoellesDais = 2011385,
+    FirmamentFeatherfall = 2011386,
+    FirmamentHoarfrostHall = 2011387,
+    FirmamentWesternRisensongQuarter = 2011388,
+    FirmamentEasternRisensongQuarter = 2011389,
+
+    Idyllshire = 75,
+    IdyllshireWest = 90,
+    IdyllshirePrologueGate = 91,
+    IdyllshireEpilogueGate = 92,
+
+    CoerthasWesternHighlandsFalconsNest = 71,
+    SeaOfCloudsCampCloudtop = 72,
+    SeaOfCloudsOkZundu = 73,
+    AzysLlaHelix = 74,
+    DravanianForelandsTailfeather = 76,
+    DravanianForelandsAnyxTrine = 77,
+    ChurningMistsMoghome = 78,
+    ChurningMistsZenith = 79,
+
+    RhalgrsReach = 104,
+    RhalgrsReachWest = 121,
+    RhalgrsReachNorthEast = 122,
+    RhalgrsReachFringesGate = 123,
+    RhalgrsReachPeaksGate = 124,
+
+    Kugane = 111,
+    KuganeShiokazeHostelry = 112,
+    KuganePier1 = 113,
+    KuganeThavnairianConsulate = 114,
+    KuganeMarkets = 115,
+    KuganeBokairoInn = 116,
+    KuganeRubyBazaar = 117,
+    KuganeSekiseigumiBarracks = 118,
+    KuganeRakuzaDistrict = 119,
+    KuganeRubyPrice = 120,
+    KuganeAirship = 126,
+
+    FringesCastrumOriens = 98,
+    FringesPeeringStones = 99,
+    PeaksAlaGannha = 100,
+    PeaksAlaGhiri = 101,
+    LochsPortaPraetoria = 102,
+    LochsAlaMhiganQuarter = 103,
+    RubySeaTamamizu = 105,
+    RubySeaOnokoro = 106,
+    YanxiaNamai = 107,
+    YanxiaHouseOfTheFierce = 108,
+    AzimSteppeReunion = 109,
+    AzimSteppeDawnThrone = 110,
+    AzimSteppeDhoroIloh = 128,
+
+    DomanEnclave = 127,
+    DomanEnclaveNorthern = 129,
+    DomanEnclaveSouthern = 130,
+    DomanEnclaveOneRiver = 131,
+    DomanEnclaveDocks = 162,
+    DomanEnclaveGangos = 163,
+
+    Crystarium = 133,
+    CrystariumMarkets = 149,
+    CrystariumTemenosRookery = 150,
+    CrystariumDossalGate = 151,
+    CrystariumPendants = 152,
+    CrystariumAmaroLaunch = 153,
+    CrystariumCrystallineMean = 154,
+    CrystariumCabinetOfCuriosity = 155,
+    CrystariumTessellation = 156,
+
+    Eulmore = 134,
+    EulmoreMainstay = 157,
+    EulmoreNightsoilPots = 158,
+    EulmoreGloryGate = 159,
+    EulmoreSoutheastDerelict = 135,
+    EulmorePathToGlory = 160,
+
+    LakelandFortJobb = 132,
+    LakelandOstallImperative = 136,
+    KholusiaStilltide = 137,
+    KholusiaWright = 138,
+    KholusiaTomra = 139,
+    AmhAraengMordSouq = 140,
+    AmhAraengInnAtJourneysHead = 161,
+    AmhAraengTwine = 141,
+    RaktikaSlitherbough = 142,
+    RaktikaFanow = 143,
+    IlMhegLydhaLran = 144,
+    IlMhegPlaEnni = 145,
+    IlMhegWolekdorf = 146,
+    TempestOndoCups = 147,
+    TempestMacarensesAngle = 148,
+
+    OldSharlayan = 182,
+    OldSharlayanStudium = 184,
+    OldSharlayanBaldesionAnnex = 185,
+    OldSharlayanRostra = 186,
+    OldSharlayanLeveilleurEstate = 187,
+    OldSharlayanJourneysEnd = 188,
+    OldSharlayanScholarsHarbor = 189,
+    OldSharlayanHallOfArtifice = 190,
+
+    RadzAtHan = 183,
+    RadzAtHanMeghaduta = 191,
+    RadzAtHanRuveydahFibers = 192,
+    RadzAtHanAirship = 193,
+    RadzAtHanAlzadaalsPeace = 194,
+    RadzAtHanHallOfTheRadiantHost = 195,
+    RadzAtHanMehrydesMeyhane = 196,
+    RadzAtHanKama = 198,
+    RadzAtHanHighCrucible = 199,
+    RadzAtHanGateOfFirstSight = 197,
+
+    LabyrinthosArcheion = 166,
+    LabyrinthosSharlayanHamlet = 167,
+    LabyrinthosAporia = 168,
+    ThavnairYedlihmad = 169,
+    ThavnairGreatWork = 170,
+    ThavnairPalakasStand = 171,
+    GarlemaldCampBrokenGlass = 172,
+    GarlemaldTertium = 173,
+    MareLamentorumSinusLacrimarum = 174,
+    MareLamentorumBestwaysBurrow = 175,
+    ElpisAnagnorisis = 176,
+    ElpisTwelveWonders = 177,
+    ElpisPoietenOikos = 178,
+    UltimaThuleReahTahra = 179,
+    UltimaThuleAbodeOfTheEa = 180,
+    UltimaThuleBaseOmicron = 181,
+
+    Tuliyollal = 216,
+
+    TuliyollalDirigibleLanding = 218,
+    TuliyollalTheResplendentQuarter = 219,
+    TuliyollalTheForardCabins = 220,
+    TuliyollalBaysideBevyMarketplace = 221,
+    TuliyollalVollokShoonsa = 222,
+    TuliyollalWachumeqimeqi = 223,
+    TuliyollalBrightploomPost = 224,
+    TuliyollalArchOfTheDawnUrqopacha = 225,
+    TuliyollalArchOfTheDawnKozamauka = 226,
+    TuliyollalIhuykatumu = 227,
+    TuliyollalDirigibleLandingYakTel = 228,
+    TuliyollalXakTuralSkygate = 229,
+    TuliyollalPhantomVillage = 239,
+
+    SolutionNine = 217,
+    SolutionNineInformationCenter = 230,
+    SolutionNineTrueVue = 231,
+    SolutionNineNeonStein = 232,
+    SolutionNineTheArcadion = 233,
+    SolutionNineResolution = 234,
+    SolutionNineNexusArcade = 235,
+    SolutionNineResidentialSector = 236,
+    SolutionNineScanningPortNine = 237,
+
+    UrqopachaWachunpelo = 200,
+    UrqopachaWorlarsEcho = 201,
+    KozamaukaOkHanu = 202,
+    KozamaukaManyFires = 203,
+    KozamaukaEarthenshire = 204,
+    KozamaukaDockPoga = 238,
+    YakTelIqBraax = 205,
+    YakTelMamook = 206,
+    ShaaloaniHhusatahwi = 207,
+    ShaaloaniShesheneweziSprings = 208,
+    ShaaloaniMehwahhetsoan = 209,
+    HeritageFoundYyasulaniStation = 210,
+    HeritageFoundTheOutskirts = 211,
+    HeritageFoundElectropeStrike = 212,
+    LivingMemoryLeynodeMnemo = 213,
+    LivingMemoryLeynodePyro = 214,
+    LivingMemoryLeynodeAero = 215
+}
+
+public static class EAetheryteLocationExtensions
+{
+    private readonly static IReadOnlyList<EAetheryteLocation> aethernetShards = [
+        EAetheryteLocation.GridaniaArcher,
+        EAetheryteLocation.GridaniaLeatherworker,
+        EAetheryteLocation.GridaniaLancer,
+        EAetheryteLocation.GridaniaConjurer,
+        EAetheryteLocation.GridaniaBotanist,
+        EAetheryteLocation.GridaniaAmphitheatre,
+        EAetheryteLocation.GridaniaBlueBadgerGate,
+        EAetheryteLocation.GridaniaYellowSerpentGate,
+        EAetheryteLocation.GridaniaAirship,
+        EAetheryteLocation.GridaniaWhiteWolfGate,
+
+        EAetheryteLocation.UldahAdventurers,
+        EAetheryteLocation.UldahThaumaturge,
+        EAetheryteLocation.UldahGladiator,
+        EAetheryteLocation.UldahMiner,
+        EAetheryteLocation.UldahAlchemist,
+        EAetheryteLocation.UldahWeaver,
+        EAetheryteLocation.UldahGoldsmith,
+        EAetheryteLocation.UldahChamberOfRule,
+        EAetheryteLocation.UldahAirship,
+        EAetheryteLocation.UldahGateOfTheSultana,
+        EAetheryteLocation.UldahGateOfNald,
+        EAetheryteLocation.UldahGateOfThal,
+        EAetheryteLocation.UldahSapphireAvenue,
+
+        EAetheryteLocation.LimsaAftcastle,
+        EAetheryteLocation.LimsaCulinarian,
+        EAetheryteLocation.LimsaArcanist,
+        EAetheryteLocation.LimsaFisher,
+        EAetheryteLocation.LimsaMarauder,
+        EAetheryteLocation.LimsaHawkersAlley,
+        EAetheryteLocation.LimsaZephyrGate,
+        EAetheryteLocation.LimsaTempestGate,
+        EAetheryteLocation.LimsaAirship,
+
+        EAetheryteLocation.GoldSaucerEntranceCardSquares,
+        EAetheryteLocation.GoldSaucerWonderSquareEast,
+        EAetheryteLocation.GoldSaucerWonderSquareWest,
+        EAetheryteLocation.GoldSaucerEventSquare,
+        EAetheryteLocation.GoldSaucerCactpotBoard,
+        EAetheryteLocation.GoldSaucerRoundSquare,
+        EAetheryteLocation.GoldSaucerChocoboSquare,
+        EAetheryteLocation.GoldSaucerMinionSquare,
+
+        EAetheryteLocation.IshgardForgottenKnight,
+        EAetheryteLocation.IshgardSkysteelManufactory,
+        EAetheryteLocation.IshgardBrume,
+        EAetheryteLocation.IshgardAthenaeumAstrologicum,
+        EAetheryteLocation.IshgardJeweledCrozier,
+        EAetheryteLocation.IshgardSaintReymanaudsCathedral,
+        EAetheryteLocation.IshgardTribunal,
+        EAetheryteLocation.IshgardLastVigil,
+        EAetheryteLocation.IshgardGatesOfJudgement,
+        EAetheryteLocation.IshgardFirmament,
+
+        EAetheryteLocation.FirmamentMendicantsCourt,
+        EAetheryteLocation.FirmamentMattock,
+        EAetheryteLocation.FirmamentNewNest,
+        EAetheryteLocation.FirmanentSaintRoellesDais,
+        EAetheryteLocation.FirmamentFeatherfall,
+        EAetheryteLocation.FirmamentHoarfrostHall,
+        EAetheryteLocation.FirmamentWesternRisensongQuarter,
+        EAetheryteLocation.FirmamentEasternRisensongQuarter,
+
+        EAetheryteLocation.IdyllshireWest,
+        EAetheryteLocation.IdyllshirePrologueGate,
+        EAetheryteLocation.IdyllshireEpilogueGate,
+
+        EAetheryteLocation.RhalgrsReachWest,
+        EAetheryteLocation.RhalgrsReachNorthEast,
+        EAetheryteLocation.RhalgrsReachFringesGate,
+        EAetheryteLocation.RhalgrsReachPeaksGate,
+
+        EAetheryteLocation.KuganeShiokazeHostelry,
+        EAetheryteLocation.KuganePier1,
+        EAetheryteLocation.KuganeThavnairianConsulate,
+        EAetheryteLocation.KuganeMarkets,
+        EAetheryteLocation.KuganeBokairoInn,
+        EAetheryteLocation.KuganeRubyBazaar,
+        EAetheryteLocation.KuganeSekiseigumiBarracks,
+        EAetheryteLocation.KuganeRakuzaDistrict,
+        EAetheryteLocation.KuganeRubyPrice,
+        EAetheryteLocation.KuganeAirship,
+
+        EAetheryteLocation.DomanEnclaveNorthern,
+        EAetheryteLocation.DomanEnclaveSouthern,
+        EAetheryteLocation.DomanEnclaveDocks,
+        EAetheryteLocation.DomanEnclaveOneRiver,
+        EAetheryteLocation.DomanEnclaveGangos,
+
+        EAetheryteLocation.CrystariumMarkets,
+        EAetheryteLocation.CrystariumTemenosRookery,
+        EAetheryteLocation.CrystariumDossalGate,
+        EAetheryteLocation.CrystariumPendants,
+        EAetheryteLocation.CrystariumAmaroLaunch,
+        EAetheryteLocation.CrystariumCrystallineMean,
+        EAetheryteLocation.CrystariumCabinetOfCuriosity,
+        EAetheryteLocation.CrystariumTessellation,
+
+        EAetheryteLocation.EulmoreMainstay,
+        EAetheryteLocation.EulmoreNightsoilPots,
+        EAetheryteLocation.EulmoreGloryGate,
+        EAetheryteLocation.EulmoreSoutheastDerelict,
+        EAetheryteLocation.EulmorePathToGlory,
+
+        EAetheryteLocation.OldSharlayanStudium,
+        EAetheryteLocation.OldSharlayanBaldesionAnnex,
+        EAetheryteLocation.OldSharlayanRostra,
+        EAetheryteLocation.OldSharlayanLeveilleurEstate,
+        EAetheryteLocation.OldSharlayanJourneysEnd,
+        EAetheryteLocation.OldSharlayanScholarsHarbor,
+        EAetheryteLocation.OldSharlayanHallOfArtifice,
+
+        EAetheryteLocation.RadzAtHanMeghaduta,
+        EAetheryteLocation.RadzAtHanRuveydahFibers,
+        EAetheryteLocation.RadzAtHanAirship,
+        EAetheryteLocation.RadzAtHanAlzadaalsPeace,
+        EAetheryteLocation.RadzAtHanHallOfTheRadiantHost,
+        EAetheryteLocation.RadzAtHanMehrydesMeyhane,
+        EAetheryteLocation.RadzAtHanKama,
+        EAetheryteLocation.RadzAtHanHighCrucible,
+        EAetheryteLocation.RadzAtHanGateOfFirstSight,
+
+        EAetheryteLocation.TuliyollalDirigibleLanding,
+        EAetheryteLocation.TuliyollalTheResplendentQuarter,
+        EAetheryteLocation.TuliyollalTheForardCabins,
+        EAetheryteLocation.TuliyollalBaysideBevyMarketplace,
+        EAetheryteLocation.TuliyollalVollokShoonsa,
+        EAetheryteLocation.TuliyollalWachumeqimeqi,
+        EAetheryteLocation.TuliyollalBrightploomPost,
+        EAetheryteLocation.TuliyollalArchOfTheDawnUrqopacha,
+        EAetheryteLocation.TuliyollalArchOfTheDawnKozamauka,
+        EAetheryteLocation.TuliyollalIhuykatumu,
+        EAetheryteLocation.TuliyollalDirigibleLandingYakTel,
+        EAetheryteLocation.TuliyollalXakTuralSkygate,
+        EAetheryteLocation.TuliyollalPhantomVillage,
+
+        EAetheryteLocation.SolutionNineInformationCenter,
+        EAetheryteLocation.SolutionNineTrueVue,
+        EAetheryteLocation.SolutionNineNeonStein,
+        EAetheryteLocation.SolutionNineTheArcadion,
+        EAetheryteLocation.SolutionNineResolution,
+        EAetheryteLocation.SolutionNineNexusArcade,
+        EAetheryteLocation.SolutionNineResidentialSector,
+        EAetheryteLocation.SolutionNineScanningPortNine,
+    ];
+    public static bool IsAethernetShard(this EAetheryteLocation aetheryteLocation) =>
+        aethernetShards.Contains(aetheryteLocation);
+    public static bool IsFirmamentAetheryte(this EAetheryteLocation aetheryteLocation) =>
+        aetheryteLocation is EAetheryteLocation.IshgardFirmament
+            or EAetheryteLocation.FirmamentMendicantsCourt
+            or EAetheryteLocation.FirmamentMattock
+            or EAetheryteLocation.FirmamentNewNest
+            or EAetheryteLocation.FirmanentSaintRoellesDais
+            or EAetheryteLocation.FirmamentFeatherfall
+            or EAetheryteLocation.FirmamentHoarfrostHall
+            or EAetheryteLocation.FirmamentWesternRisensongQuarter
+            or EAetheryteLocation.FirmamentEasternRisensongQuarter;
+    public static bool TrySpecialAethernet(this EAetheryteLocation aetheryteLocation, out EAetheryteLocation? cityState)
+    {
+        cityState = aetheryteLocation switch
+        {
+            EAetheryteLocation.GridaniaBlueBadgerGate or
+                EAetheryteLocation.GridaniaYellowSerpentGate or
+                EAetheryteLocation.GridaniaAirship or
+                EAetheryteLocation.GridaniaWhiteWolfGate => (EAetheryteLocation?)EAetheryteLocation.Gridania,
+            EAetheryteLocation.LimsaZephyrGate or
+                EAetheryteLocation.LimsaTempestGate or
+                EAetheryteLocation.LimsaAirship => (EAetheryteLocation?)EAetheryteLocation.Limsa,
+            EAetheryteLocation.UldahAirship or
+                EAetheryteLocation.UldahGateOfTheSultana or
+                EAetheryteLocation.UldahGateOfNald or
+                EAetheryteLocation.UldahGateOfThal => (EAetheryteLocation?)EAetheryteLocation.Uldah,
+            EAetheryteLocation.IshgardGatesOfJudgement or
+                EAetheryteLocation.IshgardFirmament => (EAetheryteLocation?)EAetheryteLocation.Ishgard,
+            EAetheryteLocation.IdyllshirePrologueGate or
+                EAetheryteLocation.IdyllshireEpilogueGate => (EAetheryteLocation?)EAetheryteLocation.Idyllshire,
+            EAetheryteLocation.RhalgrsReachFringesGate or
+            EAetheryteLocation.RhalgrsReachPeaksGate => (EAetheryteLocation?)EAetheryteLocation.RhalgrsReach,
+            EAetheryteLocation.KuganeRubyPrice or
+                EAetheryteLocation.KuganeAirship => (EAetheryteLocation?)EAetheryteLocation.Kugane,
+            EAetheryteLocation.DomanEnclaveOneRiver or
+                EAetheryteLocation.DomanEnclaveGangos => (EAetheryteLocation?)EAetheryteLocation.DomanEnclave,
+            EAetheryteLocation.CrystariumTessellation => (EAetheryteLocation?)EAetheryteLocation.Crystarium,
+            EAetheryteLocation.EulmorePathToGlory => (EAetheryteLocation?)EAetheryteLocation.Eulmore,
+            EAetheryteLocation.OldSharlayanHallOfArtifice => (EAetheryteLocation?)EAetheryteLocation.OldSharlayan,
+            EAetheryteLocation.RadzAtHanGateOfFirstSight => (EAetheryteLocation?)EAetheryteLocation.RadzAtHan,
+            EAetheryteLocation.SolutionNineScanningPortNine => (EAetheryteLocation?)EAetheryteLocation.SolutionNine,
+            EAetheryteLocation.TuliyollalArchOfTheDawnUrqopacha or
+                EAetheryteLocation.TuliyollalArchOfTheDawnKozamauka or
+                EAetheryteLocation.TuliyollalIhuykatumu or
+                EAetheryteLocation.TuliyollalDirigibleLandingYakTel or
+                EAetheryteLocation.TuliyollalXakTuralSkygate or
+                EAetheryteLocation.TuliyollalPhantomVillage => (EAetheryteLocation?)EAetheryteLocation.Tuliyollal,
+            _ => null,
+        };
+        return cityState != null;
+    }
+}

@@ -1,0 +1,399 @@
+﻿using AutoRetainerAPI;
+using Dalamud.Bindings.ImGui;
+using Dalamud.Interface;
+using Dalamud.Interface.Components;
+using ECommons;
+using ECommons.Automation.NeoTaskManager;
+using ECommons.Configuration;
+using ECommons.DalamudServices;
+using ECommons.DalamudServices.Legacy;
+using ECommons.ExcelServices;
+using ECommons.EzIpcManager;
+using ECommons.GameHelpers;
+using ECommons.ImGuiMethods;
+using ECommons.IPC;
+using ECommons.LazyDataHelpers;
+using ECommons.Logging;
+using ECommons.Schedulers;
+using ECommons.Throttlers;
+using ECommons.UIHelpers.AddonMasterImplementations;
+using FFXIVClientStructs.FFXIV.Client.Game;
+using Lumina.Excel.Sheets;
+using Splatoon.SplatoonScripting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Player = ECommons.GameHelpers.LegacyPlayer.Player;
+#pragma warning disable RS0030
+
+namespace SplatoonScriptsOfficial.Generic;
+public unsafe class QuestionableQuestQueue : SplatoonScript
+{
+    public override HashSet<uint>? ValidTerritories { get; } = [];
+    public override Metadata Metadata => new(9, "NightmareXIV, Aly");
+
+    [EzIPC("Questionable.IsRunning", false)] private Func<bool> QuestionableIsRunning;
+    [EzIPC("Questionable.StartSingleQuest", false)] private Func<string, bool> QuestionableStartSingleQuest;
+    [EzIPC("Questionable.StartQuest", false)] private Func<string, bool> QuestionableStartQuest;
+    [EzIPC("Questionable.GetCurrentQuestId", false)] private Func<string> QuestionableGetCurrentQuestId;
+    [EzIPC("Questionable.ImportQuestPriority", false)] private Func<string, bool> QuestionableImportQuestPriority;
+
+    [EzIPC("Lifestream.IsBusy", false)] public Func<bool> LifestreamIsBusy;
+    [EzIPC("Lifestream.Teleport", false)] public Func<uint, byte, bool> LifestreamTeleport;
+    [EzIPC("Lifestream.AethernetTeleport", false)] public Func<string, bool> LifestreamAethernetTeleport;
+
+    AutoRetainerApi ArApi => field ??= new(this.InternalData.FullName);
+
+    private Config C => Controller.GetConfig<Config>();
+    private Dictionary<uint, string> Aetherytes = [new KeyValuePair<uint, string>(0, "Disabled"), .. Svc.Data.GetExcelSheet<Aetheryte>().Where(x => x.IsAetheryte && x.PlaceName.Value.Name != "").ToDictionary(x => x.RowId, x => x.PlaceName.Value.Name.GetText())];
+    private Dictionary<uint, string> Aethernets = [new KeyValuePair<uint, string>(0, "Disabled"), .. Svc.Data.GetExcelSheet<Aetheryte>().Where(x => !x.IsAetheryte && x.AethernetName.Value.Name != "").ToDictionary(x => x.RowId, x => x.AethernetName.Value.Name.GetText())];
+
+    public bool IsNotified = false;
+    private bool questMapAvailable = false;
+
+    public override void OnSetup()
+    {
+        EzIPC.Init(this);
+        questMapAvailable = Svc.Commands.Commands.ContainsKey("/questinfo");
+    }
+
+    private TaskManager TaskManager;
+
+    public override void OnEnable()
+    {
+        TaskManager = new(new(timeLimitMS: 30000, abortOnTimeout: true, showDebug: true));
+    }
+
+    public override void OnDisable()
+    {
+        TaskManager.Dispose();
+    }
+
+    public override void OnUpdate()
+    {
+        if(!C.Active) return;
+        if(GenericHelpers.TryGetAddonMaster<AddonMaster.SelectString>(out var m) && m.IsAddonReady)
+        {
+            if(m.Text.Contains("Select a control scheme"))
+            {
+                m.Entries.First(x => x.Text.Contains("Mouse")).Select();
+            }
+        }
+        Controller.DisplayAttentionWindowLine("Script is active.");
+        if(QuestionableIsRunning())
+        {
+            IsNotified = false;
+            var allowedQuests = C.Quests.Where(x => x.Enabled && !QuestManager.IsQuestComplete(x.ID + 65536) && (!x.OnlyAccept || !QuestManager.Instance()->IsQuestAccepted(x.ID))).Select(x => x.ID.ToString());
+            if(!allowedQuests.Contains(QuestionableGetCurrentQuestId()) && !C.Whitelist.Select(x => x.ToString()).Contains(QuestionableGetCurrentQuestId()))
+            {
+                if(EzThrottler.Check(InternalData.FullName + "NoRestart"))
+                {
+                    Svc.Commands.ProcessCommand("/qst stop");
+                }
+            }
+            else
+            {
+                EzThrottler.Throttle(InternalData.FullName + "NoRestart", 3000, true);
+            }
+        }
+        if(IsBusy() || TaskManager.IsBusy || !GenericHelpers.IsScreenReady())
+        {
+            EzThrottler.Throttle(InternalData.FullName + "Busy", 1000, true);
+        }
+        if(EzThrottler.Check(InternalData.FullName + "Busy"))
+        {
+            var next = C.Quests.FirstOrDefault(x => x.Enabled && !QuestManager.IsQuestComplete(x.ID + 65536) && (!x.OnlyAccept || !QuestManager.Instance()->IsQuestAccepted(x.ID)));
+            if(next == null)
+            {
+                if(C.MultiChara)
+                {
+                    C.Charas.Remove(Player.NameWithWorld);
+                    var nextChara = C.Charas.FirstOrDefault()?.Split("@");
+                    if(nextChara != null)
+                    {
+                        ECommonsIPC.Lifestream.ChangeCharacter(nextChara[0], nextChara[1]);
+                        return;
+                    }
+                }
+                if(!IsNotified)
+                {
+                    DuoLog.Warning("No more quests left in queue, script disabled");
+                    Splatoon.Splatoon.P.NotificationMasterApi.DisplayTrayNotification(InternalData.Name, "No more quests left in queue");
+                    Splatoon.Splatoon.P.NotificationMasterApi.FlashTaskbarIcon();
+                }
+                if(C.AutoDeactivate) C.Active = false;
+                IsNotified = true;
+            }
+            else
+            {
+                IsNotified = false;
+                Enqueue(next);
+            }
+        }
+    }
+
+    private void Enqueue(QuestInfo data)
+    {
+        if(data.Aetheryte != 0)
+        {
+            var aetheryte = Svc.Data.GetExcelSheet<Aetheryte>().GetRowOrDefault(data.Aetheryte);
+            if(aetheryte != null && (aetheryte.Value.Territory.RowId != Player.Territory || !Svc.Objects.Any(x => x.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Aetheryte && Player.DistanceTo(x) < 20f)))
+            {
+                TaskManager.Enqueue(() => LifestreamTeleport(data.Aetheryte, 0), "Teleport");
+                TaskManager.Enqueue(() => !GenericHelpers.IsScreenReady(), "Wait 1");
+                TaskManager.Enqueue(() => !IsBusy(), "Wait 2");
+            }
+        }
+        if(data.Aethernet != 0)
+        {
+            TaskManager.Enqueue(() => LifestreamAethernetTeleport(Aethernets[data.Aethernet]), "Aethernet teleport");
+            TaskManager.Enqueue(() => !GenericHelpers.IsScreenReady(), "Wait 3");
+            TaskManager.Enqueue(() => !IsBusy(), "Wait 4");
+        }
+        TaskManager.Enqueue(() => (data.Cont ? QuestionableStartQuest : QuestionableStartSingleQuest)(data.ID.ToString()), "Start quest");
+    }
+
+    public bool IsBusy() => !Player.Interactable || QuestionableIsRunning() || LifestreamIsBusy() || GenericHelpers.IsOccupied() || Player.IsAnimationLocked || !GenericHelpers.IsScreenReady() || Player.Object.IsCasting;
+
+    private ImGuiEx.RealtimeDragDrop<QuestInfo> DragDrop = new("QuestInfoDragDrop", (x) => x.DragDropID);
+    public override void OnSettingsDraw()
+    {
+        ImGui.Checkbox("Automatically do quests", ref C.Active);
+        ImGui.SameLine();
+        ImGui.Checkbox("Auto deactivate on completion", ref C.AutoDeactivate);
+        ImGui.SameLine();
+        ImGui.Checkbox("Multi Character", ref C.MultiChara);
+        if(C.MultiChara)
+        {
+            ImGuiEx.SetNextItemFullWidth();
+            if(ImGui.BeginCombo("###multichara", C.Charas.Count == 0?"None":$"{C.Charas.Take(3).Print()}{(C.Charas.Count > 3 ? $", +{C.Charas.Count-3} more" : "")}", ImGuiComboFlags.HeightLargest))
+            {
+                foreach(var x in ArApi.GetRegisteredCharacters())
+                {
+                    var data = ArApi.GetOfflineCharacterData(x);
+                    var indexCombat = FindMaxIndex(data.ClassJobLevelArray, out var levelCombat, (f, i) => ExpArrayIndexToJob.TryGetValue(i, out var job) && job.IsCombat());
+
+                    if(ThreadLoadImageHandler.TryGetIconTextureWrap(ExpArrayIndexToJob[indexCombat].GetIcon(), false, out var image))
+                    {
+                        ImGui.Image(image.Handle, new(ImGui.GetTextLineHeight()));
+                        ImGui.SameLine();
+                    }
+                    if(ImGui.Selectable($"Lv.{levelCombat} {data.Name}@{data.World}", C.Charas.Contains($"{data.Name}@{data.World}"), ImGuiSelectableFlags.DontClosePopups))
+                    {
+                        C.Charas.Toggle($"{data.Name}@{data.World}");
+                    }
+                }
+                ImGui.EndCombo();
+            }
+        }
+        if(ImGuiEx.IconButtonWithText(FontAwesomeIcon.Plus, "Add new quest"))
+        {
+            C.Quests.Add(new());
+        }
+        ImGui.SameLine();
+
+        bool importButton = ImGuiEx.IconButtonWithText(FontAwesomeIcon.Copy, "Import to QST");
+        if (ImGui.IsItemHovered())
+        {
+            ImGui.SetTooltip("Left click: Import to QST priority list\nRight click: Copy to clipboard");
+        }
+        string clipboardPrefix = "qst:priority:";
+        char clipboardSeparator = ';';
+        string getPriorityPreset() => clipboardPrefix + Convert.ToBase64String(
+                    Encoding.UTF8.GetBytes(
+                        string.Join(
+                            clipboardSeparator, C.Quests.Select(x => x.ID.ToString())
+                        )
+                    )
+                );
+        if (importButton)
+        {
+            bool _ = QuestionableImportQuestPriority(getPriorityPreset());
+        }
+        else if (ImGui.IsItemClicked(ImGuiMouseButton.Right))
+        {
+            ImGui.SetClipboardText(getPriorityPreset());
+        }
+        if(TaskManager?.IsBusy == true)
+        {
+            ImGui.SameLine();
+            if(ImGuiEx.IconButtonWithText(FontAwesomeIcon.Ban, "Stop all tasks"))
+            {
+                TaskManager.Abort();
+            }
+        }
+        ImGui.SameLine();
+        ImGuiEx.Text($"Qst: {QuestionableGetCurrentQuestId()}");
+        DragDrop.Begin();
+        if(ImGuiEx.BeginDefaultTable(["##drag", "##enabled", "~Quest", "Aetheryte", "Aethernet", "##delete"]))
+        {
+            for(var i = 0; i < C.Quests.Count; i++)
+            {
+                ImGui.PushID($"Quest{i}");
+                var q = C.Quests[i];
+                var quest = Svc.Data.GetExcelSheet<Quest>().GetRowOrDefault(q.ID + 65536);
+                ImGui.TableNextRow();
+                DragDrop.SetRowColor(q.DragDropID);
+                ImGui.TableNextColumn();
+                DragDrop.NextRow();
+                DragDrop.DrawButtonDummy(q, C.Quests, i);
+                ImGui.TableNextColumn();
+                ImGui.Checkbox("##enabled", ref q.Enabled);
+                ImGui.SameLine();
+                ImGuiEx.ButtonCheckbox(FontAwesomeIcon.AngleDoubleRight, ref q.Cont);
+                ImGuiEx.Tooltip("Allow Questionable to continue");
+                ImGui.SameLine();
+                ImGuiEx.ButtonCheckbox(FontAwesomeIcon.ExclamationCircle, ref q.OnlyAccept);
+                ImGuiEx.Tooltip("Only accept this quest, but do not do it");
+                if(questMapAvailable)
+                {
+                    ImGui.SameLine();
+                    if (ImGuiComponents.IconButton(FontAwesomeIcon.Atlas))
+                        Svc.Commands.ProcessCommand($"/questinfo {q.ID}");
+
+                    if (ImGui.IsItemHovered())
+                        ImGui.SetTooltip($"Show information about '{quest?.Name ?? "Invalid quest"}' in Quest Map plugin.");
+                }
+
+                ImGui.TableNextColumn();
+                ImGui.SetNextItemWidth(50f);
+                ImGuiEx.InputUint($"{quest?.Name ?? "Invalid quest"}###questid", ref q.ID);
+                if(q.ID > 65536) q.ID -= 65536;
+                if(quest != null)
+                {
+                    if(QuestManager.IsQuestComplete(quest.Value.RowId))
+                    {
+                        ImGuiEx.HelpMarker("This quest is completed", EColor.GreenBright, FontAwesomeIcon.Check.ToIconString());
+                    }
+                    else
+                    {
+                        if(QuestManager.Instance()->IsQuestAccepted(quest.Value.RowId))
+                        {
+                            ImGuiEx.HelpMarker("This quest is not completed but accepted", EColor.YellowBright, FontAwesomeIcon.UserTimes.ToIconString());
+                        }
+                        else
+                        {
+                            ImGuiEx.HelpMarker("This quest is not completed", EColor.YellowBright, FontAwesomeIcon.Times.ToIconString());
+                        }
+                    }
+                }
+
+                ImGui.TableNextColumn();
+                ImGui.SetNextItemWidth(150f);
+                ImGuiEx.Combo("##aetheryte", ref q.Aetheryte, Aetherytes.Keys, names: Aetherytes);
+                ImGui.TableNextColumn();
+                ImGui.SetNextItemWidth(150f);
+                ImGuiEx.Combo("##aethernet", ref q.Aethernet, Aethernets.Keys, names: Aethernets);
+                ImGui.TableNextColumn();
+                if(ImGuiEx.IconButton(FontAwesomeIcon.Play))
+                {
+                    Enqueue(q);
+                }
+                ImGui.SameLine();
+                if(ImGuiEx.IconButton(FontAwesomeIcon.Trash))
+                {
+                    new TickScheduler(() => C.Quests.Remove(q));
+                }
+                ImGui.PopID();
+            }
+            ImGui.EndTable();
+            DragDrop.End();
+        }
+        if(ImGui.CollapsingHeader("Quest Whitelist"))
+        {
+            ImGuiEx.TextWrapped($"These quests will be allowed to be completed if they are running. They may still be picked up.");
+            ImGuiEx.FilteringInputInt("Add to whitelist", out var addToBl);
+            ImGui.SameLine();
+            if(ImGuiEx.IconButtonWithText(FontAwesomeIcon.Plus, $"Add {$"{Quest.GetRef(addToBl + 65536).ValueNullable?.Name}"}"))
+            {
+                C.Whitelist.Add((uint)addToBl);
+            }
+            foreach(var x in C.Whitelist)
+            {
+                if(ImGui.Selectable($"{Quest.GetRef(x + 65536).ValueNullable?.Name}"))
+                {
+                    new TickScheduler(() => C.Whitelist.Remove(x));
+                }
+            }
+        }
+        if(ImGui.CollapsingHeader("Debug"))
+        {
+            ImGuiEx.Text($"QuestionableIsRunning {QuestionableIsRunning()}");
+            ImGuiEx.Text($"QuestionableGetCurrentQuestId {QuestionableGetCurrentQuestId()}");
+        }
+    }
+
+    public class Config
+    {
+        public bool Active = false;
+        public List<QuestInfo> Quests = [];
+        public bool AutoDeactivate = true;
+        public bool MultiChara = false;
+        public List<string> Charas = [];
+        public HashSet<uint> Whitelist = [];
+    }
+
+    public class QuestInfo(uint iD, uint aetheryte, uint aethernet = 0)
+    {
+        public QuestInfo() : this(0, 0) { }
+
+        internal string DragDropID = Guid.NewGuid().ToString();
+        public bool Enabled = true;
+        public uint ID = iD;
+        public uint Aetheryte = aetheryte;
+        public uint Aethernet = aethernet;
+        public bool Cont = false;
+        public bool OnlyAccept = false;
+    }
+
+    public static int FindMaxIndex<T>(IList<T> collection, out T maxValue, Func<T, int, bool>? predicate = null) where T : IComparable<T>
+    {
+        if(collection == null || collection.Count == 0)
+        {
+            throw new ArgumentException("Collection must not be null or empty");
+        }
+
+        var maxIndex = -1;
+        maxValue = default!;
+
+        for(var i = 0; i < collection.Count; i++)
+        {
+            var element = collection[i];
+
+            if(predicate != null && !predicate(element, i))
+            {
+                continue;
+            }
+
+            if(maxIndex == -1 || element.CompareTo(maxValue) > 0)
+            {
+                maxValue = element;
+                maxIndex = i;
+            }
+        }
+
+        if(maxIndex == -1)
+        {
+            throw new InvalidOperationException("No elements matched the predicate");
+        }
+
+        return maxIndex;
+    }
+    public static Dictionary<int, Job> ExpArrayIndexToJob
+    {
+        get
+        {
+            if(field == null)
+            {
+                field = [];
+                foreach(var x in Svc.Data.GetExcelSheet<ClassJob>())
+                {
+                    field[x.ExpArrayIndex] = (Job)x.RowId;
+                }
+                Purgatory.Add(() => field = null);
+            }
+            return field;
+        }
+    }
+}

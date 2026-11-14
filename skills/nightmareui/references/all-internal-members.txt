@@ -1,0 +1,27 @@
+NightmareUI/NightmareUI/PrimaryUI/Components/CondElse.cs:2: internal class CondElse : IWidget
+NightmareUI/NightmareUI/PrimaryUI/Components/CondEndIf.cs:2: internal class CondEndIf : IWidget
+NightmareUI/NightmareUI/PrimaryUI/Components/CondIf.cs:4: internal class CondIf : IWidget
+NightmareUI/NightmareUI/PrimaryUI/Components/CondIf.cs:6: internal Func<bool> Predicate;
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:4: internal class ImGuiWidget : IWidget
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:6: internal string Label;
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:7: internal Action<string> DrawAction;
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:8: internal string? Help;
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:9: internal float? Width;
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:10: internal NuiBuilder NuiBuilder;
+NightmareUI/NightmareUI/PrimaryUI/Components/ImGuiWidget.cs:12: internal bool ShouldHighlight => NuiBuilder.Filter == "" || Label.Contains(NuiBuilder.Filter, StringComparison.OrdinalIgnoreCase);
+NightmareUI/NightmareUI/PrimaryUI/Components/IWidget.cs:2: internal interface IWidget
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:13: internal unsafe class Section
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:15: internal string Name = "";
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:16: internal Vector4? Color;
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:17: internal List<IWidget> Widgets = [];
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:18: internal bool PrevSeparator = false;
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:19: internal Func<bool>? Cond = null;
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:20: internal bool CondComp;
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:21: internal bool Collapsible;
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:22: internal Action? RightFloat;
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:23: internal Func<bool>? Visible;
+NightmareUI/NightmareUI/PrimaryUI/Components/Section.cs:30: internal void Draw(NuiBuilder builder, bool noCollapse)
+NightmareUI/NightmareUI/PrimaryUI/Components/SeparatorWidget.cs:4: internal class SeparatorWidget : IWidget
+NightmareUI/NightmareUI/PrimaryUI/Components/SeparatorWidget.cs:6: internal Action DrawAction;
+NightmareUI/NightmareUI/PrimaryUI/Components/SeparatorWidget.cs:8: internal SeparatorWidget(Action draw)
+NightmareUI.OtterGuiWrapper/NightmareUI.OtterGuiWrapper/FileSystems/Configuration/ConfigFileSystemEntry.cs:17: internal Func<string> Filter = null!;

@@ -1,0 +1,59 @@
+{
+  "Name": "M11S - P2 Towers (trigger + freeze) [EXAMPLE/UNTESTED]",
+  "Description": "EXAMPLE/UNTESTED - format demo. Zone 1325 and actions 46116/46099 are real; the tower coordinates and the MapEffect: 5, 4, 2 trigger line are ILLUSTRATIVE. Take both from a recording before use. Not verified in combat.",
+  "Group": "M11S - Arcadion",
+  "ZoneLockH": [1325],
+  "DCond": 5,
+  "Phase": 0,
+  "UseTriggers": true,
+  "Triggers": [
+    {
+      "Type": 2,
+      "Match": "MapEffect: 5, 4, 2",
+      "Duration": 12.0,
+      "MatchDelay": 0.0,
+      "ResetOnTChange": true,
+      "FireOnce": false,
+      "IsRegex": false
+    },
+    {
+      "Type": 3,
+      "Match": "starts casting 46116",
+      "Duration": 0.0,
+      "ResetOnTChange": true,
+      "FireOnce": true
+    }
+  ],
+  "Freezing": true,
+  "FreezeFor": 12.0,
+  "IntervalBetweenFreezes": 60.0,
+  "FreezeDisplayDelay": 0.0,
+  "FreezeResetTerr": true,
+  "ElementsL": [
+    {
+      "Name": "Tower N",
+      "type": 0,
+      "refX": 100.0,
+      "refY": 92.0,
+      "refZ": 0.0,
+      "radius": 3.0,
+      "color": 3372154624,
+      "fillIntensity": 0.4,
+      "overlayText": "TOWER",
+      "mechanicType": 3
+    },
+    {
+      "Name": "Tower S",
+      "type": 0,
+      "refX": 100.0,
+      "refY": 108.0,
+      "refZ": 0.0,
+      "radius": 3.0,
+      "color": 3372154624,
+      "fillIntensity": 0.4,
+      "overlayText": "TOWER",
+      "mechanicType": 3
+    }
+  ],
+  "BlacklistedProjectorActions": [46116, 46099]
+}

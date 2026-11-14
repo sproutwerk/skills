@@ -1,0 +1,646 @@
+ECommons/Automation/AutoCutsceneSkipper.cs:17: public unsafe class AutoCutsceneSkipper
+ECommons/Automation/Callback.cs:15: public static unsafe class Callback
+ECommons/Automation/Chat.cs:15: public static unsafe class Chat
+ECommons/Automation/Chat.cs:119: public static class Instance
+ECommons/Automation/LegacyTaskManager/TaskManager.cs:11: public partial class TaskManager : IDisposable
+ECommons/Automation/LegacyTaskManager/TaskManager@Enqueue.cs:6: public partial class TaskManager
+ECommons/Automation/LegacyTaskManager/TaskManager@EnqueueImmediate.cs:6: public partial class TaskManager
+ECommons/Automation/LegacyTaskManager/TaskManager@Insert.cs:6: public partial class TaskManager
+ECommons/Automation/Macro.cs:9: public readonly struct Macro : IDisposable
+ECommons/Automation/MacroManager.cs:12: public static unsafe class MacroManager
+ECommons/Automation/NeoTaskManager/TaskManager.Delay.cs:4: public partial class TaskManager
+ECommons/Automation/NeoTaskManager/TaskManager.Enqueue.cs:5: public partial class TaskManager
+ECommons/Automation/NeoTaskManager/TaskManager.Insert.cs:6: public partial class TaskManager
+ECommons/Automation/NeoTaskManager/TaskManager.Stack.cs:10: public partial class TaskManager
+ECommons/Automation/NeoTaskManager/TaskManager.Stack.cs:12: public record struct StackDetails()
+ECommons/Automation/NeoTaskManager/TaskManager.cs:10: public partial class TaskManager : IDisposable
+ECommons/Automation/NeoTaskManager/TaskManagerConfiguration.cs:9: public class TaskManagerConfiguration
+ECommons/Automation/NeoTaskManager/TaskManagerConfiguration.cs:87: public delegate void OnTaskExceptionDelegate(TaskManagerTask task, Exception exception, ref bool @continue, ref bool? abort);
+ECommons/Automation/NeoTaskManager/TaskManagerConfiguration.cs:98: public delegate void OnTaskTimeoutDelegate(TaskManagerTask task, ref long remainingTimeMS);
+ECommons/Automation/NeoTaskManager/TaskManagerConfiguration.cs:109: public delegate void OnTaskCompletionDelegate(TaskManagerTask task, ref bool? isCompleted);
+ECommons/Automation/NeoTaskManager/TaskManagerConfiguration.cs:115: public delegate void CompanionActionDelegate(TaskManagerTask task);
+ECommons/Automation/NeoTaskManager/TaskManagerConfigurationExtensions.cs:3: public static class TaskManagerConfigurationExtensions
+ECommons/Automation/NeoTaskManager/TaskManagerTask.cs:6: public class TaskManagerTask
+ECommons/Automation/NeoTaskManager/TaskTimeoutException.cs:4: public class TaskTimeoutException : Exception
+ECommons/Automation/NeoTaskManager/Tasks/DelayTask.cs:5: public class DelayTask
+ECommons/Automation/NeoTaskManager/Tasks/FrameDelayTask.cs:5: public unsafe class FrameDelayTask
+ECommons/Automation/NeoTaskManager/Tasks/NeoTasks.cs:21: public static unsafe class NeoTasks
+ECommons/Automation/UIInput/AtkEvent.cs:11: public unsafe partial struct AtkEvent
+ECommons/Automation/UIInput/ClickHelper.cs:12: public unsafe class ClickHelper
+ECommons/Automation/UIInput/ClickHelper.cs:15: public delegate nint InvokeListener(nint a1, AtkEventType a2, uint a3, AtkEvent* a4);
+ECommons/Automation/UIInput/ClickHelper.cs:25: public unsafe delegate IntPtr ReceiveEventDelegate(AtkEventListener* eventListener, EventType evt, uint which, void* eventData, void* inputData);
+ECommons/Automation/UIInput/ClickHelper.cs:117: public static unsafe class ClickHelperExtensions
+ECommons/Automation/UIInput/EventData.cs:13: public sealed unsafe class EventData : IDisposable
+ECommons/Automation/UIInput/EventType.cs:11: public enum EventType : ushort
+ECommons/Automation/UIInput/InputData.cs:13: public sealed unsafe class InputData : IDisposable
+ECommons/Automation/UTF8String.cs:9: public readonly struct UTF8String : IDisposable
+ECommons/Automation/WindowsKeypress.Forms.cs:4: public partial class WindowsKeypress
+ECommons/Automation/WindowsKeypress.cs:10: public static unsafe partial class WindowsKeypress
+ECommons/CSExtensions/AgentMapExtensions.cs:9: public unsafe static class AgentMapExtensions
+ECommons/CSExtensions/AtkEventStateExtensions.cs:9: public unsafe static class AtkEventStateExtensions
+ECommons/CSExtensions/EventObjectExtensions.cs:12: public unsafe static class EventObjectExtensions
+ECommons/CSExtensions/InputTimerModuleExtensions.cs:9: public unsafe static class InputTimerModuleExtensions
+ECommons/ChatMethods/ChatPrinter.cs:6: public static class ChatPrinter
+ECommons/ChatMethods/Sender.cs:14: public struct Sender : IEquatable<Sender>
+ECommons/ChatMethods/UIColor.cs:7: public enum UIColor : short
+ECommons/CircularBuffers/CircularArray.cs:7: public class CircularArray<T> : IEnumerable<T>
+ECommons/CircularBuffers/CircularBuffer.cs:20: public class CircularBuffer<T> : IEnumerable<T>
+ECommons/Collections/OneOrMany.cs:9: public readonly struct OneOrMany<T>
+ECommons/Collections/OneOrMany.cs:69: public struct Enumerator
+ECommons/Collections/UniqueQueue.cs:7: public class UniqueQueue<T> : IEnumerable<T>
+ECommons/Commands/CmdAttribute.cs:7: public class CmdAttribute : Attribute
+ECommons/Commands/CmdManager.cs:9: public static class CmdManager
+ECommons/Commands/SubCmdAttribute.cs:7: public class SubCmdAttribute : Attribute
+ECommons/Configuration/DefaultSerializationFactory.cs:14: public class DefaultSerializationFactory : ISerializationFactory
+ECommons/Configuration/ExternalWriter.cs:16: public static class ExternalWriter
+ECommons/Configuration/ExternalWriter.cs:177: public class FileSaveStruct
+ECommons/Configuration/EzCharaConfig.cs:12: public class EzCharaConfig<T> where T : new()
+ECommons/Configuration/EzCharaConfig.cs:79: public enum Option { AllowDefaultConfig, UnloadOnLogout, NotIndented }
+ECommons/Configuration/EzConfig.cs:21: public static class EzConfig
+ECommons/Configuration/IEzConfig.cs:6: public interface IEzConfig
+ECommons/Configuration/ISerializationFactory.cs:2: public interface ISerializationFactory
+ECommons/Configuration/IgnoreDefaultValueAttribute.cs:6: public class IgnoreDefaultValueAttribute : Attribute
+ECommons/Constants.cs:5: public class Constants
+ECommons/DalamudServices/Legacy/GameNetwork.cs:22: public unsafe delegate byte OnReceiveReplayPacket(nint thisPtr, ushort* opcode, nint* packet);
+ECommons/DalamudServices/Legacy/IChatMessageExtensions.cs:11: public static class IChatMessageExtensions
+ECommons/DalamudServices/Legacy/IClientStateExtensions.cs:9: public static class IClientStateExtensions
+ECommons/DalamudServices/Legacy/IGameNetwork.cs:5: public interface IGameNetwork
+ECommons/DalamudServices/Legacy/IGameNetwork.cs:17: public delegate void OnNetworkMessageDelegate(nint dataPtr, ushort opCode, uint sourceActorId, uint targetActorId, NetworkMessageDirection direction);
+ECommons/DalamudServices/Legacy/LegacyHelpers.cs:11: public static class LegacyHelpers
+ECommons/DalamudServices/Legacy/NetworkMessageDirection.cs:7: public enum NetworkMessageDirection
+ECommons/DalamudServices/Legacy/SignatureHelper.cs:3: public static class SignatureHelper
+ECommons/DalamudServices/Svc.cs:13: public class Svc
+ECommons/ECommonsMain.cs:42: public static class ECommonsMain
+ECommons/ErrorCode.cs:13: public enum ErrorCode
+ECommons/Events/ProperOnLogin.cs:12: public static class ProperOnLogin
+ECommons/ExcelServices/CommonlyUsedAttribute.cs:5: public class CommonlyUsedAttribute : Attribute
+ECommons/ExcelServices/Enums/BaseParamEnum.cs:10: public enum BaseParamEnum : uint
+ECommons/ExcelServices/Enums/EquipSlotCategoryEnum.cs:8: public enum EquipSlotCategoryEnum : uint
+ECommons/ExcelServices/Enums/GrandCompany.cs:2: public enum GrandCompany
+ECommons/ExcelServices/Enums/ItemRarity.cs:10: public enum ItemRarity : byte
+ECommons/ExcelServices/Enums/ItemUICategoryEnum.cs:8: public enum ItemUICategoryEnum
+ECommons/ExcelServices/Enums/Job.cs:9: public enum Job : byte
+ECommons/ExcelServices/Enums/Job.cs:232: public static class JobExtensions
+ECommons/ExcelServices/Enums/TerritoryIntendedUseEnum.cs:7: public enum TerritoryIntendedUseEnum : uint
+ECommons/ExcelServices/ExcelActionHelper.cs:8: public static unsafe class ExcelActionHelper
+ECommons/ExcelServices/ExcelItemHelper.cs:11: public static class ExcelItemHelper
+ECommons/ExcelServices/ExcelJobHelper.cs:12: public static class ExcelJobHelper
+ECommons/ExcelServices/ExcelTerritoryHelper.cs:16: public static class ExcelTerritoryHelper
+ECommons/ExcelServices/ExcelWorldHelper.cs:14: public static class ExcelWorldHelper
+ECommons/ExcelServices/ExcelWorldHelper.cs:135: public enum Region
+ECommons/ExcelServices/Sheets/ExtendedBaseParam.cs:10: public readonly unsafe struct ExtendedBaseParam(ExcelPage page, uint offset, uint row) : IRowExtension<ExtendedBaseParam, BaseParam>
+ECommons/ExcelServices/Sheets/IRowExtension.cs:10: public interface IRowExtension<out TExtension, in TBase> : IExcelRow<TExtension> where TBase : struct, IExcelRow<TBase> where TExtension : struct, IExcelRow<TExtension>, IRowExtension<TExtension, TBase>
+ECommons/ExcelServices/Sheets/QuestDialogueText.cs:7: public struct QuestDialogueText(ExcelPage page, uint offset, uint row) : IExcelRow<QuestDialogueText>
+ECommons/ExcelServices/TerritoryEnumeration/AllianceRaids.cs:8: public static class AllianceRaids
+ECommons/ExcelServices/TerritoryEnumeration/Dungeons.cs:8: public static class Dungeons
+ECommons/ExcelServices/TerritoryEnumeration/Houses.cs:9: public static class Houses
+ECommons/ExcelServices/TerritoryEnumeration/Inns.cs:8: public static class Inns
+ECommons/ExcelServices/TerritoryEnumeration/MainCities.cs:9: public static class MainCities
+ECommons/ExcelServices/TerritoryEnumeration/OpenAreas.cs:8: public static class OpenAreas // 1
+ECommons/ExcelServices/TerritoryEnumeration/Prisons.cs:8: public static class Prisons
+ECommons/ExcelServices/TerritoryEnumeration/Raids.cs:8: public static class Raids
+ECommons/ExcelServices/TerritoryEnumeration/ResidentalAreas.cs:8: public static class ResidentalAreas
+ECommons/ExcelServices/TerritoryEnumeration/TerritoryRegion.cs:5: public enum TerritoryRegion : uint
+ECommons/ExcelServices/TerritoryEnumeration/Trials.cs:8: public static class Trials
+ECommons/ExcelServices/TerritoryEnumeration/VariantDungeons.cs:8: public static class VariantDungeons
+ECommons/EzCmd.cs:10: public static class EzCmd
+ECommons/EzContextMenu/ContextMenuPrefixRemover.cs:21: public static unsafe class ContextMenuPrefixRemover
+ECommons/EzDTR/EzDtr.cs:13: public class EzDtr : IDisposable
+ECommons/EzEventManager/EzFrameworkUpdate.cs:10: public class EzFrameworkUpdate : IDisposable
+ECommons/EzEventManager/EzLogout.cs:10: public class EzLogout : IDisposable
+ECommons/EzEventManager/EzTerritoryChanged.cs:10: public class EzTerritoryChanged : IDisposable
+ECommons/EzHookManager/EzDelegate.cs:5: public static class EzDelegate
+ECommons/EzHookManager/EzHook.cs:17: public class EzHook<T> where T : System.Delegate
+ECommons/EzHookManager/EzHookAttribute.cs:5: public class EzHookAttribute : Attribute
+ECommons/EzHookManager/EzHookCommon.cs:6: public static class EzHookCommon
+ECommons/EzHookManager/EzHookFromCS.cs:9: public class EzHookFromCSAttribute : Attribute
+ECommons/EzHookManager/EzPatch.cs:12: public class EzPatch : IDisposable
+ECommons/EzHookManager/EzPatch.cs:175: public class Data
+ECommons/EzHookManager/EzPatchWithPointer.cs:8: public unsafe class EzPatchWithPointer<T> : EzPatch, IDisposable where T : unmanaged
+ECommons/EzHookManager/EzSignatureHelper.cs:9: public static class EzSignatureHelper
+ECommons/EzIpcManager/EzIPC.cs:15: public static class EzIPC
+ECommons/EzIpcManager/EzIPCAttribute.cs:5: public class EzIPCAttribute : Attribute
+ECommons/EzIpcManager/EzIPCDisposalToken.cs:8: public sealed class EzIPCDisposalToken
+ECommons/EzIpcManager/EzIPCEventAttribute.cs:5: public class EzIPCEventAttribute : Attribute
+ECommons/EzIpcManager/EzIPCExtensions.cs:6: public static class EzIPCExtensions
+ECommons/EzIpcManager/SafeWrapper.cs:4: public enum SafeWrapper
+ECommons/EzSharedDataManager/CreationMode.cs:3: public enum CreationMode
+ECommons/EzSharedDataManager/EzSharedData.cs:14: public static class EzSharedData
+ECommons/Funding/PatreonBanner.cs:9: public static class PatreonBanner
+ECommons/GameFunctions/CharacterFunctions.cs:13: public static unsafe class CharacterFunctions
+ECommons/GameFunctions/CombatRole.cs:3: public enum CombatRole
+ECommons/GameFunctions/ExtendedPronoun.cs:15: public static unsafe class FakePronoun
+ECommons/GameFunctions/ExtendedPronoun.cs:20: public static unsafe class ExtendedPronoun
+ECommons/GameFunctions/ExtendedPronoun.cs:22: public static class Extensions
+ECommons/GameFunctions/FakeParty.cs:9: public static class FakeParty
+ECommons/GameFunctions/NameplateKind.cs:8: public enum NameplateKind
+ECommons/GameFunctions/ObjectFunctions.cs:15: public static unsafe class ObjectFunctions
+ECommons/GameFunctions/PlayerFunctions.cs:11: public static unsafe class PlayerFunctions
+ECommons/GameFunctions/RenderDisableManager.cs:22: public unsafe static class RenderDisableManager
+ECommons/GameFunctions/TetherInfo.cs:12: public class TetherInfo
+ECommons/GameFunctions/VirtualTableClassifier/VObjectKind.cs:3: public enum VObjectKind
+ECommons/GameFunctions/VirtualTableClassifier/VTableClassifier.cs:13: public static class VTableClassifier
+ECommons/GameHelpers/Content.cs:18: public enum ContentType
+ECommons/GameHelpers/Content.cs:46: public enum ContentDifficulty
+ECommons/GameHelpers/Content.cs:75: public static class Content
+ECommons/GameHelpers/LegacyPlayer.cs:33: public static unsafe class Player
+ECommons/GameHelpers/Map.cs:8: public static class Map
+ECommons/GameHelpers/Player.cs:30: public static unsafe class Player
+ECommons/GameHelpers/TradeDetectionManager.cs:13: public static unsafe class TradeDetectionManager
+ECommons/GameHelpers/TradeDetectionManager.cs:26: public delegate void OnTradeStartDelegate(IPlayerCharacter? counterparty);
+ECommons/GameHelpers/TradeDetectionManager.cs:47: public delegate void OnTradeEndDelegate(IPlayerCharacter? counterparty, TradeDescriptor? result);
+ECommons/GameHelpers/TradeDetectionManager.cs:185: public class TradeDescriptor
+ECommons/GameHelpers/TradeDetectionManager.cs:206: public class ItemWithQuantity
+ECommons/GameHelpers/VfxManager.cs:33: public static class VfxManager
+ECommons/GameHelpers/VfxManager.cs:668: public record struct VfxInfo
+ECommons/GameHelpers/VfxManager.cs:711: public class PlacementData
+ECommons/GameHelpers/VfxManager.cs:727: public struct VfxStruct
+ECommons/GameHelpers/VfxManager.cs:756: public struct Quat
+ECommons/Gamepad/GamePad.cs:7: public static class GamePad
+ECommons/GenericHelpers/AddonHelpers.cs:10: public static unsafe partial class GenericHelpers
+ECommons/GenericHelpers/CollectionHelpers.cs:13: public static unsafe partial class GenericHelpers
+ECommons/GenericHelpers/ConversionHelpers.cs:13: public static unsafe partial class GenericHelpers
+ECommons/GenericHelpers/ExcelHelpers.cs:15: public static unsafe partial class GenericHelpers
+ECommons/GenericHelpers/GenericHelpers.Forms.cs:9: public static partial class GenericHelpers
+ECommons/GenericHelpers/GenericHelpers.cs:34: public static unsafe partial class GenericHelpers
+ECommons/GenericHelpers/LogHelpers.cs:6: public static unsafe partial class GenericHelpers
+ECommons/GenericHelpers/StringHelpers.cs:15: public static unsafe partial class GenericHelpers
+ECommons/Hooks/ActionEffect.cs:12: public static unsafe class ActionEffect
+ECommons/Hooks/ActionEffect.cs:16: public delegate void ProcessActionEffect(uint sourceId, Character* sourceCharacter, Vector3* pos, EffectHeader* effectHeader, EffectEntry* effectArray, ulong* effectTail);
+ECommons/Hooks/ActionEffect.cs:19: public delegate void ActionEffectCallback(ActionEffectSet set);
+ECommons/Hooks/ActionEffectTypes/ActionEffectSet.cs:12: public readonly unsafe record struct ActionEffectSet
+ECommons/Hooks/ActionEffectTypes/ActionEffectType.cs:7: public enum ActionEffectType : byte
+ECommons/Hooks/ActionEffectTypes/AttackType.cs:5: public enum AttackType
+ECommons/Hooks/ActionEffectTypes/EffectEntry.cs:5: public struct EffectEntry
+ECommons/Hooks/ActionEffectTypes/EffectHeader.cs:8: public struct EffectHeader
+ECommons/Hooks/ActionEffectTypes/TargetEffect.cs:7: public unsafe struct TargetEffect
+ECommons/Hooks/ActorVfx.cs:14: public static unsafe class ActorVfx
+ECommons/Hooks/ActorVfx.cs:49: public delegate void ActorVfxCreateCallbackDelegate(nint vfxPtr, nint vfxPathPtr, nint casterAddress, nint targetAddress, float a4, byte a5, ushort a6, byte a7);
+ECommons/Hooks/ActorVfx.cs:64: public delegate void ActorVfxDtorCallbackDelegate(nint actorVfxAddress);
+ECommons/Hooks/DirectorUpdate.cs:10: public static class DirectorUpdate
+ECommons/Hooks/DirectorUpdate.cs:14: public delegate void ProcessDirectorUpdate(nint a1, uint a2, DirectorUpdateCategory a3, uint a4, uint a5, int a6, int a7, int a8, int a9);
+ECommons/Hooks/DirectorUpdateCategory.cs:3: public enum DirectorUpdateCategory : uint
+ECommons/Hooks/GameObjectCtor.cs:17: public class GameObjectCtor
+ECommons/Hooks/GameObjectCtor.cs:19: public delegate void GameObjectConstructorCallbackDelegate(nint objectAddress);
+ECommons/Hooks/MapEffect.cs:13: public static unsafe class MapEffect
+ECommons/Hooks/SendAction.cs:9: public static class SendAction
+ECommons/Hooks/SendAction.cs:13: public delegate long SendActionDelegate(long targetObjectId, byte actionType, uint actionId, ushort sequence, long a5, long a6, long a7, long a8, long a9);
+ECommons/Hooks/SendAction.cs:14: public delegate void SendActionCallbackDelegate(long targetObjectId, byte actionType, uint actionId, ushort sequence, long a5, long a6, long a7, long a8, long a9);
+ECommons/Hooks/StaticVfx.cs:16: public static unsafe class StaticVfx
+ECommons/Hooks/StaticVfx.cs:40: public delegate void StaticVfxCreateCallbackDelegate(nint vfxPtr, string path, string systemSource);
+ECommons/Hooks/StaticVfx.cs:55: public delegate void StaticVfxDtorCallbackDelegate(nint staticVfxAddress);
+ECommons/Hooks/StaticVfx.cs:79: public delegate void StaticVfxRunCallbackDelegate(nint staticVfxAddress, float a1, uint a2);
+ECommons/ImGuiMethods/Box.cs:5: public class Box<T>
+ECommons/ImGuiMethods/CImGui.cs:7: public partial class CImGui
+ECommons/ImGuiMethods/ChangelogWindow.cs:12: public class ChangelogWindow : Window
+ECommons/ImGuiMethods/EColor.cs:9: public static class EColor
+ECommons/ImGuiMethods/EnumMemberNameAttribute.cs:6: public class EnumMemberNameAttribute(string name) : Attribute
+ECommons/ImGuiMethods/EzColor.cs:16: public struct EzColor
+ECommons/ImGuiMethods/EzFullscreenOverlayWindow.cs:7: public abstract class EzFullscreenOverlayWindow : Window
+ECommons/ImGuiMethods/EzOverlayWindow.cs:8: public abstract class EzOverlayWindow : Window
+ECommons/ImGuiMethods/EzOverlayWindow.cs:49: public enum VerticalPosition { Top, Middle, Bottom }
+ECommons/ImGuiMethods/EzOverlayWindow.cs:50: public enum HorizontalPosition { Left, Middle, Right }
+ECommons/ImGuiMethods/FontAwesome.cs:6: public static class FontAwesome
+ECommons/ImGuiMethods/GradientColor.cs:6: public static class GradientColor
+ECommons/ImGuiMethods/ImGuiBB.cs:10: public static class ImGuiBB
+ECommons/ImGuiMethods/ImGuiDragDrop.cs:11: public static class ImGuiDragDrop
+ECommons/ImGuiMethods/ImGuiEx/Alignment.cs:7: public static unsafe partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/Button.cs:13: public static partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/Button.cs:387: public class EzButtonGroup
+ECommons/ImGuiMethods/ImGuiEx/Button.cs:396: public class ButtonStyle
+ECommons/ImGuiMethods/ImGuiEx/Checkbox.cs:13: public static unsafe partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/CollectionCheckbox.cs:9: public static unsafe partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/CollectionCheckbox.cs:107: public delegate bool CollectionCoreDelegate(ref bool contains);
+ECommons/ImGuiMethods/ImGuiEx/DragDrop.cs:12: public static unsafe partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/DragDrop.cs:14: public class RealtimeDragDrop<T>
+ECommons/ImGuiMethods/ImGuiEx/EnumCombo.cs:11: public static partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/ExcelCombos.cs:11: public static partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/Extensions.cs:8: public static partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/EzTable.cs:7: public static unsafe partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/EzTable.cs:48: public struct EzTableEntry
+ECommons/ImGuiMethods/ImGuiEx/ImGuiEx.cs:31: public static unsafe partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/ImGuiEx.cs:722: public readonly record struct RequiredPluginInfo
+ECommons/ImGuiMethods/ImGuiEx/ImGuiEx.cs:899: public enum JobSelectorOption
+ECommons/ImGuiMethods/ImGuiEx/Inputs.cs:12: public static partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/InternalUtilities.cs:5: public static unsafe partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/ObsoleteOverloads.cs:5: public static unsafe partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiEx/Text.cs:7: public static partial class ImGuiEx
+ECommons/ImGuiMethods/ImGuiNoRef.cs:5: public static class ImGuiNoRef
+ECommons/ImGuiMethods/ImGuiTrans.cs:8: public class ImGuiTrans
+ECommons/ImGuiMethods/ItemSelection/ItemSelectorWindow.cs:16: public class ItemSelectorWindow : Window
+ECommons/ImGuiMethods/ItemSelection/ItemSelectorWindow.cs:56: public enum DisplayCategory
+ECommons/ImGuiMethods/MiddleOverlayWindow.cs:11: public class MiddleOverlayWindow : Window, IDisposable
+ECommons/ImGuiMethods/Notify.cs:8: public static class Notify
+ECommons/ImGuiMethods/NotifyWindow.cs:7: public abstract class NotifyWindow : Window
+ECommons/ImGuiMethods/Ref.cs:12: public static class Ref<T>
+ECommons/ImGuiMethods/TerritorySelection/TerritorySelector.cs:19: public unsafe class TerritorySelector : Window
+ECommons/ImGuiMethods/TerritorySelection/TerritorySelector.cs:21: public enum Category { [Obfuscation] World, [Obfuscation] Housing, [Obfuscation] Inn, [Obfuscation] Dungeon, [Obfuscation] Raid, [Obfuscation] Trial, [Obfuscation] Deep_Dungeon, [Obfuscation] Other, [Obfuscation] All }
+ECommons/ImGuiMethods/TerritorySelection/TerritorySelector.cs:22: public enum Column { ID, Zone, Region, IntendedUse }
+ECommons/ImGuiMethods/TerritorySelection/TerritorySelector.cs:23: public enum DisplayMode { PlaceNameDutyUnion, PlaceNameAndDuty, PlaceNameOnly }
+ECommons/ImGuiMethods/ThreadLoadImageHandler.cs:20: public class ThreadLoadImageHandler
+ECommons/ImGuiMethods/TimedMiddleOverlayWindow.cs:6: public class TimedMiddleOverlayWindow : MiddleOverlayWindow
+ECommons/Interop/LimitedKeys.cs:7: public enum LimitedKeys
+ECommons/Interop/NativeFunctions.cs:11: public static unsafe  class NativeFunctions
+ECommons/Interop/OpenFileDialog.cs:13: public class OpenFileDialog
+ECommons/Interop/OpenFileName.cs:44: public class OpenFileName
+ECommons/Interop/WindowFunctions.cs:10: public static unsafe class WindowFunctions
+ECommons/LanguageHelpers/Localization.cs:13: public static class Localization
+ECommons/LanguageHelpers/LocalizationExtensions.cs:6: public static class LocalizationExtensions
+ECommons/LazyDataHelpers/LazyData.cs:8: public static class LazyData<T>
+ECommons/LazyDataHelpers/Purgatory.cs:10: public static class Purgatory
+ECommons/LazyDataHelpers/PurgeableAttribute.cs:9: public class PurgeableAttribute : Attribute
+ECommons/Loader/ILoadable.cs:3: public interface ILoadable
+ECommons/Loader/PluginLoader.cs:19: public static class PluginLoader
+ECommons/Logging/DuoLog.cs:8: public static class DuoLog
+ECommons/Logging/InternalLog.cs:14: public class InternalLog
+ECommons/Logging/InternalLog.cs:74: public enum FilterType : long
+ECommons/Logging/InternalLogMessage.cs:6: public record struct InternalLogMessage
+ECommons/Logging/PluginLog.cs:6: public static class PluginLog
+ECommons/MathHelpers/Angle.cs:5: public struct Angle(float radians = 0)
+ECommons/MathHelpers/Angle.cs:58: public static class AngleExtensions
+ECommons/MathHelpers/BitHelper.cs:15: public static class BitHelper
+ECommons/MathHelpers/Bitmask.cs:3: public static class Bitmask
+ECommons/MathHelpers/CardinalDirection.cs:3: public enum CardinalDirection
+ECommons/MathHelpers/ENullable.cs:13: public partial struct ENullable<T> where T : struct
+ECommons/MathHelpers/ENullable.cs:101: public static class ENullable
+ECommons/MathHelpers/ENullableConverter.cs:9: public class ENullableConverter : JsonConverter
+ECommons/MathHelpers/ENullableConverterSystemJson.cs:9: public class ENullableConverterSystemJson : JsonConverterFactory
+ECommons/MathHelpers/Endianness.cs:6: public static class Endianness
+ECommons/MathHelpers/EnumerationResult.cs:3: public readonly record struct EnumerationResult<T>(T Object, float AngleDegrees);
+ECommons/MathHelpers/MathHelper.cs:13: public static class MathHelper
+ECommons/MathHelpers/Number.cs:15: public readonly unsafe struct Number : IEquatable<Number>
+ECommons/Module.cs:3: public enum Module
+ECommons/Networking/HttpClientProxyHelper.cs:18: public static class HttpClientProxyHelper
+ECommons/Networking/ProxySettings.cs:10: public class ProxySettings
+ECommons/Numeric/Int2.cs:5: public struct Int2
+ECommons/ObjectLifeTracker/ObjectLife.cs:12: public static class ObjectLife
+ECommons/Opcodes/OpcodeUpdater.cs:12: public static class OpcodeUpdater
+ECommons/PartyFunctions/UniversalParty.cs:14: public static unsafe class UniversalParty
+ECommons/PartyFunctions/UniversalPartyMember.cs:11: public class UniversalPartyMember
+ECommons/PointerHelpers.cs:6: public static unsafe class PointerHelpers
+ECommons/Reflection/DalamudReflector.cs:24: public static class DalamudReflector
+ECommons/Reflection/FieldPropertyUnion/IFieldPropertyUnion.cs:10: public interface IFieldPropertyUnion
+ECommons/Reflection/FieldPropertyUnion/UnionField.cs:7: public class UnionField : IFieldPropertyUnion
+ECommons/Reflection/FieldPropertyUnion/UnionProperty.cs:9: public class UnionProperty : IFieldPropertyUnion
+ECommons/Reflection/ReflectionHelper/Call.cs:8: public static partial class ReflectionHelper
+ECommons/Reflection/ReflectionHelper/CallStatic.cs:8: public static partial class ReflectionHelper
+ECommons/Reflection/ReflectionHelper/ReflectionHelper.cs:9: public static partial class ReflectionHelper
+ECommons/Reflection/ReflectionHelper/Utils.cs:12: public static partial class ReflectionHelper
+ECommons/Reflection/ReflectionHelper/Utils.cs:223: public class DelegateInfo
+ECommons/Schedulers/ExecuteForScheduler.cs:7: public class ExecuteForScheduler : IScheduler
+ECommons/Schedulers/IScheduler.cs:5: public interface IScheduler : IDisposable
+ECommons/Schedulers/Sequential/TaskQueue/QueuedTask.cs:8: public partial class SequentialTaskQueue
+ECommons/Schedulers/Sequential/TaskQueue/SequentialTaskQueue.cs:9: public partial class SequentialTaskQueue : IDisposable
+ECommons/Schedulers/Sequential/TaskQueue/TaskCompletionToken.cs:5: public partial class SequentialTaskQueue
+ECommons/Schedulers/Sequential/TaskQueue/TaskCompletionToken.cs:7: public class TaskCompletionToken<T> : TaskCompletionToken
+ECommons/Schedulers/Sequential/TaskQueue/TaskCompletionToken1.cs:5: public partial class SequentialTaskQueue
+ECommons/Schedulers/Sequential/TaskQueue/TaskCompletionToken1.cs:7: public class TaskCompletionToken
+ECommons/Schedulers/SingleThreadRunnerHelper/SingleThreadRunner.cs:10: public sealed class SingleThreadRunner
+ECommons/Schedulers/SingleThreadRunnerHelper/SyncHelper.cs:6: public static class SyncHelper
+ECommons/Schedulers/ThreadPool.cs:14: public class ThreadPool : IDisposable
+ECommons/Schedulers/TickScheduler.cs:7: public class TickScheduler : IScheduler
+ECommons/SimpleGui/ConfigWindow.cs:11: public class ConfigWindow : Window
+ECommons/SimpleGui/EzConfigGui.cs:11: public static class EzConfigGui
+ECommons/SimpleGui/EzConfigGui.cs:103: public enum WindowType
+ECommons/SimpleGui/PopupWindow.cs:15: public class PopupWindow : Window
+ECommons/SimpleLogger.cs:11: public class SimpleLogger : IDisposable
+ECommons/Singletons/SingletonServiceManager.cs:14: public static class SingletonServiceManager
+ECommons/Singletons/SingletonServiceManager.cs:109: public sealed class PriorityAttribute : Attribute
+ECommons/SplatoonAPI/Element.cs:8: public class Element
+ECommons/SplatoonAPI/ElementType.cs:11: public enum ElementType : int
+ECommons/SplatoonAPI/RefActorComparisonType.cs:13: public enum RefActorComparisonType : int
+ECommons/SplatoonAPI/RefActorType.cs:6: public enum RefActorType
+ECommons/SplatoonAPI/Splatoon.cs:12: public static class Splatoon
+ECommons/StringHelpers/DigitParsers.cs:5: public static partial class DigitParsers
+ECommons/StringHelpers/EqualStrings.cs:9: public static class EqualStrings
+ECommons/TerritoryName.cs:9: public static class TerritoryName
+ECommons/Throttlers/EzThrottler.cs:6: public static class EzThrottler
+ECommons/Throttlers/EzThrottler{T}.cs:10: public class EzThrottler<T>
+ECommons/Throttlers/FrameThrottler.cs:5: public static class FrameThrottler
+ECommons/Throttlers/FrameThrottler{T}.cs:9: public class FrameThrottler<T>
+ECommons/UIHelpers/AddonFinder.cs:11: public unsafe class AddonFinder
+ECommons/UIHelpers/AddonMasterCombinedImplementations/ICombinedInventory.cs:9: public static unsafe partial class AddonMasterCombined
+ECommons/UIHelpers/AddonMasterCombinedImplementations/ICombinedInventory.cs:11: public interface ICombinedInventory 
+ECommons/UIHelpers/AddonMasterImplementations/!AddonMaster.cs:18: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/!AddonMasterBase.cs:8: public abstract unsafe class AddonMasterBase<T> : IAddonMasterBase where T : unmanaged
+ECommons/UIHelpers/AddonMasterImplementations/!AddonMasterBase.cs:116: public abstract unsafe class AddonMasterBase : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/!AddonMasterBase.cs:127: public unsafe interface IAddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/AirShipExploration.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/AirShipExploration.cs:6: public unsafe class AirShipExploration : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/AirShipExplorationDetail.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/AirShipExplorationDetail.cs:6: public unsafe class AirShipExplorationDetail : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/AirShipExplorationResult.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/AirShipExplorationResult.cs:6: public unsafe class AirShipExplorationResult : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/Bank.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Bank.cs:9: public unsafe class Bank : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/BankaCraftworksSupply.cs:11: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/BankaCraftworksSupply.cs:16: public unsafe class BankaCraftworksSupply : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/BannerEditor.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/BannerEditor.cs:9: public unsafe class BannerEditor : AddonMasterBase<AddonBannerEditor>
+ECommons/UIHelpers/AddonMasterImplementations/BannerList.cs:6: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/BannerList.cs:11: public unsafe class BannerList : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/BannerList.cs:41: public readonly struct Portraits
+ECommons/UIHelpers/AddonMasterImplementations/BannerMIP.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/BannerMIP.cs:9: public unsafe class BannerMIP : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/BannerPreview.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/BannerPreview.cs:6: public unsafe class BannerPreview : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/CollectablesShop.cs:7: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/CollectablesShop.cs:9: public unsafe class CollectablesShop : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ColorantColoring.cs:5: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ColorantColoring.cs:10: public class ColorantColoring : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/CompanyCraftRecipeNoteBook.cs:4: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/CompanyCraftRecipeNoteBook.cs:6: public class CompanyCraftRecipeNoteBook : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/CompanyCraftSupply.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/CompanyCraftSupply.cs:6: public unsafe class CompanyCraftSupply : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ContentsFinderConfirm.cs:5: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ContentsFinderConfirm.cs:7: public unsafe class ContentsFinderConfirm : AddonMasterBase<AddonContentsFinderConfirm>
+ECommons/UIHelpers/AddonMasterImplementations/ContentsFinderSetting.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ContentsFinderSetting.cs:6: public unsafe class ContentsFinderSetting : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ContentsFinderStatus.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ContentsFinderStatus.cs:6: public unsafe class ContentsFinderStatus : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ContextMenu.cs:13: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ContextMenu.cs:15: public unsafe class ContextMenu : AddonMasterBase<AddonContextMenu>
+ECommons/UIHelpers/AddonMasterImplementations/ContextMenu.cs:53: public readonly struct Entry(ContextMenu am, AddonContextMenu* addon, int index)
+ECommons/UIHelpers/AddonMasterImplementations/DawnStory.cs:12: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/DawnStory.cs:14: public class DawnStory : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/DawnStory.cs:40: public class Entry(DawnStory m, int index)
+ECommons/UIHelpers/AddonMasterImplementations/Dialogue.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Dialogue.cs:9: public unsafe class Dialogue : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/DifficultySelectYesNo.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/DifficultySelectYesNo.cs:9: public unsafe class DifficultySelectYesNo : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyChest.cs:12: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyChest.cs:14: public class FreeCompanyChest : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyChest.cs:43: public class Button(FreeCompanyChest AddonMaster)
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyCreditShop.cs:8: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyCreditShop.cs:10: public unsafe class FreeCompanyCreditShop : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyCreditShop.cs:34: public readonly struct Item
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyExchange.cs:12: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyExchange.cs:14: public class FreeCompanyExchange : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/FreeCompanyExchange.cs:50: public class Entry(FreeCompanyExchange AddonMaster, int Index)
+ECommons/UIHelpers/AddonMasterImplementations/Gathering.cs:10: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Gathering.cs:12: public unsafe partial class Gathering : AddonMasterBase<AddonGathering>
+ECommons/UIHelpers/AddonMasterImplementations/Gathering.cs:50: public class GatheredItem
+ECommons/UIHelpers/AddonMasterImplementations/GatheringMasterpiece.cs:5: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/GatheringMasterpiece.cs:7: public unsafe class GatheringMasterpiece : AddonMasterBase<AddonGatheringMasterpiece>
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyChangeClass.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyChangeClass.cs:6: public unsafe class GcArmyChangeClass : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyExpedition.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyExpedition.cs:6: public unsafe class GcArmyExpedition : AddonMasterBase<AddonGcArmyExpedition>
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyExpeditionResult.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyExpeditionResult.cs:6: public unsafe class GcArmyExpeditionResult : AddonMasterBase<AddonGcArmyExpeditionResult>
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyMenberProfile.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyMenberProfile.cs:6: public unsafe class GcArmyMenberProfile : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyTraining.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/GcArmyTraining.cs:6: public unsafe class GcArmyTraining : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/GearSetList.cs:4: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/GearSetList.cs:6: public class GearSetList : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/GrandCompanySupplyReward.cs:11: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/GrandCompanySupplyReward.cs:13: public unsafe class GrandCompanySupplyReward : AddonMasterBase<AddonGrandCompanySupplyReward>
+ECommons/UIHelpers/AddonMasterImplementations/InclusionShop.cs:8: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/InclusionShop.cs:10: public unsafe class InclusionShop : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/InclusionShop.cs:17: public class ShopItemInfo(InclusionShop master, int index)
+ECommons/UIHelpers/AddonMasterImplementations/InputNumeric.cs:6: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/InputNumeric.cs:8: public unsafe class InputNumeric : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/Inventory.cs:10: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Inventory.cs:12: public class Inventory : AddonMasterBase<AddonInventory>, AddonMasterCombined.ICombinedInventory
+ECommons/UIHelpers/AddonMasterImplementations/InventoryExpansion.cs:10: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/InventoryExpansion.cs:12: public class InventoryExpansion : AddonMasterBase<AddonInventoryExpansion>, AddonMasterCombined.ICombinedInventory
+ECommons/UIHelpers/AddonMasterImplementations/InventoryLarge.cs:11: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/InventoryLarge.cs:13: public class InventoryLarge : AddonMasterBase<AddonInventoryLarge>, AddonMasterCombined.ICombinedInventory
+ECommons/UIHelpers/AddonMasterImplementations/ItemDetailCompare.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ItemDetailCompare.cs:6: public unsafe class ItemDetailCompare : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ItemFinder.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ItemFinder.cs:6: public unsafe class ItemFinder : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ItemInspectionResult.cs:7: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ItemInspectionResult.cs:9: public unsafe class ItemInspectionResult : AddonMasterBase<AddonItemInspectionResult>
+ECommons/UIHelpers/AddonMasterImplementations/ItemSearchResult.cs:8: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ItemSearchResult.cs:10: public unsafe class ItemSearchResult : AddonMasterBase<AddonItemSearchResult>
+ECommons/UIHelpers/AddonMasterImplementations/ItemSearchResult.cs:45: public readonly struct Entry(ItemSearchResult am, AddonItemSearchResult* addon, int index)
+ECommons/UIHelpers/AddonMasterImplementations/JournalAccept.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/JournalAccept.cs:6: public unsafe class JournalAccept : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/JournalDetail.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/JournalDetail.cs:6: public unsafe class JournalDetail : AddonMasterBase<AddonJournalDetail>
+ECommons/UIHelpers/AddonMasterImplementations/JournalResult.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/JournalResult.cs:6: public unsafe class JournalResult : AddonMasterBase<AddonJournalResult>
+ECommons/UIHelpers/AddonMasterImplementations/LetterHistory.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LetterHistory.cs:6: public unsafe class LetterHistory : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/LetterList.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LetterList.cs:6: public unsafe class LetterList : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/LetterViewer.cs:5: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LetterViewer.cs:7: public unsafe class LetterViewer : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/LetterViewer.cs:34: public class Item(ReaderLetterViewer.Item handle) : ReaderLetterViewer.Item(handle.AtkReaderParams.UnitBase, handle.AtkReaderParams.BeginOffset);
+ECommons/UIHelpers/AddonMasterImplementations/LookingForGroup.cs:9: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LookingForGroup.cs:11: public class LookingForGroup : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/LookingForGroupCondition.cs:4: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LookingForGroupCondition.cs:6: public class LookingForGroupCondition : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/LookingForGroupDetail.cs:5: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LookingForGroupDetail.cs:7: public class LookingForGroupDetail : AddonMasterBase<AddonLookingForGroupDetail>
+ECommons/UIHelpers/AddonMasterImplementations/LookingForGroupPrivate.cs:6: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LookingForGroupPrivate.cs:8: public class LookingForGroupPrivate : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/LotteryWeeklyInput.cs:4: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LotteryWeeklyInput.cs:6: public class LotteryWeeklyInput : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/LotteryWeeklyRewardList.cs:5: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/LotteryWeeklyRewardList.cs:7: public class LotteryWeeklyRewardList : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/LotteryWeeklyRewardList.cs:32: public readonly struct Reward(LotteryWeeklyRewardList am, int index)
+ECommons/UIHelpers/AddonMasterImplementations/MJIDisposeShop.cs:10: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MJIDisposeShop.cs:12: public unsafe class MJIDisposeShop : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/MJIDisposeShop.cs:20: public class ExportShopInfo(MJIDisposeShop master, int index)
+ECommons/UIHelpers/AddonMasterImplementations/MJIHud.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MJIHud.cs:6: public unsafe partial class MJIHud : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/MJIRecipeNoteBook.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MJIRecipeNoteBook.cs:9: public unsafe class MJIRecipeNoteBook : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ManeuversArmorBoarding.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ManeuversArmorBoarding.cs:9: public unsafe class ManeuversArmorBoarding : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ManeuversRecord.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ManeuversRecord.cs:9: public unsafe class ManeuversRecord : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/MateriaAttachDialog.cs:7: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MateriaAttachDialog.cs:9: public unsafe class MateriaAttachDialog : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/MateriaRetrieveDialog.cs:11: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MateriaRetrieveDialog.cs:13: public unsafe class MateriaRetrieveDialog : AddonMasterBase<AddonMateriaRetrieveDialog>
+ECommons/UIHelpers/AddonMasterImplementations/MaterializeDialog.cs:5: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MaterializeDialog.cs:7: public unsafe class MaterializeDialog : AddonMasterBase<AddonMaterializeDialog>
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismExecute.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismExecute.cs:6: public unsafe class MiragePrismExecute : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismMiragePlateConfirm.cs:9: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismMiragePlateConfirm.cs:11: public class MiragePrismMiragePlateConfirm : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismPrismSetConvert.cs:12: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismPrismSetConvert.cs:14: public unsafe class MiragePrismPrismSetConvert : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismPrismSetConvert.cs:26: public class Item(ReaderMiragePrismPrismSetConvert.Item handle) : ReaderMiragePrismPrismSetConvert.Item(handle.AtkReaderParams.UnitBase, handle.AtkReaderParams.BeginOffset);
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismPrismSetConvertC.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismPrismSetConvertC.cs:6: public unsafe class MiragePrismPrismSetConvertC : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismRemove.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MiragePrismRemove.cs:6: public unsafe class MiragePrismRemove : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/MoogleCollection.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/MoogleCollection.cs:9: public unsafe class MoogleCollection : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/PurifyAutoDialog.cs:9: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/PurifyAutoDialog.cs:11: public unsafe class PurifyAutoDialog : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/PurifyResult.cs:6: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/PurifyResult.cs:8: public unsafe class PurifyResult : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/PvpProfile.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/PvpProfile.cs:6: public unsafe class PvpProfile : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/PvpReward.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/PvpReward.cs:9: public unsafe class PvpReward : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/RecipeNote.cs:9: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RecipeNote.cs:11: public unsafe class RecipeNote : AddonMasterBase<AddonRecipeNote>
+ECommons/UIHelpers/AddonMasterImplementations/RecommendEquip.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RecommendEquip.cs:6: public unsafe class RecommendEquip : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/RelicNoteBook.cs:9: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RelicNoteBook.cs:11: public unsafe partial class RelicNoteBook : AddonMasterBase<AddonRelicNoteBook>
+ECommons/UIHelpers/AddonMasterImplementations/RelicNoteBook.cs:70: public class RelicNoteBookEnemy
+ECommons/UIHelpers/AddonMasterImplementations/RelicNoteBook.cs:90: public class RelicNoteBookDungeon
+ECommons/UIHelpers/AddonMasterImplementations/RelicNoteBook.cs:110: public class RelicNoteBookFate
+ECommons/UIHelpers/AddonMasterImplementations/RelicNoteBook.cs:130: public class RelicNoteBookLeve
+ECommons/UIHelpers/AddonMasterImplementations/Repair.cs:6: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Repair.cs:8: public unsafe class Repair : AddonMasterBase<AddonRepair>
+ECommons/UIHelpers/AddonMasterImplementations/Request.cs:8: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Request.cs:10: public unsafe class Request : AddonMasterBase<AddonRequest>
+ECommons/UIHelpers/AddonMasterImplementations/RetainerItemTransferList.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RetainerItemTransferList.cs:6: public unsafe class RetainerItemTransferList : AddonMasterBase<AddonRetainerItemTransferList>
+ECommons/UIHelpers/AddonMasterImplementations/RetainerItemTransferProgress.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RetainerItemTransferProgress.cs:6: public unsafe class RetainerItemTransferProgress : AddonMasterBase<AddonRetainerItemTransferProgress>
+ECommons/UIHelpers/AddonMasterImplementations/RetainerList.cs:13: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RetainerList.cs:15: public unsafe class RetainerList : AddonMasterBase<AddonRetainerList>
+ECommons/UIHelpers/AddonMasterImplementations/RetainerList.cs:41: public class Entry(AtkUnitBase* Base, ReaderRetainerList.Retainer handle, int index) : ReaderRetainerList.Retainer(handle.AtkReaderParams.UnitBase, handle.AtkReaderParams.BeginOffset)
+ECommons/UIHelpers/AddonMasterImplementations/RetainerSell.cs:7: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RetainerSell.cs:9: public unsafe class RetainerSell : AddonMasterBase<AddonRetainerSell>
+ECommons/UIHelpers/AddonMasterImplementations/RetainerTaskAsk.cs:10: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RetainerTaskAsk.cs:12: public unsafe class RetainerTaskAsk : AddonMasterBase<AddonRetainerTaskAsk>
+ECommons/UIHelpers/AddonMasterImplementations/RetainerTaskResult.cs:11: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/RetainerTaskResult.cs:13: public unsafe class RetainerTaskResult : AddonMasterBase<AddonRetainerTaskResult>
+ECommons/UIHelpers/AddonMasterImplementations/ReturnerDialog.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ReturnerDialog.cs:6: public unsafe class ReturnerDialog : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/SalvageAutoDialog.cs:9: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SalvageAutoDialog.cs:11: public unsafe class SalvageAutoDialog : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/SalvageDialog.cs:6: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SalvageDialog.cs:8: public unsafe class SalvageDialog : AddonMasterBase<AddonSalvageDialog>
+ECommons/UIHelpers/AddonMasterImplementations/SalvageResult.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SalvageResult.cs:6: public unsafe class SalvageResult : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/SatisfactionSupplyResult.cs:5: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SatisfactionSupplyResult.cs:7: public unsafe class SatisfactionSupplyResult : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/SelectIconString.cs:12: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SelectIconString.cs:14: public unsafe class SelectIconString : AddonMasterBase<AddonSelectIconString>
+ECommons/UIHelpers/AddonMasterImplementations/SelectIconString.cs:50: public struct Entry(SelectIconString am, AddonSelectIconString* addon, int index)
+ECommons/UIHelpers/AddonMasterImplementations/SelectOk.cs:6: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SelectOk.cs:8: public unsafe class SelectOk : AddonMasterBase<AddonSelectOk>
+ECommons/UIHelpers/AddonMasterImplementations/SelectString.cs:13: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SelectString.cs:15: public unsafe class SelectString : AddonMasterBase<AddonSelectString>
+ECommons/UIHelpers/AddonMasterImplementations/SelectString.cs:56: public struct Entry(SelectString am, AddonSelectString* addon, int index)
+ECommons/UIHelpers/AddonMasterImplementations/SelectYesno.cs:11: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SelectYesno.cs:13: public unsafe class SelectYesno : AddonMasterBase<AddonSelectYesno>
+ECommons/UIHelpers/AddonMasterImplementations/SelectYesno.cs:61: public unsafe class SelectYesnoMaster : AddonMaster.SelectYesno
+ECommons/UIHelpers/AddonMasterImplementations/Shop.cs:7: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Shop.cs:9: public unsafe class Shop : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/Shop.cs:14: public class ShopItemInfo(Shop master, int index)
+ECommons/UIHelpers/AddonMasterImplementations/Shop.cs:23: public class CostInfo
+ECommons/UIHelpers/AddonMasterImplementations/ShopCardDialog.cs:7: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ShopCardDialog.cs:9: public unsafe class ShopCardDialog : AddonMasterBase<AddonShopCardDialog>
+ECommons/UIHelpers/AddonMasterImplementations/ShopExchangeCurrency.cs:13: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ShopExchangeCurrency.cs:15: public unsafe class ShopExchangeCurrency : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ShopExchangeCurrency.cs:41: public class ShopItemInfo(ShopExchangeCurrency master)
+ECommons/UIHelpers/AddonMasterImplementations/ShopExchangeCurrencyDialog.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ShopExchangeCurrencyDialog.cs:9: public unsafe class ShopExchangeCurrencyDialog : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/ShopExchangeItemDialog.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/ShopExchangeItemDialog.cs:6: public unsafe class ShopExchangeItemDialog : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/SubmarineExplorationMapSelect.cs:13: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SubmarineExplorationMapSelect.cs:15: public unsafe class SubmarineExplorationMapSelect : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/SubmarineExplorationMapSelect.cs:56: public struct Entry(SubmarineExplorationMapSelect am, AtkUnitBase* addon, int index)
+ECommons/UIHelpers/AddonMasterImplementations/Synthesis.cs:5: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Synthesis.cs:7: public unsafe class Synthesis : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/Synthesis.cs:16: public enum Condition
+ECommons/UIHelpers/AddonMasterImplementations/SynthesisSimpleDialog.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/SynthesisSimpleDialog.cs:6: public unsafe class SynthesisSimpleDialog : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/Talk.cs:10: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/Talk.cs:12: public unsafe class Talk : AddonMasterBase<AddonTalk>
+ECommons/UIHelpers/AddonMasterImplementations/TitleDCWorldMap.cs:13: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/TitleDCWorldMap.cs:15: public class TitleDCWorldMap : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/TreasureHighLow.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/TreasureHighLow.cs:6: public unsafe class TreasureHighLow : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/TripleTriadRequest.cs:8: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/TripleTriadRequest.cs:10: public unsafe class TripleTriadRequest : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/TripleTriadResult.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/TripleTriadResult.cs:6: public unsafe class TripleTriadResult : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/VVDVoteRoute.cs:16: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/VVDVoteRoute.cs:18: public unsafe class VVDVoteRoute : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/VVDVoteRoute.cs:64: public struct Entry(VVDVoteRoute am, AtkUnitBase* addon, int index)
+ECommons/UIHelpers/AddonMasterImplementations/VoteMvp.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/VoteMvp.cs:6: public unsafe class VoteMvp : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/WKSHud.cs:5: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/WKSHud.cs:10: public unsafe partial class WKSHud : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/WKSLottery.cs:12: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/WKSLottery.cs:14: public unsafe partial class WKSLottery : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/WKSLottery.cs:77: public class WheelItems
+ECommons/UIHelpers/AddonMasterImplementations/WKSMission.cs:9: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/WKSMission.cs:15: public unsafe partial class WKSMission : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/WKSMission.cs:81: public class StellarMissions(WKSMission master, int index)
+ECommons/UIHelpers/AddonMasterImplementations/WKSMission.cs:96: public class ClassDropdown(WKSMission master, int index)
+ECommons/UIHelpers/AddonMasterImplementations/WKSMissionInfomation.cs:6: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/WKSMissionInfomation.cs:12: public unsafe partial class WKSMissionInfomation : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/WKSRecipeNotebook.cs:10: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/WKSRecipeNotebook.cs:16: public unsafe partial class WKSRecipeNotebook : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/WKSRecipeNotebook.cs:53: public class CraftItems(WKSRecipeNotebook master, int index)
+ECommons/UIHelpers/AddonMasterImplementations/WKSToolCustomize.cs:9: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/WKSToolCustomize.cs:15: public unsafe partial class WKSToolCustomize : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/WKSToolCustomize.cs:43: public class ClassSelector(WKSToolCustomize master, int index)
+ECommons/UIHelpers/AddonMasterImplementations/WeeklyBingoResult.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/WeeklyBingoResult.cs:6: public unsafe class WeeklyBingoResult : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/WorldTravelFinderStatus.cs:6: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/WorldTravelFinderStatus.cs:8: public unsafe class WorldTravelFinderStatus : AddonMasterBase<AtkUnitBase>
+ECommons/UIHelpers/AddonMasterImplementations/_CharaSelectListMenu.cs:9: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/_CharaSelectListMenu.cs:11: public class _CharaSelectListMenu : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/_CharaSelectListMenu.cs:50: public class Character
+ECommons/UIHelpers/AddonMasterImplementations/_CharaSelectWorldServer.cs:14: public unsafe partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/_CharaSelectWorldServer.cs:16: public class _CharaSelectWorldServer : AddonMasterBase
+ECommons/UIHelpers/AddonMasterImplementations/_CharaSelectWorldServer.cs:45: public class World
+ECommons/UIHelpers/AddonMasterImplementations/_TitleMenu.cs:4: public partial class AddonMaster
+ECommons/UIHelpers/AddonMasterImplementations/_TitleMenu.cs:6: public unsafe class _TitleMenu : AddonMasterBase
+ECommons/UIHelpers/AtkEventDataBuilder.cs:10: public unsafe class AtkEventDataBuilder
+ECommons/UIHelpers/AtkReader.cs:12: public abstract unsafe class AtkReader(AtkUnitBase* UnitBase, int BeginOffset = 0)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderBannerList.cs:6: public unsafe class ReaderBannerList(AtkUnitBase* Addon) : AtkReader(Addon)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderBannerList.cs:18: public unsafe class Portrait(nint Addon, int start) : AtkReader(Addon, start)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderContextMenu.cs:8: public unsafe class ReaderContextMenu(AtkUnitBase* Addon) : AtkReader(Addon)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderContextMenu.cs:13: public unsafe class ContextMenuEntry(nint Addon, int start) : AtkReader(Addon, start)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderDawnStory.cs:10: public unsafe class ReaderDawnStory(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderDawnStory.cs:18: public class Entry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderDawnStory.cs:25: public class EntryName(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderGCArmy;MemberList.cs:6: public unsafe class ReaderGCArmyMemberList(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderGCArmy;MemberList.cs:11: public class MemberInfo(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderGCArmy;MemberList.cs:31: public enum SquadronClassType : int
+ECommons/UIHelpers/AtkReaderImplementations/ReaderGCArmyCapture.cs:6: public unsafe class ReaderGCArmyCapture(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderGCArmyCapture.cs:14: public class DungeonInfo(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderLetterHistory.cs:5: public unsafe class ReaderLetterHistory(AtkUnitBase* Addon) : AtkReader(Addon)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderLetterHistory.cs:10: public unsafe class Letter(nint Addon, int start) : AtkReader(Addon, start)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderLetterHistory.cs:22: public unsafe class Item(nint Addon, int start) : AtkReader(Addon, start)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderLetterViewer.cs:6: public unsafe class ReaderLetterViewer(AtkUnitBase* Addon) : AtkReader(Addon)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderLetterViewer.cs:11: public unsafe class Item(nint Addon, int start) : AtkReader(Addon, start)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderMiragePrismPrismSetConvert.cs:6: public unsafe class ReaderMiragePrismPrismSetConvert(AtkUnitBase* Addon) : AtkReader(Addon)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderMiragePrismPrismSetConvert.cs:20: public unsafe class Item(nint Addon, int start) : AtkReader(Addon, start)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderMiragePrismPrismSetConvert.cs:31: public enum ItemFlag : uint
+ECommons/UIHelpers/AtkReaderImplementations/ReaderRetainerList.cs:7: public unsafe class ReaderRetainerList(AtkUnitBase* Addon) : AtkReader(Addon)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderRetainerList.cs:12: public unsafe class Retainer(nint Addon, int start) : AtkReader(Addon, start)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderSelectString.cs:7: public unsafe class ReaderSelectString(AtkUnitBase* a) : AtkReader(a)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderSelectString.cs:13: public unsafe class Entry(nint a, int s) : AtkReader(a, s)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderSynthesis.cs:6: public unsafe class ReaderSynthesis(AtkUnitBase* Addon) : AtkReader(Addon)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderTripleTriadCoinExchange.cs:5: public unsafe class ReaderTripleTriadCoinExchange(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderTripleTriadCoinExchange.cs:9: public class CardEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsBooty.cs:8: public unsafe class ReaderXBMContentsBooty(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsBooty.cs:21: public class LootChoice(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsItemShop.cs:9: public unsafe class ReaderXBMContentsItemShop(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsItemShop.cs:24: public class StockEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsItemShop.cs:44: public class ItemEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsItemShop.cs:68: public class GearEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsMainHUD.cs:8: public unsafe class ReaderXBMContentsMainHUD(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsTreasure.cs:9: public unsafe class ReaderXBMContentsTreasure(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMContentsTreasure.cs:19: public class TreasureChoice(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMMonsterNotebook.cs:8: public unsafe class ReaderXBMMonsterNotebook(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMMonsterNotebook.cs:16: public class MonsterEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMPetParty.cs:8: public unsafe class ReaderXBMPetParty(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMPetParty.cs:18: public class MonsterEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMPetParty.cs:72: public class FedEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMResult.cs:8: public unsafe class ReaderXBMResult(AtkUnitBase* UnitBase, int BeginOffset = 0) : AtkReader(UnitBase, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMResult.cs:21: public class BonusBoostEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMResult.cs:29: public class LootEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/UIHelpers/AtkReaderImplementations/ReaderXBMResult.cs:46: public class BeastEntry(nint UnitBasePtr, int BeginOffset = 0) : AtkReader(UnitBasePtr, BeginOffset)
+ECommons/WindowsFormsReflector/Keys.cs:8: public enum Keys
+ECommons/WindowsFormsReflector/Winforms.Clipboard.cs:6: public static partial class Winforms
+ECommons/WindowsFormsReflector/Winforms.Clipboard.cs:8: public static class Clipboard
+ECommons/WindowsFormsReflector/Winforms.cs:10: public static partial class Winforms

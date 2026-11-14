@@ -1,0 +1,389 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "LICENSES/BossMod-BSD-3-Clause.txt",
+      "upstreamPath": "LICENSE",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "cb9df1ad2c50662e8cec471dff7eeaf956429089620e5066e6713962702267a1",
+      "gitBlob": "57824b525eab908a5a2bd693720125db385a9457"
+    },
+    {
+      "path": "references/source/.gitmodules",
+      "upstreamPath": ".gitmodules",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "a639ba43587155488448ba5054cfaef692b366b4666d242f11ec86c856ba71f6",
+      "gitBlob": "ef093b12fdf72ea523cb3c79eed47b8a180a0d7a"
+    },
+    {
+      "path": "references/source/Common.targets",
+      "upstreamPath": "Common.targets",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "3df0f70e3b44981f2906f8b84082b515798a7606532d713b54c5012b7118c006",
+      "gitBlob": "d883bd01f12e4d84cb9192476f3b0565ca2b6c54"
+    },
+    {
+      "path": "references/source/Module.targets",
+      "upstreamPath": "Module.targets",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "81e615d15253453fda139eb0fccbd867af7cb85554f1d3ae7920d5cba6021233",
+      "gitBlob": "a7922625eb95032b1f5d6fa8a3bf75f7aec1116f"
+    },
+    {
+      "path": "references/source/global.json",
+      "upstreamPath": "global.json",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "7830edbc8ff0e97c0ceb88ddbaa8c24db039fbadbeec6821ce6e62c7d1d578b1",
+      "gitBlob": "1e2cd47807ec187eb1bb022d2528b29437b876e2"
+    },
+    {
+      "path": "references/source/BossMod/BossMod.csproj",
+      "upstreamPath": "BossMod/BossMod.csproj",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "17c8b29111b473535ae153b0923531d9e78033b248a2fbae5c7c74162a606f67",
+      "gitBlob": "c9bd9e75b9411f8811e687ef5010dcdb494b1765"
+    },
+    {
+      "path": "references/source/BossMod/BossMod.json",
+      "upstreamPath": "BossMod/BossMod.json",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "fef0a4ae1d2436f5218c2088ae50f4b009b3e9256f0a8617ceaaae8913caf6c3",
+      "gitBlob": "13ce10e72cd48b361d2f935f6a6dc5c23817617a"
+    },
+    {
+      "path": "references/source/BossMod.Modules/BossMod.Modules.csproj",
+      "upstreamPath": "BossMod.Modules/BossMod.Modules.csproj",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "3d02ea786d6315628c190f373543c68ad2d28eccc6ab3aa7b388b16306d1055f",
+      "gitBlob": "96847aafa4cfdf04cd029e3d6a350124dc10d03f"
+    },
+    {
+      "path": "references/source/BossMod/Services/IpcService.cs",
+      "upstreamPath": "BossMod/Services/IpcService.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "e5b0195be7adfbd7003b5fa9e3d845a0fc467a7b5087cb833678f39b5f6b9a6c",
+      "gitBlob": "a5f69ba61752e9dabaebb8483cd127b40be0b737"
+    },
+    {
+      "path": "references/source/BossMod/Services/TickService.cs",
+      "upstreamPath": "BossMod/Services/TickService.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "4e1eaa5a6ec2c3f3b9dd5999661f043638b165e44d09cff3acf58c4ef3f51b67",
+      "gitBlob": "873773e34ebaea0ab338da3ee4a330c1c4db7e0e"
+    },
+    {
+      "path": "references/source/BossMod/Services/ModulePackService.cs",
+      "upstreamPath": "BossMod/Services/ModulePackService.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "4134079340c98416853bf5d890cacbc54eda71b75487bd12f47f511cea6d1793",
+      "gitBlob": "44a7a31b10b16fe9304b64884d5c4f8bfb332416"
+    },
+    {
+      "path": "references/source/BossMod/Services/SlashCommandService.cs",
+      "upstreamPath": "BossMod/Services/SlashCommandService.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "bb5fe2f59304eab3980e7899b111f68f2ffb503e7504a23d0431301acaea480e",
+      "gitBlob": "37a91a73eb138cbddfa28f75bf40819718370e0b"
+    },
+    {
+      "path": "references/source/BossMod/Services/SaveConfigService.cs",
+      "upstreamPath": "BossMod/Services/SaveConfigService.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "b7b1937ad460299ee7eded7c3d8230912bc9c618ce54be78feb262fec03b0848",
+      "gitBlob": "64de9e5911a5e24736e697b76445fd4b8135e4f2"
+    },
+    {
+      "path": "references/source/BossMod/Framework/Plugin.cs",
+      "upstreamPath": "BossMod/Framework/Plugin.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "63be802e8ef9fa89e1f558956c97c364a99e5701f3a2f187b3bbbe9e85f17315",
+      "gitBlob": "ddf5db13fa8334b38e7dbee04affd783cf47b643"
+    },
+    {
+      "path": "references/source/BossMod/Framework/Program.cs",
+      "upstreamPath": "BossMod/Framework/Program.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "ac185d4650f6885907c384b28b96e58fbc8a0382a3eb09a3b1540ffdbd2d10d0",
+      "gitBlob": "4ba0fba57d82ca84b4ffb156ff37dc14a7f63f76"
+    },
+    {
+      "path": "references/source/BossMod/Config/ConfigRoot.cs",
+      "upstreamPath": "BossMod/Config/ConfigRoot.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "db4d66ec6bca8031071bf4650e6ca5f9d0deca9c5c9fc5cf2510c3bf3dc48b5c",
+      "gitBlob": "e581b2969b2394f5ac4114b4ed17f985a02f7243"
+    },
+    {
+      "path": "references/source/BossMod/BossModule/BossModule.cs",
+      "upstreamPath": "BossMod/BossModule/BossModule.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "16ea3c40d81af3114c2132962f1036e65a0b857d1e88d6d434ef5e8f9d803bb8",
+      "gitBlob": "54f4d798cc85f5fe5f63eb04467a3b7a0b194404"
+    },
+    {
+      "path": "references/source/BossMod/BossModule/BossComponent.cs",
+      "upstreamPath": "BossMod/BossModule/BossComponent.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "7502c764accd4755de4c73942bc0fcdaf1b6ebcc69c22d8cb551a65d764e7672",
+      "gitBlob": "7422a74df97e7c7307bbfbc404fcf60056efce6a"
+    },
+    {
+      "path": "references/source/BossMod/BossModule/BossModuleRegistry.cs",
+      "upstreamPath": "BossMod/BossModule/BossModuleRegistry.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "3aa232f5244ac4445dca6d3bc17300156961a0d174e8f584c3b4bc8491c53d74",
+      "gitBlob": "47c940a3afc508e72306056ebfaa2cbcfcb92345"
+    },
+    {
+      "path": "references/source/BossMod/BossModule/BossModuleManager.cs",
+      "upstreamPath": "BossMod/BossModule/BossModuleManager.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "5254c57bdd006d8d0256455b5c7406d41a57f85f66adcc0a8acf4762cd6f77f5",
+      "gitBlob": "dcc1783c85190815c50521555dc706a3f165b9ff"
+    },
+    {
+      "path": "references/source/BossMod/BossModule/StateMachineBuilder.cs",
+      "upstreamPath": "BossMod/BossModule/StateMachineBuilder.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "ec36aa1239b5565063e5f5fa9501b1612afdf7018757083a4b5e4cbf1ffb6917",
+      "gitBlob": "cc9fc5a15d053ae1f19c316d001a8d7c5bbb3a5d"
+    },
+    {
+      "path": "references/source/BossMod/BossModule/StateMachine.cs",
+      "upstreamPath": "BossMod/BossModule/StateMachine.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "fbb862df9e12e1404ab0b715c3eeda8883b63ab66a7335586973b7e0d5bdc8fc",
+      "gitBlob": "1f473330640f4c650397bb063abf99369c99802d"
+    },
+    {
+      "path": "references/source/BossMod/BossModule/AIHints.cs",
+      "upstreamPath": "BossMod/BossModule/AIHints.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "ffe5136461a16a5de342512ea897e0869c8048786119d7dc0f47cd8ab4bd5aa3",
+      "gitBlob": "d3ea4e6acf9d0179d5fe39069cfa29f48b6ee9f7"
+    },
+    {
+      "path": "references/source/BossMod/BossModule/AIHintsBuilder.cs",
+      "upstreamPath": "BossMod/BossModule/AIHintsBuilder.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "74739a7f862a19a6aa56cb62acc5ae58585f54a8094da80c4442a04ac3e237b6",
+      "gitBlob": "cb5f0692d9c697852c423b4a60a2242d4cb3ff78"
+    },
+    {
+      "path": "references/source/BossMod/Data/WorldState.cs",
+      "upstreamPath": "BossMod/Data/WorldState.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "811dda937ffcd1b314c284b312030e0d7576241c70af54df142d121803761b52",
+      "gitBlob": "c2657e6d1e85ca5db7fd332f2d93d35b153f3338"
+    },
+    {
+      "path": "references/source/BossMod/Data/Actor.cs",
+      "upstreamPath": "BossMod/Data/Actor.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "d8716a1cd4a9ae7148c381364fda11c5110d85a90999a3062f570e699143921b",
+      "gitBlob": "1923ea1e652938c86cc320f9990390abb40c513e"
+    },
+    {
+      "path": "references/source/BossMod/Data/PartyState.cs",
+      "upstreamPath": "BossMod/Data/PartyState.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "acf3a83e130de1225f80fd2b594e481a83bf9e3c487c057299e5c83ac7f2233b",
+      "gitBlob": "bdfdc8955947b9443daee801196e070b04efd5ad"
+    },
+    {
+      "path": "references/source/BossMod/Components/GenericAOEs.cs",
+      "upstreamPath": "BossMod/Components/GenericAOEs.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "cd1fac9024fbc4b5376ae0fe53b93ded5d3ac729b7c463270a812c90c41581b9",
+      "gitBlob": "17fdbce496698ddc51088ed7ed76fb4d98987d39"
+    },
+    {
+      "path": "references/source/BossMod/Components/CastCounter.cs",
+      "upstreamPath": "BossMod/Components/CastCounter.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "992c6c7e9e27f4ac0fcf3fc84d573a5c24f891f8c414853fb57b5e547933ff64",
+      "gitBlob": "03caab2a21bb9a022cb1a7eeff66adddf7b4923b"
+    },
+    {
+      "path": "references/source/BossMod/Autorotation/RotationModule.cs",
+      "upstreamPath": "BossMod/Autorotation/RotationModule.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "6aeca486b5da5363d98994b9d0c95e85dbfc2e8c67595bb2f65bcd7cf445c71b",
+      "gitBlob": "b3c7acd5ff572eee6b013ddaa8e42c27c25d2515"
+    },
+    {
+      "path": "references/source/BossMod/Autorotation/RotationModuleRegistry.cs",
+      "upstreamPath": "BossMod/Autorotation/RotationModuleRegistry.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "7e75e01bc1f92146c28fbdd17b2b13b1279482ddb44814810d1265cb60fc4a82",
+      "gitBlob": "ec15b91862f3edb280a75db70773e9603f1fe16e"
+    },
+    {
+      "path": "references/source/BossMod/Autorotation/RotationModuleManager.cs",
+      "upstreamPath": "BossMod/Autorotation/RotationModuleManager.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "a1b86837e982639dc986495d2ddc20534390f84e8b6a2b1a62ba72c5ca424b06",
+      "gitBlob": "71be2e058e318c47501a143a67e836e42fababf9"
+    },
+    {
+      "path": "references/source/BossMod/Autorotation/Preset.cs",
+      "upstreamPath": "BossMod/Autorotation/Preset.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "a92c43d67d5d71dc030f606b984b2082a427f24f22e601d9961c75aba79589b4",
+      "gitBlob": "6ab8758c83fa671535f72b63fc2debb76485fd9a"
+    },
+    {
+      "path": "references/source/BossMod/Autorotation/PresetDatabase.cs",
+      "upstreamPath": "BossMod/Autorotation/PresetDatabase.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "e2c02c499fc322715063a773f85ed57e2c8cfeac5843090c010b8158c32c161d",
+      "gitBlob": "bccca5dcd1c437b7a79790e20d8cea55b646f5b8"
+    },
+    {
+      "path": "references/source/BossMod/Autorotation/PlanPresetConverter.cs",
+      "upstreamPath": "BossMod/Autorotation/PlanPresetConverter.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "5acbc7a665f6e262e071ded01778a356d3d5cb23e1bce6f0738397674ca9c74e",
+      "gitBlob": "6ebcb28d0fb1b91e7ec590098ac87f9c73c5eadb"
+    },
+    {
+      "path": "references/source/BossMod/AI/AIConfig.cs",
+      "upstreamPath": "BossMod/AI/AIConfig.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "12aa9b42b9969dc8f2fab51f1492d88a36d5fa08abda334cf71215b848af1515",
+      "gitBlob": "4980603a56104c6b7f431fcd47eccbb054fcf0c9"
+    },
+    {
+      "path": "references/source/BossMod/AI/AIRotationModule.cs",
+      "upstreamPath": "BossMod/AI/AIRotationModule.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "20020623f637007bfeec76e9e317b0055919f113032e88f51985a4400a4f1289",
+      "gitBlob": "d1526579552b95566edcdba6406d00db539e9792"
+    },
+    {
+      "path": "references/source/BossMod/Pathfinding/ObstacleMapManager.cs",
+      "upstreamPath": "BossMod/Pathfinding/ObstacleMapManager.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "9efea410cb0afd646cb48e8d2664d6704a8220372d1e50c5d431dfb1b1f9f59d",
+      "gitBlob": "57b57bf771e33ad0fb15c0a20f3c6a83a183f07d"
+    },
+    {
+      "path": "references/source/BossMod/Replay/ReplayPlayer.cs",
+      "upstreamPath": "BossMod/Replay/ReplayPlayer.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "b402e23d4cb5c67b5c9579285448828ca5f0949d701159bcee0de535487fe601",
+      "gitBlob": "fb775fba1898347d2503fe21353e3f02c943d3b3"
+    },
+    {
+      "path": "references/source/BossMod/Replay/ReplayParserLog.cs",
+      "upstreamPath": "BossMod/Replay/ReplayParserLog.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "9f37ed8dafd7d1fa95d7ca3692f4c95526925f8629239acd3a439870fe4355de",
+      "gitBlob": "bd42479e976dbb196307d06e376fb8722a47f266"
+    },
+    {
+      "path": "references/source/BossMod/Replay/Visualization/ReplayDetailsWindow.cs",
+      "upstreamPath": "BossMod/Replay/Visualization/ReplayDetailsWindow.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "100a19fa54746e58f80780f4bef6fc3a20b86cb5615738bf9718b426f62225e0",
+      "gitBlob": "cc9f07aa3cfc6d1c778621bab90d2e006bbf7740"
+    },
+    {
+      "path": "references/source/BossMod.Modules/RealmReborn/Dungeon/D01Sastasha/D011Chopper.cs",
+      "upstreamPath": "BossMod.Modules/RealmReborn/Dungeon/D01Sastasha/D011Chopper.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "c458a8b829a2ca3ed48704a24026604c36aeef02a692de00f9eb8d747378fbbe",
+      "gitBlob": "613c2287052884311bc9e31783b338ab1d638eed"
+    },
+    {
+      "path": "references/source/BossMod.Modules/RealmReborn/Extreme/Ex4Ifrit/Ex4IfritStates.cs",
+      "upstreamPath": "BossMod.Modules/RealmReborn/Extreme/Ex4Ifrit/Ex4IfritStates.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "6cf08518125b4ade04c005c9f83df1640d25a81c239ffb5e2285fdedc24fad71",
+      "gitBlob": "da90fd2fbfcf0394c3ba3dedd8585b239a1f3997"
+    },
+    {
+      "path": "references/source/BossMod.Autorotation/MiscAI/StayCloseToTarget.cs",
+      "upstreamPath": "BossMod.Autorotation/MiscAI/StayCloseToTarget.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "f4261f0529a7ad4ef6fd21c2a490c114f3d51e6787c0f442b5c9b5658e11ad1f",
+      "gitBlob": "076ded4464a8dd84eb0b9bc70a749bc86f26fdf5"
+    },
+    {
+      "path": "references/source/BossMod/AI/AIWindow.cs",
+      "upstreamPath": "BossMod/AI/AIWindow.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "6d37d6ff6b7ad8830a3e7002e43615d572e0c1ec640f902c55e610e9ff833392",
+      "gitBlob": "d6930cb86d78d693670a499879b260e6e05b87e1"
+    },
+    {
+      "path": "references/source/BossMod/Util/Event.cs",
+      "upstreamPath": "BossMod/Util/Event.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "a0cfb944cb970893630572304e81c6dacf55a2525b994bfdabc892109cee90ca",
+      "gitBlob": "2978da8c2ad2edd2647e741287b448d56f94d3d8"
+    },
+    {
+      "path": "references/source/BossMod/Util/Vector.cs",
+      "upstreamPath": "BossMod/Util/Vector.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "584ae656d0de858f41b933e7eb39513448df5d9965a5c22800b266dc572988b7",
+      "gitBlob": "a5e9383475f8534d75823a743fc6a875576e2dd6"
+    },
+    {
+      "path": "references/source/BossMod/Util/Sdf.cs",
+      "upstreamPath": "BossMod/Util/Sdf.cs",
+      "repository": "https://github.com/awgil/ffxiv_bossmod",
+      "revision": "c50e67f37aa22f86d064489913ec9887f116accf",
+      "sha256": "85791a62307ebbe6dbda10455a1eaf50205f3c36fc8c645d23e58469bb26bb21",
+      "gitBlob": "6fff917ed5e0411aa78628be4cf40f1123c2de5c"
+    }
+  ]
+}

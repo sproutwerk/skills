@@ -1,0 +1,27 @@
+namespace Dalamud.Hooking;
+
+/// <summary>
+/// Interface describing a generic hook.
+/// </summary>
+public interface IDalamudHook : IDisposable
+{
+    /// <summary>
+    /// Gets the address to hook.
+    /// </summary>
+    IntPtr Address { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether the hook is enabled.
+    /// </summary>
+    bool IsEnabled { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether the hook is disposed.
+    /// </summary>
+    bool IsDisposed { get; }
+
+    /// <summary>
+    /// Gets the name of the hooking backend used for the hook.
+    /// </summary>
+    string BackendName { get; }
+}

@@ -1,0 +1,715 @@
+﻿using BossMod.Pathfinding;
+using Dalamud.Bindings.ImGui;
+using Dalamud.Interface.Utility.Raii;
+
+namespace BossMod;
+
+public record struct ModuleInit(WorldState World, Actor Primary, BossModuleRegistry.Info? Info);
+
+// base for boss modules - provides all the common features, so that look is standardized
+// by default, module activates (transitions to phase 0) whenever "primary" actor becomes both targetable and in combat (this is how we detect 'pull') - though this can be overridden if needed
+public abstract class BossModule : IDisposable
+{
+    public readonly WorldState WorldState;
+    public Actor PrimaryActor { get; private set; }
+    public readonly BossModuleConfig WindowConfig = Service.Config.Get<BossModuleConfig>();
+    public readonly ColorConfig ColorConfig = Service.Config.Get<ColorConfig>();
+    public readonly MiniArena Arena;
+    public readonly BossModuleRegistry.Info? Info;
+    public readonly StateMachine StateMachine;
+
+    internal void SetPrimaryActor(Actor actor)
+    {
+        PrimaryActor = actor;
+    }
+
+    private readonly EventSubscriptions _subscriptions;
+
+    public Event<BossModule, BossComponent?, string> Error = new();
+
+    public PartyState Raid => WorldState.Party;
+    public WPos Center => Arena.Center;
+    public ArenaBounds Bounds => Arena.Bounds;
+    public bool InBounds(WPos position) => Arena.InBounds(position);
+    public VBool InBounds(WVec position) => Arena.InBounds(position);
+
+    // per-oid enemy lists; filled on first request
+    private readonly Dictionary<uint, List<Actor>> _relevantEnemies = []; // key = actor OID
+    public IReadOnlyDictionary<uint, List<Actor>> RelevantEnemies => _relevantEnemies;
+    public IReadOnlyList<Actor> Enemies(uint oid)
+    {
+        IReadOnlyList<Actor>? entry = _relevantEnemies.GetValueOrDefault(oid);
+        entry ??= _relevantEnemies[oid] = [.. WorldState.Actors.Where(actor => actor.OID == oid)];
+        return entry;
+    }
+    public IReadOnlyList<Actor> Enemies<OID>(OID oid) where OID : Enum => Enemies((uint)(object)oid);
+
+    public virtual Actor? GetDefaultTarget(int slot)
+    {
+        if (!PrimaryActor.IsDeadOrDestroyed && PrimaryActor.IsTargetable)
+            return PrimaryActor;
+
+        return null;
+    }
+
+    // component management: at most one component of any given type can be active at any time
+    private readonly List<BossComponent> _components = [];
+#pragma warning disable CA1859 // someone needs to tell Visual Studio that List and IReadOnlyList don't have the same semantics
+    public IReadOnlyList<BossComponent> Components => _components;
+#pragma warning restore CA1859
+    public T? FindComponent<T>() where T : BossComponent => _components.OfType<T>().FirstOrDefault();
+
+    public void ActivateComponent<T>() where T : BossComponent
+    {
+        if (FindComponent<T>() != null)
+        {
+            ReportError(null, $"State {StateMachine.ActiveState?.ID:X}: Activating a component of type {typeof(T)} when another of the same type is already active; old one is deactivated automatically");
+            DeactivateComponent<T>();
+        }
+        var comp = New<T>.Create(this);
+        _components.Add(comp);
+
+        // execute callbacks for existing state
+        foreach (var actor in WorldState.Actors)
+        {
+            var nonPlayer = actor.Type is not ActorType.Player and not ActorType.Pet and not ActorType.Chocobo;
+            if (nonPlayer)
+            {
+                comp.OnActorCreated(actor);
+                if (actor.CastInfo?.IsSpell() ?? false)
+                    comp.OnCastStarted(actor, actor.CastInfo);
+            }
+            if (actor.IsTargetable)
+                comp.OnTargetable(actor);
+            if (actor.Tether.ID != 0)
+                comp.OnTethered(actor, actor.Tether);
+            for (var i = 0; i < actor.Statuses.Length; ++i)
+                if (actor.Statuses[i].ID != 0)
+                    comp.OnStatusGain(actor, actor.Statuses[i]);
+        }
+    }
+
+    public void DeactivateComponent<T>() where T : BossComponent
+    {
+        var count = _components.RemoveAll(x => x is T);
+        if (count == 0)
+            ReportError(null, $"State {StateMachine.ActiveState?.ID:X}: Could not find a component of type {typeof(T)} to deactivate");
+    }
+
+    public void ClearComponents(Predicate<BossComponent> condition) => _components.RemoveAll(condition);
+
+    protected BossModule(ModuleInit init, WPos center, ArenaBounds bounds)
+    {
+        WorldState = init.World;
+        PrimaryActor = init.Primary;
+        Info = init.Info;
+        Arena = new(WindowConfig, center, bounds);
+        StateMachine = Info != null ? ((StateMachineBuilder)Activator.CreateInstance(Info.StatesType, this)!).Build() : new([]);
+
+        _subscriptions = new
+        (
+            WorldState.Actors.Added.Subscribe(OnActorCreated),
+            WorldState.Actors.Removed.Subscribe(OnActorDestroyed),
+            WorldState.Actors.CastStarted.Subscribe(OnActorCastStarted),
+            WorldState.Actors.CastFinished.Subscribe(OnActorCastFinished),
+            WorldState.Actors.IsTargetableChanged.Subscribe(OnIsTargetableChanged),
+            WorldState.Actors.IsDeadChanged.Subscribe(OnIsDeadChanged),
+            WorldState.Actors.Tethered.Subscribe(OnActorTethered),
+            WorldState.Actors.Untethered.Subscribe(OnActorUntethered),
+            WorldState.Actors.StatusGain.Subscribe(OnActorStatusGain),
+            WorldState.Actors.StatusLose.Subscribe(OnActorStatusLose),
+            WorldState.Actors.IconAppeared.Subscribe(OnActorIcon),
+            WorldState.Actors.VFXAppeared.Subscribe(OnActorVFX),
+            WorldState.Actors.CastEvent.Subscribe(OnActorCastEvent),
+            WorldState.Actors.EventObjectStateChange.Subscribe(OnActorEState),
+            WorldState.Actors.EventObjectAnimation.Subscribe(OnActorEAnim),
+            WorldState.Actors.PlayActionTimelineEvent.Subscribe(OnActorPlayActionTimelineEvent),
+            WorldState.Actors.PlayActionTimelineSync.Subscribe(OnActorPlayActionTimelineSync),
+            WorldState.Actors.EventNpcYell.Subscribe(OnActorNpcYell),
+            WorldState.Actors.ModelStateChanged.Subscribe(OnActorModelStateChange),
+            WorldState.MapEffect.Subscribe(OnMapEffect),
+            WorldState.LegacyMapEffect.Subscribe(OnLegacyMapEffect),
+            WorldState.DirectorUpdate.Subscribe(OnDirectorUpdate)
+        );
+
+        foreach (var v in WorldState.Actors)
+            OnActorCreated(v);
+    }
+
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        StateMachine.Reset();
+        ClearComponents(_ => true);
+
+        _subscriptions.Dispose();
+    }
+
+    public void Update()
+    {
+        if (StateMachine.ActivePhaseIndex < 0 && AllowedToActivate() && CheckPull())
+            StateMachine.Start(WorldState.CurrentTime);
+
+        if (StateMachine.ActiveState != null)
+            StateMachine.Update(WorldState.CurrentTime);
+
+        if (StateMachine.ActiveState != null)
+        {
+            UpdateModule();
+            foreach (var comp in _components)
+                comp.Update();
+        }
+    }
+
+    public void Draw(Angle cameraAzimuth, int pcSlot, bool includeText, bool includeArena, AIHints hints)
+    {
+        var pc = Raid[pcSlot];
+        if (pc == null)
+            return;
+
+        var pcHints = CalculateHintsForRaidMember(pcSlot, pc);
+        if (includeText)
+        {
+            // reserved lines pin the radar; mechanic sequence shrinks first so player/raidwide hints stay
+            var reservedLines = includeArena ? WindowConfig.TextHintLines : 0;
+            var startY = ImGui.GetCursorPosY();
+            var globalHints = WindowConfig.ShowGlobalHints ? CalculateGlobalHints() : null;
+            var otherLines = (globalHints != null ? HintLines(globalHints) : 0) + (WindowConfig.ShowPlayerHints ? HintLines(pcHints.Select(h => h.Item1)) : 0);
+
+            if (WindowConfig.ShowMechanicTimers)
+                StateMachine.Draw(ActualShadowColor, WindowConfig.MaxUpcomingMechanics, WindowConfig.WrapMechanicSequence, reservedLines > 0 ? reservedLines - otherLines : int.MaxValue);
+
+            if (globalHints != null)
+                DrawGlobalHints(globalHints);
+
+            if (WindowConfig.ShowPlayerHints)
+                DrawPlayerHints(pcHints);
+
+            if (reservedLines > 0)
+                ImGui.SetCursorPosY(MathF.Max(ImGui.GetCursorPosY(), startY + reservedLines * ImGui.GetTextLineHeightWithSpacing()));
+        }
+        if (includeArena)
+        {
+            Arena.Begin(cameraAzimuth);
+            DrawArena(pcSlot, pc, pcHints.Any(h => h.Item2), hints);
+            Arena.End();
+        }
+    }
+
+    // sestringrenderer is a bit expensive so let's not do all the extra work if the hints window is opaque
+    Color ActualShadowColor => WindowConfig.HintsFloating ? WindowConfig.HintShadowColor : default;
+
+    static bool IsMelee(Actor pc) => pc is { Role: Role.Melee or Role.Tank } or { Class: Class.RDM };
+
+    public virtual void DrawArena(int pcSlot, Actor pc, bool haveRisks, AIHints hints)
+    {
+        if (WindowConfig.ShowWaymarks)
+            DrawWaymarks();
+
+        if (WindowConfig.ShowMeleeRange && IsMelee(pc) && WorldState.Actors.Find(pc.TargetID) is { IsAlly: false } target)
+            Arena.AddCircle(target.Position, target.HitboxRadius + pc.HitboxRadius + 3, ColorConfig.ArenaMeleeRing.ABGR);
+
+        // draw background
+        DrawArenaBackground(pcSlot, pc);
+        foreach (var comp in _components)
+            comp.DrawArenaBackground(pcSlot, pc);
+
+        // draw borders
+        if (WindowConfig.ShowBorder)
+            Arena.Border(haveRisks && WindowConfig.ShowBorderRisk ? ArenaColor.Enemy : ArenaColor.Border);
+        if (WindowConfig.ShowCardinals)
+            Arena.CardinalNames();
+        if (WindowConfig.ShowSigns)
+            DrawSigns();
+
+        // draw non-player alive party members
+        DrawPartyMembers(pcSlot, pc);
+
+        // draw non-party pcs, if requested
+        if (DrawAllPlayers && WindowConfig.ShowIrrelevantPlayers && WindowConfig.ShowAllPlayers)
+            Arena.Actors(WorldState.Actors.Where(a => a.Type == ActorType.Player && Raid.FindSlot(a.InstanceID) < 0), ArenaColor.PlayerReallyGeneric);
+
+        // draw foreground
+        DrawArenaForeground(pcSlot, pc);
+        foreach (var comp in _components)
+            comp.DrawArenaForeground(pcSlot, pc);
+
+        // draw enemies & player
+        DrawEnemies(pcSlot, pc);
+        if (DebugOpts.DrawAllActors)
+            DrawAllActors();
+        if (WindowConfig.ShowPullDebug)
+            DrawPulls(hints);
+        Arena.Actor(pc, ArenaColor.PC, true);
+    }
+
+    public BossComponent.TextHints CalculateHintsForRaidMember(int slot, Actor actor)
+    {
+        BossComponent.TextHints hints = [];
+        foreach (var comp in _components)
+            comp.AddHints(slot, actor, hints);
+        return hints;
+    }
+
+    public BossComponent.MovementHints CalculateMovementHintsForRaidMember(int slot, Actor actor)
+    {
+        BossComponent.MovementHints hints = [];
+        foreach (var comp in _components)
+            comp.AddMovementHints(slot, actor, hints);
+        return hints;
+    }
+
+    public BossComponent.GlobalHints CalculateGlobalHints()
+    {
+        BossComponent.GlobalHints hints = [];
+        foreach (var comp in _components)
+            comp.AddGlobalHints(hints);
+        return hints;
+    }
+
+    public void CalculateAIHints(int slot, Actor actor, PartyRolesConfig.Assignment assignment, AIHints hints, ObstacleMapManager obstacles)
+    {
+        hints.PathfindMapCenter = Center;
+        hints.PathfindMapBounds = Bounds;
+
+        if (Info?.BitmapEnabled == true)
+        {
+            var (entry, bitmap) = obstacles.Find(new Vector3(Center.X, actor.PosRot.Y, Center.Z));
+            if (entry != null && bitmap != null && bitmap.PixelSize == Bounds.MapResolution)
+            {
+                var originCell = (Center - entry.Origin) / bitmap.PixelSize;
+                var originX = (int)originCell.X;
+                var originZ = (int)originCell.Z;
+                var halfH = (int)(Bounds.PfHalfHeight / bitmap.PixelSize);
+                var halfW = (int)(Bounds.PfHalfWidth / bitmap.PixelSize);
+                hints.PathfindMapObstacles = new(bitmap, new(originX - halfW, originZ - halfH, originX + halfW, originZ + halfH));
+            }
+        }
+
+        foreach (var comp in _components)
+            comp.AddAIHints(slot, actor, assignment, hints);
+        CalculateModuleAIHints(slot, actor, assignment, hints);
+
+        if (!WindowConfig.AllowAutomaticActions)
+            hints.ActionsToExecute.Clear();
+        if (!WindowConfig.AllowAutomaticInteract)
+            hints.InteractWithTarget = null;
+
+        // always clear low level hints; these are executed unconditionally, regardless of autorot state, and can confuse users
+        // if the module wants the player to go somewhere or target something it should set appropriate hints instead
+        if (hints.ForcedMovement is { } move && move != new Vector3(0))
+        {
+            Service.PluginLog.Warning($"Module {GetType()} sets ForcedMovement to a non-zero value; this is not supported!");
+            hints.ForcedMovement = null;
+        }
+
+        if (hints.ForcedTarget != null)
+        {
+            Service.PluginLog.Warning($"Module {GetType()} forces a target; this is not supported!");
+            hints.ForcedTarget = null;
+        }
+
+        if (hints.ForcedFocusTarget != null)
+        {
+            Service.PluginLog.Warning($"Module {GetType()} forces a focus target; this is not supported!");
+            hints.ForcedFocusTarget = null;
+        }
+    }
+
+    public void ReportError(BossComponent? comp, string message)
+    {
+        Service.Log($"[ModuleError] [{GetType().Name}] [{comp?.GetType().Name}] {message}");
+        Error.Fire(this, comp, message);
+    }
+
+    // utility to calculate expected time when cast finishes (plus an optional delay); returns fallback value if argument is null
+    // for whatever reason, npc spells have reported remaining cast time consistently 0.3s smaller than reality - this delta is added automatically, in addition to optional delay
+    public DateTime CastFinishAt(ActorCastInfo? cast, float extraDelay = 0, DateTime fallback = default) => cast != null ? WorldState.FutureTime(cast.NPCRemainingTime + extraDelay) : fallback;
+
+    // called during update if module is not yet active, should return true if it is to be activated
+    // default implementation activates if primary target is both targetable and in combat
+    protected virtual bool CheckPull() { return PrimaryActor.IsTargetable && PrimaryActor.InCombat; }
+
+    // determines whether this module should be allowed to activate if CheckPull returns true. this is only relevant for open-world content like FATEs or foray bosses
+    // if the player isn't participating in the encounter, continuing to run the module will
+    // - interfere with generic solver (best case scenario)
+    // - crash the module (e.g. if a caster disappears because the player moves too far from them) (worst case scenario)
+    protected virtual bool AllowedToActivate() { return WorldState.Client.ActiveFate.ID == PrimaryActor.FateID; }
+
+    // called during update if module is active; should return true if module is to be reset (i.e. deleted and new instance recreated for same actor)
+    // default implementation never resets, but it's useful for outdoor bosses that can be leashed
+    public virtual bool CheckReset() => false;
+
+    // return true if non-party player characters should be drawn on the minimap
+    public virtual bool DrawAllPlayers => false;
+
+    // return true if out-of-combat enemies should be set to priority 0 - useful for multi-phase encounters when player wants to use automatic targeting via cdplan
+    public virtual bool ShouldPrioritizeAllEnemies => false;
+
+    protected virtual void UpdateModule() { }
+    protected virtual void DrawArenaBackground(int pcSlot, Actor pc) { } // before modules background
+    protected virtual void DrawArenaForeground(int pcSlot, Actor pc) { } // after border, before modules foreground
+    protected virtual void CalculateModuleAIHints(int slot, Actor actor, PartyRolesConfig.Assignment assignment, AIHints hints) { }
+
+    // called at the very end to draw important enemies, default implementation draws primary actor
+    protected virtual void DrawEnemies(int pcSlot, Actor pc)
+    {
+        Arena.Actor(PrimaryActor, ArenaColor.Enemy);
+    }
+
+    private void DrawAllActors()
+    {
+        List<string> tooltip = [];
+        var cursor = ImGui.GetMousePos();
+
+        foreach (var actor in WorldState.Actors.Exclude(PrimaryActor))
+        {
+            Arena.ActorInsideBounds(actor.Position, actor.Rotation, ArenaColor.Object);
+            var s = Arena.WorldPositionToScreenPosition(actor.Position);
+            if ((s - cursor).LengthSquared() < 100)
+            {
+                tooltip.Add(actor.ToString());
+                if (actor.CastInfo is { } ci)
+                {
+                    tooltip.Add($"> {ci}");
+                    Arena.AddLine(actor.Position, ci.LocXZ, Color.FromComponents(0, 255, 255).ABGR);
+                }
+            }
+        }
+
+        if (tooltip.Count > 0)
+            ImGui.SetTooltip(string.Join("\n", tooltip));
+    }
+
+    private void DrawPulls(AIHints hints)
+    {
+        foreach (var enemy in hints.PotentialTargets.Where(a => a.Actor is { IsDeadOrDestroyed: false, CastInfo: null } && a.CanMove))
+        {
+            if (enemy.DesiredPosition is { } pos && (pos - enemy.Actor.Position).LengthSq() > 0.25f)
+            {
+                Arena.AddLine(enemy.Actor.Position, pos, ArenaColor.Object);
+                Arena.AddCircle(pos, 0.5f, ArenaColor.Object);
+            }
+
+            if (WorldState.Actors.Find(enemy.Actor.TargetID) is { } target)
+            {
+                var toTarget = target.Position - enemy.Actor.Position;
+                var distToTarget = toTarget.Length() - enemy.Actor.HitboxRadius - target.HitboxRadius;
+                if (distToTarget > enemy.TankDistance + 0.25f)
+                {
+                    var movement = toTarget.Normalized() * (distToTarget - enemy.TankDistance);
+                    Arena.AddLine(enemy.Actor.Position, enemy.Actor.Position + movement, 0xFFFFFF00);
+                    Arena.AddCircle(enemy.Actor.Position + movement, 0.5f, 0xFFFFFF00);
+                }
+            }
+        }
+    }
+
+    // empty hint lists still take a line
+    private static int HintLines(IEnumerable<string> hints) => Math.Max(1, UIMisc.CountWrappedLines(hints.Select(h => ImGui.CalcTextSize(h).X), ImGui.GetContentRegionAvail().X));
+
+    private void DrawGlobalHints(BossComponent.GlobalHints hints)
+    {
+        using var color = ImRaii.PushColor(ImGuiCol.Text, 0xffffff00);
+        var first = true;
+        foreach (var hint in hints)
+        {
+            if (!first)
+                UIMisc.SameLineOrWrap(ImGui.CalcTextSize(hint).X);
+            first = false;
+            Utils.TextOutlined(hint, ActualShadowColor);
+        }
+        if (first)
+            ImGui.NewLine();
+    }
+
+    private void DrawPlayerHints(BossComponent.TextHints hints)
+    {
+        var first = true;
+        foreach ((var hint, var risk) in hints)
+        {
+            if (!first)
+                UIMisc.SameLineOrWrap(ImGui.CalcTextSize(hint).X);
+            first = false;
+            using var color = ImRaii.PushColor(ImGuiCol.Text, risk ? ArenaColor.Danger : ArenaColor.Safe);
+            Utils.TextOutlined(hint, ActualShadowColor);
+        }
+        if (first)
+            ImGui.NewLine();
+    }
+
+    private void DrawWaymarks()
+    {
+        DrawWaymark(WorldState.Waymarks[Waymark.A], "A", 0xff964ee5);
+        DrawWaymark(WorldState.Waymarks[Waymark.B], "B", 0xff11a2c6);
+        DrawWaymark(WorldState.Waymarks[Waymark.C], "C", 0xffe29f30);
+        DrawWaymark(WorldState.Waymarks[Waymark.D], "D", 0xffbc567a);
+        DrawWaymark(WorldState.Waymarks[Waymark.N1], "1", 0xff964ee5);
+        DrawWaymark(WorldState.Waymarks[Waymark.N2], "2", 0xff11a2c6);
+        DrawWaymark(WorldState.Waymarks[Waymark.N3], "3", 0xffe29f30);
+        DrawWaymark(WorldState.Waymarks[Waymark.N4], "4", 0xffbc567a);
+    }
+
+    private void DrawWaymark(Vector3? pos, string text, uint color)
+    {
+        if (pos != null)
+        {
+            if (WindowConfig.ShowOutlinesAndShadows)
+                Arena.TextWorld(new(pos.Value.XZ()), text, 0xFF000000, 25);
+            Arena.TextWorld(new(pos.Value.XZ()), text, color, 22);
+
+            if (WindowConfig.StrokeWaymarks)
+            {
+                if (text is "A" or "B" or "C" or "D")
+                    Arena.AddCircle(new(pos.Value.XZ()), 1.25f, color);
+                else
+                    Arena.AddRect(new(pos.Value.XZ()), new(0, 1), 1.1f, 1.1f, 1.1f, color);
+            }
+        }
+    }
+
+    private void DrawSigns()
+    {
+        for (var i = Sign.Attack1; i < Sign.Count; i++)
+        {
+            var actor = WorldState.Actors.Find(WorldState.Waymarks[i]);
+            if (actor == null)
+                continue;
+
+            var iconId = i.IconId();
+            if (Service.Texture.TryGetFromGameIcon(iconId, out var tex))
+            {
+                var wrap = tex.GetWrapOrEmpty();
+                var pos = Arena.WorldPositionToScreenPosition(actor.Position);
+                var scale = WindowConfig.EffectiveArenaScale * 24;
+
+                ImGui.GetWindowDrawList().AddImage(wrap.Handle, pos - new Vector2(scale), pos);
+            }
+        }
+    }
+
+    private void DrawPartyMembers(int pcSlot, Actor pc)
+    {
+        foreach (var (slot, player) in Raid.WithSlot().Exclude(pcSlot))
+        {
+            var (prio, color) = CalculateHighestPriority(pcSlot, pc, slot, player);
+
+            var isFocus = WorldState.Client.FocusTargetId == player.InstanceID;
+            if (prio == BossComponent.PlayerPriority.Irrelevant && !WindowConfig.ShowIrrelevantPlayers && !(isFocus && WindowConfig.ShowFocusTargetPlayer))
+                continue;
+
+            if (color == 0)
+            {
+                color = prio switch
+                {
+                    BossComponent.PlayerPriority.Interesting => ArenaColor.PlayerInteresting,
+                    BossComponent.PlayerPriority.Danger => ArenaColor.Danger,
+                    BossComponent.PlayerPriority.Critical => ArenaColor.Vulnerable, // TODO: select some better color...
+                    _ => ArenaColor.PlayerGeneric
+                };
+
+                if (color == ArenaColor.PlayerGeneric)
+                {
+                    // optional focus/role-based overrides
+                    if (isFocus)
+                    {
+                        color = ColorConfig.ArenaPlayerGenericFocus.ABGR;
+                    }
+                    else if (WindowConfig.ColorPlayersBasedOnRole)
+                    {
+                        color = player.ClassCategory switch
+                        {
+                            ClassCategory.Tank => ColorConfig.ArenaPlayerGenericTank.ABGR,
+                            ClassCategory.Healer => ColorConfig.ArenaPlayerGenericHealer.ABGR,
+                            ClassCategory.Melee => ColorConfig.ArenaPlayerGenericMelee.ABGR,
+                            ClassCategory.Caster => ColorConfig.ArenaPlayerGenericCaster.ABGR,
+                            ClassCategory.PhysRanged => ColorConfig.ArenaPlayerGenericPhysRanged.ABGR,
+                            _ => color
+                        };
+                    }
+                }
+            }
+            Arena.Actor(player, color);
+        }
+
+        if (WindowConfig.ShowPet && WorldState.Actors.Find(WorldState.Client.ActivePet.InstanceID) is { } pet)
+            Arena.Actor(pet, ArenaColor.Object);
+    }
+
+    private (BossComponent.PlayerPriority, uint) CalculateHighestPriority(int pcSlot, Actor pc, int playerSlot, Actor player)
+    {
+        uint color = 0;
+        var highestPrio = BossComponent.PlayerPriority.Irrelevant;
+        foreach (var s in _components)
+        {
+            uint subColor = 0;
+            var subPrio = s.CalcPriority(pcSlot, pc, playerSlot, player, ref subColor);
+            if (subPrio > highestPrio)
+            {
+                highestPrio = subPrio;
+                color = subColor;
+            }
+        }
+        return (highestPrio, color);
+    }
+
+    private void OnActorCreated(Actor actor)
+    {
+        _relevantEnemies.GetValueOrDefault(actor.OID)?.Add(actor);
+        if (actor.Type is not (ActorType.Player or ActorType.Pet or ActorType.Chocobo))
+            foreach (var comp in _components)
+                comp.OnActorCreated(actor);
+    }
+
+    private void OnActorDestroyed(Actor actor)
+    {
+        _relevantEnemies.GetValueOrDefault(actor.OID)?.Remove(actor);
+        if (actor.Type is not (ActorType.Player or ActorType.Pet or ActorType.Chocobo))
+            foreach (var comp in _components)
+                comp.OnActorDestroyed(actor);
+    }
+
+    private void OnActorCastStarted(Actor actor)
+    {
+        if (actor.Type is not (ActorType.Player or ActorType.Pet or ActorType.Chocobo) && actor.CastInfo?.IsSpell() == true)
+            foreach (var comp in _components)
+                comp.OnCastStarted(actor, actor.CastInfo);
+    }
+
+    private void OnActorCastFinished(Actor actor)
+    {
+        if (actor.Type is not (ActorType.Player or ActorType.Pet or ActorType.Chocobo) && actor.CastInfo?.IsSpell() == true)
+            foreach (var comp in _components)
+                comp.OnCastFinished(actor, actor.CastInfo);
+    }
+
+    private void OnIsTargetableChanged(Actor actor)
+    {
+        if (actor.IsTargetable)
+        {
+            foreach (var comp in _components)
+                comp.OnTargetable(actor);
+        }
+        else
+        {
+            foreach (var comp in _components)
+                comp.OnUntargetable(actor);
+        }
+    }
+
+    private void OnIsDeadChanged(Actor actor)
+    {
+        foreach (var comp in _components)
+            comp.OnIsDeadChanged(actor);
+    }
+
+    private void OnActorTethered(Actor actor)
+    {
+        foreach (var comp in _components)
+            comp.OnTethered(actor, actor.Tether);
+    }
+
+    private void OnActorUntethered(Actor actor)
+    {
+        foreach (var comp in _components)
+            comp.OnUntethered(actor, actor.Tether);
+    }
+
+    private void OnActorStatusGain(Actor actor, int index)
+    {
+        foreach (var comp in _components)
+            comp.OnStatusGain(actor, actor.Statuses[index]);
+    }
+
+    private void OnActorStatusLose(Actor actor, int index)
+    {
+        foreach (var comp in _components)
+            comp.OnStatusLose(actor, actor.Statuses[index]);
+    }
+
+    private void OnActorIcon(Actor actor, uint iconID, ulong targetID)
+    {
+        foreach (var comp in _components)
+            comp.OnEventIcon(actor, iconID, targetID);
+    }
+
+    private void OnActorVFX(Actor actor, uint vfxID, ulong targetID)
+    {
+        foreach (var comp in _components)
+            comp.OnEventVFX(actor, vfxID, targetID);
+    }
+
+    private void OnActorCastEvent(Actor actor, ActorCastEvent cast)
+    {
+        if (actor.Type is not (ActorType.Player or ActorType.Pet or ActorType.Chocobo) && cast.IsSpell())
+            foreach (var comp in _components)
+                comp.OnEventCast(actor, cast);
+    }
+
+    private void OnActorEState(Actor actor, ushort state)
+    {
+        foreach (var comp in _components)
+            comp.OnActorEState(actor, state);
+    }
+
+    private void OnActorEAnim(Actor actor, ushort p1, ushort p2)
+    {
+        var state = ((uint)p1 << 16) | p2;
+        foreach (var comp in _components)
+            comp.OnActorEAnim(actor, state);
+    }
+
+    private void OnActorPlayActionTimelineEvent(Actor actor, ushort id)
+    {
+        foreach (var comp in _components)
+            comp.OnActorPlayActionTimelineEvent(actor, id);
+    }
+
+    private void OnActorPlayActionTimelineSync(Actor actor, List<(ulong, ushort)> events)
+    {
+        foreach (var comp in _components)
+            comp.OnActorPlayActionTimelineSync(actor, events);
+    }
+
+    private void OnActorNpcYell(Actor actor, ushort id)
+    {
+        foreach (var comp in _components)
+            comp.OnActorNpcYell(actor, id);
+    }
+
+    private void OnActorModelStateChange(Actor actor)
+    {
+        foreach (var comp in _components)
+            comp.OnActorModelStateChange(actor, actor.ModelState.ModelState, actor.ModelState.AnimState1, actor.ModelState.AnimState2);
+    }
+
+    private void OnMapEffect(WorldState.OpMapEffect op)
+    {
+        foreach (var comp in _components)
+            comp.OnMapEffect(op.Index, op.State);
+    }
+
+    private void OnLegacyMapEffect(WorldState.OpLegacyMapEffect op)
+    {
+        foreach (var comp in _components)
+            comp.OnLegacyMapEffect(op.Sequence, op.Param, op.Data);
+    }
+
+    private void OnDirectorUpdate(WorldState.OpDirectorUpdate op)
+    {
+        foreach (var comp in _components)
+            comp.OnEventDirectorUpdate(op.UpdateID, op.Param1, op.Param2, op.Param3, op.Param4);
+    }
+
+    public struct DebugOptions()
+    {
+        public bool DrawAllActors = false;
+    }
+
+    internal DebugOptions DebugOpts;
+}

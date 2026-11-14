@@ -1,0 +1,49 @@
+    public static Action<Exception?, string?>? ErrorAction = null;
+    public static void ClearAll()
+    public static bool TryGetIconTextureWrap(int icon, bool hq, out IDalamudTextureWrap textureWrap) => TryGetIconTextureWrap((uint)icon, hq, out textureWrap);
+    public static bool TryGetIconTextureWrap(uint icon, bool hq, out IDalamudTextureWrap textureWrap)
+    public static bool TryGetTextureWrap(string url, out IDalamudTextureWrap textureWrap)
+    public static void AddConversionToBitmap(Func<byte[], byte[]> conversion)
+    public static void RemoveConversionToBitmap(Func<byte[], byte[]> conversion)
+public static class ExcelItemHelper
+    public static Item? Get(int rowId) => Get((uint)rowId);
+    public static Item? Get(uint rowId) => Svc.Data.GetExcelSheet<Item>()!.GetRowOrDefault(rowId);
+    public static string GetName(uint id, bool includeID = false)
+    public static float GetCooldown(this Item item)
+    public static string GetName(this Item? item, bool includeID = false)
+    public static string GetName(this Item item, bool includeID = false) => GetName((Item?)item, includeID);
+    public static int GetStat(this Item item, BaseParamEnum param, bool isHq = false)
+    public static int GetStatCap(this InventoryItem item, BaseParamEnum baseParam)
+    public static int GetStatCap(this Item item, BaseParamEnum baseParam)
+    public static int GetStat(this InventoryItem item, BaseParamEnum param)
+    public static ItemRarity GetRarity(this Item item)
+    public static uint GetGCSeals(this Item item)
+public static class Notify
+    public static void Success(string s)
+    public static void Info(string s)
+    public static void Error(string s)
+    public static void Warning(string s)
+    public static void Plain(string s)
+public static class DuoLog
+    public static void Information(string s)
+    public static void Debug(string s)
+    public static void Verbose(string s)
+    public static void Warning(string s)
+    public static void Error(string s)
+    public static void Fatal(string s)
+public static class EzConfig
+    public static string? PluginConfigDirectoryOverride { get; set; } = null;
+    public static bool UseDefaultAsyncSave { get; set; } = false;
+    public static Action<string, string>? SaveFileActionOverride
+    public static string GetPluginConfigDirectory()
+    public static string DefaultConfigurationFileName => Path.Combine(EzConfig.GetPluginConfigDirectory(), DefaultSerializationFactory.DefaultConfigFileName);
+    public static object? Config { get; private set; }
+    public static T Get<T>()
+    public static T Set<T>(T newReference)
+    public static event Action? OnSave;
+    public static ISerializationFactory DefaultSerializationFactory
+    public static T Init<T>() where T : new()
+    public static void Migrate<T>() where T : new()
+    public static void Save()
+    public static void SaveConfiguration(this object Configuration, string path, bool prettyPrint = false, bool appendConfigDirectory = true, ISerializationFactory? serializationFactory = null, bool? writeFileAsync = null, bool? useReliableFileStorage = null)
+    public static T LoadConfiguration<T>(string path, bool appendConfigDirectory = true, ISerializationFactory? serializationFactory = null) where T : new()

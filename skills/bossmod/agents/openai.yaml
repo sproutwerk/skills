@@ -1,0 +1,4 @@
+interface:
+  display_name: "BossMod / VBM"
+  short_description: "FFXIV BossMod IPC, encounter modules, rotations, and replays"
+  default_prompt: "Use $bossmod to implement a source-verified VBM integration at my target revision."

@@ -1,0 +1,765 @@
+Dalamud/Configuration/Internal/AutoUpdatePreference.cs:20: public enum OptKind
+Dalamud/Configuration/Internal/DalamudConfiguration.cs:63: public delegate void DalamudConfigurationSavedDelegate(DalamudConfiguration dalamudConfiguration);
+Dalamud/Configuration/IPluginConfiguration.cs:6: public interface IPluginConfiguration
+Dalamud/Configuration/PluginConfigurations.cs:15: public sealed class PluginConfigurations
+Dalamud/Console/ConsoleEntry.cs:8: public interface IConsoleEntry
+Dalamud/Console/ConsoleEntry.cs:24: public interface IConsoleCommand : IConsoleEntry
+Dalamud/Console/ConsoleEntry.cs:38: public interface IConsoleVariable<T> : IConsoleEntry
+Dalamud/Console/ConsoleManager.cs:411: public record ArgumentInfo(ConsoleArgumentType Type, object? DefaultValue);
+Dalamud/DalamudAsset.cs:13: public enum DalamudAsset
+Dalamud/Data/DataManager.cs:193: public enum IndexIntegrityResult
+Dalamud/EntryPoint.cs:33: public sealed class EntryPoint
+Dalamud/EntryPoint.cs:47: public delegate void InitDelegate(IntPtr infoPtr, IntPtr mainThreadContinueEvent);
+Dalamud/Game/ActionKind.cs:6: public enum ActionKind
+Dalamud/Game/Addon/Events/AddonCursorType.cs:6: public enum AddonCursorType
+Dalamud/Game/Addon/Events/AddonEventHandle.cs:6: public class AddonEventHandle : IAddonEventHandle
+Dalamud/Game/Addon/Events/AddonEventListener.cs:40: public delegate void ReceiveEventDelegate(AtkEventListener* self, AtkEventType eventType, uint eventParam, AtkEvent* eventPtr, AtkEventData* eventDataPtr);
+Dalamud/Game/Addon/Events/EventDataTypes/AddonEventData.cs:6: public class AddonEventData
+Dalamud/Game/Addon/Events/EventDataTypes/AddonMouseEventData.cs:10: public unsafe class AddonMouseEventData : AddonEventData
+Dalamud/Game/Addon/Events/IAddonEventHandle.cs:6: public interface IAddonEventHandle
+Dalamud/Game/Addon/Lifecycle/AddonArgsType.cs:6: public enum AddonArgsType
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonArgs.cs:9: public class AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonCloseArgs.cs:6: public class AddonCloseArgs : AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonFocusChangedArgs.cs:6: public class AddonFocusChangedArgs : AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonHideArgs.cs:6: public class AddonHideArgs : AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonReceiveEventArgs.cs:8: public class AddonReceiveEventArgs : AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonRefreshArgs.cs:13: public class AddonRefreshArgs : AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonRequestedUpdateArgs.cs:6: public class AddonRequestedUpdateArgs : AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonSetupArgs.cs:13: public class AddonSetupArgs : AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonArgTypes/AddonShowArgs.cs:6: public class AddonShowArgs : AddonArgs
+Dalamud/Game/Addon/Lifecycle/AddonEvent.cs:10: public enum AddonEvent
+Dalamud/Game/Agent/AgentArgsType.cs:6: public enum AgentArgsType
+Dalamud/Game/Agent/AgentArgTypes/AgentArgs.cs:8: public unsafe class AgentArgs
+Dalamud/Game/Agent/AgentArgTypes/AgentClassJobChangeArgs.cs:6: public class AgentClassJobChangeArgs : AgentArgs
+Dalamud/Game/Agent/AgentArgTypes/AgentGameEventArgs.cs:6: public class AgentGameEventArgs : AgentArgs
+Dalamud/Game/Agent/AgentArgTypes/AgentLevelChangeArgs.cs:6: public class AgentLevelChangeArgs : AgentArgs
+Dalamud/Game/Agent/AgentArgTypes/AgentReceiveEventArgs.cs:13: public class AgentReceiveEventArgs : AgentArgs
+Dalamud/Game/Agent/AgentEvent.cs:6: public enum AgentEvent
+Dalamud/Game/Agent/AgentLifecycleEventListener.cs:8: public class AgentLifecycleEventListener
+Dalamud/Game/BaseAddressResolver.cs:12: public abstract class BaseAddressResolver
+Dalamud/Game/Chat/ChatMessage.cs:17: public interface IChatMessage
+Dalamud/Game/Chat/ChatMessage.cs:68: public interface IMutableChatMessage : IChatMessage
+Dalamud/Game/Chat/ChatMessage.cs:94: public interface IHandleableChatMessage : IMutableChatMessage
+Dalamud/Game/Chat/LogMessage.cs:24: public interface ILogMessage : IEquatable<ILogMessage>
+Dalamud/Game/Chat/LogMessageEntity.cs:17: public interface ILogMessageEntity : IEquatable<ILogMessageEntity>
+Dalamud/Game/ClientLanguage.cs:9: public enum ClientLanguage
+Dalamud/Game/ClientState/Aetherytes/AetheryteEntry.cs:12: public interface IAetheryteEntry
+Dalamud/Game/ClientState/Buddy/BuddyMember.cs:16: public interface IBuddyMember : IEquatable<IBuddyMember>
+Dalamud/Game/ClientState/Conditions/ConditionFlag.cs:11: public enum ConditionFlag
+Dalamud/Game/ClientState/Customize/CustomizeData.cs:8: public interface ICustomizeData
+Dalamud/Game/ClientState/Fates/Fate.cs:17: public interface IFate : IEquatable<IFate>
+Dalamud/Game/ClientState/GamePad/GamepadButtons.cs:7: public enum GamepadButtons : ushort
+Dalamud/Game/ClientState/JobGauge/Enums/DeliriumStep.cs:6: public enum DeliriumStep
+Dalamud/Game/ClientState/JobGauge/Enums/DismissedFairy.cs:6: public enum DismissedFairy : byte
+Dalamud/Game/ClientState/JobGauge/Enums/Mudras.cs:6: public enum Mudras : byte
+Dalamud/Game/ClientState/JobGauge/Enums/PetGlam.cs:6: public enum PetGlam : byte
+Dalamud/Game/ClientState/JobGauge/Enums/SummonAttunement.cs:6: public enum SummonAttunement
+Dalamud/Game/ClientState/JobGauge/Enums/SummonPet.cs:6: public enum SummonPet : byte
+Dalamud/Game/ClientState/JobGauge/Types/ASTGauge.cs:10: public unsafe class ASTGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.AstrologianGauge>
+Dalamud/Game/ClientState/JobGauge/Types/BLMGauge.cs:6: public unsafe class BLMGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.BlackMageGauge>
+Dalamud/Game/ClientState/JobGauge/Types/BRDGauge.cs:10: public unsafe class BRDGauge : JobGaugeBase<BardGauge>
+Dalamud/Game/ClientState/JobGauge/Types/DNCGauge.cs:6: public unsafe class DNCGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.DancerGauge>
+Dalamud/Game/ClientState/JobGauge/Types/DRGGauge.cs:6: public unsafe class DRGGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.DragoonGauge>
+Dalamud/Game/ClientState/JobGauge/Types/DRKGauge.cs:10: public unsafe class DRKGauge : JobGaugeBase<DarkKnightGauge>
+Dalamud/Game/ClientState/JobGauge/Types/GNBGauge.cs:6: public unsafe class GNBGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.GunbreakerGauge>
+Dalamud/Game/ClientState/JobGauge/Types/JobGaugeBase.cs:6: public abstract unsafe class JobGaugeBase
+Dalamud/Game/ClientState/JobGauge/Types/JobGaugeBase{T}.cs:7: public unsafe class JobGaugeBase<T> : JobGaugeBase where T : unmanaged
+Dalamud/Game/ClientState/JobGauge/Types/MCHGauge.cs:6: public unsafe class MCHGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.MachinistGauge>
+Dalamud/Game/ClientState/JobGauge/Types/MNKGauge.cs:10: public unsafe class MNKGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.MonkGauge>
+Dalamud/Game/ClientState/JobGauge/Types/NINGauge.cs:6: public unsafe class NINGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.NinjaGauge>
+Dalamud/Game/ClientState/JobGauge/Types/PCTGauge.cs:11: public unsafe class PCTGauge : JobGaugeBase<PictomancerGauge>
+Dalamud/Game/ClientState/JobGauge/Types/PLDGauge.cs:6: public unsafe class PLDGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.PaladinGauge>
+Dalamud/Game/ClientState/JobGauge/Types/RDMGauge.cs:6: public unsafe class RDMGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.RedMageGauge>
+Dalamud/Game/ClientState/JobGauge/Types/RPRGauge.cs:6: public unsafe class RPRGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.ReaperGauge>
+Dalamud/Game/ClientState/JobGauge/Types/SAMGauge.cs:8: public unsafe class SAMGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.SamuraiGauge>
+Dalamud/Game/ClientState/JobGauge/Types/SCHGauge.cs:8: public unsafe class SCHGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.ScholarGauge>
+Dalamud/Game/ClientState/JobGauge/Types/SGEGauge.cs:6: public unsafe class SGEGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.SageGauge>
+Dalamud/Game/ClientState/JobGauge/Types/SMNGauge.cs:12: public unsafe class SMNGauge : JobGaugeBase<SummonerGauge>
+Dalamud/Game/ClientState/JobGauge/Types/VPRGauge.cs:11: public unsafe class VPRGauge : JobGaugeBase<ViperGauge>
+Dalamud/Game/ClientState/JobGauge/Types/WARGauge.cs:6: public unsafe class WARGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.WarriorGauge>
+Dalamud/Game/ClientState/JobGauge/Types/WHMGauge.cs:6: public unsafe class WHMGauge : JobGaugeBase<FFXIVClientStructs.FFXIV.Client.Game.Gauge.WhiteMageGauge>
+Dalamud/Game/ClientState/Keys/VirtualKey.cs:9: public enum VirtualKey : ushort
+Dalamud/Game/ClientState/Keys/VirtualKeyExtensions.cs:8: public static class VirtualKeyExtensions
+Dalamud/Game/ClientState/Objects/Enums/CustomizeIndex.cs:7: public enum CustomizeIndex
+Dalamud/Game/ClientState/Objects/Enums/StatusFlags.cs:7: public enum StatusFlags : byte
+Dalamud/Game/ClientState/Objects/SubKinds/EventObj.cs:8: public interface IEventObj : IGameObject
+Dalamud/Game/ClientState/Objects/SubKinds/Npc.cs:8: public interface INpc : ICharacter
+Dalamud/Game/ClientState/Objects/SubKinds/PlayerCharacter.cs:12: public interface IPlayerCharacter : IBattleChara
+Dalamud/Game/ClientState/Objects/Types/BattleChara.cs:9: public interface IBattleChara : ICharacter
+Dalamud/Game/ClientState/Objects/Types/BattleNpc.cs:8: public interface IBattleNpc : IBattleChara
+Dalamud/Game/ClientState/Objects/Types/Character.cs:15: public interface ICharacter : IGameObject
+Dalamud/Game/ClientState/Objects/Types/GameObject.cs:13: public interface IGameObject : IEquatable<IGameObject>
+Dalamud/Game/ClientState/Party/PartyMember.cs:20: public interface IPartyMember : IEquatable<IPartyMember>
+Dalamud/Game/ClientState/Statuses/Status.cs:17: public interface IStatus : IEquatable<IStatus>
+Dalamud/Game/ClientState/Statuses/StatusList.cs:16: public sealed unsafe partial class StatusList
+Dalamud/Game/ClientState/Statuses/StatusList.cs:129: public sealed partial class StatusList : IReadOnlyCollection<IStatus>, ICollection
+Dalamud/Game/ClientState/ZoneInitEventArgs.cs:17: public class ZoneInitEventArgs : EventArgs
+Dalamud/Game/ClientState/ZoneInitEventArgs.cs:96: public readonly record struct FestivalEntry(RowRef<Festival> Festival, ushort FestivalPhase);
+Dalamud/Game/Command/CommandInfo.cs:6: public interface IReadOnlyCommandInfo
+Dalamud/Game/Command/CommandInfo.cs:44: public sealed class CommandInfo : IReadOnlyCommandInfo
+Dalamud/Game/Command/CommandManager.cs:269: public class CommandEventArgs : EventArgs
+Dalamud/Game/Config/ConfigChangeEvent.cs:9: public abstract record ConfigChangeEvent
+Dalamud/Game/Config/ConfigChangeEvent.cs:53: public record ConfigChangeEvent<T> : ConfigChangeEvent where T : Enum
+Dalamud/Game/Config/ConfigOptionNotFoundException.cs:6: public class ConfigOptionNotFoundException : Exception
+Dalamud/Game/Config/ConfigType.cs:6: public enum ConfigType
+Dalamud/Game/Config/GameConfigOptionAttribute.cs:7: public class GameConfigOptionAttribute : Attribute
+Dalamud/Game/Config/GameConfigSection.cs:15: public class GameConfigSection
+Dalamud/Game/Config/IncorrectConfigTypeException.cs:6: public class IncorrectConfigTypeException : Exception
+Dalamud/Game/Config/PadButtonValue.cs:9: public enum PadButtonValue
+Dalamud/Game/Config/Properties.cs:9: public record StringConfigProperties(SeString? Default);
+Dalamud/Game/Config/Properties.cs:17: public record UIntConfigProperties(uint Default, uint Minimum, uint Maximum);
+Dalamud/Game/Config/Properties.cs:25: public record FloatConfigProperties(float Default, float Minimum, float Maximum);
+Dalamud/Game/Config/SystemConfigOption.cs:10: public enum SystemConfigOption
+Dalamud/Game/Config/UiConfigOption.cs:10: public enum UiConfigOption
+Dalamud/Game/Config/UiControlOption.cs:10: public enum UiControlOption
+Dalamud/Game/DutyState/DutyStateEventArgs.cs:11: public interface IDutyStateEventArgs
+Dalamud/Game/Gui/ContextMenu/ContextMenuType.cs:7: public enum ContextMenuType
+Dalamud/Game/Gui/ContextMenu/MenuArgs.cs:13: public interface IMenuArgs
+Dalamud/Game/Gui/ContextMenu/MenuItemClickedArgs.cs:13: public interface IMenuItemClickedArgs : IMenuArgs
+Dalamud/Game/Gui/ContextMenu/MenuItem.cs:11: public interface IMenuItem
+Dalamud/Game/Gui/ContextMenu/MenuItem.cs:84: public sealed record MenuItem : IMenuItem
+Dalamud/Game/Gui/ContextMenu/MenuOpenedArgs.cs:11: public interface IMenuOpenedArgs : IMenuArgs
+Dalamud/Game/Gui/ContextMenu/MenuTarget.cs:7: public abstract class MenuTarget
+Dalamud/Game/Gui/ContextMenu/MenuTargetDefault.cs:16: public sealed unsafe class MenuTargetDefault : MenuTarget
+Dalamud/Game/Gui/ContextMenu/MenuTargetInventory.cs:10: public sealed unsafe class MenuTargetInventory : MenuTarget
+Dalamud/Game/Gui/Dtr/DtrBarEntry.cs:16: public interface IReadOnlyDtrBarEntry
+Dalamud/Game/Gui/Dtr/DtrBarEntry.cs:67: public interface IDtrBarEntry : IReadOnlyDtrBarEntry, IDisposable
+Dalamud/Game/Gui/Dtr/DtrInteractionEvent.cs:10: public class DtrInteractionEvent
+Dalamud/Game/Gui/Dtr/DtrInteractionTypes.cs:6: public enum MouseClickType
+Dalamud/Game/Gui/Dtr/DtrInteractionTypes.cs:23: public enum ClickModifierKeys
+Dalamud/Game/Gui/Dtr/DtrInteractionTypes.cs:49: public enum MouseScrollDirection
+Dalamud/Game/Gui/FlyText/FlyTextKind.cs:6: public enum FlyTextKind : int
+Dalamud/Game/Gui/HoveredAction.cs:6: public class HoveredAction
+Dalamud/Game/Gui/NamePlate/NamePlateInfoView.cs:11: public interface INamePlateInfoView
+Dalamud/Game/Gui/NamePlate/NamePlateQuotedParts.cs:17: public class NamePlateQuotedParts(NamePlateStringField field, bool isFreeCompany)
+Dalamud/Game/Gui/NamePlate/NamePlateSimpleParts.cs:16: public class NamePlateSimpleParts(NamePlateStringField field)
+Dalamud/Game/Gui/NamePlate/NamePlateStringField.cs:7: public enum NamePlateStringField
+Dalamud/Game/Gui/NamePlate/NamePlateUpdateContext.cs:13: public interface INamePlateUpdateContext
+Dalamud/Game/Gui/NamePlate/NamePlateUpdateHandler.cs:21: public interface INamePlateUpdateHandler
+Dalamud/Game/Gui/PartyFinder/Types/DutyType.cs:6: public enum DutyType
+Dalamud/Game/Gui/PartyFinder/Types/JobFlags.cs:7: public enum JobFlags : ulong
+Dalamud/Game/Gui/PartyFinder/Types/JobFlagsExtensions.cs:10: public static class JobFlagsExtensions
+Dalamud/Game/Gui/PartyFinder/Types/PartyFinderListing.cs:17: public interface IPartyFinderListing
+Dalamud/Game/Gui/PartyFinder/Types/PartyFinderListingEventArgs.cs:6: public interface IPartyFinderListingEventArgs
+Dalamud/Game/Gui/PartyFinder/Types/PartyFinderSlot.cs:9: public class PartyFinderSlot
+Dalamud/Game/Gui/Toast/QuestToastOptions.cs:6: public sealed class QuestToastOptions
+Dalamud/Game/Gui/Toast/QuestToastPosition.cs:6: public enum QuestToastPosition
+Dalamud/Game/Gui/Toast/ToastOptions.cs:6: public sealed class ToastOptions
+Dalamud/Game/Gui/Toast/ToastPosition.cs:6: public enum ToastPosition : byte
+Dalamud/Game/Gui/Toast/ToastSpeed.cs:6: public enum ToastSpeed : byte
+Dalamud/Game/Inventory/GameInventoryEvent.cs:6: public enum GameInventoryEvent
+Dalamud/Game/Inventory/GameInventoryItem.cs:19: public unsafe struct GameInventoryItem : IEquatable<GameInventoryItem>
+Dalamud/Game/Inventory/InventoryEventArgTypes/InventoryComplexEventArgs.cs:6: public abstract class InventoryComplexEventArgs : InventoryEventArgs
+Dalamud/Game/Inventory/InventoryEventArgTypes/InventoryEventArgs.cs:6: public abstract class InventoryEventArgs
+Dalamud/Game/Inventory/InventoryEventArgTypes/InventoryItemAddedArgs.cs:6: public sealed class InventoryItemAddedArgs : InventoryEventArgs
+Dalamud/Game/Inventory/InventoryEventArgTypes/InventoryItemChangedArgs.cs:7: public sealed class InventoryItemChangedArgs : InventoryEventArgs
+Dalamud/Game/Inventory/InventoryEventArgTypes/InventoryItemMergedArgs.cs:6: public sealed class InventoryItemMergedArgs : InventoryComplexEventArgs
+Dalamud/Game/Inventory/InventoryEventArgTypes/InventoryItemMovedArgs.cs:6: public sealed class InventoryItemMovedArgs : InventoryComplexEventArgs
+Dalamud/Game/Inventory/InventoryEventArgTypes/InventoryItemRemovedArgs.cs:6: public sealed class InventoryItemRemovedArgs : InventoryEventArgs
+Dalamud/Game/Inventory/InventoryEventArgTypes/InventoryItemSplitArgs.cs:6: public sealed class InventoryItemSplitArgs : InventoryComplexEventArgs
+Dalamud/Game/Inventory/Records/MateriaEntry.cs:11: public record MateriaEntry
+Dalamud/Game/Marketboard/Network/Structures/IMarketBoardCurrentOfferings.cs:8: public interface IMarketBoardCurrentOfferings
+Dalamud/Game/Marketboard/Network/Structures/IMarketBoardCurrentOfferings.cs:24: public interface IMarketBoardItemListing
+Dalamud/Game/Marketboard/Network/Structures/IMarketBoardCurrentOfferings.cs:105: public interface IItemMateria
+Dalamud/Game/Marketboard/Network/Structures/IMarketBoardHistory.cs:8: public interface IMarketBoardHistory
+Dalamud/Game/Marketboard/Network/Structures/IMarketBoardHistory.cs:24: public interface IMarketBoardHistoryListing
+Dalamud/Game/Marketboard/Network/Structures/IMarketBoardPurchase.cs:7: public interface IMarketBoardPurchase
+Dalamud/Game/Marketboard/Network/Structures/IMarketBoardPurchaseHandler.cs:7: public interface IMarketBoardPurchaseHandler
+Dalamud/Game/Marketboard/Network/Structures/IMarketTaxRates.cs:6: public interface IMarketTaxRates
+Dalamud/Game/Marketboard/Network/Structures/InfoProxy/CharacterData.cs:15: public unsafe class CharacterData
+Dalamud/Game/Marketboard/Network/Structures/MarketBoardCurrentOfferings.cs:10: public class MarketBoardCurrentOfferings : IMarketBoardCurrentOfferings
+Dalamud/Game/Marketboard/Network/Structures/MarketBoardCurrentOfferings.cs:109: public class MarketBoardItemListing : IMarketBoardItemListing
+Dalamud/Game/Marketboard/Network/Structures/MarketBoardCurrentOfferings.cs:222: public class ItemMateria : IItemMateria
+Dalamud/Game/Marketboard/Network/Structures/MarketBoardHistory.cs:10: public class MarketBoardHistory : IMarketBoardHistory
+Dalamud/Game/Marketboard/Network/Structures/MarketBoardHistory.cs:85: public class MarketBoardHistoryListing : IMarketBoardHistoryListing
+Dalamud/Game/Marketboard/Network/Structures/MarketBoardPurchase.cs:9: public class MarketBoardPurchase : IMarketBoardPurchase
+Dalamud/Game/Marketboard/Network/Structures/MarketBoardPurchaseHandler.cs:9: public class MarketBoardPurchaseHandler : IMarketBoardPurchaseHandler
+Dalamud/Game/Marketboard/Network/Structures/MarketTaxRates.cs:9: public class MarketTaxRates : IMarketTaxRates
+Dalamud/Game/NativeWrapper/AgentInterfacePtr.cs:13: public readonly unsafe struct AgentInterfacePtr(nint address) : IEquatable<AgentInterfacePtr>
+Dalamud/Game/NativeWrapper/AtkUnitBasePtr.cs:17: public readonly unsafe struct AtkUnitBasePtr(nint address) : IEquatable<AtkUnitBasePtr>
+Dalamud/Game/NativeWrapper/AtkValuePtr.cs:14: public readonly unsafe struct AtkValuePtr(nint address) : IEquatable<AtkValuePtr>
+Dalamud/Game/NativeWrapper/UIModulePtr.cs:12: public readonly unsafe struct UIModulePtr(nint address) : IEquatable<UIModulePtr>
+Dalamud/Game/Player/MentorVersion.cs:6: public enum MentorVersion : byte
+Dalamud/Game/Player/Sex.cs:6: public enum Sex : byte
+Dalamud/Game/SigScanner.cs:28: public class SigScanner : IDisposable, ISigScanner
+Dalamud/Game/Text/Evaluator/SeStringParameter.cs:12: public readonly struct SeStringParameter
+Dalamud/Game/Text/Noun/Enums/EnglishArticleType.cs:6: public enum EnglishArticleType
+Dalamud/Game/Text/Noun/Enums/FrenchArticleType.cs:6: public enum FrenchArticleType
+Dalamud/Game/Text/Noun/Enums/GermanArticleType.cs:6: public enum GermanArticleType
+Dalamud/Game/Text/Noun/Enums/JapaneseArticleType.cs:6: public enum JapaneseArticleType
+Dalamud/Game/Text/Sanitizer/ISanitizer.cs:8: public interface ISanitizer
+Dalamud/Game/Text/Sanitizer/Sanitizer.cs:9: public class Sanitizer : ISanitizer
+Dalamud/Game/Text/SeIconChar.cs:6: public enum SeIconChar
+Dalamud/Game/Text/SeIconCharExtensions.cs:6: public static class SeIconCharExtensions
+Dalamud/Game/Text/SeStringHandling/BitmapFontIcon.cs:6: public enum BitmapFontIcon : uint
+Dalamud/Game/Text/SeStringHandling/ITextProvider.cs:6: public interface ITextProvider
+Dalamud/Game/Text/SeStringHandling/Payload.cs:22: public abstract partial class Payload
+Dalamud/Game/Text/SeStringHandling/Payload.cs:227: public abstract partial class Payload
+Dalamud/Game/Text/SeStringHandling/Payload.cs:247: public enum EmbeddedInfoType
+Dalamud/Game/Text/SeStringHandling/Payloads/AutoTranslatePayload.cs:16: public class AutoTranslatePayload : Payload, ITextProvider
+Dalamud/Game/Text/SeStringHandling/Payloads/DalamudLinkPayload.cs:15: public class DalamudLinkPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/EmphasisItalicPayload.cs:13: public class EmphasisItalicPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/IconPayload.cs:9: public class IconPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/ItemPayload.cs:19: public class ItemPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/MapLinkPayload.cs:16: public class MapLinkPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/NewLinePayload.cs:8: public class NewLinePayload : Payload, ITextProvider
+Dalamud/Game/Text/SeStringHandling/Payloads/PartyFinderPayload.cs:14: public class PartyFinderPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/PartyFinderPayload.cs:46: public enum PartyFinderLinkType
+Dalamud/Game/Text/SeStringHandling/Payloads/PlayerPayload.cs:18: public class PlayerPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/QuestPayload.cs:16: public class QuestPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/RawPayload.cs:14: public class RawPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/SeHyphenPayload.cs:8: public class SeHyphenPayload : Payload, ITextProvider
+Dalamud/Game/Text/SeStringHandling/Payloads/StatusPayload.cs:16: public class StatusPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/TextPayload.cs:12: public class TextPayload : Payload, ITextProvider
+Dalamud/Game/Text/SeStringHandling/Payloads/UIForegroundPayload.cs:17: public class UIForegroundPayload : Payload
+Dalamud/Game/Text/SeStringHandling/Payloads/UIGlowPayload.cs:17: public class UIGlowPayload : Payload
+Dalamud/Game/Text/SeStringHandling/PayloadType.cs:6: public enum PayloadType
+Dalamud/Game/Text/SeStringHandling/SeStringBuilder.cs:11: public class SeStringBuilder
+Dalamud/Game/Text/SeStringHandling/SeString.cs:21: public class SeString
+Dalamud/Game/Text/XivChatEntry.cs:8: public sealed class XivChatEntry
+Dalamud/Game/Text/XivChatType.cs:6: public enum XivChatType : ushort
+Dalamud/Game/Text/XivChatTypeExtensions.cs:8: public static class XivChatTypeExtensions
+Dalamud/Game/Text/XivChatTypeInfoAttribute.cs:7: public class XivChatTypeInfoAttribute : Attribute
+Dalamud/Hooking/AsmHookBehaviour.cs:7: public enum AsmHookBehaviour
+Dalamud/Hooking/AsmHook.cs:14: public sealed class AsmHook : IDisposable, IDalamudHook
+Dalamud/Hooking/Hook.cs:22: public abstract class Hook<T> : IDalamudHook where T : Delegate
+Dalamud/Hooking/IDalamudHook.cs:6: public interface IDalamudHook : IDisposable
+Dalamud/Hooking/Internal/Unhooker.cs:10: public class Unhooker
+Dalamud/Hooking/Internal/Verification/HookVerificationException.cs:11: public class HookVerificationException : Exception
+Dalamud/Interface/Animation/AnimUtil.cs:8: public static class AnimUtil
+Dalamud/Interface/Animation/Easing.cs:9: public abstract class Easing
+Dalamud/Interface/Animation/EasingFunctions/InCirc.cs:6: public class InCirc : Easing
+Dalamud/Interface/Animation/EasingFunctions/InCubic.cs:6: public class InCubic : Easing
+Dalamud/Interface/Animation/EasingFunctions/InElastic.cs:6: public class InElastic : Easing
+Dalamud/Interface/Animation/EasingFunctions/InOutCirc.cs:6: public class InOutCirc : Easing
+Dalamud/Interface/Animation/EasingFunctions/InOutCubic.cs:6: public class InOutCubic : Easing
+Dalamud/Interface/Animation/EasingFunctions/InOutElastic.cs:6: public class InOutElastic : Easing
+Dalamud/Interface/Animation/EasingFunctions/InOutQuint.cs:6: public class InOutQuint : Easing
+Dalamud/Interface/Animation/EasingFunctions/InOutSine.cs:6: public class InOutSine : Easing
+Dalamud/Interface/Animation/EasingFunctions/InQuint.cs:6: public class InQuint : Easing
+Dalamud/Interface/Animation/EasingFunctions/InSine.cs:6: public class InSine : Easing
+Dalamud/Interface/Animation/EasingFunctions/OutCirc.cs:6: public class OutCirc : Easing
+Dalamud/Interface/Animation/EasingFunctions/OutCubic.cs:6: public class OutCubic : Easing
+Dalamud/Interface/Animation/EasingFunctions/OutElastic.cs:6: public class OutElastic : Easing
+Dalamud/Interface/Animation/EasingFunctions/OutQuint.cs:6: public class OutQuint : Easing
+Dalamud/Interface/Animation/EasingFunctions/OutSine.cs:6: public class OutSine : Easing
+Dalamud/Interface/ColorHelpers.cs:12: public static class ColorHelpers
+Dalamud/Interface/ColorHelpers.cs:332: public record struct HsvaColor(float H, float S, float V, float A);
+Dalamud/Interface/Colors/ImGuiColors.cs:8: public static class ImGuiColors
+Dalamud/Interface/Components/ImGuiComponents.ColorPickerWithPalette.cs:12: public static partial class ImGuiComponents
+Dalamud/Interface/Components/ImGuiComponents.cs:6: public static partial class ImGuiComponents
+Dalamud/Interface/Components/ImGuiComponents.DisabledButton.cs:11: public static partial class ImGuiComponents
+Dalamud/Interface/Components/ImGuiComponents.HelpMarker.cs:11: public static partial class ImGuiComponents
+Dalamud/Interface/Components/ImGuiComponents.IconButton.cs:12: public static partial class ImGuiComponents
+Dalamud/Interface/Components/ImGuiComponents.IconButtonSelect.cs:13: public static partial class ImGuiComponents
+Dalamud/Interface/Components/ImGuiComponents.Test.cs:8: public static partial class ImGuiComponents
+Dalamud/Interface/Components/ImGuiComponents.TextWithLabel.cs:9: public static partial class ImGuiComponents
+Dalamud/Interface/Components/ImGuiComponents.ToggleSwitch.cs:10: public static partial class ImGuiComponents
+Dalamud/Interface/DalamudWindowOpenKinds.cs:6: public enum PluginInstallerOpenKind
+Dalamud/Interface/DalamudWindowOpenKinds.cs:37: public enum SettingsOpenKind
+Dalamud/Interface/DragDrop/DragDropInterop.cs:18: public interface IDropTarget
+Dalamud/Interface/DragDrop/DragDropInterop.cs:44: public enum ModifierKeys
+Dalamud/Interface/DragDrop/DragDropInterop.cs:55: public enum ClipboardFormat
+Dalamud/Interface/DragDrop/DragDropInterop.cs:65: public enum DVAspect
+Dalamud/Interface/DragDrop/DragDropInterop.cs:74: public enum TYMED
+Dalamud/Interface/DragDrop/DragDropInterop.cs:87: public enum DropEffects : uint
+Dalamud/Interface/DragDrop/IDragDropManager.cs:12: public interface IDragDropManager : IDalamudService
+Dalamud/Interface/FontAwesome/FontAwesomeCategoriesAttribute.cs:6: public class FontAwesomeCategoriesAttribute : Attribute
+Dalamud/Interface/FontAwesome/FontAwesomeExtensions.cs:10: public static class FontAwesomeExtensions
+Dalamud/Interface/FontAwesome/FontAwesomeHelpers.cs:11: public static class FontAwesomeHelpers
+Dalamud/Interface/FontAwesome/FontAwesomeIcon.cs:15: public enum FontAwesomeIcon
+Dalamud/Interface/FontAwesome/FontAwesomeSearchTermsAttribute.cs:6: public class FontAwesomeSearchTermsAttribute : Attribute
+Dalamud/Interface/FontIdentifier/DalamudAssetFontAndFamilyId.cs:16: public sealed class DalamudAssetFontAndFamilyId : IFontFamilyId, IFontId
+Dalamud/Interface/FontIdentifier/DalamudDefaultFontAndFamilyId.cs:15: public sealed class DalamudDefaultFontAndFamilyId : IFontId, IFontFamilyId
+Dalamud/Interface/FontIdentifier/GameFontAndFamilyId.cs:16: public sealed class GameFontAndFamilyId : IFontId, IFontFamilyId
+Dalamud/Interface/FontIdentifier/IFontFamilyId.cs:17: public interface IFontFamilyId : IObjectWithLocalizableName
+Dalamud/Interface/FontIdentifier/IFontId.cs:10: public interface IFontId : IObjectWithLocalizableName
+Dalamud/Interface/FontIdentifier/IFontSpec.cs:10: public interface IFontSpec
+Dalamud/Interface/FontIdentifier/IObjectWithLocalizableName.cs:12: public interface IObjectWithLocalizableName
+Dalamud/Interface/FontIdentifier/SingleFontSpec.cs:21: public record SingleFontSpec : IFontSpec
+Dalamud/Interface/FontIdentifier/SystemFontFamilyId.cs:17: public sealed class SystemFontFamilyId : IFontFamilyId
+Dalamud/Interface/FontIdentifier/SystemFontId.cs:19: public sealed class SystemFontId : IFontId
+Dalamud/Interface/GameFonts/FdtReader.cs:9: public class FdtReader
+Dalamud/Interface/GameFonts/FdtReader.cs:183: public unsafe struct FdtHeader
+Dalamud/Interface/GameFonts/FdtReader.cs:210: public unsafe struct FontTableHeader
+Dalamud/Interface/GameFonts/FdtReader.cs:267: public struct FontTableEntry : IComparable<FontTableEntry>
+Dalamud/Interface/GameFonts/FdtReader.cs:360: public unsafe struct KerningTableHeader
+Dalamud/Interface/GameFonts/FdtReader.cs:382: public struct KerningTableEntry : IComparable<KerningTableEntry>
+Dalamud/Interface/GameFonts/GameFontFamilyAndSize.cs:6: public enum GameFontFamilyAndSize
+Dalamud/Interface/GameFonts/GameFontFamily.cs:6: public enum GameFontFamily
+Dalamud/Interface/GameFonts/GameFontLayoutPlan.cs:11: public class GameFontLayoutPlan
+Dalamud/Interface/GameFonts/GameFontLayoutPlan.cs:16: public enum HorizontalAlignment
+Dalamud/Interface/GameFonts/GameFontLayoutPlan.cs:91: public class Element
+Dalamud/Interface/GameFonts/GameFontLayoutPlan.cs:229: public class Builder
+Dalamud/Interface/GameFonts/GameFontStyle.cs:6: public struct GameFontStyle
+Dalamud/Interface/GlyphRangesJapanese.cs:6: public static class GlyphRangesJapanese
+Dalamud/Interface/ImGuiBackend/Delegates/ImGuiBuildUiDelegate.cs:4: public delegate void ImGuiBuildUiDelegate();
+Dalamud/Interface/ImGuiBackend/Delegates/ImGuiNewInputFrameDelegate.cs:4: public delegate void ImGuiNewInputFrameDelegate();
+Dalamud/Interface/ImGuiBackend/Delegates/ImGuiNewRenderFrameDelegate.cs:4: public delegate void ImGuiNewRenderFrameDelegate();
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:60: public struct InputAssemblerState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:118: public struct RasterizerState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:168: public struct OutputMergerState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:259: public struct VertexShaderState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:324: public struct HullShaderState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:389: public struct DomainShaderState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:454: public struct GeometryShaderState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:519: public struct PixelShaderState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/D3D11/D3D11DeviceContextStateBackup.cs:584: public struct ComputeShaderState : IDisposable
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:16: public delegate void CreateWindowDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:22: public delegate void DestroyWindowDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:29: public delegate void SetWindowSizeDelegate(ImGuiViewportPtr viewport, Vector2 size);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:36: public delegate void RenderWindowDelegate(ImGuiViewportPtr viewport, nint v);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:43: public delegate void SwapBuffersDelegate(ImGuiViewportPtr viewport, nint v);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:49: public delegate void ShowWindowDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:55: public delegate void UpdateWindowDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:63: public unsafe delegate Vector2* GetWindowPosDelegate(Vector2* returnStorage, ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:70: public delegate void SetWindowPosDelegate(ImGuiViewportPtr viewport, Vector2 pos);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:78: public unsafe delegate Vector2* GetWindowSizeDelegate(Vector2* returnStorage, ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:84: public delegate void SetWindowFocusDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:91: public delegate bool GetWindowFocusDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:98: public delegate bool GetWindowMinimizedDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:105: public delegate void SetWindowTitleDelegate(ImGuiViewportPtr viewport, string title);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:112: public delegate void SetWindowAlphaDelegate(ImGuiViewportPtr viewport, float alpha);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:119: public delegate void SetImeInputPosDelegate(ImGuiViewportPtr viewport, Vector2 pos);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:126: public delegate float GetWindowDpiScaleDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiBackend/Helpers/ImGuiViewportHelpers.cs:132: public delegate void ChangedViewportDelegate(ImGuiViewportPtr viewport);
+Dalamud/Interface/ImGuiFileDialog/FileDialog.cs:12: public partial class FileDialog
+Dalamud/Interface/ImGuiFileDialog/FileDialog.Files.cs:13: public partial class FileDialog
+Dalamud/Interface/ImGuiFileDialog/FileDialog.Files.cs:28: public enum SortingField
+Dalamud/Interface/ImGuiFileDialog/FileDialog.Filters.cs:9: public partial class FileDialog
+Dalamud/Interface/ImGuiFileDialog/FileDialog.Helpers.cs:6: public partial class FileDialog
+Dalamud/Interface/ImGuiFileDialog/FileDialogManager.cs:10: public class FileDialogManager
+Dalamud/Interface/ImGuiFileDialog/FileDialog.Structs.cs:13: public partial class FileDialog
+Dalamud/Interface/ImGuiFileDialog/FileDialog.UI.cs:16: public partial class FileDialog
+Dalamud/Interface/ImGuiFileDialog/ImGuiFileDialogFlags.cs:7: public enum ImGuiFileDialogFlags
+Dalamud/Interface/ImGuiFontChooserDialog/SingleFontChooserDialog.cs:29: public sealed class SingleFontChooserDialog : IDisposable
+Dalamud/Interface/ImGuiNotification/EventArgs/INotificationClickArgs.cs:5: public interface INotificationClickArgs
+Dalamud/Interface/ImGuiNotification/EventArgs/INotificationDismissArgs.cs:5: public interface INotificationDismissArgs
+Dalamud/Interface/ImGuiNotification/EventArgs/INotificationDrawArgs.cs:7: public interface INotificationDrawArgs
+Dalamud/Interface/ImGuiNotification/IActiveNotification.cs:9: public interface IActiveNotification : INotification
+Dalamud/Interface/ImGuiNotification/INotification.cs:7: public interface INotification
+Dalamud/Interface/ImGuiNotification/INotificationIcon.cs:16: public interface INotificationIcon
+Dalamud/Interface/ImGuiNotification/Internal/NotificationSnapDirection.cs:6: public enum NotificationSnapDirection
+Dalamud/Interface/ImGuiNotification/Notification.cs:6: public sealed record Notification : INotification
+Dalamud/Interface/ImGuiNotification/NotificationDismissReason.cs:4: public enum NotificationDismissReason
+Dalamud/Interface/ImGuiNotification/NotificationType.cs:4: public enum NotificationType
+Dalamud/Interface/ImGuiNotification/NotificationUtilities.cs:18: public static class NotificationUtilities
+Dalamud/Interface/ImGuiSeStringRenderer/Internal/GfdFile.cs:87: public struct GfdHeader
+Dalamud/Interface/ImGuiSeStringRenderer/Internal/GfdFile.cs:101: public struct GfdEntry
+Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawChannel.cs:5: public enum SeStringDrawChannel
+Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawParams.cs:10: public record struct SeStringDrawParams
+Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawResult.cs:9: public ref struct SeStringDrawResult
+Dalamud/Interface/ImGuiSeStringRenderer/SeStringDrawState.cs:22: public unsafe ref struct SeStringDrawState : IDisposable
+Dalamud/Interface/ImGuiSeStringRenderer/SeStringReplacementEntity.cs:6: public readonly record struct SeStringReplacementEntity
+Dalamud/Interface/ImGuiSeStringRenderer/SeStringReplacementEntity.cs:28: public delegate SeStringReplacementEntity GetEntityDelegate(scoped in SeStringDrawState state, int byteOffset);
+Dalamud/Interface/ImGuiSeStringRenderer/SeStringReplacementEntity.cs:34: public delegate void DrawDelegate(scoped in SeStringDrawState state, int byteOffset, Vector2 offset);
+Dalamud/Interface/Internal/InterfaceManager.cs:1307: public class InterfaceManagerWithScene : IServiceType
+Dalamud/Interface/Internal/PluginCategoryManager.cs:72: public enum GroupKind
+Dalamud/Interface/Internal/PluginCategoryManager.cs:98: public enum CategoryKind
+Dalamud/Interface/Internal/PluginCategoryManager.cs:452: public struct CategoryInfo
+Dalamud/Interface/Internal/PluginCategoryManager.cs:484: public enum AppearCondition
+Dalamud/Interface/Internal/PluginCategoryManager.cs:516: public struct GroupInfo
+Dalamud/Interface/Internal/ReShadeHandling/ReShadeAddonInterface.cs:104: public delegate void PresentDelegate(
+Dalamud/Interface/Internal/ReShadeHandling/ReShadeAddonInterface.cs:113: public delegate void ReShadeOverlayDelegate(ref ApiObject effectRuntime);
+Dalamud/Interface/Internal/ReShadeHandling/ReShadeAddonInterface.cs:117: public delegate void ReShadeInitSwapChain(ref ApiObject swapChain);
+Dalamud/Interface/Internal/ReShadeHandling/ReShadeAddonInterface.cs:121: public delegate void ReShadeDestroySwapChain(ref ApiObject swapChain);
+Dalamud/Interface/Internal/ReShadeHandling/ReShadeAddonInterface.cs:207: public struct ApiObject
+Dalamud/Interface/Internal/ReShadeHandling/ReShadeAddonInterface.cs:229: public struct VTable
+Dalamud/Interface/Internal/SwapChainHelper.cs:18: public enum HookMode
+Dalamud/Interface/Internal/UiDebug/Browsing/AddonTree.AtkValues.cs:13: public unsafe partial class AddonTree
+Dalamud/Interface/Internal/UiDebug/Browsing/AddonTree.cs:21: public unsafe partial class AddonTree : IDisposable
+Dalamud/Interface/Internal/UiDebug/Browsing/AddonTree.FieldNames.cs:15: public unsafe partial class AddonTree
+Dalamud/Interface/Internal/UiDebug/Browsing/Events.cs:17: public static class Events
+Dalamud/Interface/Internal/UiDebug/Browsing/TimelineTree.cs:26: public readonly unsafe partial struct TimelineTree
+Dalamud/Interface/Internal/UiDebug/Browsing/TimelineTree.KeyGroupColumn.cs:8: public readonly partial struct TimelineTree
+Dalamud/Interface/Internal/UiDebug/Browsing/TimelineTree.KeyGroupColumn.cs:13: public interface IKeyGroupColumn
+Dalamud/Interface/Internal/UiDebug/Browsing/TimelineTree.KeyGroupColumn.cs:35: public struct KeyGroupColumn<T> : IKeyGroupColumn
+Dalamud/Interface/Internal/UiDebug/Utility/NodeBounds.cs:19: public unsafe struct NodeBounds
+Dalamud/Interface/Internal/Windows/BranchSwitcherWindow.cs:24: public class BranchSwitcherWindow : Window
+Dalamud/Interface/Internal/Windows/ChangelogWindow.cs:619: public static class AutoUpdate
+Dalamud/Interface/Internal/Windows/Data/Widgets/AddonLifecycleWidget.cs:13: public class AddonLifecycleWidget : IDataWindowWidget
+Dalamud/Interface/Internal/Windows/Data/Widgets/ExceptionWidget.cs:17: public class ExceptionWidget : IDataWindowWidget
+Dalamud/Interface/Internal/Windows/Data/Widgets/IconBrowserWidget.cs:18: public class IconBrowserWidget : IDataWindowWidget
+Dalamud/Interface/Internal/Windows/HitchSettingsWindow.cs:10: public class HitchSettingsWindow : Window
+Dalamud/Interface/Internal/Windows/PluginInstaller/DalamudChangelog.cs:28: public class DalamudChangelogChange
+Dalamud/Interface/Internal/Windows/ProfilerWindow.cs:18: public class ProfilerWindow : Window
+Dalamud/Interface/Internal/Windows/Settings/Widgets/EnumSettingsEntry{T}.cs:49: public delegate T LoadSettingDelegate(DalamudConfiguration config);
+Dalamud/Interface/Internal/Windows/Settings/Widgets/EnumSettingsEntry{T}.cs:51: public delegate void SaveSettingDelegate(T value, DalamudConfiguration config);
+Dalamud/Interface/Internal/Windows/Settings/Widgets/SettingsEntry{T}.cs:45: public delegate T? LoadSettingDelegate(DalamudConfiguration config);
+Dalamud/Interface/Internal/Windows/Settings/Widgets/SettingsEntry{T}.cs:47: public delegate void SaveSettingDelegate(T? value, DalamudConfiguration config);
+Dalamud/Interface/Internal/Windows/StyleEditor/StyleEditorWindow.cs:27: public class StyleEditorWindow : Window
+Dalamud/Interface/ManagedFontAtlas/FluentGlyphRangeBuilder.cs:19: public struct FluentGlyphRangeBuilder
+Dalamud/Interface/ManagedFontAtlas/FontAtlasAutoRebuildMode.cs:6: public enum FontAtlasAutoRebuildMode
+Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildStep.cs:8: public enum FontAtlasBuildStep
+Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildStepDelegate.cs:14: public delegate void FontAtlasBuildStepDelegate(IFontAtlasBuildToolkit toolkit);
+Dalamud/Interface/ManagedFontAtlas/FontAtlasBuildToolkitUtilities.cs:12: public static class FontAtlasBuildToolkitUtilities
+Dalamud/Interface/ManagedFontAtlas/FontScaleMode.cs:9: public enum FontScaleMode
+Dalamud/Interface/ManagedFontAtlas/IFontAtlasBuildToolkit.cs:12: public interface IFontAtlasBuildToolkit
+Dalamud/Interface/ManagedFontAtlas/IFontAtlasBuildToolkitPostBuild.cs:10: public interface IFontAtlasBuildToolkitPostBuild : IFontAtlasBuildToolkit
+Dalamud/Interface/ManagedFontAtlas/IFontAtlasBuildToolkitPreBuild.cs:22: public interface IFontAtlasBuildToolkitPreBuild : IFontAtlasBuildToolkit
+Dalamud/Interface/ManagedFontAtlas/IFontAtlas.cs:13: public interface IFontAtlas : IDisposable
+Dalamud/Interface/ManagedFontAtlas/IFontHandle.cs:12: public interface IFontHandle : IDisposable
+Dalamud/Interface/ManagedFontAtlas/ILockedImFont.cs:10: public interface ILockedImFont : IDisposable
+Dalamud/Interface/ManagedFontAtlas/Internals/GamePrebakedFontHandle.cs:57: public interface IGameFontTextureProvider
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Files.cs:84: public readonly struct DirectoryTableEntry
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.GposGsub.cs:110: public readonly struct Format1ClassArray
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.GposGsub.cs:127: public readonly struct Format2ClassRanges
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.GposGsub.cs:139: public struct ClassRangeRecord : IComparable<ClassRangeRecord>
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.GposGsub.cs:166: public enum CoverageFormat : ushort
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.GposGsub.cs:209: public struct RangeRecord
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:104: public struct EncodingRecord
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:123: public struct MapGroup : IComparable<MapGroup>
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:156: public abstract class CmapFormat : IReadOnlyDictionary<int, ushort>
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:181: public class CmapFormat0 : CmapFormat
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:207: public class CmapFormat2 : CmapFormat
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:288: public struct SubHeader
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:306: public class CmapFormat4 : CmapFormat
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:425: public class CmapFormat6 : CmapFormat
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:466: public class CmapFormat8 : CmapFormat
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:516: public class CmapFormat10 : CmapFormat
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:555: public class CmapFormat12And13 : CmapFormat
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:677: public struct ValueRecord
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:713: public readonly struct PairAdjustmentPositioning
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:728: public readonly struct Format1
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:840: public readonly struct PairSet
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:880: public struct PairValueRecord
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:889: public readonly struct Format2
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1003: public readonly struct ExtensionPositioningSubtableFormat1
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1037: public enum HeadFlags : ushort
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1058: public enum MacStyleFlags : ushort
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1129: public readonly struct Format0
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1148: public readonly struct Version0
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1155: public enum CoverageFlags : byte
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1212: public readonly struct Subtable
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1236: public readonly struct Version1
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1243: public enum CoverageFlags : byte
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1272: public readonly struct Subtable
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1344: public struct NameRecord
+Dalamud/Interface/ManagedFontAtlas/Internals/TrueType.Tables.cs:1372: public struct LanguageRecord
+Dalamud/Interface/ManagedFontAtlas/SafeFontConfig.cs:12: public struct SafeFontConfig
+Dalamud/Interface/Style/DalamudColors.cs:10: public class DalamudColors
+Dalamud/Interface/Style/StyleModel.cs:19: public abstract class StyleModel
+Dalamud/Interface/Style/StyleModelV1.cs:15: public class StyleModelV1 : StyleModel
+Dalamud/Interface/Textures/DalamudTextureWrapExtensions.cs:6: public static class DalamudTextureWrapExtensions
+Dalamud/Interface/Textures/ForwardingSharedImmediateTexture.cs:11: public class ForwardingSharedImmediateTexture : ISharedImmediateTexture
+Dalamud/Interface/Textures/GameIconLookup.cs:8: public readonly record struct GameIconLookup
+Dalamud/Interface/Textures/IBitmapCodecInfo.cs:6: public interface IBitmapCodecInfo
+Dalamud/Interface/Textures/ImGuiViewportTextureArgs.cs:10: public record struct ImGuiViewportTextureArgs()
+Dalamud/Interface/Textures/Internal/IconNotFoundException.cs:6: public class IconNotFoundException : Exception
+Dalamud/Interface/Textures/Internal/TextureManager.BlameTracker.cs:23: public interface IBlameableDalamudTextureWrap : IDalamudTextureWrap
+Dalamud/Interface/Textures/ISharedImmediateTexture.cs:16: public interface ISharedImmediateTexture
+Dalamud/Interface/Textures/RawImageSpecification.cs:6: public record struct RawImageSpecification
+Dalamud/Interface/Textures/TextureModificationArgs.cs:11: public record struct TextureModificationArgs()
+Dalamud/Interface/Textures/TextureWraps/ForwardingTextureWrap.cs:13: public abstract class ForwardingTextureWrap : IDalamudTextureWrap
+Dalamud/Interface/Textures/TextureWraps/IDalamudTextureWrap.cs:16: public interface IDalamudTextureWrap : IDisposable
+Dalamud/Interface/Textures/TextureWraps/IDrawListTextureWrap.cs:9: public interface IDrawListTextureWrap : IDalamudTextureWrap
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:62: public struct InputAssemblerState : IDisposable
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:125: public struct RasterizerState : IDisposable
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:175: public struct OutputMergerState : IDisposable
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:266: public struct VertexShaderState : IDisposable
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:331: public struct HullShaderState : IDisposable
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:396: public struct DomainShaderState : IDisposable
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:461: public struct GeometryShaderState : IDisposable
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:526: public struct PixelShaderState : IDisposable
+Dalamud/Interface/Textures/TextureWraps/Internal/DrawListTextureWrap/DeviceContextStateBackup.cs:591: public struct ComputeShaderState : IDisposable
+Dalamud/Interface/TitleScreenMenu/TitleScreenMenuEntry.cs:14: public interface ITitleScreenMenuEntry : IReadOnlyTitleScreenMenuEntry, IComparable<TitleScreenMenuEntry>
+Dalamud/Interface/TitleScreenMenu/TitleScreenMenuEntry.cs:51: public interface IReadOnlyTitleScreenMenuEntry
+Dalamud/Interface/TitleScreenMenu/TitleScreenMenuEntry.cs:72: public class TitleScreenMenuEntry : ITitleScreenMenuEntry
+Dalamud/Interface/UiBuilder.cs:30: public interface IUiBuilder
+Dalamud/Interface/UiBuilder.cs:292: public sealed class UiBuilder : IDisposable, IUiBuilder
+Dalamud/Interface/UldWrapper.cs:17: public class UldWrapper : IDisposable
+Dalamud/Interface/Utility/BufferBackedImDrawData.cs:10: public unsafe struct BufferBackedImDrawData : IDisposable
+Dalamud/Interface/Utility/ImGuiClip.cs:10: public static class ImGuiClip
+Dalamud/Interface/Utility/ImGuiExtensions.cs:10: public static class ImGuiExtensions
+Dalamud/Interface/Utility/ImGuiHelpers.cs:29: public static partial class ImGuiHelpers
+Dalamud/Interface/Utility/ImGuiHelpers.cs:890: public struct ImFontGlyphReal
+Dalamud/Interface/Utility/ImGuiHelpers.cs:979: public struct ImFontGlyphHotDataReal
+Dalamud/Interface/Utility/ImGuiHelpers.cs:1017: public unsafe struct ImFontAtlasCustomRectReal
+Dalamud/Interface/Utility/ImGuiHelpers.cs:1050: public class HorizontalButtonGroup
+Dalamud/Interface/Utility/ImGuiId.cs:8: public readonly ref struct ImGuiId
+Dalamud/Interface/Utility/ImGuiId.cs:56: public enum Type
+Dalamud/Interface/Utility/ImGuiTable.cs:14: public static class ImGuiTable
+Dalamud/Interface/Utility/ImVectorWrapper.cs:18: public unsafe struct ImVectorWrapper<T> : IList<T>, IList, IReadOnlyList<T>, IDisposable
+Dalamud/Interface/Utility/ImVectorWrapper.cs:87: public delegate void ImGuiNativeDestroyDelegate(T* self);
+Dalamud/Interface/Utility/ImVectorWrapper.cs:592: public static class ImVectorWrapper
+Dalamud/Interface/Utility/LineEvaluator.cs:8: public readonly struct LineEvaluator(Vector2 lineStart, Vector2 lineEnd)
+Dalamud/Interface/Utility/Raii/Disposables/ChildDisposable.cs:8: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/ChildDisposable.cs:11: public ref struct ChildDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/ChildFrameDisposable.cs:8: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/ChildFrameDisposable.cs:11: public ref struct ChildFrameDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/ClipRectDisposable.cs:9: public sealed class ClipRectDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs:10: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/ColorDisposable.cs:12: public sealed class ColorDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/ColumnsDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/ColumnsDisposable.cs:9: public ref struct ColumnsDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/ComboDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/ComboDisposable.cs:9: public ref struct ComboDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/DisabledDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/DisabledDisposable.cs:9: public sealed class DisabledDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/DragDropSourceDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/DragDropSourceDisposable.cs:9: public ref struct DragDropSourceDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/DragDropTargetDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/DragDropTargetDisposable.cs:9: public ref struct DragDropTargetDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/EnabledDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/EnabledDisposable.cs:9: public sealed class EnabledDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/FontDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/FontDisposable.cs:9: public sealed class FontDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/GroupDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/GroupDisposable.cs:9: public ref struct GroupDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/HeaderDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/HeaderDisposable.cs:9: public ref struct HeaderDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/IdDisposable.cs:8: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/IdDisposable.cs:11: public sealed class IdDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/IndentDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/IndentDisposable.cs:9: public sealed class IndentDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/ItemWidthDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/ItemWidthDisposable.cs:9: public sealed class ItemWidthDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/ListBoxDisposable.cs:8: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/ListBoxDisposable.cs:11: public ref struct ListBoxDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/MainMenuBarDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/MainMenuBarDisposable.cs:9: public ref struct MainMenuBarDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/MenuBarDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/MenuBarDisposable.cs:9: public ref struct MenuBarDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/MenuDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/MenuDisposable.cs:9: public ref struct MenuDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PlotAlignedDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PlotAlignedDisposable.cs:9: public ref struct PlotAlignedDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs:11: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PlotColorDisposable.cs:13: public sealed class PlotColorDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PlotDisposable.cs:8: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PlotDisposable.cs:11: public ref struct PlotDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropSourceDisposable.cs:7: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropSourceDisposable.cs:10: public ref struct PlotDragDropSourceDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropTargetDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PlotDragDropTargetDisposable.cs:9: public ref struct PlotDragDropTargetDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PlotLegendDisposable.cs:7: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PlotLegendDisposable.cs:10: public ref struct PlotLegendDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs:10: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PlotStyleDisposable.cs:13: public sealed class PlotStyleDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PlotSubDisposable.cs:8: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PlotSubDisposable.cs:11: public ref struct PlotSubDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/PopupDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/PopupDisposable.cs:9: public ref struct PopupDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs:10: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/StyleDisposable.cs:13: public sealed class StyleDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/TabBarDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/TabBarDisposable.cs:9: public ref struct TabBarDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/TabItemDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/TabItemDisposable.cs:9: public ref struct TabItemDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/TableDisposable.cs:8: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/TableDisposable.cs:11: public ref struct TableDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/TextWrapDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/TextWrapDisposable.cs:9: public sealed class TextWrapDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/TooltipDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/TooltipDisposable.cs:9: public ref struct TooltipDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/Disposables/TreeNodeDisposable.cs:6: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Disposables/TreeNodeDisposable.cs:9: public ref struct TreeNodeDisposable : IDisposable
+Dalamud/Interface/Utility/Raii/ImGui.cs:10: public static partial class ImRaii
+Dalamud/Interface/Utility/Raii/Plot.cs:9: public static partial class ImRaii
+Dalamud/Interface/Utility/Rectangle.cs:9: public readonly record struct Rectangle(Vector2 Minimum, Vector2 Maximum)
+Dalamud/Interface/Utility/Table/Column.cs:5: public class Column<TItem>
+Dalamud/Interface/Utility/Table/ColumnFlags.cs:8: public class ColumnFlags<T, TItem> : Column<TItem> where T : struct, Enum
+Dalamud/Interface/Utility/Table/ColumnSelect.cs:8: public class ColumnSelect<T, TItem> : Column<TItem> where T : struct, Enum, IEquatable<T>
+Dalamud/Interface/Utility/Table/ColumnString.cs:8: public class ColumnString<TItem> : Column<TItem>
+Dalamud/Interface/Utility/Table/Table.cs:11: public static class Table
+Dalamud/Interface/Utility/Table/Table.cs:16: public class Table<T>
+Dalamud/Interface/Windowing/IWindow.cs:11: public interface IWindow
+Dalamud/Interface/Windowing/IWindowSystem.cs:8: public interface IWindowSystem
+Dalamud/Interface/Windowing/TitleBarButton.cs:10: public class TitleBarButton
+Dalamud/Interface/Windowing/Window.cs:9: public abstract class Window : IWindow
+Dalamud/Interface/Windowing/WindowHost.cs:32: public class WindowHost
+Dalamud/Interface/Windowing/WindowSizeConstraints.cs:11: public struct WindowSizeConstraints
+Dalamud/Interface/Windowing/WindowSystem.cs:14: public class WindowSystem : IWindowSystem
+Dalamud/IoC/PluginInterfaceAttribute.cs:7: public class PluginInterfaceAttribute : Attribute
+Dalamud/IoC/PluginServiceAttribute.cs:10: public class PluginServiceAttribute : Attribute
+Dalamud/Localization.cs:16: public class Localization : IServiceType
+Dalamud/Localization.cs:49: public delegate void LocalizationChangedDelegate(string langCode);
+Dalamud/Logging/Internal/ModuleLog.cs:11: public class ModuleLog
+Dalamud/Memory/Exceptions/MemoryAllocationException.cs:6: public class MemoryAllocationException : MemoryException
+Dalamud/Memory/Exceptions/MemoryException.cs:6: public abstract class MemoryException : Exception
+Dalamud/Memory/Exceptions/MemoryPermissionException.cs:6: public class MemoryPermissionException : MemoryException
+Dalamud/Memory/Exceptions/MemoryReadException.cs:6: public class MemoryReadException : MemoryException
+Dalamud/Memory/Exceptions/MemoryWriteException.cs:6: public class MemoryWriteException : MemoryException
+Dalamud/Memory/MemoryHelper.cs:28: public static unsafe class MemoryHelper
+Dalamud/Memory/MemoryProtection.cs:9: public enum MemoryProtection
+Dalamud/Networking/Http/HappyEyeballsCallback.cs:21: public class HappyEyeballsCallback : IDisposable
+Dalamud/Plugin/ActivePluginsChangedEventArgs.cs:9: public class ActivePluginsChangedEventArgs : EventArgs, IActivePluginsChangedEventArgs
+Dalamud/Plugin/IActivePluginsChangedEventArgs.cs:10: public interface IActivePluginsChangedEventArgs
+Dalamud/Plugin/IActivePluginsChangedEventArgs.cs:13: public interface IAffectedPlugin
+Dalamud/Plugin/IAsyncDalamudPlugin.cs:10: public interface IAsyncDalamudPlugin : IAsyncDisposable
+Dalamud/Plugin/IDalamudPlugin.cs:7: public interface IDalamudPlugin : IDisposable
+Dalamud/Plugin/IDalamudPluginInterface.cs:25: public interface IDalamudPluginInterface : IServiceProvider
+Dalamud/Plugin/InstalledPluginState.cs:9: public interface IExposedPlugin
+Dalamud/Plugin/Internal/PluginManager.cs:1908: public record PluginUpdateProgress(int PluginsProcessed, int TotalPlugins, IPluginManifest CurrentPluginManifest);
+Dalamud/Plugin/Internal/PluginManager.cs:1914: public class StartupLoadTracker
+Dalamud/Plugin/Internal/PluginValidator.cs:19: public enum ValidationSeverity
+Dalamud/Plugin/Internal/PluginValidator.cs:40: public interface IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:108: public class NoConfigUiProblem : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:120: public class NoMainUiProblem : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:133: public class CommandWithoutHelpTextProblem(string commandName) : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:145: public class NoTagsProblem : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:157: public class NoDescriptionProblem : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:169: public class NoPunchlineProblem : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:181: public class NoNameProblem : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:193: public class NoAuthorProblem : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:205: public class WrongApiLevelProblem : IValidationProblem
+Dalamud/Plugin/Internal/PluginValidator.cs:218: public class InternalNameIsSamplePluginProblem : IValidationProblem
+Dalamud/Plugin/Internal/Profiles/ProfileModel.cs:14: public abstract class ProfileModel
+Dalamud/Plugin/Internal/Profiles/ProfileModelV1.cs:10: public class ProfileModelV1 : ProfileModel
+Dalamud/Plugin/Internal/Profiles/ProfileModelV1.cs:15: public enum ProfileStartupPolicy
+Dalamud/Plugin/Internal/Profiles/ProfileModelV1.cs:76: public class ProfileModelV1Plugin
+Dalamud/Plugin/Internal/Profiles/ProfileModelV1.cs:100: public class ProfileModelV1Character(string displayName, ulong contentId, string serverName)
+Dalamud/Plugin/Internal/Types/Manifest/ILocalPluginManifest.cs:6: public interface ILocalPluginManifest : IPluginManifest
+Dalamud/Plugin/Internal/Types/Manifest/IPluginManifest.cs:11: public interface IPluginManifest
+Dalamud/Plugin/Internal/Types/Manifest/SpecialPluginSource.cs:6: public static class SpecialPluginSource
+Dalamud/Plugin/Internal/Types/PluginUpdateStatus.cs:13: public enum StatusKind
+Dalamud/Plugin/Ipc/Exceptions/AdapterMethodMissingException.cs:4: public sealed class AdapterMethodMissingException : Exception
+Dalamud/Plugin/Ipc/Exceptions/AdapterTypeMismatchException.cs:4: public sealed class AdapterTypeMismatchException : Exception
+Dalamud/Plugin/Ipc/Exceptions/DataCacheCreationError.cs:8: public class DataCacheCreationError : IpcError
+Dalamud/Plugin/Ipc/Exceptions/DataCacheTypeMismatchError.cs:8: public class DataCacheTypeMismatchError : IpcError
+Dalamud/Plugin/Ipc/Exceptions/DataCacheValueNullError.cs:6: public class DataCacheValueNullError : IpcError
+Dalamud/Plugin/Ipc/Exceptions/IpcError.cs:6: public abstract class IpcError : Exception
+Dalamud/Plugin/Ipc/Exceptions/IpcLengthMismatchError.cs:6: public class IpcLengthMismatchError : IpcError
+Dalamud/Plugin/Ipc/Exceptions/IpcNotReadyError.cs:6: public class IpcNotReadyError : IpcError
+Dalamud/Plugin/Ipc/Exceptions/IpcTypeMismatchError.cs:6: public class IpcTypeMismatchError : IpcError
+Dalamud/Plugin/Ipc/Exceptions/IpcValueNullError.cs:6: public class IpcValueNullError : IpcError
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:11: public interface ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:27: public interface ICallGateProvider<TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:40: public interface ICallGateProvider<T1, TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:53: public interface ICallGateProvider<T1, T2, TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:66: public interface ICallGateProvider<T1, T2, T3, TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:79: public interface ICallGateProvider<T1, T2, T3, T4, TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:92: public interface ICallGateProvider<T1, T2, T3, T4, T5, TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:105: public interface ICallGateProvider<T1, T2, T3, T4, T5, T6, TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:118: public interface ICallGateProvider<T1, T2, T3, T4, T5, T6, T7, TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateProvider.cs:131: public interface ICallGateProvider<T1, T2, T3, T4, T5, T6, T7, T8, TRet> : ICallGateProvider
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:10: public interface ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:20: public interface ICallGateSubscriber<TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:36: public interface ICallGateSubscriber<T1, TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:52: public interface ICallGateSubscriber<T1, T2, TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:68: public interface ICallGateSubscriber<T1, T2, T3, TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:84: public interface ICallGateSubscriber<T1, T2, T3, T4, TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:100: public interface ICallGateSubscriber<T1, T2, T3, T4, T5, TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:116: public interface ICallGateSubscriber<T1, T2, T3, T4, T5, T6, TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:132: public interface ICallGateSubscriber<T1, T2, T3, T4, T5, T6, T7, TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/ICallGateSubscriber.cs:148: public interface ICallGateSubscriber<T1, T2, T3, T4, T5, T6, T7, T8, TRet> : ICallGateSubscriber
+Dalamud/Plugin/Ipc/IDataShareAdapter.cs:8: public interface IIdDataShareAdapter : IDisposable
+Dalamud/Plugin/Ipc/Internal/DataCachePluginId.cs:8: public record DataCachePluginId(string InternalName, Guid EffectiveWorkingId);
+Dalamud/Plugin/Ipc/IpcContext.cs:6: public class IpcContext
+Dalamud/Plugin/PluginListInvalidationKind.cs:6: public enum PluginListInvalidationKind
+Dalamud/Plugin/PluginLoadReason.cs:7: public enum PluginLoadReason
+Dalamud/Plugin/PluginUpdate.cs:9: public record PluginUpdate(Version Version, bool IsTesting, string? Changelog);
+Dalamud/Plugin/SelfTest/ISelfTestStep.cs:6: public interface ISelfTestStep
+Dalamud/Plugin/SelfTest/SelfTestStepResult.cs:6: public enum SelfTestStepResult
+Dalamud/Plugin/Services/IAddonEventManager.cs:9: public interface IAddonEventManager : IDalamudService
+Dalamud/Plugin/Services/IAddonLifecycle.cs:12: public interface IAddonLifecycle : IDalamudService
+Dalamud/Plugin/Services/IAetheryteList.cs:10: public interface IAetheryteList : IDalamudService, IReadOnlyCollection<IAetheryteEntry>
+Dalamud/Plugin/Services/IAgentLifecycle.cs:12: public interface IAgentLifecycle : IDalamudService
+Dalamud/Plugin/Services/IBuddyList.cs:11: public interface IBuddyList : IDalamudService, IReadOnlyCollection<IBuddyMember>
+Dalamud/Plugin/Services/IChatGui.cs:13: public interface IChatGui : IDalamudService
+Dalamud/Plugin/Services/IClientState.cs:10: public interface IClientState : IDalamudService
+Dalamud/Plugin/Services/ICommandManager.cs:10: public interface ICommandManager : IDalamudService
+Dalamud/Plugin/Services/ICondition.cs:10: public interface ICondition : IDalamudService
+Dalamud/Plugin/Services/IConsole.cs:11: public interface IConsole : IDalamudService
+Dalamud/Plugin/Services/IContextMenu.cs:8: public interface IContextMenu : IDalamudService
+Dalamud/Plugin/Services/IDalamudService.cs:10: public interface IDalamudService;
+Dalamud/Plugin/Services/IDataManager.cs:17: public interface IDataManager : IDalamudService
+Dalamud/Plugin/Services/IDtrBar.cs:11: public interface IDtrBar : IDalamudService
+Dalamud/Plugin/Services/IDutyState.cs:11: public interface IDutyState : IDalamudService
+Dalamud/Plugin/Services/IFateTable.cs:10: public interface IFateTable : IDalamudService, IReadOnlyCollection<IFate>
+Dalamud/Plugin/Services/IFlyTextGui.cs:9: public interface IFlyTextGui : IDalamudService
+Dalamud/Plugin/Services/IFramework.cs:28: public interface IFramework : IDalamudService
+Dalamud/Plugin/Services/IGameConfig.cs:20: public interface IGameConfig : IDalamudService
+Dalamud/Plugin/Services/IGameGui.cs:12: public unsafe interface IGameGui : IDalamudService
+Dalamud/Plugin/Services/IGameInteropProvider.cs:13: public interface IGameInteropProvider : IDalamudService
+Dalamud/Plugin/Services/IGameInventory.cs:11: public interface IGameInventory : IDalamudService
+Dalamud/Plugin/Services/IGameLifecycle.cs:8: public interface IGameLifecycle : IDalamudService
+Dalamud/Plugin/Services/IGamepadState.cs:12: public interface IGamepadState : IDalamudService
+Dalamud/Plugin/Services/IJobGauges.cs:8: public interface IJobGauges : IDalamudService
+Dalamud/Plugin/Services/IKeyState.cs:46: public interface IKeyState : IDalamudService
+Dalamud/Plugin/Services/IMarketBoard.cs:8: public interface IMarketBoard : IDalamudService
+Dalamud/Plugin/Services/INamePlateGui.cs:10: public interface INamePlateGui : IDalamudService
+Dalamud/Plugin/Services/INotificationManager.cs:6: public interface INotificationManager : IDalamudService
+Dalamud/Plugin/Services/IObjectTable.cs:11: public interface IObjectTable : IDalamudService, IEnumerable<IGameObject>
+Dalamud/Plugin/Services/IPartyFinderGui.cs:8: public interface IPartyFinderGui : IDalamudService
+Dalamud/Plugin/Services/IPartyList.cs:10: public interface IPartyList : IDalamudService, IReadOnlyCollection<IPartyMember>
+Dalamud/Plugin/Services/IPlayerState.cs:15: public interface IPlayerState : IDalamudService
+Dalamud/Plugin/Services/IPluginLog.cs:11: public interface IPluginLog : IDalamudService
+Dalamud/Plugin/Services/IReliableFileStorage.cs:23: public interface IReliableFileStorage : IDalamudService
+Dalamud/Plugin/Services/ISelfTestRegistry.cs:49: public interface ISelfTestRegistry : IDalamudService
+Dalamud/Plugin/Services/ISeStringEvaluator.cs:12: public interface ISeStringEvaluator : IDalamudService
+Dalamud/Plugin/Services/ISigScanner.cs:10: public interface ISigScanner : IDalamudService
+Dalamud/Plugin/Services/ITargetManager.cs:8: public interface ITargetManager : IDalamudService
+Dalamud/Plugin/Services/ITextureProvider.cs:36: public interface ITextureProvider : IDalamudService
+Dalamud/Plugin/Services/ITextureReadbackProvider.cs:12: public interface ITextureReadbackProvider : IDalamudService
+Dalamud/Plugin/Services/ITextureSubstitutionProvider.cs:8: public interface ITextureSubstitutionProvider : IDalamudService
+Dalamud/Plugin/Services/ITitleScreenMenu.cs:11: public interface ITitleScreenMenu : IDalamudService
+Dalamud/Plugin/Services/IToastGui.cs:9: public interface IToastGui : IDalamudService
+Dalamud/Plugin/Services/IUnlockState.cs:13: public interface IUnlockState : IDalamudService
+Dalamud/Plugin/VersionInfo/IDalamudVersionInfo.cs:6: public interface IDalamudVersionInfo
+Dalamud/SafeMemory.cs:15: public static class SafeMemory
+Dalamud/Service/IServiceType.cs:6: public interface IServiceType
+Dalamud/Service/LoadingDialog.cs:46: public enum State
+Dalamud/Service/ServiceManager.cs:65: public delegate void RegisterStartupBlockerDelegate(Task t, string justification);
+Dalamud/Service/ServiceManager.cs:76: public delegate void RegisterUnloadAfterDelegate(IEnumerable<Type> unloadAfter, string justification);
+Dalamud/Service/ServiceManager.cs:82: public enum ServiceKind
+Dalamud/Service/ServiceManager.cs:625: public class ServiceConstructor : Attribute
+Dalamud/Service/ServiceManager.cs:633: public class ServiceDependency : Attribute
+Dalamud/Service/ServiceManager.cs:641: public abstract class ServiceAttribute : Attribute
+Dalamud/Service/ServiceManager.cs:659: public class ProvidedServiceAttribute : ServiceAttribute
+Dalamud/Service/ServiceManager.cs:674: public class EarlyLoadedServiceAttribute : ServiceAttribute
+Dalamud/Service/ServiceManager.cs:699: public class BlockingEarlyLoadedServiceAttribute : EarlyLoadedServiceAttribute
+Dalamud/Service/ServiceManager.cs:720: public class ScopedServiceAttribute : ServiceAttribute
+Dalamud/Service/ServiceManager.cs:738: public class CallWhenServicesReady : Attribute
+Dalamud/Service/ServiceManager.cs:760: public class InjectableTypeAttribute : Attribute
+Dalamud/Service/Service{T}.cs:419: public class UnloadedException : InvalidOperationException
+Dalamud/Storage/Assets/DalamudAssetExtensions.cs:10: public static class DalamudAssetExtensions
+Dalamud/Storage/Assets/DalamudAssetPurpose.cs:6: public enum DalamudAssetPurpose
+Dalamud/Storage/Assets/IDalamudAssetManager.cs:22: public interface IDalamudAssetManager : IDalamudService
+Dalamud/Storage/FileReadException.cs:6: public class FileReadException : Exception
+Dalamud/Storage/ReliableFileStoragePluginScoped.cs:24: public class ReliableFileStoragePluginScoped : IReliableFileStorage, IInternalDisposableService
+Dalamud/Support/DalamudReleases.cs:53: public class DalamudVersionInfo
+Dalamud/Support/Troubleshooting.cs:24: public static class Troubleshooting
+Dalamud/Utility/ActionKindExtensions.cs:8: public static class ActionKindExtensions
+Dalamud/Utility/AsyncUtils.cs:11: public static class AsyncUtils
+Dalamud/Utility/ClientLanguageExtensions.cs:8: public static class ClientLanguageExtensions
+Dalamud/Utility/CStringExtensions.cs:15: public static class CStringExtensions
+Dalamud/Utility/DateTimeSpanExtensions.cs:14: public static class DateTimeSpanExtensions
+Dalamud/Utility/Debouncer.cs:11: public interface IDebouncer : IDisposable
+Dalamud/Utility/DiagnosticUtil.cs:9: public static class DiagnosticUtil
+Dalamud/Utility/DisposeSafety.cs:16: public static class DisposeSafety
+Dalamud/Utility/DisposeSafety.cs:21: public interface IDisposeCallback : IDisposable
+Dalamud/Utility/DisposeSafety.cs:144: public class ScopedFinalizer : IDisposeCallback, IAsyncDisposable
+Dalamud/Utility/EnumExtensions.cs:10: public static class EnumExtensions
+Dalamud/Utility/FilesystemUtil.cs:13: public static class FilesystemUtil
+Dalamud/Utility/Hash.cs:9: public static class Hash
+Dalamud/Utility/HitchDetector.cs:10: public class HitchDetector
+Dalamud/Utility/ItemUtil.cs:15: public enum ItemKind : uint
+Dalamud/Utility/ItemUtil.cs:41: public static class ItemUtil
+Dalamud/Utility/MapUtil.cs:18: public static class MapUtil
+Dalamud/Utility/Numerics/VectorExtensions.cs:12: public static class VectorExtensions
+Dalamud/Utility/ObjectKindExtensions.cs:8: public static class ObjectKindExtensions
+Dalamud/Utility/ReadOnlySePayloadExtensions.cs:11: public static class ReadOnlySePayloadExtensions
+Dalamud/Utility/ReadOnlySePayloadSpanExtensions.cs:14: public static class ReadOnlySePayloadSpanExtensions
+Dalamud/Utility/ReadOnlySeStringExtensions.cs:8: public static class ReadOnlySeStringExtensions
+Dalamud/Utility/ReadOnlySeStringSpanExtensions.cs:11: public static class ReadOnlySeStringSpanExtensions
+Dalamud/Utility/ReadOnlySpanExtensions.cs:6: public static class ReadOnlySpanExtensions
+Dalamud/Utility/RentedSeStringBuilder.cs:21: public readonly struct RentedSeStringBuilder() : IResettable, IDisposable
+Dalamud/Utility/ScopedSyncRoot.cs:8: public class ScopedSyncRoot : IDisposable
+Dalamud/Utility/SeStringBuilderExtensions.cs:19: public static class SeStringBuilderExtensions
+Dalamud/Utility/SeStringExtensions.cs:14: public static class SeStringExtensions
+Dalamud/Utility/Signatures/Fallibility.cs:6: public enum Fallibility
+Dalamud/Utility/Signatures/ScanType.cs:8: public enum ScanType
+Dalamud/Utility/Signatures/SignatureAttribute.cs:13: public sealed class SignatureAttribute : Attribute
+Dalamud/Utility/Signatures/SignatureException.cs:6: public class SignatureException : Exception
+Dalamud/Utility/Signatures/SignatureUseFlags.cs:9: public enum SignatureUseFlags
+Dalamud/Utility/StringExtensions.cs:14: public static class StringExtensions
+Dalamud/Utility/TaskExtensions.cs:30: public static class TaskExtensions
+Dalamud/Utility/TexFileExtensions.cs:15: public static class TexFileExtensions
+Dalamud/Utility/ThreadSafety.cs:10: public static class ThreadSafety
+Dalamud/Utility/Timing/TimingEvent.cs:8: public class TimingEvent
+Dalamud/Utility/Timing/TimingHandle.cs:12: public sealed class TimingHandle : TimingEvent, IDisposable, IComparable<TimingHandle>
+Dalamud/Utility/Timing/Timings.cs:12: public static class Timings
+Dalamud/Utility/Utf8StringExtensions.cs:15: public static class Utf8StringExtensions
+Dalamud/Utility/Util.cs:46: public static partial class Util
+Dalamud/Utility/WeakConcurrentCollection.cs:12: public class WeakConcurrentCollection<T> : ICollection<T> where T : class

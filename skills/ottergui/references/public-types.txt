@@ -1,0 +1,358 @@
+Classes/Backup.cs:6: public static partial class Backup
+Classes/BoolSetter.cs:3: public readonly ref struct BoolSetter
+Classes/ConcurrentSet.cs:6: public readonly struct NullValue : IEquatable<NullValue>
+Classes/ConcurrentSet.cs:27: public sealed class ConcurrentSet<T> : ConcurrentDictionary<T, NullValue> where T : notnull
+Classes/DayChangeTracker.cs:5: public static class DayChangeTracker
+Classes/DelayedReferenceLoader.cs:5: public abstract class DelayedReferenceLoader<TObj, TData>(MessageService messager)
+Classes/DisposableContainer.cs:3: public readonly struct DisposableContainer : IDisposable
+Classes/DoubleModifier.cs:6: public struct DoubleModifier : IEquatable<DoubleModifier>
+Classes/EventWrapperBase.cs:6: public static class EventWrapperBase
+Classes/EventWrapperBase.cs:14: public delegate void ActionRef<T1>(ref T1 a);
+Classes/EventWrapperBase.cs:15: public delegate void ActionRef<T1, T2>(ref T1 a, ref T2 b);
+Classes/EventWrapperBase.cs:16: public delegate void ActionRef2<in T1, T2>(T1 a, ref T2 b);
+Classes/EventWrapperBase.cs:17: public delegate void ActionRef3<in T1, in T2, T3>(T1 a, T2 b, ref T3 c);
+Classes/EventWrapperBase.cs:18: public delegate void ActionRef34<in T1, in T2, T3, T4>(T1 a, T2 b, ref T3 c, ref T4 d);
+Classes/EventWrapperBase.cs:19: public unsafe delegate void ActionPtr<T1>(T1* a) where T1 : unmanaged;
+Classes/EventWrapperBase.cs:20: public unsafe delegate void ActionPtr<T1, T2>(T1* a, T2* b) where T1 : unmanaged where T2 : unmanaged;
+Classes/EventWrapperBase.cs:21: public unsafe delegate void ActionPtr<T1, T2, T3>(T1* a, T2* b, T3* c) where T1 : unmanaged where T2 : unmanaged where T3 : unmanaged;
+Classes/EventWrapperBase.cs:22: public unsafe delegate void ActionPtr1<T1, in T2>(T1* a, T2 b) where T1 : unmanaged;
+Classes/EventWrapperBase.cs:23: public unsafe delegate void ActionPtr1<T1, in T2, in T3>(T1* a, T2 b, T3 c) where T1 : unmanaged;
+Classes/EventWrapperBase.cs:25: public unsafe delegate void ActionPtr234<in T1, T2, T3, T4>(T1 a, T2* b, T3* c, T4* d)
+Classes/EventWrapperBase.cs:28: public unsafe delegate void ActionPtr12Ref34<T1, T2, T3, T4>(T1* a, T2* b, ref T3 c, ref T4 d)
+Classes/EventWrapperBase.cs:31: public abstract class EventWrapperBase<TPriority>(string name) : IDisposable, IService
+Classes/EventWrapperBase.cs:104: public abstract class EventWrapper<TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:129: public abstract class EventWrapper<T1, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:154: public abstract class EventWrapper<T1, T2, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:179: public abstract class EventWrapper<T1, T2, T3, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:204: public abstract class EventWrapper<T1, T2, T3, T4, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:229: public abstract class EventWrapper<T1, T2, T3, T4, T5, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:254: public abstract class EventWrapper<T1, T2, T3, T4, T5, T6, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:279: public abstract unsafe class EventWrapperRef2<T1, T2, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:304: public abstract unsafe class EventWrapperRef3<T1, T2, T3, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:329: public abstract unsafe class EventWrapperRef34<T1, T2, T3, T4, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:354: public abstract unsafe class EventWrapperPtr<T1, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:380: public abstract unsafe class EventWrapperPtr1<T1, T2, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:406: public abstract unsafe class EventWrapperPtr1<T1, T2, T3, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:432: public abstract unsafe class EventWrapperPtr<T1, T2, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:459: public abstract unsafe class EventWrapperPtr<T1, T2, T3, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:487: public abstract unsafe class EventWrapperPtr234<T1, T2, T3, T4, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/EventWrapperBase.cs:515: public abstract unsafe class EventWrapperPtr12Ref34<T1, T2, T3, T4, TPriority>(string name) : EventWrapperBase<TPriority>(name)
+Classes/FilterUtility.cs:5: public abstract class FilterUtility<T>
+Classes/FrameworkManager.cs:9: public class FrameworkManager : IDisposable, IService
+Classes/InMethodChecker.cs:3: public readonly struct InMethodChecker
+Classes/InMethodChecker.cs:21: public readonly ref struct RaiiSetter
+Classes/IndexSet.cs:3: public class IndexSet : IEnumerable<int>
+Classes/KeyboardManager.cs:10: public class KeyboardManager : IService, IDisposable
+Classes/LazyList.cs:3: public interface ICachingList<out T> : IReadOnlyList<T>
+Classes/LazyList.cs:10: public class LazyList<T>(Func<IReadOnlyList<T>> generator) : ICachingList<T>
+Classes/LowerString.cs:9: public readonly struct LowerString : IEquatable<LowerString>, IComparable<LowerString>, IEquatable<string>, IComparable<string>
+Classes/MessageHelpers.cs:6: public static class MessageServiceExtensions
+Classes/MessageHelpers.cs:21: public static class SeStringBuilderExtensions
+Classes/MessageService.cs:14: public class Notification : MessageService.IMessage
+Classes/MessageService.cs:56: public class MessageService(Logger log, IUiBuilder builder, IChatGui chat, INotificationManager notificationManager)
+Classes/MessageService.cs:59: public interface IMessage
+Classes/ModifiableHotkey.cs:10: public struct ModifiableHotkey : IEquatable<ModifiableHotkey>
+Classes/ModifiableHotkey.cs:114: public static class VirtualKeyExtensions
+Classes/ModifierHotkey.cs:9: public readonly struct ModifierHotkey : IEquatable<ModifierHotkey>
+Classes/MultiDictionary.cs:3: public class MultiDictionary<TKey, TValue> : IReadOnlyCollection<KeyValuePair<TKey, TValue>> where TKey : notnull
+Classes/MultiDictionary.cs:110: public class UniquePairMultiDictionary<TKey, TValue> : IReadOnlyCollection<KeyValuePair<TKey, TValue>> where TKey : notnull
+Classes/MultiDictionary.cs:240: public static class MultiDictionaryExtensions
+Classes/OptionalBool.cs:5: public readonly struct OptionalBool : IEquatable<OptionalBool>, IEquatable<bool?>, IEquatable<bool>
+Classes/OptionalBool.cs:63: public readonly struct QuadBool : IEquatable<QuadBool>, IEquatable<OptionalBool>, IEquatable<bool?>, IEquatable<bool>
+Classes/PerformanceTracker.cs:8: public class PerformanceTracker<T> : IDisposable where T : unmanaged, Enum
+Classes/PerformanceTracker.cs:108: public readonly struct TimingStopper : IDisposable
+Classes/ReadWriteDictionary.cs:4: public class ReadWriteDictionary<TKey, TValue>() : ReaderWriterLockSlim(LockRecursionPolicy.SupportsRecursion), IDictionary<TKey, TValue>
+Classes/SaveService.cs:9: public interface ISavable<in T>
+Classes/SaveService.cs:25: public enum SaveType
+Classes/SaveService.cs:34: public class SaveServiceBase<T>
+Classes/SingleArray.cs:3: public readonly struct SingleArray<T> : IReadOnlyList<T> where T : notnull
+Classes/StartTimeTracker.cs:7: public class StartTimeTracker
+Classes/StartTimeTracker.cs:19: public readonly struct TimingStopper : IDisposable
+Classes/SubList.cs:4: public readonly struct SubList<T> : IReadOnlyList<T>
+Classes/TemporaryList.cs:6: public class TemporaryList<T> : ICachingList<T>
+Classes/TextureCache.cs:7: public class TextureCache(IDataManager dataManager, ITextureProvider textureProvider)
+Classes/TransformList.cs:6: public readonly struct TransformList<TIn, TOut> : IReadOnlyList<TOut>
+Classes/UserRegex.cs:8: public struct UserRegex
+Classes/ZipList.cs:4: public readonly struct ZipList<T1, T2> : IReadOnlyList<(T1, T2)>
+Classes/ZipList.cs:30: public static class ZipList
+Compression/CompressionAlgorithm.cs:4: public enum CompressionAlgorithm
+Compression/FileCompactor.cs:6: public class FileCompactor(Logger logger) : IDisposable, IService
+Custom/CustomGui.cs:11: public static class CustomGui
+Custom/IndividualHelpers.cs:7: public static class IndividualHelpers
+Extensions/ArrayExtensions.cs:3: public static class ArrayExtensions
+Extensions/FileExtensions.cs:3: public static class FileExtensions
+Extensions/GuidExtensions.cs:5: public static class GuidExtensions
+Extensions/PowerSetExtensions.cs:5: public static class PowerSetExtensions
+Extensions/StableInsertionSortExtension.cs:3: public static class StableInsertionSortExtension
+Extensions/VectorExtensions.cs:3: public static class VectorExtensions
+Filesystem/Extensions.cs:3: public static partial class Extensions
+Filesystem/FileSystem.File.cs:6: public partial class FileSystem<T>
+Filesystem/FileSystem.Internals.cs:3: public partial class FileSystem<T>
+Filesystem/FileSystem.cs:3: public enum FileSystemChangeType
+Filesystem/FileSystem.cs:17: public partial class FileSystem<T> : IReadOnlyDictionary<T, FileSystem<T>.Leaf> where T : class
+Filesystem/FileSystem.cs:20: public delegate void ChangeDelegate(FileSystemChangeType type, IPath changedObject, IPath? previousParent, IPath? newParent);
+Filesystem/Folder.cs:3: public partial class FileSystem<T>
+Filesystem/Folder.cs:5: public class Folder(Folder parent, string name, uint identifier) : IWritePath
+Filesystem/Leaf.cs:3: public partial class FileSystem<T>
+Filesystem/Leaf.cs:5: public sealed class Leaf : IWritePath
+Filesystem/NameComparer.cs:3: public partial class FileSystem<T>
+Filesystem/Path.cs:3: public partial class FileSystem<T>
+Filesystem/Path.cs:6: public enum PathFlags : byte
+Filesystem/Path.cs:11: public interface IPath
+Filesystem/Selector/FileSystemSelector.Buttons.cs:9: public partial class FileSystemSelector<T, TStateStorage>
+Filesystem/Selector/FileSystemSelector.Context.cs:9: public partial class FileSystemSelector<T, TStateStorage>
+Filesystem/Selector/FileSystemSelector.DragDrop.cs:7: public partial class FileSystemSelector<T, TStateStorage>
+Filesystem/Selector/FileSystemSelector.Draw.cs:12: public partial class FileSystemSelector<T, TStateStorage>
+Filesystem/Selector/FileSystemSelector.State.cs:7: public partial class FileSystemSelector<T, TStateStorage> : IDisposable
+Filesystem/Selector/FileSystemSelector.Utility.cs:8: public partial class FileSystemSelector<T, TStateStorage>
+Filesystem/Selector/FileSystemSelector.cs:10: public record struct ModSelectorSettings(float CurrentWidth, float MinimumScale, float MaximumScale, bool Resizable, bool UseScaling);
+Filesystem/Selector/FileSystemSelector.cs:12: public partial class FileSystemSelector<T, TStateStorage> where T : class where TStateStorage : struct
+Filesystem/Selector/FileSystemSelector.cs:14: public delegate void SelectionChangeDelegate(T? oldSelection, T? newSelection, in TStateStorage state);
+Filesystem/Selector/SearchStringSplitter.cs:3: public interface ISplitterEntry<TEnum, in TEntry>
+Filesystem/Selector/SearchStringSplitter.cs:11: public abstract class SearchStringSplitter<TEnum, TObj, TEntry>
+Filesystem/SortMode.cs:3: public enum SortMode
+Filesystem/SortMode.cs:15: public interface ISortMode<T> where T : class
+Filesystem/SortMode.cs:67: public struct InverseLexicographicalT : ISortMode<T>
+Filesystem/SortMode.cs:79: public struct FoldersLastT : ISortMode<T>
+Filesystem/SortMode.cs:91: public struct InverseFoldersLastT : ISortMode<T>
+Filesystem/SortMode.cs:103: public struct InternalOrderT : ISortMode<T>
+Filesystem/SortMode.cs:115: public struct InverseInternalOrderT : ISortMode<T>
+Functions.cs:5: public static class Functions
+ImGuiClip.cs:7: public static class ImGuiClip
+ImGuiPie.cs:6: public static class ImGuiPie
+ImGuiTable.cs:6: public static class ImGuiTable
+ItemSelector.cs:8: public class ItemSelector<T>
+ItemSelector.cs:11: public enum Flags : byte
+ItemSelector.cs:456: public static class ItemDetailsWindow
+Log/Logger.cs:5: public readonly struct LazyString(Func<string> func)
+Log/Logger.cs:14: public class Logger
+Log/Logger.cs:33: public enum LogLevel
+Log/Logger.cs:45: public ref struct LogLevelInterpolatedStringHandler
+Log/Logger.cs:89: public ref struct FatalInterpolatedStringHandler
+Log/Logger.cs:130: public ref struct ErrorInterpolatedStringHandler
+Log/Logger.cs:174: public ref struct WarningInterpolatedStringHandler
+Log/Logger.cs:218: public ref struct InformationInterpolatedStringHandler
+Log/Logger.cs:262: public ref struct DebugInterpolatedStringHandler
+Log/Logger.cs:306: public ref struct VerboseInterpolatedStringHandler
+OtterGuiInternal/Enums/ChildFlags.cs:3: public enum ChildFlags : uint
+OtterGuiInternal/Enums/Direction.cs:3: public enum Direction : uint
+OtterGuiInternal/Enums/ImGuiId.cs:3: public enum ImGuiId : uint
+OtterGuiInternal/Enums/ImGuiInputFlags.cs:4: public enum ImGuiInputFlags : ulong
+OtterGuiInternal/ImGuiInternal.cs:9: public static unsafe class ImGuiInternal
+OtterGuiInternal/Structs/ImGuiWindowTemp.cs:6: public struct ImGuiWindowTemp
+OtterGuiInternal/Structs/ImVec2.cs:4: public readonly record struct ImVec2(float X, float Y)
+OtterGuiInternal/Structs/ImVector.cs:4: public readonly unsafe record struct ImVector<T>(int Size, int Capacity, nint Data);
+OtterGuiInternal/Utility/ColorHelpers.cs:5: public static class ColorHelpers
+OtterGuiInternal/Utility/StringHelpers.cs:6: public static class StringHelpers
+OtterGuiInternal/Utility/SymbolHelpers.cs:5: public static class SymbolHelpers
+OtterGuiInternal/Wrappers/ImGuiWindowTempPtr.cs:5: public readonly unsafe struct ImGuiWindowTempPtr
+Raii/Color.cs:7: public static partial class ImRaii
+Raii/Color.cs:25: public sealed class Color : IDisposable
+Raii/ColorStyle.cs:5: public static partial class ImRaii
+Raii/ColorStyle.cs:17: public readonly struct ColorStyle() : IDisposable
+Raii/EndObjects.cs:9: public static partial class ImRaii
+Raii/EndObjects.cs:186: public interface IEndObject : IDisposable
+Raii/Font.cs:7: public static partial class ImRaii
+Raii/Font.cs:16: public sealed class Font : IDisposable
+Raii/Id.cs:7: public static partial class ImRaii
+Raii/Id.cs:18: public sealed class Id : IDisposable
+Raii/Indent.cs:6: public static partial class ImRaii
+Raii/Indent.cs:14: public sealed class Indent : IDisposable
+Raii/Style.cs:8: public static partial class ImRaii
+Raii/Style.cs:32: public sealed class Style : IDisposable
+Services/DynamisIpc.cs:10: public class DynamisIpc : IDisposable, IService
+Services/FastHook.cs:5: public abstract class FastHook<T> : IHookService where T : Delegate
+Services/HookManager.cs:7: public sealed class HookManager(IGameInteropProvider provider) : IDisposable, IService
+Services/IService.cs:6: public interface IService
+Services/IService.cs:9: public interface IDataContainer : IService
+Services/IService.cs:17: public interface IAsyncService : IService
+Services/IService.cs:24: public interface IRequiredService : IService;
+Services/IService.cs:26: public interface IAwaitedService : IRequiredService, IAsyncService;
+Services/IService.cs:28: public interface IHookService : IAwaitedService
+Services/IService.cs:35: public interface IAsyncDataContainer : IDataContainer, IAsyncService
+Services/IService.cs:38: public interface IInvokeService : IService
+Services/IService.cs:43: public interface ILoadService : IService
+Services/IService.cs:48: public interface IUiService : IService
+Services/IService.cs:51: public interface IApiService : IService
+Services/ImGuiCacheService.cs:7: public class ImGuiCacheService : IDisposable, IUiService
+Services/ImGuiCacheService.cs:180: public readonly struct CacheId(int id) : IEquatable<CacheId>, IComparable<CacheId>
+Services/ServiceManager.cs:9: public class ServiceManager : IDisposable
+String/Interop.cs:5: public static unsafe partial class Interop
+String/Interop.cs:21: public struct MemoryBasicInformation
+String/Interop.cs:34: public enum MemoryState : uint
+String/Interop.cs:42: public enum MemoryType : uint
+String/Utf8String.cs:12: public readonly struct StringU8 : IReadOnlyList<byte>, IEquatable<StringU8>, IComparable<StringU8>,
+String/Utf8String.cs:246: public ref struct Utf8InterpolatedStringHandler
+Table/Column.cs:5: public class Column<TItem>
+Table/ColumnFlags.cs:9: public class ColumnFlags<T, TItem> : Column<TItem> where T : struct, Enum
+Table/ColumnFlags.cs:76: public abstract class TriStateColumnFlags<T, TItem> : Column<TItem> where T : struct, Enum
+Table/ColumnNumber.cs:3: public class ColumnNumber<TItem> : ColumnString<TItem>
+Table/ColumnNumber.cs:5: public enum ComparisonMethod : byte
+Table/ColumnSelect.cs:8: public class ColumnSelect<T, TItem> : Column<TItem> where T : struct, Enum, IEquatable<T>
+Table/ColumnString.cs:6: public class ColumnString<TItem> : Column<TItem>
+Table/Table.cs:9: public static class Table
+Table/Table.cs:14: public class Table<T>
+Table/YesNoColumn.cs:8: public enum YesNoFlag
+Table/YesNoColumn.cs:14: public class YesNoColumn<TItem> : ColumnFlags<YesNoFlag, TItem>
+Tasks/IAction.cs:3: public enum ActionState
+Tasks/IAction.cs:13: public interface IAction : IEquatable<IAction>
+Tasks/SingleTaskQueue.cs:3: public class SingleTaskQueue
+Tasks/TaskWrap.cs:7: public static class TrackedTask
+Tasks/TaskWrap.cs:18: public static class AwaitedTask
+Tasks/TaskWrap.cs:29: public static class AsyncTask
+Text/EndObjects/Child.cs:6: public unsafe ref struct Child
+Text/EndObjects/ClipRect.cs:5: public ref struct ClipRect
+Text/EndObjects/CollapsingHeader.cs:5: public unsafe ref struct CollapsingHeader
+Text/EndObjects/Columns.cs:5: public readonly ref struct Columns
+Text/EndObjects/Combo.cs:5: public unsafe ref struct Combo
+Text/EndObjects/DragDropSource.cs:6: public ref struct DragDropSource
+Text/EndObjects/DragDropTarget.cs:7: public unsafe ref struct DragDropTarget()
+Text/EndObjects/Group.cs:5: public ref struct Group
+Text/EndObjects/Id.cs:6: public unsafe ref struct Id
+Text/EndObjects/ListBox.cs:5: public unsafe ref struct ListBox
+Text/EndObjects/ListClipper.cs:6: public ref struct ListClipper
+Text/EndObjects/Menu.cs:5: public unsafe ref struct Menu
+Text/EndObjects/Modal.cs:6: public unsafe ref struct Modal
+Text/EndObjects/Popup.cs:6: public unsafe ref struct Popup
+Text/EndObjects/PopupContextItem.cs:5: public unsafe ref struct PopupContextItem
+Text/EndObjects/TabBar.cs:5: public unsafe ref struct TabBar
+Text/EndObjects/TabItem.cs:5: public unsafe ref struct TabItem
+Text/EndObjects/Table.cs:5: public ref struct Table
+Text/EndObjects/Tooltip.cs:5: public ref struct Tooltip
+Text/EndObjects/TreeNode.cs:6: public unsafe ref struct TreeNode
+Text/Extended/ImUtf8.BulletTextColored.cs:8: public static partial class ImUtf8
+Text/Extended/ImUtf8.ButtonEx.cs:11: public static partial class ImUtf8
+Text/Extended/ImUtf8.ColorPicker.cs:8: public static partial class ImUtf8
+Text/Extended/ImUtf8.CopyOnClickSelectable.cs:10: public static partial class ImUtf8
+Text/Extended/ImUtf8.Dummy.cs:5: public static partial class ImUtf8
+Text/Extended/ImUtf8.GetBytes.cs:5: public static partial class ImUtf8
+Text/Extended/ImUtf8.HoverTooltip.cs:9: public static unsafe partial class ImUtf8
+Text/Extended/ImUtf8.Icon.cs:9: public static partial class ImUtf8
+Text/Extended/ImUtf8.IconButton.cs:12: public static partial class ImUtf8
+Text/Extended/ImUtf8.IconDummy.cs:5: public static partial class ImUtf8
+Text/Extended/ImUtf8.InputMultiLineDeactivated.cs:8: public static unsafe partial class ImUtf8
+Text/Extended/ImUtf8.InputScalarDeactivated.cs:8: public static unsafe partial class ImUtf8
+Text/Extended/ImUtf8.InputTextDeactivated.cs:8: public static unsafe partial class ImUtf8
+Text/Extended/ImUtf8.LabeledHelpMarker.cs:12: public static partial class ImUtf8
+Text/Extended/ImUtf8.ResizableChild.cs:11: public static unsafe partial class ImUtf8
+Text/Extended/ImUtf8.SelectableHelpMarker.cs:10: public static partial class ImUtf8
+Text/Extended/ImUtf8.Spinner.cs:8: public static partial class ImUtf8
+Text/Extended/ImUtf8.TextCentered.cs:8: public static partial class ImUtf8
+Text/Extended/ImUtf8.TextColumn.cs:8: public static partial class ImUtf8
+Text/Extended/ImUtf8.TextFrameAligned.cs:8: public static partial class ImUtf8
+Text/Extended/ImUtf8.TextFramed.cs:12: public static partial class ImUtf8
+Text/Extended/ImUtf8.TextRightAligned.cs:8: public static partial class ImUtf8
+Text/Extended/ImUtf8.TextShadowed.cs:8: public static partial class ImUtf8
+Text/Extended/ImUtf8.TextWrapped.cs:8: public static partial class ImUtf8
+Text/Extended/TerminatedByteString.cs:4: public readonly struct TerminatedByteString
+Text/HelperObjects/HintStringHandlerBuffer.cs:3: public unsafe struct HintStringHandlerBuffer : IStringHandlerBuffer
+Text/HelperObjects/HoverUtf8StringHandler.cs:7: public unsafe ref struct HoverUtf8StringHandler
+Text/HelperObjects/IStringHandlerBuffer.cs:3: public interface IStringHandlerBuffer
+Text/HelperObjects/ImTextExtensions.cs:3: public static class ImTextExtensions
+Text/HelperObjects/ImUtf8Exception.cs:7: public class ImUtf8FormatException() : Exception("Could not format UTF8 String.");
+Text/HelperObjects/ImUtf8Exception.cs:12: public class ImUtf8SizeException() : Exception("Input data is longer than buffer size.");
+Text/HelperObjects/InputStringHandlerBuffer.cs:6: public unsafe struct InputStringHandlerBuffer : IStringHandlerBuffer
+Text/HelperObjects/LabelStringHandlerBuffer.cs:3: public unsafe struct LabelStringHandlerBuffer : IStringHandlerBuffer
+Text/HelperObjects/SpanTextWriter.cs:6: public unsafe ref struct SpanTextWriter
+Text/HelperObjects/SpanTextWriter.cs:239: public unsafe ref struct AppendInterpolatedStringHandler
+Text/HelperObjects/TextStringHandlerBuffer.cs:3: public unsafe struct TextStringHandlerBuffer : IStringHandlerBuffer
+Text/HelperObjects/Utf8StringHandler.cs:6: public unsafe ref struct Utf8StringHandler<T> where T : IStringHandlerBuffer
+Text/ImUtf8.BulletText.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.Button.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.CalcTextSize.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.Checkbox.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.Child.cs:9: public static partial class ImUtf8
+Text/ImUtf8.ClipRect.cs:6: public static partial class ImUtf8
+Text/ImUtf8.Clipboard.cs:6: public static partial class ImUtf8
+Text/ImUtf8.CollapsingHeader.cs:9: public static partial class ImUtf8
+Text/ImUtf8.ColorButton.cs:8: public static partial class ImUtf8
+Text/ImUtf8.ColorEdit.cs:8: public static partial class ImUtf8
+Text/ImUtf8.ColorPicker.cs:8: public static partial class ImUtf8
+Text/ImUtf8.Columns.cs:8: public static partial class ImUtf8
+Text/ImUtf8.Combo.cs:9: public static partial class ImUtf8
+Text/ImUtf8.DragDrop.cs:6: public static partial class ImUtf8
+Text/ImUtf8.DragScalar.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.DrawList.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.GetId.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.Group.cs:5: public static partial class ImUtf8
+Text/ImUtf8.InputMultiLine.cs:9: public static unsafe partial class ImUtf8
+Text/ImUtf8.InputScalar.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.InputText.cs:9: public static unsafe partial class ImUtf8
+Text/ImUtf8.InvisibleButton.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.IsPopupOpen.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.LabelText.cs:8: public static partial class ImUtf8
+Text/ImUtf8.ListBox.cs:8: public static partial class ImUtf8
+Text/ImUtf8.ListClipper.cs:5: public static partial class ImUtf8
+Text/ImUtf8.Menu.cs:8: public static partial class ImUtf8
+Text/ImUtf8.MenuItem.cs:7: public static unsafe partial class ImUtf8
+Text/ImUtf8.Modal.cs:9: public static partial class ImUtf8
+Text/ImUtf8.OpenPopup.cs:8: public static partial class ImUtf8
+Text/ImUtf8.Popup.cs:9: public static unsafe partial class ImUtf8
+Text/ImUtf8.PopupContextItem.cs:9: public static partial class ImUtf8
+Text/ImUtf8.ProgressBar.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.PushId.cs:6: public static partial class ImUtf8
+Text/ImUtf8.RadioButton.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.RotatedText.cs:8: public static partial class ImUtf8
+Text/ImUtf8.Selectable.cs:8: public static partial class ImUtf8
+Text/ImUtf8.Slider.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.SliderAngle.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.SliderVertical.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.SmallButton.cs:6: public static unsafe partial class ImUtf8
+Text/ImUtf8.Style.cs:5: public static partial class ImUtf8
+Text/ImUtf8.TabBar.cs:9: public static partial class ImUtf8
+Text/ImUtf8.TabItem.cs:9: public static partial class ImUtf8
+Text/ImUtf8.TabItemButton.cs:8: public static unsafe partial class ImUtf8
+Text/ImUtf8.Table.cs:8: public static partial class ImUtf8
+Text/ImUtf8.TableHeader.cs:6: public static partial class ImUtf8
+Text/ImUtf8.TableSetupColumn.cs:8: public static partial class ImUtf8
+Text/ImUtf8.Text.cs:13: public static partial class ImUtf8
+Text/ImUtf8.Tooltip.cs:5: public static partial class ImUtf8
+Text/ImUtf8.Tree.cs:9: public static partial class ImUtf8
+Text/ImUtf8Test.cs:6: public class ImUtf8TestWindow : Window
+Text/ImUtf8Test.cs:8: public class BetterStopWatch(long dataPoints = 100)
+Text/ImUtf8Test.cs:111: public class ImUtf8Test
+Text/ImUtf8Test.cs:210: public record struct TestStruct(ImUtf8Test Parent, int Value) : IUtf8SpanFormattable, ISpanFormattable, IIncrementOperators<TestStruct>
+Text/Widget/Changelog.cs:9: public enum ChangeLogDisplayType
+Text/Widget/Changelog.cs:16: public sealed class Changelog : Window
+Text/Widget/Editors/ColorEditor.cs:5: public sealed class ColorEditor : IEditor<float>, IEditor<Vector3>, IEditor<Vector4>
+Text/Widget/Editors/DragEditor.cs:5: public sealed class DragEditor<T>(T? minimum, T? maximum, float speed, float relativeSpeed, Editors.FormatBuffer format, ImGuiSliderFlags flags) : IEditor<T>
+Text/Widget/Editors/Editors.cs:10: public static class Editors
+Text/Widget/Editors/Editors.cs:186: public struct FormatBuffer
+Text/Widget/Editors/Editors.cs:221: public struct IdBuffer
+Text/Widget/Editors/Editors.cs:229: public struct ComponentHelper
+Text/Widget/Editors/EnumEditor.cs:7: public sealed class EnumEditor<T>(IReadOnlyList<(ReadOnlyMemory<byte> Label, T Value, ReadOnlyMemory<byte> Description)> domain) : IEditor<T>
+Text/Widget/Editors/IEditor.cs:9: public interface IEditor<T> where T : unmanaged
+Text/Widget/Editors/InputEditor.cs:5: public sealed class InputEditor<T>(T? minimum, T? maximum, T step, T stepFast, Editors.FormatBuffer format, ImGuiInputTextFlags flags) : IEditor<T>
+Text/Widget/Editors/SliderEditor.cs:5: public sealed class SliderEditor<T>(T minimum, T maximum, Editors.FormatBuffer format, ImGuiSliderFlags flags) : IEditor<T>
+Text/Widget/FontAwesomeCheckbox.cs:10: public class FontAwesomeCheckbox(FontAwesomeIcon icon, uint? color = null) : FontAwesomeCheckbox<bool>
+Text/Widget/FontAwesomeCheckbox.cs:23: public abstract class FontAwesomeCheckbox<T> : MultiStateCheckbox<T>
+Text/Widget/MultiStateCheckbox.cs:14: public abstract class MultiStateCheckbox<T>
+Text/Widget/TriStateCheckbox.cs:10: public sealed class TriStateCheckbox : MultiStateCheckbox<bool?>
+Text/Widget/TwoStateCheckbox.cs:7: public sealed class TwoStateCheckbox : MultiStateCheckbox<bool>
+Text/Widget/XCheckbox.cs:8: public sealed class XCheckbox : MultiStateCheckbox<bool>
+Util.cs:13: public ref struct HoverTooltipStringHandler
+Util.cs:51: public static partial class ImGuiUtil
+Widgets/Changelog.cs:9: public enum ChangeLogDisplayType
+Widgets/Changelog.cs:16: public sealed class Changelog : Window
+Widgets/ChatTypeSelector.cs:7: public static partial class Widget
+Widgets/ClippedSelectableCombo.cs:7: public class ClippedSelectableCombo<T>
+Widgets/ColorPicker.cs:6: public static partial class Widget
+Widgets/FilterComboCache.cs:12: public abstract class FilterComboCache<T> : FilterComboBase<T>
+Widgets/FilterComboColors.cs:9: public class FilterComboColors : FilterComboCache<KeyValuePair<byte, (string Name, uint Color, bool Gloss)>>
+Widgets/FilteredCombo.cs:11: public enum MouseWheelType : byte
+Widgets/FilteredCombo.cs:20: public abstract class FilterComboBase<T>
+Widgets/HexViewer.cs:8: public static partial class Widget
+Widgets/ImGuiFramedGroup.cs:8: public static partial class Widget
+Widgets/ImGuiRenameableCombo.cs:5: public static partial class Widget
+Widgets/ImGuiResizingTextInput.cs:5: public static partial class Widget
+Widgets/KeySelectors.cs:8: public static partial class Widget
+Widgets/PaletteColorPicker.cs:6: public static partial class Widget
+Widgets/TabBar.cs:6: public interface ITab
+Widgets/TabBar.cs:22: public static class TabBar
+Widgets/TagButtons.cs:12: public class TagButtons
+Widgets/ToggleButton.cs:10: public static class ToggleButton
+Widgets/ToggleButton.cs:44: public ref struct SplitButtonData
+Widgets/TristateCheckbox.cs:7: public class TristateCheckbox(uint crossColor = 0xFF0000FF, uint checkColor = 0xFF00FF00, uint dotColor = 0xFFD0D0D0)
+Widgets/Tutorial.cs:8: public class Tutorial
+Widgets/Tutorial.cs:10: public record struct Step(string Name, string Text, bool Enabled);
+Widgets/WidgetUtil.cs:5: public static class WidgetUtil

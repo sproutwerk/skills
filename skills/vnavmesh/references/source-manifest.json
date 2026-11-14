@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": ".gitmodules",
+      "path": "references/source/vnavmesh/.gitmodules",
+      "sha256": "93f1fffc3c1e1eae8a24d207ea07aae33c642b2ec5f2b01b932f9dea8ae59a1d"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "README.md",
+      "path": "references/source/vnavmesh/README.md",
+      "sha256": "8faa5eab3be624b127882c8c496190d77a3a89896194eef3b33392565919a913"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/vnavmesh.csproj",
+      "path": "references/source/vnavmesh/vnavmesh/vnavmesh.csproj",
+      "sha256": "50dfa600426443305f86e3dc0abd5edce6f1f90a88acc6cee29d4cce36abefc6"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/vnavmesh.json",
+      "path": "references/source/vnavmesh/vnavmesh/vnavmesh.json",
+      "sha256": "7b2cd0f429b0a3a3864bffd41470c4a80f4276545c5966e962b4e50a2be51af4"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/IPCProvider.cs",
+      "path": "references/source/vnavmesh/vnavmesh/IPCProvider.cs",
+      "sha256": "aab01ea8c3af884d8e0425652e3a7bfcc8a507bf5add0511b7ffe4d8c36b32fc"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/NavmeshManager.cs",
+      "path": "references/source/vnavmesh/vnavmesh/NavmeshManager.cs",
+      "sha256": "f5646151936be57e838a43aac8a50c99a4b800b6ad4f2c8482ada45489ff5897"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/NavmeshQuery.cs",
+      "path": "references/source/vnavmesh/vnavmesh/NavmeshQuery.cs",
+      "sha256": "b0e0983a22fc395e6b934a0edab843444b3318f80fae706c1716c314d3004593"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/AsyncMoveRequest.cs",
+      "path": "references/source/vnavmesh/vnavmesh/AsyncMoveRequest.cs",
+      "sha256": "3dbb048b59afd6307b4c4764195332f6cea2074db80ebd517a3d3d27b300cd13"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/Movement/FollowPath.cs",
+      "path": "references/source/vnavmesh/vnavmesh/Movement/FollowPath.cs",
+      "sha256": "8f3c167cf417dabccf4f07bf1425f8d0ab1c9fa1f5b9022e661b4bfc7dba1b72"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/Movement/OverrideMovement.cs",
+      "path": "references/source/vnavmesh/vnavmesh/Movement/OverrideMovement.cs",
+      "sha256": "82f57047b597c5a4b0dc8e5eb8eddb15e7508ece5b18db4941c14b2927135473"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/Plugin.cs",
+      "path": "references/source/vnavmesh/vnavmesh/Plugin.cs",
+      "sha256": "360912a863dd5a989abef30e26ab754b80f7bdc4e0098753b5e2594fd22c69b9"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/Config.cs",
+      "path": "references/source/vnavmesh/vnavmesh/Config.cs",
+      "sha256": "7d1cc1ba271a50d6da31dc6f05b52688bf3bd0202babd58ae156edd78aa17513"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/Extensions.cs",
+      "path": "references/source/vnavmesh/vnavmesh/Extensions.cs",
+      "sha256": "ecab2da23d85486e2b61acd10ba30f598edb87b2e2c398efe4f7af54f1114fa7"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/MapUtils.cs",
+      "path": "references/source/vnavmesh/vnavmesh/MapUtils.cs",
+      "sha256": "d564b69cafb61f82cc6699730683c237ed66a1320778342c1f809d348fea8690"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/NavmeshBuilder.cs",
+      "path": "references/source/vnavmesh/vnavmesh/NavmeshBuilder.cs",
+      "sha256": "5d034166df4a159034167c6a3f51522df9ff1c899043477c48e74391bd039670"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/NavmeshCustomization.cs",
+      "path": "references/source/vnavmesh/vnavmesh/NavmeshCustomization.cs",
+      "sha256": "fced324db73f8918fe2a2ad0522d7def272710f5ca5ff1213b79018e309ada27"
+    },
+    {
+      "repository": "https://github.com/awgil/ffxiv_navmesh",
+      "revision": "38d2a24c3306f24640e64efe13915a78d301e878",
+      "upstreamPath": "vnavmesh/FloodFill.cs",
+      "path": "references/source/vnavmesh/vnavmesh/FloodFill.cs",
+      "sha256": "eb993587cb2f463781f7d443a185f8a4d69ededc995777b81895b29eabd2f141"
+    },
+    {
+      "repository": "https://github.com/xanunderscore/DotRecast",
+      "revision": "8002b30b9f196bcd9eb0a898e51abcea4177fb04",
+      "upstreamPath": "LICENSE.txt",
+      "path": "LICENSES/DotRecast-LICENSE.txt",
+      "sha256": "dddd160c04e2c236583e7a3a4448838f07eb4c5baec7753e4e51a150bb6792d8"
+    },
+    {
+      "repository": "https://github.com/xanunderscore/DotRecast",
+      "revision": "8002b30b9f196bcd9eb0a898e51abcea4177fb04",
+      "upstreamPath": "src/DotRecast.Core/DotRecast.Core.csproj",
+      "path": "references/source/DotRecast/src/DotRecast.Core/DotRecast.Core.csproj",
+      "sha256": "0ad225ccff96cc9b9ed70e9574f44a7e7c0ab837839c8e5cb7fb76621f1618fa"
+    }
+  ]
+}
