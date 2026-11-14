@@ -38,6 +38,7 @@ jobs:
     strategy:
       matrix:
         dir:
+          - maintenance/audits
           - maintenance/dalamudimgui
           - maintenance/ottergui
           - skills/xivapi/scripts/xivapi

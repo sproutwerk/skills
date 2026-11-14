@@ -29,13 +29,16 @@ helpers under `maintenance/` and `skills/xivapi/scripts/`. Run the same checks l
 
 ```sh
 bash .github/scripts/check-skills-sh.sh .
+(cd maintenance/audits && go vet ./... && go test ./...)
 (cd maintenance/dalamudimgui && go test ./...)
 (cd maintenance/ottergui && go test ./...)
 (cd skills/xivapi/scripts/xivapi && go vet ./... && go test ./...)
 ```
 
 Hosted skills.sh security audits are separate from CLI installation and are
-not asserted by CI.
+not asserted by CI. The audit table in `README.md` is generated: after
+skills.sh has rescanned a change, run `go -C maintenance/audits run .` and
+commit the README on its own, apart from the change that caused the scan.
 
 Do not add `cisco-ai-skill-scanner` (`skill-scanner`) or any other tool that
 depends on LiteLLM to the checks, directly or transitively.
