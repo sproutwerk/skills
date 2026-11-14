@@ -5,6 +5,7 @@ package main
 import (
 	"strings"
 	"testing"
+	"time"
 )
 
 const page = `<html><script>var Snyk = "Fail"</script><main>
@@ -26,6 +27,31 @@ func TestParseStatuses(t *testing.T) {
 	}
 	if got := parseStatuses("<p>Snyk</p><p>Docs</p>"); len(got) != 0 {
 		t.Errorf("unrecognised status parsed as %v", got)
+	}
+}
+
+func TestParseAnalyzed(t *testing.T) {
+	for _, label := range []string{"Analyzed", "Analyzed At"} {
+		at, ok := parseAnalyzed("<div><span>" + label + "</span><span>Nov 14, 2026, 09:37 PM</span></div>")
+		if want := time.Date(2026, 11, 14, 21, 37, 0, 0, time.UTC); !ok || !at.Equal(want) {
+			t.Errorf("%s: got %v %v, want %v", label, at, ok, want)
+		}
+	}
+	if _, ok := parseAnalyzed("<p>Analyzed</p><p>soon</p>"); ok {
+		t.Error("unparseable time accepted")
+	}
+}
+
+func TestStale(t *testing.T) {
+	commit := time.Date(2026, 11, 14, 10, 0, 30, 0, time.UTC)
+	for scan, want := range map[time.Time]bool{
+		time.Date(2026, 11, 14, 9, 37, 0, 0, time.UTC): true,
+		time.Date(2026, 11, 14, 10, 0, 0, 0, time.UTC): true,
+		time.Date(2026, 11, 14, 10, 1, 0, 0, time.UTC): false,
+	} {
+		if got := stale(scan, commit); got != want {
+			t.Errorf("scan %v: got %v, want %v", scan, got, want)
+		}
 	}
 }
 

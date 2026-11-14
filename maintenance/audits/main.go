@@ -1,7 +1,8 @@
 // Copyright (c) 2026 sproutwerk. SPDX-License-Identifier: MIT
 
 // Command audits rewrites the audit table in the repository README from the
-// results skills.sh publishes for each skill.
+// results skills.sh publishes for each skill. Its check subcommand reports
+// whether those results are newer than each skill's last commit.
 package main
 
 import (
@@ -12,8 +13,11 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"os/exec"
 	"regexp"
+	"strconv"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -38,9 +42,8 @@ var (
 	tag    = regexp.MustCompile(`(?s)<[^>]*>`)
 )
 
-// parseStatuses returns the status shown beside each auditor label on a
-// skill page. An auditor with no recognised status is absent from the map.
-func parseStatuses(page string) map[string]string {
+// textLines returns the visible text of a page, one trimmed line per element.
+func textLines(page string) []string {
 	text := tag.ReplaceAllString(hidden.ReplaceAllString(page, "\n"), "\n")
 	var lines []string
 	for _, line := range strings.Split(html.UnescapeString(text), "\n") {
@@ -48,6 +51,34 @@ func parseStatuses(page string) map[string]string {
 			lines = append(lines, line)
 		}
 	}
+	return lines
+}
+
+// parseAnalyzed returns the scan time shown on an audit detail page. The
+// page prints it to the minute, without a zone; it is read as UTC.
+func parseAnalyzed(page string) (time.Time, bool) {
+	lines := textLines(page)
+	for i := 0; i+1 < len(lines); i++ {
+		if lines[i] != "Analyzed" && lines[i] != "Analyzed At" {
+			continue
+		}
+		if at, err := time.Parse("Jan 2, 2006, 03:04 PM", lines[i+1]); err == nil {
+			return at, true
+		}
+	}
+	return time.Time{}, false
+}
+
+// stale reports whether a scan could predate a commit. Scan times are
+// truncated to the minute, so a scan in the commit's own minute counts as old.
+func stale(analyzed, committed time.Time) bool {
+	return !analyzed.After(committed.Truncate(time.Minute))
+}
+
+// parseStatuses returns the status shown beside each auditor label on a
+// skill page. An auditor with no recognised status is absent from the map.
+func parseStatuses(page string) map[string]string {
+	lines := textLines(page)
 	found := map[string]string{}
 	for i := 0; i+1 < len(lines); i++ {
 		for _, a := range auditors {
@@ -142,7 +173,108 @@ func fetch(client *http.Client, url string) (string, int, error) {
 	return string(body), resp.StatusCode, err
 }
 
+// lastCommit returns the time of the newest commit that touched a skill.
+func lastCommit(root, skill string) (time.Time, error) {
+	out, err := exec.Command("git", "-C", root, "log", "-1", "--format=%ct", "--", "skills/"+skill).Output()
+	if err != nil {
+		return time.Time{}, fmt.Errorf("git log for %s: %w", skill, err)
+	}
+	seconds, err := strconv.ParseInt(strings.TrimSpace(string(out)), 10, 64)
+	if err != nil {
+		return time.Time{}, fmt.Errorf("%s has no commit under skills/", skill)
+	}
+	return time.Unix(seconds, 0).UTC(), nil
+}
+
+// check prints every audit that has not been rerun since its skill last
+// changed and reports whether all of them are current.
+func check(args []string) (bool, error) {
+	flags := flag.NewFlagSet("check", flag.ExitOnError)
+	repo := flags.String("repo", "sproutwerk/skills", "owner/name on skills.sh")
+	config := flags.String("config", "../../skills.sh.json", "path to skills.sh.json")
+	root := flags.String("root", "../..", "repository checkout to read commit times from")
+	flags.Parse(args)
+
+	skills, err := skillNames(*config)
+	if err != nil {
+		return false, err
+	}
+	type job struct{ skill, label, slug string }
+	var jobs []job
+	commits := map[string]time.Time{}
+	for _, skill := range skills {
+		if commits[skill], err = lastCommit(*root, skill); err != nil {
+			return false, err
+		}
+		for _, a := range auditors {
+			jobs = append(jobs, job{skill, a.label, a.slug})
+		}
+	}
+
+	client := &http.Client{Timeout: 60 * time.Second}
+	notes := make([]string, len(jobs))
+	errs := make([]error, len(jobs))
+	limit := make(chan struct{}, 6)
+	var wg sync.WaitGroup
+	for i, j := range jobs {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			limit <- struct{}{}
+			defer func() { <-limit }()
+			page, status, err := fetch(client, "https://skills.sh/"+*repo+"/"+j.skill+"/security/"+j.slug)
+			switch {
+			case err != nil:
+				errs[i] = fmt.Errorf("%s %s: %w", j.skill, j.label, err)
+			case status == http.StatusNotFound:
+				notes[i] = "not listed"
+			case status != http.StatusOK:
+				errs[i] = fmt.Errorf("%s %s: HTTP %d", j.skill, j.label, status)
+			default:
+				analyzed, ok := parseAnalyzed(page)
+				if !ok {
+					notes[i] = "no result yet"
+				} else if stale(analyzed, commits[j.skill]) {
+					notes[i] = "scanned " + analyzed.Format("2006-01-02 15:04")
+				}
+			}
+		}()
+	}
+	wg.Wait()
+
+	waiting := 0
+	old := map[string][]string{}
+	for i, j := range jobs {
+		if errs[i] != nil {
+			return false, errs[i]
+		}
+		if notes[i] != "" {
+			waiting++
+			old[j.skill] = append(old[j.skill], j.label+" "+notes[i])
+		}
+	}
+	for _, skill := range skills {
+		if len(old[skill]) > 0 {
+			fmt.Printf("%s, changed %s: %s\n", skill, commits[skill].Format("2006-01-02 15:04"),
+				strings.Join(old[skill], "; "))
+		}
+	}
+	if waiting > 0 {
+		fmt.Printf("\nNot ready: %d of %d audits predate their skill's last commit. Times are UTC.\n", waiting, len(jobs))
+		return false, nil
+	}
+	fmt.Printf("Ready: all %d audits are newer than their skill's last commit.\n", len(jobs))
+	return true, nil
+}
+
 func run() error {
+	if len(os.Args) > 1 && os.Args[1] == "check" {
+		ready, err := check(os.Args[2:])
+		if err == nil && !ready {
+			os.Exit(2)
+		}
+		return err
+	}
 	repo := flag.String("repo", "sproutwerk/skills", "owner/name on skills.sh")
 	config := flag.String("config", "../../skills.sh.json", "path to skills.sh.json")
 	readmePath := flag.String("readme", "../../README.md", "README to rewrite")

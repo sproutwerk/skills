@@ -4,12 +4,18 @@
 results [skills.sh](https://skills.sh/sproutwerk/skills) shows for each skill.
 It is outside the installable skills.
 
-Run it from the repository root after skills.sh has rescanned a change:
+Run it from the repository root:
 
 ```sh
+go -C maintenance/audits run . check      # has skills.sh rescanned every skill?
 go -C maintenance/audits run .            # rewrite the table in README.md
 go -C maintenance/audits run . -print     # print the table only
 ```
+
+`check` compares the scan time on each audit's detail page with the newest
+commit under that skill's directory. It lists every audit that is older than
+its skill, not listed, or still without a result, and exits non-zero until none
+is left. Scan times are read as UTC and are shown to the minute.
 
 The default paths are relative to this directory; `-config` and `-readme`
 override them.
